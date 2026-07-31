@@ -22,10 +22,12 @@ const root = path.join(__dirname, '..');
 const SUBJECT = process.env.EMAIL_SUBJECT || 'คำขอลบบัญชีของคุณได้รับการอนุมัติ';
 const SENDER = process.env.MS_SENDER || 'parisa.a@gofive.co.th';
 const fullName = process.argv[2] || '{{FULL_NAME}}';
+// Which template to build (default = gray version). e.g. TEMPLATE=empeo-account-deletion-white.html
+const templateName = process.env.TEMPLATE || 'empeo-account-deletion.html';
 
 // ---------- Load template, swap image URLs → cid: ----------
 let html = fs.readFileSync(
-  path.join(root, 'email-templates', 'empeo-account-deletion.html'),
+  path.join(root, 'email-templates', templateName),
   'utf8',
 ).replaceAll('{{FULL_NAME}}', fullName);
 
@@ -75,7 +77,7 @@ for (const img of images) {
 eml += `--${BOUNDARY}--` + CRLF;
 
 // ---------- Write ----------
-const outPath = path.join(__dirname, 'empeo-account-deletion.eml');
+const outPath = path.join(__dirname, templateName.replace(/\.html$/, '.eml'));
 fs.writeFileSync(outPath, eml);
 console.log(`✅ Wrote ${path.relative(root, outPath)} (${(eml.length / 1024).toFixed(0)} KB, images embedded)`);
 console.log(`   Name in body: ${fullName === '{{FULL_NAME}}' ? '{{FULL_NAME}} (replace in Outlook)' : fullName}`);

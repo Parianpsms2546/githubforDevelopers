@@ -35,6 +35,15 @@ cd send
 node build-eml.mjs "วริศรา ช."   # ได้ empeo-account-deletion.eml ที่แทนชื่อให้แล้ว
 ```
 
+**มี 2 ธีมให้เลือก:**
+- `empeo-account-deletion.html` / `.eml` — พื้นหลังการ์ดสีเทาอ่อน (ดีฟอลต์)
+- `empeo-account-deletion-white.html` / `.eml` — พื้นหลังสีขาวล้วน
+
+สร้าง .eml ของเวอร์ชันพื้นหลังขาว:
+```bash
+TEMPLATE=empeo-account-deletion-white.html node build-eml.mjs
+```
+
 ### วิธีสำรอง — "Insert as Text" ใน Outlook (ใช้ไฟล์ .html)
 
 1. เปิด Outlook → **New Email**
