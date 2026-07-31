@@ -24,23 +24,30 @@
 
 ---
 
-## 🖼️ ขั้นตอนที่ 1 — อัปโหลดรูปโลโก้ (สำคัญมาก)
+## 🖼️ รูปโลโก้ — host แล้ว ✅
 
-อีเมลไม่สามารถฝังรูปภาพในไฟล์ได้ **ต้อง host รูปไว้บน URL สาธารณะ (HTTPS)** ก่อน เช่น
-CDN, S3, Cloudflare R2, หรือ storage ของ ESP ที่ใช้
+รูปทั้ง 4 ถูก commit ไว้ใน `email-templates/assets/` และ **ผูก URL ในไฟล์ HTML ให้เรียบร้อยแล้ว**
+ผ่าน **jsDelivr CDN** (ดึงจาก repo นี้ ล็อกที่ commit เพื่อให้ cache นิ่ง):
 
-อัปโหลดรูป 3 ชุดที่ให้มา แล้วนำ URL จริงไปแทน placeholder ในไฟล์ HTML:
+| ตำแหน่ง | ไฟล์ | ขนาดแสดงผล |
+|---------|------|-----------|
+| Header | `assets/empeo-logo.png` | 140 × 34 px |
+| Footer | `assets/powered-by-empeo.png` | 120 × 30 px |
+| Footer | `assets/icon-facebook.png` | 28 × 28 px |
+| Footer | `assets/icon-youtube.png` | 28 × 28 px |
 
-| ตำแหน่ง | รูป | Placeholder ที่ต้องแทนที่ | ขนาดแนะนำ (แสดงผล) |
-|---------|-----|--------------------------|--------------------|
-| Header | โลโก้ empeo (ภาพที่ 2) | `https://cdn.empeo.com/email/empeo-logo.png` | 140 × 34 px (อัปโหลด 2x = 280px) |
-| Footer | Powered by empeo (ภาพที่ 3) | `https://cdn.empeo.com/email/powered-by-empeo.png` | 120 × 30 px |
-| Footer | ไอคอน Facebook (ภาพที่ 4) | `https://cdn.empeo.com/email/icon-facebook.png` | 28 × 28 px |
-| Footer | ไอคอน YouTube (ภาพที่ 4) | `https://cdn.empeo.com/email/icon-youtube.png` | 28 × 28 px |
+รูปแบบ URL ที่ใช้:
+```
+https://cdn.jsdelivr.net/gh/Parianpsms2546/githubforDevelopers@<commit-sha>/email-templates/assets/<file>.png
+```
 
-> 💡 ใช้ไฟล์ **PNG** (รองรับพื้นหลังโปร่งใส) และอัปโหลดที่ความละเอียด 2 เท่า
-> เพื่อความคมชัดบนจอ Retina จากนั้นระบุ `width`/`height` ในโค้ดตามขนาดแสดงผลจริง
-> URL ของรูปต้อง **เข้าถึงได้แบบสาธารณะ ไม่ต้อง login**
+> ⚠️ **jsDelivr ใช้ได้เฉพาะ repo แบบ public** — ถ้า repo นี้เป็น private รูปจะไม่ขึ้น
+> ให้ย้ายรูปทั้ง 4 ไป host บน CDN/S3/Cloudflare R2 หรือ storage ของ ESP แล้วแก้ 4 URL ในไฟล์ HTML แทน
+>
+> 🔁 **อยากใช้โลโก้ official จาก Figma/Brand?** แค่นำไฟล์มาแทนใน `assets/` (ใช้ชื่อไฟล์เดิม)
+> แล้ว commit — โครง URL ไม่ต้องแก้ (ถ้าใช้ commit ใหม่ ให้อัปเดต `<commit-sha>` ใน URL ให้ตรง)
+
+> 💡 โลโก้ในโฟลเดอร์นี้เป็นเวอร์ชันที่วาดใหม่ให้ตรงต้นฉบับ (สี Flame `#F1592A`, PNG พื้นหลังโปร่งใส)
 
 ---
 
