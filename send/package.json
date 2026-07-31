@@ -1,0 +1,17 @@
+{
+  "name": "empeo-email-sender",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Send the empeo email template through Outlook / Microsoft 365",
+  "scripts": {
+    "send:graph": "node --env-file=.env send-outlook-graph.mjs",
+    "send:smtp": "node --env-file=.env send-outlook-smtp.mjs"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  },
+  "engines": {
+    "node": ">=20.6.0"
+  }
+}
