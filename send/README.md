@@ -14,6 +14,38 @@
 
 ---
 
+## 📨 อยากแค่ copy แล้วส่งเองใน Outlook (ไม่ต้องรันสคริปต์ส่ง) ⭐
+
+### วิธีที่ดีที่สุด — ไฟล์ `.eml` ดับเบิลคลิกแล้วส่งได้เลย
+
+ในโฟลเดอร์นี้มีไฟล์ **`empeo-account-deletion.eml`** ที่ **ฝังรูปโลโก้ไว้ในไฟล์แล้ว**
+(รูปขึ้นครบ ไม่ต้องกด "Download pictures" และ repo จะ public หรือไม่ก็ได้)
+
+1. ดาวน์โหลดไฟล์ `send/empeo-account-deletion.eml` มาไว้ในเครื่อง
+2. **ดับเบิลคลิก** → Outlook (desktop) จะเปิดเป็น **อีเมลใหม่ที่แก้ไขได้** พร้อมดีไซน์ครบ
+3. ใส่ช่อง **To**, แก้คำว่า `{{FULL_NAME}}` ในเนื้อหาเป็นชื่อผู้รับ
+4. กด **Send** — จบ ✅
+
+> ทำงานได้เพราะไฟล์มี header `X-Unsent: 1` ที่บอก Outlook ให้เปิดเป็นฉบับร่างที่ส่งได้
+> (ถ้าดับเบิลคลิกแล้วเปิดเป็นข้อความอ่านอย่างเดียว ให้คลิกขวาไฟล์ → Open with → Outlook)
+
+**อยากใส่ชื่อผู้รับล่วงหน้า** (ไม่ต้องแก้ใน Outlook) — สร้างไฟล์ใหม่พร้อมชื่อ:
+```bash
+cd send
+node build-eml.mjs "วริศรา ช."   # ได้ empeo-account-deletion.eml ที่แทนชื่อให้แล้ว
+```
+
+### วิธีสำรอง — "Insert as Text" ใน Outlook (ใช้ไฟล์ .html)
+
+1. เปิด Outlook → **New Email**
+2. แท็บ **Insert** → **Attach File** → **Browse This PC** → เลือก `email-templates/empeo-account-deletion.html`
+3. ที่ปุ่ม Insert กด **ลูกศรลง** → เลือก **Insert as Text**
+   → เนื้อหา HTML จะถูกวางเป็นดีไซน์ในอีเมล
+4. ใส่ผู้รับ + แก้ `{{FULL_NAME}}` → **Send**
+   *(วิธีนี้รูปมาจาก jsDelivr — Outlook อาจให้กด Download pictures ก่อน)*
+
+---
+
 ## เตรียมก่อนเริ่ม (ทั้ง 2 วิธี)
 
 ```bash
