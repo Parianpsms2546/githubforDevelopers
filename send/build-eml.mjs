@@ -25,11 +25,15 @@ const fullName = process.argv[2] || '{{FULL_NAME}}';
 // Which template to build (default = gray version). e.g. TEMPLATE=empeo-account-deletion-white.html
 const templateName = process.env.TEMPLATE || 'empeo-account-deletion.html';
 
-// ---------- Load template, swap image URLs → cid: ----------
+// ---------- Load template, swap placeholders + image URLs → cid: ----------
 let html = fs.readFileSync(
   path.join(root, 'email-templates', templateName),
   'utf8',
-).replaceAll('{{FULL_NAME}}', fullName);
+)
+  .replaceAll('{{FULL_NAME}}', fullName)
+  // Optional per-template placeholders (default: keep so you can edit in Outlook)
+  .replaceAll('{{PAY_PERIOD}}', process.env.PAY_PERIOD || '{{PAY_PERIOD}}')
+  .replaceAll('{{DOWNLOAD_URL}}', process.env.DOWNLOAD_URL || '{{DOWNLOAD_URL}}');
 
 // jsDelivr URL (…/assets/<name>.png)  →  cid:<name>
 html = html.replace(
@@ -41,7 +45,9 @@ html = html.replace(
 const wrap76 = (b64) => b64.match(/.{1,76}/g).join('\r\n');
 const encWord = (s) => `=?UTF-8?B?${Buffer.from(s, 'utf8').toString('base64')}?=`;
 
-const images = ['empeo-logo', 'powered-by-empeo', 'icon-facebook', 'icon-youtube'].map((name) => ({
+// Embed exactly the images this template references (via cid:), in first-seen order.
+const imageNames = [...new Set([...html.matchAll(/cid:([\w-]+)/g)].map((m) => m[1]))];
+const images = imageNames.map((name) => ({
   name,
   cid: name,
   b64: wrap76(fs.readFileSync(path.join(root, 'email-templates', 'assets', `${name}.png`)).toString('base64')),
