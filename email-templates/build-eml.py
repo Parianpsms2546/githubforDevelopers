@@ -26,8 +26,12 @@ def b64_lines(data: bytes) -> str:
 def build(name: str, subject: str) -> Path:
     html = (ROOT / "src" / f"{name}.html").read_text(encoding="utf-8")
 
-    # Preserve first-seen order, drop duplicates
-    cids = list(dict.fromkeys(re.findall(r'src="cid:([^"]+)"', html)))
+    # Pick up both <img src="cid:x"> and CSS background-image:url('cid:x').
+    # Preserve first-seen order, drop duplicates.
+    cids = list(dict.fromkeys(
+        re.findall(r'src="cid:([^"]+)"', html)
+        + re.findall(r"""url\(['"]?cid:([^'")]+)['"]?\)""", html)
+    ))
 
     out = [
         f"From: {FROM}",

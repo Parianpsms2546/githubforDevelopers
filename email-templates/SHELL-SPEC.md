@@ -139,5 +139,15 @@ sides, and that cannot be corrected from inside the message. Reintroduce
   linkified. The cells carry the radius, so their table needs
   `border-collapse:separate` like any other rounded table.
 
+- **A spacer cell collapses next to a `width:100%` column.** `font-size:0` gives
+  it no min-content width, so the 100% column takes everything and the gutter
+  vanishes — the step titles ran straight into their number badges. Use
+  `padding-left` on the content cell for gutters in that situation.
+
+- **A fixed-size cell needs its table sized too.** `width:24px` on a cell inside
+  an auto-width table does nothing; the table shrink-wraps to the content and the
+  number badge came out 7px wide instead of a 24px circle. Put the width on the
+  table as well.
+
 - Images are inlined by CID. Run `build-eml.py <name> "<subject>"` after every
   edit to the HTML — the `.eml` is generated, never hand-edited.
