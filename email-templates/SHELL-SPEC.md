@@ -52,34 +52,28 @@ sides, and that cannot be corrected from inside the message. Reintroduce
 
 ## Non-negotiables
 
-- **Numeric runs must be wrapped like this**, or iOS, the Gmail app and Outlook
-  mobile will detect codes, dates and postcodes and paint them as blue
-  underlined links:
+- **Do not wrap text in `<a>` to stop auto-linking.** Outlook mobile paints
+  every link blue, and an inline `color:inherit !important` does not stop it, so
+  the wrapper causes the exact problem it was meant to prevent. Three rounds
+  were spent learning this: the wrappers turned the payroll period blue as well
+  as the code it was protecting.
+
+- **Break the digit run instead.** Only long runs are detected. `12 พ.ย. 2003`
+  was never touched, so a four-digit run is below the threshold, while the
+  eight-digit `12112003` was. A single zero-width space splits it:
 
   ```html
-  <a href="#" style="…; color:inherit !important;
-     -webkit-text-fill-color:inherit !important;
-     text-decoration:none !important; pointer-events:none; cursor:default;">1211</a>
+  เช่น 12 พ.ย. 2003 &rarr; 1211&#8203;2003
   ```
 
-  Every part earns its place:
+  It stays plain text, inherits the surrounding colour in both schemes, and no
+  client can repaint it because there is nothing to repaint. Reads as `12112003`
+  on screen. The one cost is a stray invisible character if someone copies it —
+  acceptable for an example nobody retypes verbatim, but do not use this on a
+  real credential the recipient must copy.
 
-  - **`href` is not optional.** An `<a>` with no `href` is not a link, so client
-    sanitisers unwrap it and the inline styles go with it, leaving bare text for
-    the detector to find.
-  - **`color:inherit !important`**, not a hex. Outlook mobile repaints link text
-    with its own `!important` blue, which beats a plain inline colour. Inline
-    `!important` outranks any author rule and wins — but a hard-coded hex would
-    then fight the client's dark-mode transform, so inherit the surrounding
-    text's colour instead. That is what "looks like plain text" actually means,
-    and it holds in both schemes.
-  - **`-webkit-text-fill-color`** too: iOS colours links through it, and it wins
-    over `color`.
-  - **`pointer-events:none; cursor:default`** keep the dead link untappable.
-  - `<style>` rules cannot carry any of this — the Gmail app strips the block.
-
-  Any visible run of four or more digits needs it, not just the obvious ones.
-  The address unit number (`MM3205`) counts.
+  Leave the `format-detection` meta and the `.no-autolink` rule in place as
+  backup for clients that honour them.
 
 - **The CTA needs the same protection.** Outlook mobile darkens `#F15A2E` to a
   muddy red in dark mode. The button cell carries `class="btn-bg"`, restored by
