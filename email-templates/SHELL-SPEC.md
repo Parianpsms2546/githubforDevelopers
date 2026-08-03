@@ -93,6 +93,20 @@ sides, and that cannot be corrected from inside the message. Reintroduce
   valid absolute URL: it drops the link and prints the raw attribute value as
   text over the button, so the CTA reads `[{{DOWNLOAD_URL}}]ดาวน์โหลด`. Ship a
   real `https://` URL and mark the substitution point in a comment beside it.
+- **A rounded table needs `border-collapse:separate`.** The reset forces
+  `border-collapse: collapse !important` on every table, and a collapsed table
+  cannot render `border-radius` — the corners come out square whatever the value
+  is. Any table carrying a radius must override it inline:
+
+  ```html
+  style="… border-radius:16px; border-collapse:separate !important; border-spacing:0;"
+  ```
+
+  This is why the card looked square at both 8px and 16px. Chromium was lenient
+  enough to hide it locally, so trust the client, not the local render. A `<td>`
+  with a background and a radius inside a collapsed table is the same risk; the
+  file-password box happens to render rounded today, but treat it as fragile.
+
 - **Label / value rows: pin the value column to `width="100%"`.** In a 100%-wide
   table with two auto columns the leftover width lands in the *first* column, so
   the label column inflates and shoves the value across the card. Pinning the
