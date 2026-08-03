@@ -89,6 +89,12 @@ sides, and that cannot be corrected from inside the message. Reintroduce
   valid absolute URL: it drops the link and prints the raw attribute value as
   text over the button, so the CTA reads `[{{DOWNLOAD_URL}}]ดาวน์โหลด`. Ship a
   real `https://` URL and mark the substitution point in a comment beside it.
+- **Label / value rows: pin the value column to `width="100%"`.** In a 100%-wide
+  table with two auto columns the leftover width lands in the *first* column, so
+  the label column inflates and shoves the value across the card. Pinning the
+  value column makes it absorb the slack instead, collapsing the label column to
+  its own content.
+
 - **Cards must survive a narrow screen.** Give label cells `white-space:nowrap`
   but no fixed width — a fixed width plus nowrap cannot both hold when text
   scales up, and the value column gets squeezed to nothing. Let the label column
