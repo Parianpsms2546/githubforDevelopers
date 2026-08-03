@@ -66,6 +66,7 @@
     /* ---------- Responsive (mobile) ---------- */
     @media only screen and (max-width: 600px) {
       .email-container { width: 100% !important; margin: 0 auto !important; }
+      .inner { width: 100% !important; max-width: 100% !important; }
       .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
       .stack-column,
       .stack-column-center {
@@ -134,41 +135,51 @@
           <!-- Email container (full width) -->
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; max-width:100%; margin:0 auto;">
 
-            <!-- ============ HEADER (logo) — flush to top, no padding above logo ============ -->
+            <!-- ============ HEADER band (full-bleed) — logo flush to top ============ -->
             <tr>
-              <td class="card-bg px-24" align="center" style="background-color:#FFFFFF; padding:0 40px 0 40px;">
-                <a href="https://www.empeo.com" target="_blank" style="text-decoration:none;">
-                  <img src="cid:empeo-logo"
-                       width="128" height="64" alt="empeo"
-                       style="display:block; width:128px; max-width:128px; height:auto; border:0;" />
-                </a>
+              <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" align="center" style="padding:0 40px 0 40px;">
+                      <a href="https://www.empeo.com" target="_blank" style="text-decoration:none;">
+                        <img src="cid:empeo-logo"
+                             width="128" height="64" alt="empeo"
+                             style="display:block; width:128px; max-width:128px; height:auto; border:0;" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
 
-            <!-- ============ BODY — 24px logo→greeting, 48px button→footer ============ -->
+            <!-- ============ BODY band (full-bleed) — 16px logo→greeting, 60px button→footer ============ -->
             <tr>
-              <td class="card-bg px-24" align="center" style="background-color:#FFFFFF; padding:24px 40px 48px 40px;">
+              <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:16px 0 60px 0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" style="padding:0 40px 0 40px;">
 
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
 
                   <!-- Greeting -->
                   <tr>
-                    <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; line-height:24px; color:#2B2D33; padding:0; mso-line-height-rule:exactly;"><span style="font-size:16px; font-weight:500;">สวัสดี </span><span style="font-size:16px; font-weight:700;">สมปอง หมายปอง</span></td>
+                    <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; line-height:24px; color:#2B2D33; padding:0; mso-line-height-rule:exactly;"><span style="font-size:18px; font-weight:500;">สวัสดี </span><span style="font-size:18px; font-weight:700;">สมปอง หมายปอง</span></td>
                   </tr>
 
-                  <!-- 12px: greeting → body copy -->
+                  <!-- 8px: greeting → body copy -->
                   <tr>
-                    <td height="12" style="font-size:0; line-height:12px; height:12px;">&nbsp;</td>
+                    <td height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
                   </tr>
 
                   <!-- Body copy -->
                   <tr>
-                    <td align="center" class="text-charcoal body-mobile" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:500; color:#2B2D33; padding:0; mso-line-height-rule:exactly;">
+                    <td align="center" class="text-charcoal body-mobile" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:500; color:#2B2D33; text-align:center; padding:0; mso-line-height-rule:exactly;">
                       เอกสารของคุณถูกปฏิเสธ
                     </td>
                   </tr>
 
-                  <!-- 36px: body copy → document detail card -->
+
+                  <!-- 36px: sub copy → document detail card -->
                   <tr>
                     <td height="36" style="font-size:0; line-height:36px; height:36px;">&nbsp;</td>
                   </tr>
@@ -183,7 +194,7 @@
                             <!-- Title + status badge -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                               <tr>
-                                <td align="left" valign="middle" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:#2B2D33; mso-line-height-rule:exactly;">ลาป่วย (<a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">L2302</a><a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">00033</a>)</td>
+                                <td align="left" valign="middle" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:#2B2D33; mso-line-height-rule:exactly;">ลาป่วย (L2302&#8203;00033)</td>
                                 <td align="right" valign="middle" width="80" style="width:80px;">
                                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="right">
                                     <tr>
@@ -205,7 +216,7 @@
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                               <tr>
                                 <td valign="top" width="88" class="text-iron" style="width:88px; font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:400; color:#5A5F68; mso-line-height-rule:exactly;">วันที่:</td>
-                                <td valign="top" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:#2B2D33; mso-line-height-rule:exactly;"><a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">25 กรกฎาคม 2565</a> (<a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">1 วัน</a>)</td>
+                                <td valign="top" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:#2B2D33; mso-line-height-rule:exactly;">25 กรกฎาคม 2565 (1 วัน)</td>
                               </tr>
                               <tr>
                                 <td valign="top" width="88" class="text-iron" style="width:88px; font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:400; color:#5A5F68; mso-line-height-rule:exactly;">รายละเอียด:</td>
@@ -219,8 +230,7 @@
                     </td>
                   </tr>
 
-                  <!-- Button (CTA) — per-document link — swap this URL at send time
-                        — 48px above via padding, matching the 48px below -->
+                  <!-- Button (CTA) — 48px above via padding, matching the 48px below -->
                   <tr>
                     <td align="center" class="btn-mobile" style="padding:48px 0 0 0;">
                       <!--[if mso]>
@@ -245,12 +255,18 @@
 
                 </table>
 
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
 
-            <!-- ============ FOOTER ============ -->
+            <!-- ============ FOOTER band (full-bleed) ============ -->
             <tr>
-              <td class="footer-bg px-24" style="background-color:#F5F6F7; padding:24px 40px 24px 40px;">
+              <td class="footer-bg" align="center" style="background-color:#F5F6F7; padding:24px 0 24px 0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" style="padding:0 40px 0 40px;">
 
                 <!-- Row: powered-by logo (left) + social icons (right) -->
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
@@ -307,8 +323,8 @@
                   <tr>
                     <td class="text-muted no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#8A8F98; padding:0;">
                       92 Central Park Offices,<br />
-                      Unit MM<a href="#" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">3205</a>, 32nd Floor, Rama 4 Road,<br />
-                      Silom, Bang Rak, Bangkok <a href="#" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">105</a><a href="#" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">00</a>
+                      Unit MM3205, 32nd Floor, Rama 4 Road,<br />
+                      Silom, Bang Rak, Bangkok 10500
                     </td>
                   </tr>
                   <tr>
@@ -319,6 +335,9 @@
                   </tr>
                 </table>
 
+                    </td>
+                  </tr>
+                </table>
               </td>
             </tr>
 
