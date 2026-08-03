@@ -52,12 +52,21 @@ sides, and that cannot be corrected from inside the message. Reintroduce
 
 ## Non-negotiables
 
-- **Numeric runs must be wrapped in a bare `<a>` with inline styles.** iOS and
+- **Numeric runs must be wrapped in `<a href="#">` with inline styles.** iOS and
   the Gmail app detect codes, dates and postcodes and draw them as blue
   underlined links. The wrapper prevents detection, and the inline
   `text-decoration:none !important` beats an injected inline style. `<style>`
   rules alone are not enough — the Gmail app strips the whole block. Keep
   `color` inline *without* `!important` so dark mode still applies.
+
+  The `href` is not optional. An `<a>` with no `href` is not a link, so client
+  sanitisers unwrap it and the inline styles go with it, leaving bare text for
+  the detector to find — which is exactly how the payslip code example came
+  through blue and underlined on mobile after looking correct on desktop.
+  `pointer-events:none; cursor:default` keeps the dead link from being tappable.
+
+  Any visible run of four or more digits needs this, not just the obvious ones.
+  The address unit number (`MM3205`) counts.
 - Spacer cells carry the HTML `height` attribute plus a matching `line-height`;
   Outlook honours the attribute and can grow a cell sized only in CSS.
 - **Never put a `{{TOKEN}}` in an `href`.** Outlook rejects an href that is not a
