@@ -58,12 +58,15 @@ sides, and that cannot be corrected from inside the message. Reintroduce
   were spent learning this: the wrappers turned the payroll period blue as well
   as the code it was protecting.
 
-- **Break the digit run instead.** Only long runs are detected. `12 พ.ย. 2003`
-  was never touched, so a four-digit run is below the threshold, while the
-  eight-digit `12112003` was. A single zero-width space splits it:
+- **Break the digit run instead**, with a word joiner. Only long runs are
+  detected: `12 พ.ย. 2003` was never touched, so four digits is below the
+  threshold, while the eight-digit `12112003` was. Use `&#8288;` (U+2060), not
+  `&#8203;` (U+200B) — a zero-width *space* is a legal line-break opportunity, so
+  it let the reference number split across two lines on mobile. A word joiner is
+  zero-width and non-breaking:
 
   ```html
-  เช่น 12 พ.ย. 2003 &rarr; 1211&#8203;2003
+  เช่น 12 พ.ย. 2003 &rarr; 1211&#8288;2003
   ```
 
   It stays plain text, inherits the surrounding colour in both schemes, and no
@@ -86,5 +89,12 @@ sides, and that cannot be corrected from inside the message. Reintroduce
   valid absolute URL: it drops the link and prints the raw attribute value as
   text over the button, so the CTA reads `[{{DOWNLOAD_URL}}]ดาวน์โหลด`. Ship a
   real `https://` URL and mark the substitution point in a comment beside it.
+- **Cards must survive a narrow screen.** Give label cells `white-space:nowrap`
+  but no fixed width — a fixed width plus nowrap cannot both hold when text
+  scales up, and the value column gets squeezed to nothing. Let the label column
+  size to its content, keep the gutter as `padding-right`, and both rows still
+  line up because they share the column. Keep short bracketed suffixes together
+  with `&nbsp;` (`(1&nbsp;วัน)`) and give the status pill `nowrap`.
+
 - Images are inlined by CID. Run `build-eml.py <name> "<subject>"` after every
   edit to the HTML — the `.eml` is generated, never hand-edited.
