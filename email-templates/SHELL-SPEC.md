@@ -80,6 +80,21 @@ sides, and that cannot be corrected from inside the message. Reintroduce
   Leave the `format-detection` meta and the `.no-autolink` rule in place as
   backup for clients that honour them.
 
+  Any visible run of four or more digits needs this, not just the obvious ones —
+  the address unit number (`MM3205`) counts.
+
+- **Times are a separate pattern from digit runs.** `hh:mm` is detected on its
+  own: Outlook mobile linkified `13:00 - 14:00` even though no run in it exceeds
+  two digits. Break each time around its colon:
+
+  ```html
+  13&#8288;:&#8288;00 - 14&#8288;:&#8288;00
+  ```
+
+  In the preheader — the inbox preview line — write the time in Thai dot form
+  (`13.00 - 14.00 น.`) instead, so the preview stays readable rather than
+  carrying joiners.
+
 - **The CTA needs the same protection.** Outlook mobile darkens `#F15A2E` to a
   muddy red in dark mode. The button cell carries `class="btn-bg"`, restored by
   the `[data-ogsb]` / `[data-ogsc]` rules Outlook keys off after it transforms a
