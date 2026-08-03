@@ -118,5 +118,11 @@ sides, and that cannot be corrected from inside the message. Reintroduce
   line up because they share the column. Keep short bracketed suffixes together
   with `&nbsp;` (`(1&nbsp;วัน)`) and give the status pill `nowrap`.
 
+- **A one-time code goes one digit per cell.** Six digits in a single text node
+  is exactly what a phone detector looks for; split across six cells there is no
+  contiguous run to match, so no word joiner is needed and nothing can be
+  linkified. The cells carry the radius, so their table needs
+  `border-collapse:separate` like any other rounded table.
+
 - Images are inlined by CID. Run `build-eml.py <name> "<subject>"` after every
   edit to the HTML — the `.eml` is generated, never hand-edited.
