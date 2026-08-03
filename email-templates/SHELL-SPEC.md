@@ -34,6 +34,10 @@ Font stack: `'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif`.
 Flame (buttons, accents): `#F15A2E` — sampled from the logo asset.
 Charcoal `#2B2D33` · Iron `#5A5F68` · Muted `#8A8F98` · Footer bg `#F5F6F7`.
 
+Corner radius: content cards **16px**, small inline note boxes **8px**. A radius
+reads weaker on a tall outlined box than on a short filled one, so the card needs
+the larger value to look as rounded as the note box does at 8px.
+
 ## Layout
 
 - Bands are full-bleed: the white body and the grey footer run edge to edge.
