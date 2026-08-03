@@ -60,5 +60,9 @@ sides, and that cannot be corrected from inside the message. Reintroduce
   `color` inline *without* `!important` so dark mode still applies.
 - Spacer cells carry the HTML `height` attribute plus a matching `line-height`;
   Outlook honours the attribute and can grow a cell sized only in CSS.
+- **Never put a `{{TOKEN}}` in an `href`.** Outlook rejects an href that is not a
+  valid absolute URL: it drops the link and prints the raw attribute value as
+  text over the button, so the CTA reads `[{{DOWNLOAD_URL}}]ดาวน์โหลด`. Ship a
+  real `https://` URL and mark the substitution point in a comment beside it.
 - Images are inlined by CID. Run `build-eml.py <name> "<subject>"` after every
   edit to the HTML — the `.eml` is generated, never hand-edited.
