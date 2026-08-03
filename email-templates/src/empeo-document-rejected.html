@@ -100,6 +100,15 @@
     [data-ogsc] .text-charcoal { color: #FFFFFF !important; }
     [data-ogsc] .text-iron { color: #C7CBD1 !important; }
     [data-ogsc] .text-muted { color: #9AA0A8 !important; }
+
+    /* Outlook mobile rewrites colours for its own dark mode and tags whatever it
+       touched with data-ogsb / data-ogsc. Hold the CTA to Flame with white text,
+       otherwise #F15A2E is darkened to a muddy red. */
+    [data-ogsb] .btn-bg, .btn-bg[data-ogsb] { background-color: #F15A2E !important; }
+    [data-ogsc] .btn-bg a, .btn-bg a[data-ogsc] {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
   </style>
 </head>
 
@@ -174,7 +183,7 @@
                             <!-- Title + status badge -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                               <tr>
-                                <td align="left" valign="middle" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:#2B2D33; mso-line-height-rule:exactly;">ลาป่วย (<a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:#2B2D33; text-decoration:none !important; pointer-events:none; cursor:default;">L2302</a><a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:#2B2D33; text-decoration:none !important; pointer-events:none; cursor:default;">00033</a>)</td>
+                                <td align="left" valign="middle" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:#2B2D33; mso-line-height-rule:exactly;">ลาป่วย (<a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">L2302</a><a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">00033</a>)</td>
                                 <td align="right" valign="middle" width="80" style="width:80px;">
                                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="right">
                                     <tr>
@@ -196,7 +205,7 @@
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                               <tr>
                                 <td valign="top" width="88" class="text-iron" style="width:88px; font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:400; color:#5A5F68; mso-line-height-rule:exactly;">วันที่:</td>
-                                <td valign="top" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:#2B2D33; mso-line-height-rule:exactly;"><a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:#2B2D33; text-decoration:none !important; pointer-events:none; cursor:default;">25 กรกฎาคม 2565</a> (<a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:#2B2D33; text-decoration:none !important; pointer-events:none; cursor:default;">1 วัน</a>)</td>
+                                <td valign="top" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:#2B2D33; mso-line-height-rule:exactly;"><a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">25 กรกฎาคม 2565</a> (<a href="#" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:500; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">1 วัน</a>)</td>
                               </tr>
                               <tr>
                                 <td valign="top" width="88" class="text-iron" style="width:88px; font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:400; color:#5A5F68; mso-line-height-rule:exactly;">รายละเอียด:</td>
@@ -224,9 +233,9 @@
                       <!--[if !mso]><!-->
                       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
                         <tr>
-                          <td align="center" bgcolor="#F15A2E" style="background-color:#F15A2E; border-radius:8px;">
+                          <td align="center" bgcolor="#F15A2E" class="btn-bg" style="background-color:#F15A2E; border-radius:8px;">
                             <a href="https://app.empeo.com/document" target="_blank"
-                               style="display:inline-block; padding:11px 24px; font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:22px; font-weight:600; color:#FFFFFF; text-decoration:none; border-radius:8px; mso-line-height-rule:exactly;">ดูเอกสาร</a>
+                               style="display:inline-block; padding:11px 24px; font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:22px; font-weight:600; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important; border-radius:8px; mso-line-height-rule:exactly;">ดูเอกสาร</a>
                           </td>
                         </tr>
                       </table>
@@ -298,8 +307,8 @@
                   <tr>
                     <td class="text-muted no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#8A8F98; padding:0;">
                       92 Central Park Offices,<br />
-                      Unit MM<a href="#" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#8A8F98; text-decoration:none !important; pointer-events:none; cursor:default;">3205</a>, 32nd Floor, Rama 4 Road,<br />
-                      Silom, Bang Rak, Bangkok <a href="#" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#8A8F98; text-decoration:none !important; pointer-events:none; cursor:default;">105</a><a href="#" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#8A8F98; text-decoration:none !important; pointer-events:none; cursor:default;">00</a>
+                      Unit MM<a href="#" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">3205</a>, 32nd Floor, Rama 4 Road,<br />
+                      Silom, Bang Rak, Bangkok <a href="#" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">105</a><a href="#" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:inherit !important; -webkit-text-fill-color:inherit !important; text-decoration:none !important; pointer-events:none; cursor:default;">00</a>
                     </td>
                   </tr>
                   <tr>
