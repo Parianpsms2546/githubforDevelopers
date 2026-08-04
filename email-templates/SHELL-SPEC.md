@@ -5,7 +5,9 @@ every new template and only change what sits between the greeting and the CTA.
 
 `src/empeo-account-inactive.html` is the reference implementation. Start from it,
 swap the content rows, and leave everything else alone.
-`src/empeo-account-deletion-grayfooter.html` is the same shell with a CTA.
+`src/empeo-account-deletion-grayfooter.html` is the same shell with a CTA, and
+`src/empeo-payslip-grayfooter.html` adds the content components — an icon-plus-label
+block and an info box — on top of that.
 
 ## Type
 
@@ -61,6 +63,19 @@ desktop, 26px is the one-line fix (inline value **and** `.body-mobile`).
 Greeting at 18px/700 clears comfortably at 24px (+3). The CTA label at 16px/600
 clears at 30px (+7), and 30px is what keeps the button exactly 44px tall with
 `padding:7px 24px`, matching its VML fallback — do not retune it to the body value.
+
+Per-template components, measured in Prompt and all clearing their current values:
+
+| Component | Metric | Headroom |
+|---|---|---|
+| Payroll period label, 16px/600 | lh 24px | +3.00 |
+| Payroll period date, 16px/700 — worst of the twelve months is `กุมภาพันธ์` | lh 24px | +3.00 |
+| File-password note, 14px/600 and 14px/400 | lh 22px | +3.50 |
+
+The period block is 24px rather than a guard value because its content is
+**enumerable** — a fixed label and a date — so it can be measured instead of
+defended. Measure the whole domain, not the string in front of you: December alone
+would understate what February needs. Free-form copy keeps the shell value.
 
 ## Vertical rhythm
 
@@ -144,16 +159,23 @@ image is named by its `cid`.
 Outlook desktop's Word engine cannot render it — the icon becomes an empty box.
 Vector sources live in `assets/` for regeneration only:
 
-| cid | asset | source |
-|---|---|---|
-| `empeo-logo` | `empeo-logo.png` | — |
-| `powered-by-empeo` | `powered-by-empeo.png` | — |
-| `icon-facebook` | `icon-facebook.png` | `facebook.svg` |
-| `icon-youtube` | `icon-youtube.png` | `bi_youtube.svg` |
+| cid | asset | source | display |
+|---|---|---|---|
+| `empeo-logo` | `empeo-logo.png` | — | 128×64 |
+| `powered-by-empeo` | `powered-by-empeo.png` | — | 60×18 |
+| `icon-facebook` | `icon-facebook.png` | `facebook.svg` | 14×14 |
+| `icon-youtube` | `icon-youtube.png` | `bi_youtube.svg` | 14×14 |
+| `empeo-e-payslip` | `empeo-e-payslip.png` | `empeo-e-payslip.svg` | 36×36 |
 
 Social icons are rasterised at **168px** (12× their 14px display size, matching the
 density of the assets they replaced) on a transparent canvas, keeping the source
-SVG's `#1C1C22`.
+SVG's `#1C1C22`. The payslip icon is rasterised at **144px** (4× its 36px box),
+keeping the source SVG's `#F05B2F`.
+
+**The payslip icon carries no background chip.** The 80px asset it replaced had a
+pale peach rounded square baked in; `empeo-e-payslip.svg` is the artwork alone, and
+its ink fills 24 of its 36px box. If a chip is wanted back it belongs in the asset,
+not the HTML — the same rule as the logo's margin.
 
 ## Dark mode
 
