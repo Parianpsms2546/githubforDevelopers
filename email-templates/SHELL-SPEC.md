@@ -58,19 +58,33 @@ The header is logo-agnostic in layout: centring, the 16px gap to the heading and
 the flush-to-top alignment all hold whatever shape the logo is. Only two things
 change per brand.
 
-1. Replace `assets/empeo-logo.png` (or point the `cid` at a new asset) and rebuild.
-2. **Update the `height` attribute on the logo `<img>` to match the new logo's
-   aspect ratio.** The shell ships `width="128" height="64"` for a 2:1 mark. A
-   wider wordmark at 4:1 needs `height="32"`.
+**Build the asset to fit the box; do not change the HTML.** Export every brand
+logo onto a **256x128 transparent canvas** (2x of the 128x64 slot) with the
+artwork centred. The header then needs no per-brand edit at all — the shell's own
+`width="128" height="64"` keeps working.
 
-The second step is not optional. `height:auto` in the stylesheet protects clients
-that apply author CSS, but Outlook's Word engine goes by the HTML attributes — so
-a 4:1 logo left at `height="64"` renders 128x64 and is visibly stretched. Verified
-by rendering with the stylesheet removed: `height="64"` gives a 2:1 box for a 4:1
-image, `height="32"` gives 4:1 correctly.
+This matters for spacing, not just sizing. The empeo asset carries about 17.5px of
+transparent margin above and below its artwork at display size, and that margin is
+part of the perceived gap to the heading: 16px of box spacing plus 17.5px of
+padding reads as ~36px. A logo trimmed tight to its ink sits only 16px away and
+looks stuck to the heading — which is exactly what happened with bangchak before
+it was re-padded.
 
-Supply the logo at 2x the display size (256px wide for a 128px slot) so it stays
-sharp, and keep the width attribute at the display size.
+So: trim the incoming artwork to its real ink, scale it to the slot width, and
+centre it on the 256x128 canvas. Measured result — empeo 36px optical gap,
+bangchak 37px, both in a 128x64 box.
+
+Two traps when preparing the artwork:
+
+- **Trim before measuring the ratio.** bangchak.svg declares a 3.33:1 box but its
+  artwork is 4.54:1 once 210px of transparent padding is removed on each side.
+- **An SVG may not be vector.** bangchak.svg is a wrapper around an embedded
+  4096x1231 PNG. Pull the bitmap out of the `xlink:href` data URI rather than
+  rasterising the SVG box.
+
+If you ever do keep a tightly-trimmed asset instead, the `height` attribute must
+match its real ratio — `height:auto` in the stylesheet saves clients that apply
+author CSS, but Outlook goes by the attributes and will stretch it.
 
 ## Non-negotiables
 
