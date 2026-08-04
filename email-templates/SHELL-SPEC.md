@@ -122,7 +122,7 @@ asset's bottom margin, not the box. Measured across four brands: optical gap
 | bangchak | 128 x 28 | 128 x 64 | 64 |
 | Tech-X | 105 x 29 | 128 x 65 | 65 |
 | Gofive | 48 x 48 | 128 x 84 | 84 |
-| ILEA Bangkok | 48 x 48 | 128 x 84 | 84 |
+| ILEA Bangkok | 56 x 56 (margin 4px) | 128 x 64 | 64 |
 | AFS | 84 x 56 (margin 4px) | 128 x 64 | 64 |
 
 **A square mark is the exception to step 2.** Held to a 29px ink height, Gofive's
@@ -130,23 +130,30 @@ asset's bottom margin, not the box. Measured across four brands: optical gap
 48px instead. Keeping the 18px margin means the box grows to 84 and the gap is
 still 37px — the spacing survives, only the `height` attribute changes.
 
-**ILEA Bangkok took the same treatment**, and it is the clearest demonstration
-that the box height is not what sets the spacing. It was built twice from the same
-artwork: 28px ink in a 64 box, then 48px ink in an 84 box. The margin stayed at
-18px both times, and the optical gap measured **37.8px in both** — the 20px of
-extra box went entirely into the mark, not into the rhythm.
+**ILEA Bangkok was built three ways from the same artwork**, which between them
+show exactly what each number controls:
 
-28px is what a 64 box leaves after the margin, and at that size the lettering
-around the seal's rim is gone. So a detailed square emblem wants 48px, exactly as
-Gofive does. Set the box from the ink the mark needs; the gap looks after itself as
-long as the margin is 18px.
+| Ink | Margin | Box | Optical gap |
+|---|---|---|---|
+| 28 x 28 | 18 | 64 | 37.8px |
+| 48 x 48 | 18 | 84 | 37.8px |
+| **56 x 56** | **4** | **64** | **23.8px** |
+
+The first two prove the box height sets nothing: 20px more box, all of it into the
+mark, and the gap did not move because the margin did not. The third is the shipped
+one — the same treatment AFS has — and it shows the margin is the only thing the gap
+ever depended on.
+
+At 28px the lettering around the seal's rim disappears, so that size is out for this
+mark whatever the box does. 56px in a 64 box is both the largest ink and the
+shortest header of the three, at the cost of the 37.8px rhythm.
 
 **AFS stays on the 64 box and that is fine.** It is a flag holding three letters,
 so at 28px of ink it still reads - which is the test, not the ratio. Held up against
 ILEA at the same 28px, where the seal's rim lettering disappeared, the difference is
 what the mark is made of. Render it and look before reaching for a bigger box.
 
-**AFS is also the one brand that breaks the 18px margin, deliberately.** It was asked
+**AFS and ILEA Bangkok both break the 18px margin, deliberately.** It was asked
 to fill the 64 box, and a 64 box can hold either 28px of ink with the margin or 56px
 without it - not both. Its margin is 4px and its ink is 84x56, filling 88% of the box
 height, so the optical gap to the greeting is **23.5px** where every other brand
