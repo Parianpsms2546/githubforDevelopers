@@ -159,6 +159,18 @@ Document-rejected's detail card:
 The 8px spacer carries `colspan="2"` so it cannot introduce a third column and nudge
 the label column's width.
 
+### The steps divider label
+
+The divider is three cells: a 50% rule, the label, a 50% rule. That adds up to more than
+100% once the label is counted, so the label cell ends up holding whatever slack the
+client leaves — and Gmail leaves a lot. The cell stays centred, because the rule cells are
+equal, but a left-aligned label inside an oversized cell reads off-centre.
+
+`align="center"` plus `text-align:center` on the label cell fixes it: measured with the
+cell forced to 326px against 179px of text, the ink lands 0px from the cell's centre
+centred and 62px off left-aligned. **Any cell whose width the client decides needs its
+text alignment declared** — never rely on the cell hugging its content.
+
 ### Pin the label column, do not let the client size it
 
 Both cards run label / value as a two-column table. `white-space:nowrap` on the label
