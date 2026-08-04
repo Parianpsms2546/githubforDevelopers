@@ -34,17 +34,19 @@ differently, so mixing the two makes the two sides of the button drift apart.
 Font stack: `'Kanit', Helvetica, Arial, sans-serif`.
 
 **`empeo-account-inactive` runs Prompt instead, by request** —
-`'Prompt', 'Noto Sans Thai', Helvetica, Arial, sans-serif`, with the webfont link
-switched to match.
-Its third slot is **Tahoma, not Helvetica** — Tahoma carries Thai glyphs where
-Helvetica has none, so it is a real fallback rather than a dead one.
+`'Prompt', 'Noto Sans Thai', Tahoma, Helvetica, Arial, sans-serif`, with the webfont
+link switched to match.
+**Tahoma sits ahead of Helvetica** in that stack, and the order is the point:
+Tahoma carries Thai glyphs, Helvetica carries none. Put Helvetica first and the Thai
+falls straight through it to whatever the OS chooses; put Tahoma first and the email
+keeps the decision. Helvetica stays on as the Latin fallback behind it.
 
 Its own values, set by request and different from the shell:
 
 | | shell | this template |
 |---|---|---|
 | Greeting colour | `#2B2D33` | **`#000000`** |
-| Body colour | `#2B2D33` | **`#383842`** |
+| Body colour | `#2B2D33` | **`#1C1C22`** |
 | Body line-height | 30px | **24px** |
 
 **24px is knowingly tight.** Measured with real Prompt at 16px/500 against the three
