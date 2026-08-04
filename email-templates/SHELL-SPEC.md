@@ -61,8 +61,8 @@ kept because it is the approved look; if a tone mark ever looks cut in Outlook
 desktop, 26px is the one-line fix (inline value **and** `.body-mobile`).
 
 Greeting at 18px/700 clears comfortably at 24px (+3). The CTA label at 16px/600
-clears at 30px (+7), and 30px is what keeps the button exactly 44px tall with
-`padding:7px 24px`, matching its VML fallback — do not retune it to the body value.
+clears at 30px (+7) — keep the button on 30px rather than retuning it to the body
+value, and see the CTA box below for how the height follows from it.
 
 Per-template components, measured in Prompt and all clearing their current values:
 
@@ -96,6 +96,26 @@ On a template with no CTA the 80px runs from the last line of copy to the footer
 The logo's optical gap is larger than 16px on purpose: the asset carries ~17.5px of
 transparent margin below its artwork, so 16px of box spacing reads as ~36px. Put
 logo spacing in the asset, never in the HTML.
+
+## The CTA box
+
+```
+padding: 24px          /* all four sides, matching the horizontal value */
+line-height: 30px      /* the Thai clearance value, unchanged */
+border-radius: 8px
+background: #F15A2E
+```
+
+Height is **78px** = 24 + 30 + 24, and the VML fallback's `height` must be set to the
+same number or Outlook renders a different button from every other client. The two
+are edited together, always.
+
+Padding is the CSS value, not the optical gap. The line box is 30px while the label's
+ink is only 13px tall (`ดาวน์โหลด`, `ติดต่อเรา` — both 13px, no descender), so 24px of
+padding reads as **31px above the ink and 34px below** against 24px at the sides. If
+the four gaps ever need to look equal rather than measure equal, `padding:17px 24px`
+puts the ink 24px from the top edge and takes the box to 64px — but that is not the
+current value.
 
 ## Layout and width
 
