@@ -34,6 +34,9 @@ Outlook desktop ignores the webfont entirely and lands on Tahoma.
 | CTA label | 16px | 600 | 30px | `#FFFFFF` |
 | Footer address / help line / Help Center link | 10px | 400 | 16px | `#525260` |
 | Info-box label / body (payslip) | 14px | 600 / 400 | 22px | `#1C1C22` / `#525260` |
+| OTP digit (password reset) | 20px | 700 | 44px | `#F15A2E` on `#FDEDE8` |
+| Reference line (password reset) | 12px | 400 | 18px | `#525260` |
+| Inline link in body copy | 16px | 500 | 24px | `#F15A2E` |
 
 Flame (buttons, accents): `#F15A2E`. Footer band: `#F5F6F7`. Card: `#FFFFFF`.
 Corner radius: **8px**, buttons and cards alike.
@@ -72,6 +75,15 @@ Per-template components, measured in Prompt and all clearing their current value
 | Payroll period label, 16px/500 | lh 24px | +4.00 |
 | Payroll period date, 16px/500 — worst of the twelve months is `กุมภาพันธ์` | lh 24px | +4.00 |
 | File-password note, 14px/600 and 14px/400 | lh 22px | +3.50 |
+| Reference line, 12px/400 | lh 18px | +3.00 |
+| OTP digit, 20px/700 — Latin numerals, no Thai marks | lh 44px | +15.00 |
+
+Password reset is the template most exposed to the 24px body value: all four of its
+Thai lines — the body copy and the three closing lines — carry a stacked
+vowel-plus-tone (`นี้`, `ที่นี่`, `ตั้ง`, `ต้อง`) and every one measures 17.35px of ink,
+so each sits at **−0.35px** in a 24px line box. They were 30px and 28px before the
+shell was applied. Same trade as the other templates: fine everywhere except Outlook
+desktop, where 26px is the fix.
 
 The period block is 24px rather than a guard value because its content is
 **enumerable** — a fixed label and a date — so it can be measured instead of
@@ -88,6 +100,14 @@ would understate what February needs. Free-form copy keeps the shell value.
 | Last content row → CTA button | **48px** | `padding-top:48px` on the CTA cell |
 | CTA button → footer | **80px** | body band `padding-bottom:80px` |
 | Footer top / bottom | **24px** | footer band `padding:24px 0` |
+
+Password reset's own block, between the body copy and the closing lines:
+
+| Gap | Value | Where it lives |
+|---|---|---|
+| Body copy → OTP row | **48px** | spacer row |
+| OTP row → reference line | **12px** | spacer row |
+| Reference line → closing lines | **48px** | spacer row |
 
 Both sides of the button are padding, never a spacer row on one side and padding on
 the other — clients size the two differently and the gaps drift apart.
@@ -116,6 +136,19 @@ optical gap: the line box is 30px while the label's ink is only 13px tall (`ด�
 and `ติดต่อเรา` both measure 13px, no descender), so the 30px box already contributes
 ~17px of its own breathing room. Squaring the padding at 24px was tried and reverted —
 it took the button to 78px, which read as oversized.
+
+## The OTP row
+
+Six `<td>`s of `width:40px; height:44px` on `#FDEDE8` with `border-radius:8px`, and
+8px spacer cells between them.
+
+Two things are load-bearing. The wrapping table needs
+`border-collapse:separate !important; border-spacing:0` — the shell's reset collapses
+every table, and **a collapsed cell drops its `border-radius`**, so the chips render as
+plain squares. And the 8px gaps are spacer cells with an explicit `width`, not padding
+on the digit cells, so each digit stays centred in its own chip.
+
+The chip fill is the same `#FDEDE8` as the payslip icon's chip.
 
 ## Layout and width
 

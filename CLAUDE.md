@@ -13,6 +13,7 @@ template — only the rows between the greeting and the CTA change per email.
 - Rebuild with `cd email-templates && python3 build-eml.py <name> "<Subject>"`.
 - `src/empeo-account-inactive.html` is the reference shell (no CTA);
   `src/empeo-account-deletion-grayfooter.html` is the same shell with one;
-  `src/empeo-payslip-grayfooter.html` adds the content components.
+  `src/empeo-payslip-grayfooter.html` adds the content components;
+  `src/empeo-password-reset.html` adds the OTP row.
 - Images are inline `cid:` parts resolved against `assets/<cid>.png`. Email clients
   do not render SVG — rasterise it and keep the vector in `assets/` as the source.
