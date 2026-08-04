@@ -149,5 +149,13 @@ sides, and that cannot be corrected from inside the message. Reintroduce
   number badge came out 7px wide instead of a 24px circle. Put the width on the
   table as well.
 
+- **A gradient needs the HTML `background` attribute, not CSS.** A `cid:` url
+  inside `background-image` is dropped by most clients, so the card arrived flat
+  orange. Put `background="cid:x"` on the `<td>`, keep `bgcolor` as the fallback,
+  and cut the tile to *exactly* the element's width and only a few px tall — the
+  attribute tiles it down with `repeat-y` and never repeats sideways, so no
+  `background-size` is involved. Outlook still shows the `bgcolor`, which is why
+  the fallback has to look acceptable on its own.
+
 - Images are inlined by CID. Run `build-eml.py <name> "<subject>"` after every
   edit to the HTML — the `.eml` is generated, never hand-edited.

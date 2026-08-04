@@ -67,6 +67,7 @@
     @media only screen and (max-width: 600px) {
       .email-container { width: 100% !important; margin: 0 auto !important; }
       .inner { width: 100% !important; max-width: 100% !important; }
+      .cred-bg { width: 100% !important; max-width: 100% !important; }
       .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
       .stack-column,
       .stack-column-center {
@@ -104,7 +105,8 @@
        touched with data-ogsb / data-ogsc. Hold the CTA to Flame with white text,
        otherwise #F15A2E is darkened to a muddy red. */
     [data-ogsb] .btn-bg, .btn-bg[data-ogsb],
-    [data-ogsb] .cred-bg, .cred-bg[data-ogsb] { background-color: #F15A2E !important; }
+    [data-ogsb] .cred-bg, .cred-bg[data-ogsb],
+    [data-ogsb] .cred-cell, .cred-cell[data-ogsb] { background-color: #F15A2E !important; }
     [data-ogsc] .cred-text, .cred-text[data-ogsc], [data-ogsc] .cred-text a {
       color: #FFFFFF !important;
       -webkit-text-fill-color: #FFFFFF !important;
@@ -200,9 +202,9 @@
                        Flame fallback for clients that ignore background images. -->
                   <tr>
                     <td align="center" style="padding:0;">
-                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="cred-bg" bgcolor="#F15A2E" style="background-color:#F15A2E; background-image:url('cid:bg-credentials'); background-repeat:no-repeat; background-size:cover; background-position:center center; border-radius:8px; border-collapse:separate !important; border-spacing:0;">
+                      <table role="presentation" width="386" align="center" cellspacing="0" cellpadding="0" border="0" class="cred-bg" style="width:386px; max-width:386px; margin:0 auto; border-radius:8px; border-collapse:separate !important; border-spacing:0;">
                         <tr>
-                          <td style="padding:20px 24px;">
+                          <td background="cid:bg-credentials" bgcolor="#F15A2E" class="cred-cell" style="background-color:#F15A2E; background-image:url('cid:bg-credentials'); background-repeat:repeat-y; border-radius:8px; padding:20px 24px;">
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
                             <tr>
                               <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-user-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
@@ -247,7 +249,7 @@
                               <tr><td height="1" bgcolor="#E6E8EB" style="height:1px; font-size:0; line-height:1px;">&nbsp;</td></tr>
                             </table>
                           </td>
-                          <td valign="middle" class="text-muted" style="padding:0 12px; white-space:nowrap; font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:12px; line-height:18px; font-weight:400; color:#8A8F98; mso-line-height-rule:exactly;">เริ่มใช้งานได้ใน 3 ขั้นตอน</td>
+                          <td valign="middle" class="text-muted" style="padding:0 12px; white-space:nowrap; font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#8A8F98; mso-line-height-rule:exactly;">เริ่มใช้งานได้ใน 3 ขั้นตอน</td>
                           <td valign="middle" width="50%" style="width:50%;">
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                               <tr><td height="1" bgcolor="#E6E8EB" style="height:1px; font-size:0; line-height:1px;">&nbsp;</td></tr>
@@ -293,9 +295,9 @@
                                 <td align="left">
                                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse:separate !important; border-spacing:0;">
                                     <tr>
-                                      <td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; padding:10px 18px;"><a href="https://apps.apple.com/app/empeo" target="_blank" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:20px; font-weight:600; color:#2B2D33 !important; -webkit-text-fill-color:#2B2D33 !important; text-decoration:none !important;">iOS</a></td>
+                                      <td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; padding:10px 18px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr><td valign="middle" width="16" style="width:16px;"><a href="https://apps.apple.com/app/empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-apple" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></a></td><td valign="middle" style="padding-left:8px;"><a href="https://apps.apple.com/app/empeo" target="_blank" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:20px; font-weight:600; color:#2B2D33 !important; -webkit-text-fill-color:#2B2D33 !important; text-decoration:none !important;">iOS</a></td></tr></table></td>
                                       <td width="12" style="width:12px; font-size:0; line-height:0;">&nbsp;</td>
-                                      <td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; padding:10px 18px;"><a href="https://play.google.com/store/apps/details?id=com.empeo" target="_blank" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:20px; font-weight:600; color:#2B2D33 !important; -webkit-text-fill-color:#2B2D33 !important; text-decoration:none !important;">Android</a></td>
+                                      <td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; padding:10px 18px;"><table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr><td valign="middle" width="16" style="width:16px;"><a href="https://play.google.com/store/apps/details?id=com.empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-android" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></a></td><td valign="middle" style="padding-left:8px;"><a href="https://play.google.com/store/apps/details?id=com.empeo" target="_blank" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif; font-size:14px; line-height:20px; font-weight:600; color:#2B2D33 !important; -webkit-text-fill-color:#2B2D33 !important; text-decoration:none !important;">Android</a></td></tr></table></td>
                                     </tr>
                                   </table>
                                 </td>
