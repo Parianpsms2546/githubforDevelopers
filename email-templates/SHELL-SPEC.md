@@ -123,7 +123,7 @@ asset's bottom margin, not the box. Measured across four brands: optical gap
 | Tech-X | 105 x 29 | 128 x 65 | 65 |
 | Gofive | 48 x 48 | 128 x 84 | 84 |
 | ILEA Bangkok | 48 x 48 | 128 x 84 | 84 |
-| AFS | 42 x 28 | 128 x 64 | 64 |
+| AFS | 84 x 56 (margin 4px) | 128 x 64 | 64 |
 
 **A square mark is the exception to step 2.** Held to a 29px ink height, Gofive's
 1:1 logo would be a 29x29 speck beside a 117px-wide wordmark, so it is scaled to
@@ -145,6 +145,19 @@ long as the margin is 18px.
 so at 28px of ink it still reads - which is the test, not the ratio. Held up against
 ILEA at the same 28px, where the seal's rim lettering disappeared, the difference is
 what the mark is made of. Render it and look before reaching for a bigger box.
+
+**AFS is also the one brand that breaks the 18px margin, deliberately.** It was asked
+to fill the 64 box, and a 64 box can hold either 28px of ink with the margin or 56px
+without it - not both. Its margin is 4px and its ink is 84x56, filling 88% of the box
+height, so the optical gap to the greeting is **23.5px** where every other brand
+measures 37-38px.
+
+That is the whole trade, and it is worth stating plainly because it is the one thing
+the recipe is built to prevent: **the gap is the asset's bottom margin.** Take the
+margin out and the mark sits closer to the heading; there is no third option inside a
+fixed box. Keeping 56px of ink *and* the 37.5px gap needs a 92 box, which measures
+identically to every other brand. Pick the box from the ink and the margin you want,
+in that order - never the other way round.
 
 Two traps when preparing the artwork:
 
