@@ -45,6 +45,23 @@ matters, take the difference out of the padding — the CTA is `padding:7px 24px
 with a 30px line box, which keeps it exactly 44px tall and matching its VML
 fallback.
 
+**30px is a guard against unknown text, so measured text may go tighter.** Two
+stacked lines at 30px leave a 14px gap between them, which read as too loose in
+the payslip's payroll-period block. The gap is exactly
+`line-height − inkDescent(upper line) − inkAscent(lower line)`, independent of the
+font's own ascent and descent, so it can be computed rather than eyeballed.
+
+Kanit at 16px has a font ascent of 14px. Most Thai stays inside that; what
+overflows is a *stacked* vowel-plus-tone, which is why `ติดตั้ง` reaches 18px of
+ink and needs 25px. Measured against real Kanit, the payslip's label needs 17px,
+and the tallest of the twelve month names — `กุมภาพันธ์`, whose `ธ์` carries a
+thanthakhat — needs 19px. That block therefore runs at **24px**: 5px of clearance
+and an 8px gap.
+
+Only do this where the content is enumerable, and measure the whole domain, not
+the one string in front of you — December alone would have suggested 17px and
+February would then have clipped. Free-form body copy stays at 30px.
+
 Helvetica and Arial carry no Thai glyphs, so on a client without Kanit the OS
 picks a Thai fallback of its own. Add a named Thai fallback to the stack if that
 substitution ever looks wrong.

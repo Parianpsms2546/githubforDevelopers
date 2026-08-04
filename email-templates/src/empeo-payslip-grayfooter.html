@@ -190,8 +190,19 @@
                           </td>
                           <td width="12" style="width:12px; font-size:0; line-height:0;">&nbsp;</td>
                           <td valign="middle" align="left" style="font-family:'Kanit',Helvetica,Arial,sans-serif;">
-                            <div class="text-charcoal" style="font-family:'Kanit',Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#2B2D33; mso-line-height-rule:exactly;">รอบเงินเดือน:</div>
-                            <div class="no-autolink" style="font-family:'Kanit',Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:700; color:#F15A2E; mso-line-height-rule:exactly;">1 - 31 ธันวาคม 2566</div>
+                            <!-- 24px, not the shell's 30px. The 30px exists so an
+                                 arbitrary Thai string cannot have its stacked tone
+                                 marks clipped, and it left a 14px gap between these
+                                 two lines. Here the content is enumerable - a fixed
+                                 label and a date - so it can be measured instead of
+                                 guarded. In real Kanit the tallest of the twelve
+                                 month names is กุมภาพันธ์ at 15px of ink above the
+                                 baseline, needing 19px; the label needs 17px. 24px
+                                 clears both by 5px and brings the gap to 8px. Do not
+                                 tighten further without re-measuring, and keep 30px
+                                 for any free-form body copy. -->
+                            <div class="text-charcoal" style="font-family:'Kanit',Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:600; color:#2B2D33; mso-line-height-rule:exactly;">รอบเงินเดือน:</div>
+                            <div class="no-autolink" style="font-family:'Kanit',Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:700; color:#F15A2E; mso-line-height-rule:exactly;">1 - 31 ธันวาคม 2566</div>
                           </td>
                         </tr>
                       </table>
