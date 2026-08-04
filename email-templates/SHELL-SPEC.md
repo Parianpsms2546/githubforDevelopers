@@ -27,10 +27,27 @@ differently, so mixing the two makes the two sides of the button drift apart.
 |---|---|---|---|
 | Greeting "สวัสดี " | 18px | 500 | 24px |
 | Greeting name | 18px | 700 | 24px |
-| Body copy | 16px | 500 | 24px |
+| Body copy | 16px | 500 | **30px** |
+| Card labels / values | 14px | 400 / 500 | 22px |
 | Footer address | 10px | 400 | 16px |
 
-Font stack: `'Prompt','Noto Sans Thai',Tahoma,Arial,sans-serif`.
+Font stack: `'Kanit', Helvetica, Arial, sans-serif`.
+
+**Kanit needs more headroom than Prompt did.** Its Thai upper tone marks sit
+higher, and every clip measured was at the *top* of the line box — where
+`mso-line-height-rule:exactly` makes Outlook cut them off rather than overflow.
+Measured against the real strings, `font-size + 8` is not enough at 16px: the
+worst case, "ติดตั้ง empeo บนมือถือ" at weight 600, still clipped by 0.5px at 26px
+and only clears by 1.5px at **30px**. 14px is fine at 22px, 18px at 24px.
+
+So for 16px Thai text use **line-height 30px**, and where a fixed element height
+matters, take the difference out of the padding — the CTA is `padding:7px 24px`
+with a 30px line box, which keeps it exactly 44px tall and matching its VML
+fallback.
+
+Helvetica and Arial carry no Thai glyphs, so on a client without Kanit the OS
+picks a Thai fallback of its own. Add a named Thai fallback to the stack if that
+substitution ever looks wrong.
 Flame (buttons, accents): `#F15A2E` — sampled from the logo asset.
 Charcoal `#2B2D33` · Iron `#5A5F68` · Muted `#8A8F98` · Footer bg `#F5F6F7`.
 
