@@ -45,7 +45,7 @@ Outlook desktop ignores the webfont entirely and lands on Tahoma.
 | Detail-card label / value | 14px | 400 / 600 | 22px | `#525260` / `#1C1C22` |
 | Status badge (document) | 12px | 500 | 16px | `#FFFFFF` on `#8A8F98` |
 | Appointment day number | 36px | 700 | 44px | `#1C1C22` |
-| Appointment month / time | 16px | 500 / 700 | 24px | `#1C1C22` / `#F15A2E` |
+| Appointment month / time | 16px | 500 / 600 | 24px | `#1C1C22` / `#F15A2E` |
 | Appointment mode heading | 16px | 600 | 24px | `#1C1C22` |
 | Appointment label / value | 14px | 400 / 500 | 22px | `#525260` / `#1C1C22` |
 
@@ -92,7 +92,7 @@ Per-template components, measured in Prompt and all clearing their current value
 | Detail-card label 14px/400, value 14px/600 | lh 22px | +3.50 |
 | Status badge, 12px/500 | lh 16px | +3.00 |
 | Appointment day `25`, 36px/700 | lh 44px | +10.00 |
-| Appointment month 16px/500, time 16px/700 | lh 24px | +5.00 / +6.00 |
+| Appointment month 16px/500, time 16px/600 | lh 24px | +5.00 / +6.00 |
 | Appointment mode, 16px/600 | lh 24px | +4.00 |
 | Appointment place 14px/500, note 14px/500 | lh 22px | +3.50 / +1.19 |
 
