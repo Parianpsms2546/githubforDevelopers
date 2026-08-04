@@ -128,7 +128,17 @@
                nothing but these two to centre the shrink-wrapped table. The
                attribute is the one every renderer understands, and it is a no-op
                whenever the table really is full width. -->
-          <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; max-width:100%; margin:0 auto;">
+          <!-- width="100%" for Outlook, max-width:600px for everyone else.
+               Outlook ignores max-width and goes by the attribute, so it keeps
+               filling its pane; every other client honours the cap. That split is
+               deliberate: left fully fluid, each client picks its own width, and
+               Gmail picks a narrow one - it rendered this email about 395px wide in
+               a 1206px pane while Outlook filled 680px. Nothing in the email asked
+               for 395; with no pixel width declared anywhere, the client decides.
+               600px is the email convention and lands within 80px of what Outlook
+               already shows, so the two finally agree. Raise the number here if a
+               wider measure is wanted. -->
+          <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; max-width:600px; margin:0 auto;">
 
             <!-- ============ HEADER band (full-bleed) — logo flush to top ============ -->
             <tr>

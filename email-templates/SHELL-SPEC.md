@@ -142,8 +142,24 @@ Corner radius: **8px** everywhere — content cards and inline note boxes alike.
 
 At full width the email's outer left and right margins come from the client's
 own container, not from the email. Outlook hands it roughly 824px with uneven
-sides, and that cannot be corrected from inside the message. Reintroduce
-`max-width` on the `.inner` tables if that ever becomes unacceptable.
+sides, and that cannot be corrected from inside the message.
+
+**Fully fluid means every client picks its own width, and Gmail picks a narrow
+one.** Measured side by side on the same message: Gmail web rendered it about
+**395px wide in a 1206px pane**, while Outlook filled its 680px pane. Nothing in
+the email asked for 395 — and that is the point. With no pixel width declared
+anywhere, there is nothing for a client to honour, so each one guesses.
+
+`empeo-account-inactive` therefore carries a cap, and the mechanism is worth
+copying: **`width="100%"` as the attribute, `max-width:600px` in the style.**
+Outlook ignores `max-width` and goes by the attribute, so it keeps filling its
+pane; every other client honours the cap. Verified in both profiles — capped at
+600 and centred at 680px and 1206px where `max-width` applies, still filling 680
+and 1206 where it does not, and fluid with zero overflow at 320-600px either way.
+
+600px is within 80px of what Outlook already shows, so the two clients finally
+agree. The other eleven templates are still fully fluid; add the same cap if the
+same complaint comes up.
 
 ## Swapping the logo for another brand
 
