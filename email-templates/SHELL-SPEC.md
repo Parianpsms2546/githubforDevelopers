@@ -207,13 +207,17 @@ as before:
 | Fill | `#FDEDE8` | most common opaque colour in the old PNG |
 | Corner radius | **7.2px** — 20% of the 36px width | opacity on row 0 starts 16px into an 80px asset |
 | Box | **36×42** | see below |
-| Glyph | native scale, artwork nudged 3px down to re-centre | — |
+| Glyph | **32px** — the 36px canvas scaled to 32 and centred | — |
 
 **The chip is 36×42, not square.** The artwork is 23.73×29.81 inside its 36px canvas,
 so a square chip left 6.19px of peach at the sides but only 3.09px above and below.
-Growing the box to 42px and re-centring evens that out — measured off the raster:
-left 6.25, right 6.0, top 6.25, bottom 6.25. Exact equality wants 42.1875px; 42 keeps
-the box on whole pixels for a quarter-pixel difference.
+Growing the box to 42px and re-centring evens that out. Exact equality wants 42.1875px;
+42 keeps the box on whole pixels for a quarter-pixel difference.
+
+**The glyph then scaled from 36 to 32 inside that unchanged chip**, which lifts the
+peach to 7.5px at the sides and 7.75px above and below — measured off the raster, not
+computed. `translate(2,5) scale(32/36)` in the chip SVG is the whole of it; the box, the
+`<img>` and every gap around the block stay where they were.
 
 `<img>` carries `width="36" height="42"` to match, and the block is `valign="middle"`,
 so the taller chip still centres against the two lines beside it.
