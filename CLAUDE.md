@@ -16,6 +16,7 @@ template — only the rows between the greeting and the CTA change per email.
   `src/empeo-payslip-grayfooter.html` adds the content components;
   `src/empeo-password-reset.html` adds the OTP row;
   `src/empeo-document-rejected.html` adds the detail card;
-  `src/empeo-interview-appointment.html` adds the appointment card.
+  `src/empeo-interview-appointment.html` adds the appointment card;
+  `src/empeo-welcome-onboarding.html` adds the credentials card and numbered steps.
 - Images are inline `cid:` parts resolved against `assets/<cid>.png`. Email clients
   do not render SVG — rasterise it and keep the vector in `assets/` as the source.

@@ -8,9 +8,11 @@ swap the content rows, and leave everything else alone.
 `src/empeo-account-deletion-grayfooter.html` is the same shell with a CTA. On top of
 that, `src/empeo-payslip-grayfooter.html` adds an icon-plus-label block and an info
 box, `src/empeo-password-reset.html` adds the OTP row,
-`src/empeo-document-rejected.html` adds the detail card, and
-`src/empeo-interview-appointment.html` adds the appointment card. The interview card's
-own internal spacing is deliberately its own — see the rhythm section.
+`src/empeo-document-rejected.html` adds the detail card,
+`src/empeo-interview-appointment.html` adds the appointment card, and
+`src/empeo-welcome-onboarding.html` adds the credentials card with its numbered steps.
+The interview card's own internal spacing is deliberately its own — see the rhythm
+section.
 
 ## Type
 
@@ -48,6 +50,12 @@ Outlook desktop ignores the webfont entirely and lands on Tahoma.
 | Appointment month / time | 16px | 500 / 600 | 24px | `#1C1C22` / `#F15A2E` |
 | Appointment mode heading | 16px | 600 | 24px | `#1C1C22` |
 | Appointment label / value | 14px | 400 / 500 | 22px | `#525260` / `#1C1C22` |
+| Credentials label / value (welcome) | 14px | 500 / 700 | 22px | `#FFFFFF` |
+| Steps divider label (welcome) | 16px | 400 | 30px | `#525260` |
+| Step heading (welcome) | 16px | 600 | 30px | `#1C1C22` |
+| Step description (welcome) | 16px | 400 | 24px | `#525260` |
+| Step number badge (welcome) | 11px | 700 | 20px | `#FFFFFF` on `#F15A2E` |
+| Outlined button label (welcome) | 14px | 600 | 22px | `#1C1C22` |
 
 Flame (buttons, accents): `#F15A2E`. Footer band: `#F5F6F7`. Card: `#FFFFFF`.
 Corner radius: **8px**, buttons and cards alike.
@@ -95,6 +103,15 @@ Per-template components, measured in Prompt and all clearing their current value
 | Appointment month 16px/500, time 16px/600 | lh 24px | +5.00 / +6.00 |
 | Appointment mode, 16px/600 | lh 24px | +4.00 |
 | Appointment place 14px/500, note 14px/500 | lh 22px | +3.50 / +1.19 |
+| Steps divider label, 16px/400 | lh 30px | +4.38 |
+| Step headings, 16px/600 — worst is `ติดตั้ง empeo บนมือถือ` | lh 30px | +3.19 |
+| Step descriptions, 16px/400 — worst is the `ที่ https://…` line | lh 24px | +0.68 |
+| Step number badge, 11px/700 | lh 20px | +6.50 |
+| Credentials label, 14px/500 | lh 22px | +1.19 |
+
+The step descriptions went 13px/20px → **16px/24px**. At 16px the old 20px line box
+would have cut them, and even 22px sits at −0.32px on the `ที่ https://…` line, so 24px
+is the value that works — the same number the shell already uses for 16px copy.
 
 Document-rejected is the one template whose body copy is safe at 24px: `เอกสารของคุณ
 ถูกปฏิเสธ` has no stacked vowel-plus-tone, so it clears by +5px at the top and +2px
@@ -176,6 +193,26 @@ card:
 | Detail row → detail row | **6px** | `padding-top` on the second row's two cells |
 | Card → closing line | **24px** | spacer row |
 
+Welcome-onboarding's blocks:
+
+| Gap | Value | Where it lives |
+|---|---|---|
+| Body copy → credentials card | **36px** | spacer row |
+| Credentials card padding | **20px 24px** | on the card's single cell |
+| Between the two credential rows | **16px** | spacer row, `colspan="7"` |
+| Credentials card → steps divider | **48px** | spacer row |
+| Divider → first step | **24px** | spacer row |
+| Step heading → description | **4px** | spacer row |
+| Description → store buttons | **14px** | spacer row |
+| Between steps | **20px + 1px rule + 20px** | three rows |
+| Last step → footer | **80px** | body band `padding-bottom:80px` |
+
+The step number badge is a 20x20 cell with `border-radius:10px` and an 11px digit on a
+20px line box, which centres it without a second table. It sits in its own 20px column
+with `padding-left:12px` on the text column beside it. The two app-store buttons are
+**116px wide each**, fixed, with the padding vertical only — horizontal padding would
+fight the width, so the inner table centres itself instead.
+
 Password reset's own block, between the body copy and the closing lines:
 
 | Gap | Value | Where it lives |
@@ -235,6 +272,34 @@ The status badge is `#FFFFFF` on `#8A8F98` with a 10px radius and `padding:3px 1
 plus `white-space:nowrap` on the badge cell and its parent so a long title can never
 break the word. `#8A8F98` is the one place the old muted grey survives — it is a chip
 fill behind white text, not body copy, so it did not move to `#525260` with the rest.
+
+## The credentials card's gradient
+
+```html
+<td background="cid:bg-credentials" bgcolor="#F15A2E" class="cred-cell"
+    style="background-color:#F15A2E;
+           background-image:linear-gradient(90deg, #E94E2D 0%, #F7943C 100%);
+           background-repeat:repeat-y; border-radius:8px; padding:20px 24px;">
+```
+
+Three declarations paint one gradient, because no single one reaches every client:
+
+| Declaration | Serves |
+|---|---|
+| `background` attribute → `cid:bg-credentials` | **Outlook desktop**, which paints a cell background image but ignores CSS gradients |
+| `background-image: linear-gradient(...)` | **Gmail and the rest**, which drop a `cid:` URL used inside CSS |
+| `bgcolor` / `background-color` | last resort — flat Flame |
+
+The CSS gradient was **not** in the original: it carried `url('cid:bg-credentials')` in CSS
+as well as in the attribute, and a client that ignores the attribute but honours CSS still
+got nothing usable out of a `cid:` URL there, so the card fell back to flat `#F15A2E`.
+
+Stops are sampled off the asset the attribute still points at — `#E94E2D` at the left
+edge, `#F7943C` at the right — so the two paths agree. **If the stops change, change the
+PNG too**, or Outlook and Gmail drift apart.
+
+The card is a fixed **386px** wide (`width:100%; max-width:386px`), which is why the PNG is
+386px and needs no stretching.
 
 ## The OTP row
 
