@@ -55,8 +55,7 @@ sides, and that cannot be corrected from inside the message. Reintroduce
 ## Swapping the logo for another brand
 
 The header is logo-agnostic in layout: centring, the 16px gap to the heading and
-the flush-to-top alignment all hold whatever shape the logo is. Only two things
-change per brand.
+the flush-to-top alignment all hold whatever shape the logo is.
 
 **Build the asset to fit the box; do not change the HTML.** Export every brand
 logo onto a **256x128 transparent canvas** (2x of the 128x64 slot) with the
