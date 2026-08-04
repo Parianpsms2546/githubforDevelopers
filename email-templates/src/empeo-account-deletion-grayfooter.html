@@ -112,7 +112,7 @@
   <div role="article" aria-roledescription="email" aria-label="empeo" lang="th" style="background-color:#FFFFFF;">
 
     <!-- Full-width background wrapper -->
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="darkmode-bg" style="background-color:#FFFFFF;">
+    <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="darkmode-bg" style="background-color:#FFFFFF; margin:0 auto;">
       <tr>
         <td align="center" style="padding:0;">
 
@@ -120,8 +120,13 @@
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td>
           <![endif]-->
 
-          <!-- Email container (full width) -->
-          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; max-width:100%; margin:0 auto;">
+          <!-- Email container (full width).
+               align="center" as well as margin:0 auto: iOS Mail left-aligned the
+               whole message, and a client that treats width:100% as auto has
+               nothing but these two to centre the shrink-wrapped table. The
+               attribute is the one every renderer understands, and it is a no-op
+               whenever the table really is full width. -->
+          <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; max-width:100%; margin:0 auto;">
 
             <!-- ============ HEADER band (full-bleed) — logo flush to top ============ -->
             <tr>
@@ -132,7 +137,7 @@
                       <a href="https://www.empeo.com" target="_blank" style="text-decoration:none;">
                         <img src="cid:empeo-logo"
                              width="128" height="64" alt="empeo"
-                             style="display:block; width:128px; max-width:128px; height:auto; border:0;" />
+                             style="display:block; width:128px; max-width:128px; height:auto; border:0; margin:0 auto;" />
                       </a>
                     </td>
                   </tr>
@@ -151,7 +156,7 @@
 
                   <!-- Greeting -->
                   <tr>
-                    <td align="center" class="text-charcoal" style="font-family:'Kanit',Helvetica,Arial,sans-serif; line-height:24px; color:#2B2D33; padding:0; mso-line-height-rule:exactly;"><span style="font-size:18px; font-weight:500;">สวัสดี </span><span style="font-size:18px; font-weight:700;">สมปอง หมายปอง</span></td>
+                    <td align="center" class="text-charcoal" style="font-family:'Kanit',Helvetica,Arial,sans-serif; line-height:24px; color:#2B2D33; text-align:center; padding:0; mso-line-height-rule:exactly;"><span style="font-size:18px; font-weight:500;">สวัสดี </span><span style="font-size:18px; font-weight:700;">สมปอง หมายปอง</span></td>
                   </tr>
 
                   <!-- 8px: greeting → body copy -->

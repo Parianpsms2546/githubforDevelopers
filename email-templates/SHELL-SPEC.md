@@ -266,5 +266,20 @@ author CSS, but Outlook goes by the attributes and will stretch it.
   stylesheet surviving. The tile just crops on the right when the card is narrower,
   which is what already happened under the media query.
 
+- **A `display:block` image needs `margin:0 auto` to be centred — `align="center"`
+  is not enough.** `text-align` cannot centre a block-level box at all. The header
+  logo only looked centred because `align="center"` on a `<td>` maps to
+  `text-align:-webkit-center`, a legacy value that *does* centre block children;
+  a renderer without it left the logo hard against the left padding, which is how
+  iOS Mail came out. Overriding that cell with a plain `text-align:center` in the
+  inline style reproduces the bug exactly — measured at 88px instead of 160px in a
+  320px pane — so never write `text-align:center` on a cell whose content is
+  block-level. Centre the block on its own margins and leave the attribute alone.
+
+  Both outer tables also carry `align="center"` *and* `margin:0 auto`. They are
+  no-ops at full width, but a client that treats `width:100%` as auto shrink-wraps
+  the table, and then those two are the only things keeping the message centred
+  instead of hugging the left edge.
+
 - Images are inlined by CID. Run `build-eml.py <name> "<subject>"` after every
   edit to the HTML — the `.eml` is generated, never hand-edited.
