@@ -57,10 +57,10 @@ sides, and that cannot be corrected from inside the message. Reintroduce
 The header is logo-agnostic in layout: centring, the 16px gap to the heading and
 the flush-to-top alignment all hold whatever shape the logo is.
 
-**Build the asset to fit the box; do not change the HTML.** Export every brand
-logo onto a **256x128 transparent canvas** (2x of the 128x64 slot) with the
-artwork centred. The header then needs no per-brand edit at all — the shell's own
-`width="128" height="64"` keeps working.
+**Put the spacing in the asset, not in the HTML.** Every brand logo is exported
+onto a transparent canvas with a fixed margin baked in around the artwork, and the
+header markup only ever changes the `cid`, the `alt`, the link and the `height`
+attribute — never the spacing.
 
 This matters for spacing, not just sizing. The empeo asset carries about 17.5px of
 transparent margin above and below its artwork at display size, and that margin is
