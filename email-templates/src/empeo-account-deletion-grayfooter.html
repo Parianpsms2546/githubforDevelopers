@@ -214,12 +214,23 @@
                      The middle cell takes up the slack. -->
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                   <tr>
-                    <td width="60" valign="middle" align="left" style="width:60px; font-size:0; line-height:0;">
+                    <td width="60" valign="middle" align="left" style="width:60px; min-width:60px; font-size:0; line-height:0;">
+                      <!-- Outlook mobile rendered this about 9px wide while the
+                           icons beside it stayed 14px. The asset is 960px wide,
+                           and the icons differ in exactly one way: their height
+                           is in px, not auto. An auto height is what allows a
+                           squeezed column to scale the whole image down, so pin
+                           the height and floor the width. -->
                       <img src="cid:powered-by-empeo"
                            width="60" height="18" alt="Powered by empeo"
-                           style="display:block; width:60px; height:auto; border:0;" />
+                           style="display:block; width:60px; min-width:60px; height:18px; border:0;" />
                     </td>
-                    <td width="100%" style="width:100%; font-size:0; line-height:0;">&nbsp;</td>
+                    <!-- No width on the middle cell. It was width="100%", and
+                         Outlook mobile read that as "this cell takes the whole
+                         table" and collapsed the 60px and 36px columns beside
+                         it. With both ends pinned this is the only auto column,
+                         so it absorbs the slack on its own. -->
+                    <td style="font-size:0; line-height:0;">&nbsp;</td>
                     <td width="36" valign="middle" align="right" style="width:36px; font-size:0; line-height:0;">
                       <!-- SOCIAL ICONS. The 8px gap is padding, not a spacer cell:
                            the colspan rows below hand this column its width, and a
