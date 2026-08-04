@@ -114,7 +114,7 @@
   <div role="article" aria-roledescription="email" aria-label="empeo" lang="th" style="background-color:#FFFFFF;">
 
     <!-- Full-width background wrapper -->
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="darkmode-bg" style="background-color:#FFFFFF;">
+    <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="darkmode-bg" style="background-color:#FFFFFF; margin:0 auto;">
       <tr>
         <td align="center" style="padding:0;">
 
@@ -122,8 +122,13 @@
           <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td>
           <![endif]-->
 
-          <!-- Email container (full width) -->
-          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; max-width:100%; margin:0 auto;">
+          <!-- Email container (full width).
+               align="center" as well as margin:0 auto: iOS Mail left-aligned the
+               whole message, and a client that treats width:100% as auto has
+               nothing but these two to centre the shrink-wrapped table. The
+               attribute is the one every renderer understands, and it is a no-op
+               whenever the table really is full width. -->
+          <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; max-width:100%; margin:0 auto;">
 
             <!-- ============ HEADER band (full-bleed) — logo flush to top ============ -->
             <tr>
@@ -134,7 +139,7 @@
                       <a href="https://www.bangchak.co.th" target="_blank" style="text-decoration:none;">
                         <img src="cid:bangchak-logo"
                              width="128" height="64" alt="bangchak"
-                             style="display:block; width:128px; max-width:128px; height:auto; border:0;" />
+                             style="display:block; width:128px; max-width:128px; height:auto; border:0; margin:0 auto;" />
                       </a>
                     </td>
                   </tr>
@@ -153,7 +158,7 @@
 
                   <!-- Greeting -->
                   <tr>
-                    <td align="center" class="text-charcoal" style="font-family:'Kanit',Helvetica,Arial,sans-serif; line-height:24px; color:#2B2D33; padding:0; mso-line-height-rule:exactly;"><span style="font-size:18px; font-weight:500;">สวัสดี </span><span style="font-size:18px; font-weight:700;">สมปอง หมายปอง</span></td>
+                    <td align="center" class="text-charcoal" style="font-family:'Kanit',Helvetica,Arial,sans-serif; line-height:24px; color:#2B2D33; text-align:center; padding:0; mso-line-height-rule:exactly;"><span style="font-size:18px; font-weight:500;">สวัสดี </span><span style="font-size:18px; font-weight:700;">สมปอง หมายปอง</span></td>
                   </tr>
 
                   <!-- 8px: greeting → body copy -->
@@ -286,12 +291,23 @@
                      The middle cell takes up the slack. -->
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                   <tr>
-                    <td width="60" valign="middle" align="left" style="width:60px; font-size:0; line-height:0;">
+                    <td width="60" valign="middle" align="left" style="width:60px; min-width:60px; font-size:0; line-height:0;">
+                      <!-- Outlook mobile rendered this about 9px wide while the
+                           icons beside it stayed 14px. The asset is 960px wide,
+                           and the icons differ in exactly one way: their height
+                           is in px, not auto. An auto height is what allows a
+                           squeezed column to scale the whole image down, so pin
+                           the height and floor the width. -->
                       <img src="cid:powered-by-empeo"
                            width="60" height="18" alt="Powered by empeo"
-                           style="display:block; width:60px; height:auto; border:0;" />
+                           style="display:block; width:60px; min-width:60px; height:18px; border:0;" />
                     </td>
-                    <td width="100%" style="width:100%; font-size:0; line-height:0;">&nbsp;</td>
+                    <!-- No width on the middle cell. It was width="100%", and
+                         Outlook mobile read that as "this cell takes the whole
+                         table" and collapsed the 60px and 36px columns beside
+                         it. With both ends pinned this is the only auto column,
+                         so it absorbs the slack on its own. -->
+                    <td style="font-size:0; line-height:0;">&nbsp;</td>
                     <td width="36" valign="middle" align="right" style="width:36px; font-size:0; line-height:0;">
                       <!-- SOCIAL ICONS. The 8px gap is padding, not a spacer cell:
                            the colspan rows below hand this column its width, and a

@@ -266,6 +266,19 @@ author CSS, but Outlook goes by the attributes and will stretch it.
   stylesheet surviving. The tile just crops on the right when the card is narrower,
   which is what already happened under the media query.
 
+- **Pin an image's box; never leave it negotiable.** Outlook mobile rendered the
+  footer's powered-by logo about 9px wide while the two social icons beside it
+  stayed a correct 14px. The asset is 960px wide, and the icons differ from it in
+  exactly one way: their height is in px. `height:auto` is what lets a squeezed
+  column scale the whole image down to fit. So the footer logo carries
+  `height:18px` and `min-width:60px`, and its cell carries `min-width:60px` too.
+
+  The other half of that fix: **do not put a percentage width on a cell sitting
+  between two fixed columns.** The footer's middle spacer was `width="100%"` and
+  Outlook mobile read it as "this cell takes the whole table", collapsing the 60px
+  and 36px columns either side. With both ends pinned the middle cell is the only
+  auto column left, so it absorbs the slack with no width at all.
+
 - **A `display:block` image needs `margin:0 auto` to be centred — `align="center"`
   is not enough.** `text-align` cannot centre a block-level box at all. The header
   logo only looked centred because `align="center"` on a `<td>` maps to
