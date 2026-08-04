@@ -285,37 +285,39 @@ plus `white-space:nowrap` on the badge cell and its parent so a long title can n
 break the word. `#8A8F98` is the one place the old muted grey survives — it is a chip
 fill behind white text, not body copy, so it did not move to `#525260` with the rest.
 
-## The credentials card's gradient
-
-Outlook desktop renders **neither** a `cid:` background image nor a CSS gradient — both
-were tried and both came out flat Flame. So the card is built twice, the same way the CTA
-button is:
+## The credentials card
 
 ```html
-<!--[if mso]>
-<v:roundrect arcsize="8%" stroke="f" fillcolor="#F15A2E" style="width:386px; height:100px;">
-  <v:fill type="gradient" color="#E94E2D" color2="#F7943C" angle="90" />
-  <v:textbox inset="24px,20px,24px,20px">
-    …rows…
-  </v:textbox>
-</v:roundrect>
-<![endif]-->
-<!--[if !mso]><!-->
-<table …><tr><td bgcolor="#F15A2E" class="cred-cell"
-    style="background-color:#F15A2E;
-           background-image:linear-gradient(90deg, #E94E2D 0%, #F7943C 100%);
-           border-radius:8px; padding:20px 24px;">…rows…</td></tr></table>
-<!--<![endif]-->
+<td bgcolor="#F15A2E" class="cred-cell"
+    style="background-color:#F15A2E; border-radius:8px; padding:20px 24px;">
 ```
 
-| Path | Serves | Fails when |
-|---|---|---|
-| VML `v:fill type="gradient"`, `angle="90"` = left → right | **classic Outlook desktop** (Word engine) | the client is not Word-based, so it never sees `[if mso]` at all |
-| `background="https://…/bg-credentials.png"` | a webview client that strips CSS `background-image` but honours the legacy attribute | images are not downloaded, or the URL 404s |
-| CSS `linear-gradient` | Gmail, Apple Mail, iOS, webmail | the sanitizer strips `background-image` |
-| `fillcolor` / `bgcolor` `#F15A2E` | everything else | — |
+**Flat Flame, by decision — the gradient was dropped, not lost.** It was tried three ways
+and this is what the outcome was worth:
 
-**VML requires its namespaces on `<html>`**, not just inline on the element:
+| Path | Result |
+|---|---|
+| `background` attribute → `cid:` PNG | nothing, in any Outlook |
+| CSS `linear-gradient` | works in Gmail / Apple Mail, stripped by the webview-based Outlook |
+| VML `v:roundrect` + `v:fill type="gradient"` | only reaches a Word-engine Outlook, and the client this is checked in is not one |
+
+The new Outlook for Windows and Outlook on the web render with a browser engine: they skip
+`[if mso]` entirely, so VML never applies, and their sanitiser drops `background-image`, so
+the CSS gradient never applies either. The card landed on `#F15A2E` in that client no matter
+which trick was in the file. A gradient behind live text needs a Word engine, a CSS
+gradient, or a downloadable image — with two of the three unavailable there, flat is the
+honest answer.
+
+What flat bought back: **one table for every client** instead of an `[if mso]` VML branch
+and an `[if !mso]` branch carrying duplicate copies of the same two rows, no fixed VML
+height to keep in sync with the content, and no hosted asset to keep pinned. `bg-credentials.png`
+is deleted.
+
+Do not re-add a gradient here without checking which Outlook the review happens in.
+
+The card stays a fixed **386px** wide (`width:100%; max-width:386px`).
+
+The VML namespaces stay on `<html>` regardless — the CTA buttons still need them:
 
 ```html
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -323,35 +325,10 @@ button is:
       xmlns:o="urn:schemas-microsoft-com:office:office" …>
 ```
 
-Every template carries them now. Four of them had shipped VML buttons declaring `xmlns:v`
-inline on the `v:roundrect` — the fragile form — with nothing on `<html>` and the document's
-own `xmlns` pointing at `https://www.w3.org/1999/xhtml`, which is not the XHTML namespace
-(it is `http://`). Both are fixed.
-
-**A webview-based Outlook cannot be reached by VML at all.** The new Outlook for Windows
-and Outlook on the web render with a browser engine, so `[if mso]` is skipped and the
-`[if !mso]` branch is what they get — which is why the hosted-image path exists. If that
-client also blocks the download or the URL is unreachable, the card is flat Flame, and
-there is no fourth trick: a gradient behind live text needs either a Word engine, a CSS
-gradient, or a downloadable image.
-
-The hosted URL is pinned to a commit SHA. **Re-pin it whenever the asset changes**, and
-note it only resolves while the repository is public.
-
-**The two branches carry the same rows — edit both.** That duplication is the price of a
-gradient that survives Outlook; there is no single declaration that does.
-
-Numbers that are load-bearing:
-
-- `height:100px` on the VML shape is not a guess: 20 padding + 22 row + 16 spacer + 22 row
-  + 20 padding. VML has no auto height, so a row added inside means this number changes.
-- `arcsize="8%"` is the 8px radius as a fraction of the shape's shorter side (100px).
-- `inset="24px,20px,24px,20px"` is left/top/right/bottom, matching `padding:20px 24px`.
-- The card is a fixed **386px** wide (`width:100%; max-width:386px`), and the VML shape
-  repeats that width because VML cannot inherit it.
-
-`bg-credentials.png` is gone. It only ever served the `background` attribute that Outlook
-ignored, so keeping it would have implied a third path that never rendered.
+Four templates shipped VML buttons declaring `xmlns:v` inline on the `v:roundrect` — the
+fragile form — with nothing on `<html>`, and the document's own `xmlns` pointed at
+`https://www.w3.org/1999/xhtml`, which is not the XHTML namespace. Both are fixed in all
+seven.
 
 ## The OTP row
 
