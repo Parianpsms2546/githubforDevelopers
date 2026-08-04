@@ -36,14 +36,31 @@ Font stack: `'Kanit', Helvetica, Arial, sans-serif`.
 **`empeo-account-inactive` runs Prompt instead, by request** —
 `'Prompt', 'Noto Sans Thai', Helvetica, Arial, sans-serif`, with the webfont link
 switched to match.
-Its line-heights are unchanged: they were tuned for Kanit, and Prompt was measured
-against every real string in that email at the shipped sizes rather than assumed to
-fit. Headroom above the ink, Kanit vs Prompt: 10px/16px 3.5 vs 3.5, 16px/30px 3.5 vs
-3.5, 18px/24px 2 vs 2. Nothing clips in either, so do not "correct" the line-heights
-when changing the family — measure first.
+Its third slot is **Tahoma, not Helvetica** — Tahoma carries Thai glyphs where
+Helvetica has none, so it is a real fallback rather than a dead one.
 
-Prompt sets a little wider than Kanit, so the body paragraph breaks at different
-points. That is the only visible difference.
+Its own values, set by request and different from the shell:
+
+| | shell | this template |
+|---|---|---|
+| Greeting colour | `#2B2D33` | **`#000000`** |
+| Body colour | `#2B2D33` | **`#383842`** |
+| Body line-height | 30px | **24px** |
+
+**24px is knowingly tight.** Measured with real Prompt at 16px/500 against the three
+body lines, headroom above the ink is −0.4px on the line starting `ขณะนี้` — its `นี้`
+stacks a vowel and a tone mark — and +3px and +4px on the other two. Browsers and
+webmail let that 0.4px overflow the line box invisibly; **Outlook desktop, where
+`mso-line-height-rule:exactly` applies, can shave the top of that tone mark.** 26px is
+the tightest value that clears every line (+0.6px worst case), 30px clears by 2.6px.
+
+Correcting an earlier note here: Kanit and Prompt are *not* equal on headroom. That
+claim came from a truncated test string. Against the full lines, Prompt needs more
+room than Kanit at every size — at 16px the `ขณะนี้` line measures Kanit +3.8 vs
+Prompt +2.6 at 30px, and +0.8 vs −0.4 at 24px.
+
+Remember `.body-mobile` in the media query carries its own `line-height`; change it
+with the inline value or the mobile view snaps back.
 
 **Kanit needs more headroom than Prompt did.** Its Thai upper tone marks sit
 higher, and every clip measured was at the *top* of the line box — where
