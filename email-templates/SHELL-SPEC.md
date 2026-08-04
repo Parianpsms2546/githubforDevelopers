@@ -87,6 +87,45 @@ own container, not from the email. Outlook hands it roughly 824px with uneven
 sides, and that cannot be corrected from inside the message. Reintroduce
 `max-width` on the `.inner` tables if that ever becomes unacceptable.
 
+### The layout-width floor
+
+Every template carries a 1px row holding an empty
+`<table width="386" class="width-anchor" style="width:386px">` just above the
+greeting. **Gmail's iOS app lays the message out narrower than the screen when
+nothing in it has a width**, and the mail arrives looking pinched.
+Welcome-onboarding was the one template that escaped it, purely because its
+credentials card is 386px wide — which is why that one looked right and the other
+ten did not. The floor gives them all the same 386px, 466px once the 40px side
+padding is counted, and Gmail scales that up to fill the screen. Wider viewports
+are unaffected: the email is still fluid, this only raises the minimum.
+
+**Gmail's iOS app honours the stylesheet but ignores media queries.** Both halves
+are measured: its `.px-24` padding stayed 40px in a pane well under 600px, and an
+attempt to hide the floor behind a plain `.width-anchor { width:100% }` rule made
+it vanish entirely. So the 386 is unconditional — attribute *and* inline width —
+and is walked back only by `.width-anchor { width:auto !important }` **inside** the
+mobile media query, where an `!important` author rule beats the inline width. A
+real narrow viewport that honours media queries therefore drops the floor and never
+scrolls sideways; Gmail keeps it.
+
+Three things not to do here, each one measured and discarded:
+
+- **Do not use an inline `width:386px` with `max-width:100%`.** A percentage
+  max-width is ignored while a browser computes intrinsic width, so the 386 inflates
+  min-content and the email really does scroll sideways — 114px of overflow on a
+  320px viewport, with the stylesheet present.
+- **Do not put the collapse rule outside the media query.** Gmail reads it, the
+  floor collapses, and the change does nothing at all.
+- **Do not treat "block centred in the viewport" as a passing condition in a
+  stylesheet-stripped profile.** The floor makes the message wider than a narrow
+  viewport on purpose, and the clients that behave that way scale it to fit rather
+  than scrolling. With the stylesheet present there is zero overflow at 320-824px.
+
+`x-apple-disable-message-reformatting` stays. Removing it was tried as a way to let
+clients fit the mail to the screen, but it is an Apple hint that Gmail ignores
+outright, so it did nothing for the actual target and only risked Apple Mail
+resizing type that already looked right.
+
 ## Swapping the logo for another brand
 
 The header is logo-agnostic in layout: centring, the 16px gap to the heading and
