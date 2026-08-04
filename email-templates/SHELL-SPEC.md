@@ -122,11 +122,19 @@ asset's bottom margin, not the box. Measured across four brands: optical gap
 | bangchak | 128 x 28 | 128 x 64 | 64 |
 | Tech-X | 105 x 29 | 128 x 65 | 65 |
 | Gofive | 48 x 48 | 128 x 84 | 84 |
+| ILEA Bangkok | 28 x 28 | 128 x 64 | 64 |
 
 **A square mark is the exception to step 2.** Held to a 29px ink height, Gofive's
 1:1 logo would be a 29x29 speck beside a 117px-wide wordmark, so it is scaled to
 48px instead. Keeping the 18px margin means the box grows to 84 and the gap is
 still 37px — the spacing survives, only the `height` attribute changes.
+
+**ILEA Bangkok is the same shape but is pinned to a 64 box by request**, which
+leaves 28px of ink once the margin is taken out. The rhythm is fine — the gap
+measures 37.8px, in line with every other brand — but the mark is a detailed
+circular seal, and at 28px the rim lettering is gone. A square emblem carrying
+fine detail wants the Gofive treatment; if the fixed 64 is ever relaxed, rebuild
+it at 48px ink for an 84 box.
 
 Two traps when preparing the artwork:
 
