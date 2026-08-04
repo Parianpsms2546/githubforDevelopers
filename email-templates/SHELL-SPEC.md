@@ -69,9 +69,29 @@ padding reads as ~36px. A logo trimmed tight to its ink sits only 16px away and
 looks stuck to the heading — which is exactly what happened with bangchak before
 it was re-padded.
 
-So: trim the incoming artwork to its real ink, scale it to the slot width, and
-centre it on the 256x128 canvas. Measured result — empeo 36px optical gap,
-bangchak 37px, both in a 128x64 box.
+The recipe, then, is about the **margin**, not the box:
+
+1. Trim the incoming artwork to its real ink.
+2. Scale it so the ink is about **29px tall** at display size — empeo's ink is
+   117x29, so matching the height matches the optical weight.
+3. Centre it on a transparent canvas **128px wide** with **18px of margin above and
+   below**, exported at 2x. Set the `height` attribute to that canvas height.
+
+The box height may differ per brand and that is fine — the gap comes from the
+asset's bottom margin, not the box. Measured across four brands: optical gap
+36-37px and top margin 17-18px for every one of them.
+
+| Brand | Ink at display size | Canvas | `height` |
+|---|---|---|---|
+| empeo | 117 x 29 | 128 x 64 | 64 |
+| bangchak | 128 x 28 | 128 x 64 | 64 |
+| Tech-X | 105 x 29 | 128 x 65 | 65 |
+| Gofive | 48 x 48 | 128 x 84 | 84 |
+
+**A square mark is the exception to step 2.** Held to a 29px ink height, Gofive's
+1:1 logo would be a 29x29 speck beside a 117px-wide wordmark, so it is scaled to
+48px instead. Keeping the 18px margin means the box grows to 84 and the gap is
+still 37px — the spacing survives, only the `height` attribute changes.
 
 Two traps when preparing the artwork:
 
