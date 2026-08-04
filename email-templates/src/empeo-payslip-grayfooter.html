@@ -181,16 +181,18 @@
                   </tr>
 
                   <!-- Payroll period: icon + label / date.
-                       Icon is 36x36 and carries no background chip of its own -
-                       empeo-e-payslip.svg is the artwork, rasterised to PNG because
-                       no email client renders SVG. -->
+                       Icon box is 36x42: the peach chip grew from square so the
+                       artwork clears it by the same ~6px top and bottom as it does
+                       left and right. The chip is part of the asset, never padding
+                       here, and SVG is rasterised to PNG because no email client
+                       renders it. -->
                   <tr>
                     <td align="left" style="padding:0;">
                       <table role="presentation" cellspacing="0" cellpadding="0" border="0">
                         <tr>
                           <td valign="middle" width="36" style="width:36px; min-width:36px;">
-                            <img src="cid:empeo-e-payslip" width="36" height="36" alt=""
-                                 style="display:block; width:36px; min-width:36px; height:36px; border:0;" />
+                            <img src="cid:empeo-e-payslip" width="36" height="42" alt=""
+                                 style="display:block; width:36px; min-width:36px; height:42px; border:0;" />
                           </td>
                           <td width="12" style="width:12px; font-size:0; line-height:0;">&nbsp;</td>
                           <td valign="middle" align="left" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif;">
