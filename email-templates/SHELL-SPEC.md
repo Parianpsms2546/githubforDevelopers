@@ -137,6 +137,29 @@ Document-rejected's detail card:
 The 8px spacer carries `colspan="2"` so it cannot introduce a third column and nudge
 the label column's width.
 
+### Pin the label column, do not let the client size it
+
+Both cards run label / value as a two-column table. `white-space:nowrap` on the label
+plus `width:100%` on the value is enough for Outlook and for every browser — the label
+shrinks to its text — but **Gmail sizes those columns its own way and hands the label
+roughly half the card**, which pushes the values far right and wraps them early. It is
+not reproducible in Chromium: the same markup gives a 96px label column there.
+
+So the label column carries an explicit width, as an attribute and inline, and no
+distribution algorithm gets a choice:
+
+| Card | Longest label | Prompt | Tahoma | Column |
+|---|---|---|---|---|
+| Interview | `ข้อมูลเพิ่มเติม:` | 84.1px | 86.0px | **100px** |
+| Document | `รายละเอียด:` | 69.9px | 74.1px | **88px** |
+
+Measured at 14px/400. Tahoma is what Outlook desktop falls back to, so it is the width
+that has to fit, and the 12px `padding-right` lives inside the same box — 86 + 12 = 98,
+so 100 leaves 2px of slack. Verified constant at 1100 / 675 / 375px panes.
+
+**Re-measure if a label's text changes.** These are fixed strings today; a longer one
+would wrap inside a column that no longer fits it.
+
 The two cards also differ in the weight of their values: the document card runs them at
 **600**, the appointment card at **500** with only its mode heading at 600. Both are
 deliberate — do not align one to the other.
