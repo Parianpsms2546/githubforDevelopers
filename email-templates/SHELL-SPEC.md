@@ -48,6 +48,7 @@ fallback.
 Helvetica and Arial carry no Thai glyphs, so on a client without Kanit the OS
 picks a Thai fallback of its own. Add a named Thai fallback to the stack if that
 substitution ever looks wrong.
+
 Flame (buttons, accents): `#F15A2E` — sampled from the logo asset.
 Charcoal `#2B2D33` · Iron `#5A5F68` · Muted `#8A8F98` · Footer bg `#F5F6F7`.
 
