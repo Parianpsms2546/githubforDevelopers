@@ -40,12 +40,14 @@ Outlook desktop ignores the webfont entirely and lands on Tahoma.
 | OTP digit (password reset) | 20px | 700 | 44px | `#F15A2E` on `#FDEDE8` |
 | Reference line (password reset) | 12px | 400 | 18px | `#525260` |
 | Inline link in body copy | 16px | 500 | 24px | `#F15A2E` |
+| Emphasis inside body copy | 16px | 600 | 24px | inherits |
 | Detail-card title (document) | 16px | 600 | 30px | `#1C1C22` |
 | Detail-card label / value | 14px | 400 / 600 | 22px | `#525260` / `#1C1C22` |
 | Status badge (document) | 12px | 500 | 16px | `#FFFFFF` on `#8A8F98` |
 | Appointment day number | 36px | 700 | 44px | `#1C1C22` |
 | Appointment month / time | 16px | 500 / 700 | 24px | `#1C1C22` / `#F15A2E` |
 | Appointment mode heading | 16px | 600 | 24px | `#1C1C22` |
+| Appointment label / value | 14px | 400 / 500 | 22px | `#525260` / `#1C1C22` |
 
 Flame (buttons, accents): `#F15A2E`. Footer band: `#F5F6F7`. Card: `#FFFFFF`.
 Corner radius: **8px**, buttons and cards alike.
@@ -92,7 +94,7 @@ Per-template components, measured in Prompt and all clearing their current value
 | Appointment day `25`, 36px/700 | lh 44px | +10.00 |
 | Appointment month 16px/500, time 16px/700 | lh 24px | +5.00 / +6.00 |
 | Appointment mode, 16px/600 | lh 24px | +4.00 |
-| Appointment place 14px/600, note 14px/600 | lh 22px | +3.50 / +1.19 |
+| Appointment place 14px/500, note 14px/500 | lh 22px | +3.50 / +1.19 |
 
 Document-rejected is the one template whose body copy is safe at 24px: `เอกสารของคุณ
 ถูกปฏิเสธ` has no stacked vowel-plus-tone, so it clears by +5px at the top and +2px
@@ -134,6 +136,10 @@ Document-rejected's detail card:
 
 The 8px spacer carries `colspan="2"` so it cannot introduce a third column and nudge
 the label column's width.
+
+The two cards also differ in the weight of their values: the document card runs them at
+**600**, the appointment card at **500** with only its mode heading at 600. Both are
+deliberate — do not align one to the other.
 
 Interview-appointment's card, kept as it arrived rather than aligned to the document
 card:
