@@ -68,16 +68,6 @@
       .email-container { width: 100% !important; margin: 0 auto !important; }
       .inner { width: 100% !important; max-width: 100% !important; }
       .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
-      .stack-column,
-      .stack-column-center {
-        display: block !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        direction: ltr !important;
-      }
-      .stack-column-center { text-align: center !important; }
-      .footer-social { text-align: center !important; padding-top: 16px !important; }
-      .footer-logo { text-align: center !important; }
       .px-24 { padding-left: 24px !important; padding-right: 24px !important; }
       .h1-mobile { font-size: 22px !important; line-height: 30px !important; }
       .body-mobile { font-size: 16px !important; line-height: 30px !important; }
@@ -268,46 +258,27 @@
                   <tr>
                     <td class="px-24" style="padding:0 40px 0 40px;">
 
-                <!-- Row: powered-by logo (left) + social icons (right) -->
+                <!-- Row: powered-by logo (left) + social icons (right).
+                     One row in every client, at every width: no classes, no
+                     media query, no inline-block, no ghost cells. The whole row
+                     is ~96px of content, so it never needs to stack. -->
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                   <tr>
-                    <!--[if mso]>
-                    <td width="60%" valign="middle" align="left">
-                    <![endif]-->
-                    <td class="stack-column footer-logo" valign="middle" align="left" style="font-size:0;">
-                      <!--[if !mso]><!-->
-                      <div class="stack-column footer-logo" style="display:inline-block; width:100%; max-width:220px; vertical-align:middle; text-align:left;">
-                      <!--<![endif]-->
-                        <img src="cid:powered-by-empeo"
-                             width="60" height="18" alt="Powered by empeo"
-                             style="display:inline-block; width:60px; max-width:60px; height:auto; border:0;" />
-                      <!--[if !mso]><!-->
-                      </div>
-                      <!--<![endif]-->
+                    <td valign="middle" align="left" style="font-size:0; line-height:0;">
+                      <img src="cid:powered-by-empeo"
+                           width="60" height="18" alt="Powered by empeo"
+                           style="display:block; width:60px; height:auto; border:0;" />
                     </td>
-                    <!--[if mso]>
+                    <td valign="middle" align="right" style="font-size:0; line-height:0;">
+                      <!-- SOCIAL ICONS — table with fixed 8px gap (Outlook-safe) -->
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="right">
+                        <tr>
+                          <td valign="middle"><a href="https://www.facebook.com/empeoHR" target="_blank" style="text-decoration:none;"><img src="cid:icon-facebook" width="14" height="14" alt="Facebook" style="display:block; width:14px; height:14px; border:0;" /></a></td>
+                          <td width="8" style="width:8px; font-size:0; line-height:0;">&nbsp;</td>
+                          <td valign="middle"><a href="https://www.youtube.com/@empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-youtube" width="14" height="14" alt="YouTube" style="display:block; width:14px; height:14px; border:0;" /></a></td>
+                        </tr>
+                      </table>
                     </td>
-                    <td width="40%" valign="middle" align="right">
-                    <![endif]-->
-                    <td class="stack-column footer-social" valign="middle" align="right" style="font-size:0;">
-                      <!--[if !mso]><!-->
-                      <div class="stack-column footer-social" style="display:inline-block; width:100%; max-width:120px; vertical-align:middle; text-align:right;">
-                      <!--<![endif]-->
-                        <!-- SOCIAL ICONS — table with fixed 8px gap (Outlook-safe) -->
-                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="right" style="display:inline-block;">
-                          <tr>
-                            <td valign="middle"><a href="https://www.facebook.com/empeoHR" target="_blank" style="text-decoration:none;"><img src="cid:icon-facebook" width="14" height="14" alt="Facebook" style="display:block; width:14px; height:14px; border:0;" /></a></td>
-                            <td width="8" style="width:8px; font-size:0; line-height:0;">&nbsp;</td>
-                            <td valign="middle"><a href="https://www.youtube.com/@empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-youtube" width="14" height="14" alt="YouTube" style="display:block; width:14px; height:14px; border:0;" /></a></td>
-                          </tr>
-                        </table>
-                      <!--[if !mso]><!-->
-                      </div>
-                      <!--<![endif]-->
-                    </td>
-                    <!--[if mso]>
-                    </td>
-                    <![endif]-->
                   </tr>
                 </table>
 

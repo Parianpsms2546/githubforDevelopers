@@ -228,5 +228,29 @@ author CSS, but Outlook goes by the attributes and will stretch it.
   `background-size` is involved. Outlook still shows the `bgcolor`, which is why
   the fallback has to look acceptable on its own.
 
+- **The footer row must never stack.** It holds a 60px logo and two 14px icons —
+  about 96px of content — so it fits side by side even on a 320px screen. It used
+  to carry the usual mobile-stacking kit (`.stack-column { display:block
+  !important; width:100% !important }`, `[if mso]` ghost cells, `inline-block`
+  wrappers), and that kit is what broke it: **a reading pane narrower than 600px
+  is not a phone.** Outlook hands the message ~824px and looked right; a mail
+  client in a ~435px pane tripped the `max-width:600px` query, so the two cells
+  stacked and the icons centred under the logo. The row is now a plain two-cell
+  table — no classes, no media query, no `inline-block`, no conditional comments
+  — so there is nothing left for a client to get wrong.
+
+  Only stack a row whose content genuinely cannot fit, and remember that the
+  media query fires on the *pane* width, not the device.
+
+- **A fixed pixel width belongs in the attribute, never in the inline CSS.** The
+  welcome card was `width="386" style="width:386px; max-width:386px"` to match its
+  gradient tile, and the media query's `.cred-bg { width:100% !important }` was the
+  only thing shrinking it — so a client that strips `<style>` on a narrow screen
+  got a 386px card in a 320px pane and the whole email scrolled sideways. Write it
+  as `width="386" style="width:100%; max-width:386px"` instead: Outlook takes the
+  attribute and stays at 386, everyone else stays fluid, and nothing depends on the
+  stylesheet surviving. The tile just crops on the right when the card is narrower,
+  which is what already happened under the media query.
+
 - Images are inlined by CID. Run `build-eml.py <name> "<subject>"` after every
   edit to the HTML — the `.eml` is generated, never hand-edited.
