@@ -181,45 +181,73 @@
                     <td height="36" style="font-size:0; line-height:36px; height:36px;">&nbsp;</td>
                   </tr>
 
-                  <!-- Credentials card, 386px wide. Three ways to paint the gradient,
-                       because no single one reaches every client:
-                         background attribute -> Outlook desktop, which renders a cell
-                           background image but ignores CSS gradients;
-                         CSS linear-gradient -> Gmail and the rest, which drop a
-                           cid: URL inside CSS and would otherwise show flat Flame;
-                         bgcolor -> last resort, flat #F15A2E.
-                       Stops sampled off the asset the attribute still points at. -->
+                  <!-- Credentials card, 386px wide, gradient painted twice.
+                       Outlook desktop renders neither a cid: background image nor a
+                       CSS gradient, so it gets a VML roundrect whose fill IS the
+                       gradient, with the content inside a v:textbox. Its height is
+                       fixed at 100px, which is exactly 20 + 22 + 16 + 22 + 20.
+                       Everyone else takes the [if !mso] table and the CSS gradient.
+                       The two branches carry the same rows - edit both. -->
                   <tr>
                     <td align="center" style="padding:0;">
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+                                   arcsize="8%" stroke="f" fillcolor="#F15A2E" style="width:386px; height:100px;">
+                        <v:fill type="gradient" color="#E94E2D" color2="#F7943C" angle="90" />
+                        <v:textbox inset="24px,20px,24px,20px">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
+                          <tr>
+                            <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-user-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
+                            <td width="10" style="width:10px; font-size:0; line-height:0;">&nbsp;</td>
+                            <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">ชื่อผู้ใช้</td>
+                            <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                            <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">:</td>
+                            <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                            <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;"><a href="mailto:jutiphan@gofive.co.th" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:700; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important;">jutiphan@gofive.co.th</a></td>
+                          </tr>
+                          <tr><td colspan="7" height="16" style="font-size:0; line-height:16px; height:16px;">&nbsp;</td></tr>
+                          <tr>
+                            <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-lock-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
+                            <td width="10" style="width:10px; font-size:0; line-height:0;">&nbsp;</td>
+                            <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">รหัสผ่าน</td>
+                            <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                            <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">:</td>
+                            <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                            <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;">empeo100886</td>
+                          </tr>
+                        </table>
+                        </v:textbox>
+                      </v:roundrect>
+                      <![endif]-->
+                      <!--[if !mso]><!-->
                       <table role="presentation" width="386" align="center" cellspacing="0" cellpadding="0" border="0" class="cred-bg" style="width:100%; max-width:386px; margin:0 auto; border-radius:8px; border-collapse:separate !important; border-spacing:0;">
                         <tr>
-                          <td background="cid:bg-credentials" bgcolor="#F15A2E" class="cred-cell" style="background-color:#F15A2E; background-image:linear-gradient(90deg, #E94E2D 0%, #F7943C 100%); background-repeat:repeat-y; border-radius:8px; padding:20px 24px;">
+                          <td bgcolor="#F15A2E" class="cred-cell" style="background-color:#F15A2E; background-image:linear-gradient(90deg, #E94E2D 0%, #F7943C 100%); border-radius:8px; padding:20px 24px;">
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
-                            <tr>
-                              <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-user-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
-                              <td width="10" style="width:10px; font-size:0; line-height:0;">&nbsp;</td>
-                              <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">ชื่อผู้ใช้</td>
-                              <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
-                              <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">:</td>
-                              <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
-                              <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;"><a href="mailto:jutiphan@gofive.co.th" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:700; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important;">jutiphan@gofive.co.th</a></td>
-                            </tr>
                               <tr>
-                                <td colspan="7" height="16" style="font-size:0; line-height:16px; height:16px;">&nbsp;</td>
+                                <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-user-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
+                                <td width="10" style="width:10px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">ชื่อผู้ใช้</td>
+                                <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">:</td>
+                                <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;"><a href="mailto:jutiphan@gofive.co.th" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:700; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important;">jutiphan@gofive.co.th</a></td>
                               </tr>
-                            <tr>
-                              <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-lock-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
-                              <td width="10" style="width:10px; font-size:0; line-height:0;">&nbsp;</td>
-                              <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">รหัสผ่าน</td>
-                              <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
-                              <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">:</td>
-                              <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
-                              <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;">empeo100886</td>
-                            </tr>
+                              <tr><td colspan="7" height="16" style="font-size:0; line-height:16px; height:16px;">&nbsp;</td></tr>
+                              <tr>
+                                <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-lock-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
+                                <td width="10" style="width:10px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">รหัสผ่าน</td>
+                                <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">:</td>
+                                <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;">empeo100886</td>
+                              </tr>
                             </table>
                           </td>
                         </tr>
                       </table>
+                      <!--<![endif]-->
                     </td>
                   </tr>
 
@@ -259,18 +287,19 @@
                     <td align="left" style="padding:0;">
                       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                          <td valign="top" width="20" style="width:20px;">
+                          <td valign="middle" width="20" style="width:20px;">
                             <table role="presentation" width="20" cellspacing="0" cellpadding="0" border="0" style="width:20px; border-collapse:separate !important; border-spacing:0;">
                               <tr>
                                 <td align="center" width="20" height="20" bgcolor="#F15A2E" style="width:20px; height:20px; background-color:#F15A2E; border-radius:10px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:11px; line-height:20px; font-weight:700; color:#FFFFFF; text-align:center; mso-line-height-rule:exactly;">1</td>
                               </tr>
                             </table>
                           </td>
-                          <td valign="top" width="100%" style="width:100%; padding-left:12px;">
+                          <td valign="middle" width="100%" class="text-charcoal" style="width:100%; padding-left:12px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">ติดตั้ง empeo บนมือถือ</td>
+                        </tr>
+                        <tr>
+                          <td width="20" style="width:20px; font-size:0; line-height:0;">&nbsp;</td>
+                          <td width="100%" style="width:100%; padding-left:12px;">
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                              <tr>
-                                <td align="left" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">ติดตั้ง empeo บนมือถือ</td>
-                              </tr>
                               <tr>
                                 <td height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
                               </tr>
@@ -312,18 +341,19 @@
                     <td align="left" style="padding:0;">
                       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                          <td valign="top" width="20" style="width:20px;">
+                          <td valign="middle" width="20" style="width:20px;">
                             <table role="presentation" width="20" cellspacing="0" cellpadding="0" border="0" style="width:20px; border-collapse:separate !important; border-spacing:0;">
                               <tr>
                                 <td align="center" width="20" height="20" bgcolor="#F15A2E" style="width:20px; height:20px; background-color:#F15A2E; border-radius:10px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:11px; line-height:20px; font-weight:700; color:#FFFFFF; text-align:center; mso-line-height-rule:exactly;">2</td>
                               </tr>
                             </table>
                           </td>
-                          <td valign="top" width="100%" style="width:100%; padding-left:12px;">
+                          <td valign="middle" width="100%" class="text-charcoal" style="width:100%; padding-left:12px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">มาเรียนรู้วิธีใช้กันเลย</td>
+                        </tr>
+                        <tr>
+                          <td width="20" style="width:20px; font-size:0; line-height:0;">&nbsp;</td>
+                          <td width="100%" style="width:100%; padding-left:12px;">
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                              <tr>
-                                <td align="left" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">มาเรียนรู้วิธีใช้กันเลย</td>
-                              </tr>
                               <tr>
                                 <td height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
                               </tr>
@@ -363,18 +393,19 @@
                     <td align="left" style="padding:0;">
                       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                         <tr>
-                          <td valign="top" width="20" style="width:20px;">
+                          <td valign="middle" width="20" style="width:20px;">
                             <table role="presentation" width="20" cellspacing="0" cellpadding="0" border="0" style="width:20px; border-collapse:separate !important; border-spacing:0;">
                               <tr>
                                 <td align="center" width="20" height="20" bgcolor="#F15A2E" style="width:20px; height:20px; background-color:#F15A2E; border-radius:10px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:11px; line-height:20px; font-weight:700; color:#FFFFFF; text-align:center; mso-line-height-rule:exactly;">3</td>
                               </tr>
                             </table>
                           </td>
-                          <td valign="top" width="100%" style="width:100%; padding-left:12px;">
+                          <td valign="middle" width="100%" class="text-charcoal" style="width:100%; padding-left:12px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">กรอกข้อมูลส่วนตัวให้ครบ</td>
+                        </tr>
+                        <tr>
+                          <td width="20" style="width:20px; font-size:0; line-height:0;">&nbsp;</td>
+                          <td width="100%" style="width:100%; padding-left:12px;">
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                              <tr>
-                                <td align="left" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">กรอกข้อมูลส่วนตัวให้ครบ</td>
-                              </tr>
                               <tr>
                                 <td height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
                               </tr>

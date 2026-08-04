@@ -207,9 +207,16 @@ Welcome-onboarding's blocks:
 | Between steps | **20px + 1px rule + 20px** | three rows |
 | Last step → footer | **80px** | body band `padding-bottom:80px` |
 
-The step number badge is a 20x20 cell with `border-radius:10px` and an 11px digit on a
-20px line box, which centres it without a second table. It sits in its own 20px column
-with `padding-left:12px` on the text column beside it. The two app-store buttons are
+**The step number shares a row with its heading.** The badge used to sit in a
+`valign="top"` column beside the whole text block, which left it floating above the first
+line in Outlook — a 20px badge against a 30px line box has 10px to drift in, and Outlook
+spends it differently from everyone else. Now the badge cell and the heading cell are one
+row, both `valign="middle"`, so the number is tied to the line it belongs to; the
+description and buttons sit in a second row indented by the same 20 + 12px. Verified: the
+badge's centre and the heading's centre land within 0px in all three steps.
+
+The badge itself is a 20x20 cell with `border-radius:10px` and an 11px digit on a 20px
+line box, which centres it without a second table. The two app-store buttons are
 **116px wide each**, fixed, with the padding vertical only — horizontal padding would
 fight the width, so the inner table centres itself instead.
 
@@ -275,31 +282,47 @@ fill behind white text, not body copy, so it did not move to `#525260` with the 
 
 ## The credentials card's gradient
 
+Outlook desktop renders **neither** a `cid:` background image nor a CSS gradient — both
+were tried and both came out flat Flame. So the card is built twice, the same way the CTA
+button is:
+
 ```html
-<td background="cid:bg-credentials" bgcolor="#F15A2E" class="cred-cell"
+<!--[if mso]>
+<v:roundrect arcsize="8%" stroke="f" fillcolor="#F15A2E" style="width:386px; height:100px;">
+  <v:fill type="gradient" color="#E94E2D" color2="#F7943C" angle="90" />
+  <v:textbox inset="24px,20px,24px,20px">
+    …rows…
+  </v:textbox>
+</v:roundrect>
+<![endif]-->
+<!--[if !mso]><!-->
+<table …><tr><td bgcolor="#F15A2E" class="cred-cell"
     style="background-color:#F15A2E;
            background-image:linear-gradient(90deg, #E94E2D 0%, #F7943C 100%);
-           background-repeat:repeat-y; border-radius:8px; padding:20px 24px;">
+           border-radius:8px; padding:20px 24px;">…rows…</td></tr></table>
+<!--<![endif]-->
 ```
 
-Three declarations paint one gradient, because no single one reaches every client:
-
-| Declaration | Serves |
+| Branch | Serves |
 |---|---|
-| `background` attribute → `cid:bg-credentials` | **Outlook desktop**, which paints a cell background image but ignores CSS gradients |
-| `background-image: linear-gradient(...)` | **Gmail and the rest**, which drop a `cid:` URL used inside CSS |
-| `bgcolor` / `background-color` | last resort — flat Flame |
+| VML `v:fill type="gradient"`, `angle="90"` = left → right | **Outlook desktop / Windows Mail** |
+| CSS `linear-gradient` | Gmail, Apple Mail, iOS, webmail |
+| `fillcolor` and `bgcolor` | last resort — flat `#F15A2E` |
 
-The CSS gradient was **not** in the original: it carried `url('cid:bg-credentials')` in CSS
-as well as in the attribute, and a client that ignores the attribute but honours CSS still
-got nothing usable out of a `cid:` URL there, so the card fell back to flat `#F15A2E`.
+**The two branches carry the same rows — edit both.** That duplication is the price of a
+gradient that survives Outlook; there is no single declaration that does.
 
-Stops are sampled off the asset the attribute still points at — `#E94E2D` at the left
-edge, `#F7943C` at the right — so the two paths agree. **If the stops change, change the
-PNG too**, or Outlook and Gmail drift apart.
+Numbers that are load-bearing:
 
-The card is a fixed **386px** wide (`width:100%; max-width:386px`), which is why the PNG is
-386px and needs no stretching.
+- `height:100px` on the VML shape is not a guess: 20 padding + 22 row + 16 spacer + 22 row
+  + 20 padding. VML has no auto height, so a row added inside means this number changes.
+- `arcsize="8%"` is the 8px radius as a fraction of the shape's shorter side (100px).
+- `inset="24px,20px,24px,20px"` is left/top/right/bottom, matching `padding:20px 24px`.
+- The card is a fixed **386px** wide (`width:100%; max-width:386px`), and the VML shape
+  repeats that width because VML cannot inherit it.
+
+`bg-credentials.png` is gone. It only ever served the `background` attribute that Outlook
+ignored, so keeping it would have implied a third path that never rendered.
 
 ## The OTP row
 
