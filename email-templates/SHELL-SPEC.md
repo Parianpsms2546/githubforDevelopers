@@ -34,7 +34,8 @@ differently, so mixing the two makes the two sides of the button drift apart.
 Font stack: `'Kanit', Helvetica, Arial, sans-serif`.
 
 **`empeo-account-inactive` runs Prompt instead, by request** —
-`'Prompt', Helvetica, Arial, sans-serif`, with the webfont link switched to match.
+`'Prompt', 'Noto Sans Thai', Helvetica, Arial, sans-serif`, with the webfont link
+switched to match.
 Its line-heights are unchanged: they were tuned for Kanit, and Prompt was measured
 against every real string in that email at the shipped sizes rather than assumed to
 fit. Headroom above the ink, Kanit vs Prompt: 10px/16px 3.5 vs 3.5, 16px/30px 3.5 vs
@@ -73,9 +74,29 @@ Only do this where the content is enumerable, and measure the whole domain, not
 the one string in front of you — December alone would have suggested 17px and
 February would then have clipped. Free-form body copy stays at 30px.
 
-Helvetica and Arial carry no Thai glyphs, so on a client without Kanit the OS
-picks a Thai fallback of its own. Add a named Thai fallback to the stack if that
-substitution ever looks wrong.
+Helvetica and Arial carry no Thai glyphs, so on a client without the webfont the OS
+picks a Thai fallback of its own. `empeo-account-inactive` now names one —
+**`'Noto Sans Thai'` sits between Prompt and Helvetica**, so the choice is the
+email's rather than the OS's. Quote it: it is a multi-word family name.
+
+Verified by measuring the same Thai string under each branch of the chain, with the
+families loaded rather than merely declared:
+
+| Scenario | Renders in |
+|---|---|
+| Prompt available | Prompt (539.5px) |
+| Prompt missing, Noto available | Noto Sans Thai (508.9px) |
+| both missing | Helvetica/Arial (545.7px) — no Thai glyphs, OS substitutes |
+
+Note the trap in checking this: `@font-face` families load lazily, so measuring
+straight after page load reports the default font for everything. Await
+`document.fonts.load(...)` for each family and then `document.fonts.ready` first.
+
+Noto Sans Thai is deliberately **not** added to the webfont `<link>`. It only matters
+when Prompt is unavailable, and a client that cannot load one webfont will not load
+the other either — adding it would double the font payload for a case it cannot serve.
+The other eleven templates keep `'Kanit', Helvetica, Arial, sans-serif`; add the same
+Thai entry there if the OS substitution ever looks wrong.
 
 Flame (buttons, accents): `#F15A2E` — sampled from the logo asset.
 Charcoal `#2B2D33` · Iron `#5A5F68` · Muted `#8A8F98` · Footer bg `#F5F6F7`.
