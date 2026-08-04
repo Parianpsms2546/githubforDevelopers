@@ -52,6 +52,26 @@ own container, not from the email. Outlook hands it roughly 824px with uneven
 sides, and that cannot be corrected from inside the message. Reintroduce
 `max-width` on the `.inner` tables if that ever becomes unacceptable.
 
+## Swapping the logo for another brand
+
+The header is logo-agnostic in layout: centring, the 16px gap to the heading and
+the flush-to-top alignment all hold whatever shape the logo is. Only two things
+change per brand.
+
+1. Replace `assets/empeo-logo.png` (or point the `cid` at a new asset) and rebuild.
+2. **Update the `height` attribute on the logo `<img>` to match the new logo's
+   aspect ratio.** The shell ships `width="128" height="64"` for a 2:1 mark. A
+   wider wordmark at 4:1 needs `height="32"`.
+
+The second step is not optional. `height:auto` in the stylesheet protects clients
+that apply author CSS, but Outlook's Word engine goes by the HTML attributes — so
+a 4:1 logo left at `height="64"` renders 128x64 and is visibly stretched. Verified
+by rendering with the stylesheet removed: `height="64"` gives a 2:1 box for a 4:1
+image, `height="32"` gives 4:1 correctly.
+
+Supply the logo at 2x the display size (256px wide for a 128px slot) so it stays
+sharp, and keep the width attribute at the display size.
+
 ## Non-negotiables
 
 - **Do not wrap text in `<a>` to stop auto-linking.** Outlook mobile paints
