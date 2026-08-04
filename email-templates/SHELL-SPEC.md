@@ -7,9 +7,10 @@ every new template and only change what sits between the greeting and the CTA.
 swap the content rows, and leave everything else alone.
 `src/empeo-account-deletion-grayfooter.html` is the same shell with a CTA. On top of
 that, `src/empeo-payslip-grayfooter.html` adds an icon-plus-label block and an info
-box, `src/empeo-password-reset.html` adds the OTP row, and
+box, `src/empeo-password-reset.html` adds the OTP row,
 `src/empeo-document-rejected.html` adds the detail card, and
-`src/empeo-interview-appointment.html` adds the appointment card.
+`src/empeo-interview-appointment.html` adds the appointment card. The interview card's
+own internal spacing is deliberately its own — see the rhythm section.
 
 ## Type
 
@@ -133,6 +134,18 @@ Document-rejected's detail card:
 
 The 8px spacer carries `colspan="2"` so it cannot introduce a third column and nudge
 the label column's width.
+
+Interview-appointment's card, kept as it arrived rather than aligned to the document
+card:
+
+| Gap | Value | Where it lives |
+|---|---|---|
+| Body copy → card | **36px** | spacer row |
+| Card padding | **24px 20px** | on the card's single cell |
+| Date block → mode heading | **32px** | spacer row inside the card |
+| Mode heading → first detail row | **12px** | spacer row inside the card |
+| Detail row → detail row | **6px** | `padding-top` on the second row's two cells |
+| Card → closing line | **24px** | spacer row |
 
 Password reset's own block, between the body copy and the closing lines:
 
