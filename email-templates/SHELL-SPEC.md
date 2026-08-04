@@ -161,15 +161,31 @@ the label column's width.
 
 ### The steps divider label
 
-The divider is three cells: a 50% rule, the label, a 50% rule. That adds up to more than
-100% once the label is counted, so the label cell ends up holding whatever slack the
-client leaves — and Gmail leaves a lot. The cell stays centred, because the rule cells are
-equal, but a left-aligned label inside an oversized cell reads off-centre.
+```html
+<td width="49%">…rule…</td>
+<td width="2%" align="center" style="width:2%; white-space:nowrap; text-align:center; padding:0 12px;">เริ่มใช้งานได้ใน 3 ขั้นตอน</td>
+<td width="49%">…rule…</td>
+```
 
-`align="center"` plus `text-align:center` on the label cell fixes it: measured with the
-cell forced to 326px against 179px of text, the ink lands 0px from the cell's centre
-centred and 62px off left-aligned. **Any cell whose width the client decides needs its
-text alignment declared** — never rely on the cell hugging its content.
+Two things were wrong here, and they compounded.
+
+**The columns were over-constrained.** The rules declared 50% each, the label declared
+nothing — so the percentages claimed the entire row before the label was counted, and the
+client had to invent a distribution. Chromium floors the label at its content and shrinks
+the rules; Gmail handed the label the slack instead, which left the rules short with a gap
+either side. Declaring all three so they total 100 — **49 / 2 / 49** — removes the guess.
+`white-space:nowrap` still floors the label at its text width, so the 2% is only a hint
+about where slack should *not* go: measured at 375 / 700 / 1100px panes the label cell is
+203px every time (179px of ink + 24px padding) and the two rules stay equal.
+
+**The label was left-aligned in its cell.** While the cell was oversized that read as
+off-centre even though the cell itself was centred. `align="center"` plus
+`text-align:center`: with the cell forced to 326px against 179px of text, the ink lands 0px
+from the cell's centre, against 62px off left-aligned.
+
+**Any cell whose width the client decides needs both its width and its alignment
+declared** — never rely on a cell hugging its content, and never leave a row's percentages
+adding up to more than 100.
 
 ### Pin the label column, do not let the client size it
 
