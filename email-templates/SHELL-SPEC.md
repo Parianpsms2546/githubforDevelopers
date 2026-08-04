@@ -51,9 +51,9 @@ Outlook desktop ignores the webfont entirely and lands on Tahoma.
 | Appointment mode heading | 16px | 600 | 24px | `#1C1C22` |
 | Appointment label / value | 14px | 400 / 500 | 22px | `#525260` / `#1C1C22` |
 | Credentials label / value (welcome) | 14px | 500 / 700 | 22px | `#FFFFFF` |
-| Steps divider label (welcome) | 16px | 400 | 30px | `#525260` |
+| Steps divider label (welcome) | 16px | 400 | 30px | `#1C1C22` |
 | Step heading (welcome) | 16px | 600 | 30px | `#1C1C22` |
-| Step description (welcome) | 16px | 400 | 24px | `#525260` |
+| Step description (welcome) | 16px | 400 | 24px | `#1C1C22` |
 | Step number badge (welcome) | 11px | 700 | 20px | `#FFFFFF` on `#F15A2E` |
 | Outlined button label (welcome) | 14px | 600 | 22px | `#1C1C22` |
 
@@ -62,6 +62,11 @@ Corner radius: **8px**, buttons and cards alike.
 
 `.body-mobile` in the media query carries its own `line-height` — change it with the
 inline value or the mobile view snaps back.
+
+**A colour change is two edits: the inline value and the class.** `.text-muted` and
+`.text-iron` carry their own dark-mode overrides (`#9AA0A8`, `#C7CBD1`), so a line
+recoloured to `#1C1C22` while still classed muted stays grey in dark mode while every
+other charcoal line turns white. Recolour to charcoal, reclass to `text-charcoal`.
 
 ### Body copy at 24px is knowingly tight
 
