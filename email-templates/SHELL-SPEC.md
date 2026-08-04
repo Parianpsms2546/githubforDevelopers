@@ -70,7 +70,7 @@ Per-template components, measured in Prompt and all clearing their current value
 | Component | Metric | Headroom |
 |---|---|---|
 | Payroll period label, 16px/500 | lh 24px | +4.00 |
-| Payroll period date, 16px/700 — worst of the twelve months is `กุมภาพันธ์` | lh 24px | +3.00 |
+| Payroll period date, 16px/500 — worst of the twelve months is `กุมภาพันธ์` | lh 24px | +4.00 |
 | File-password note, 14px/600 and 14px/400 | lh 22px | +3.50 |
 
 The period block is 24px rather than a guard value because its content is
