@@ -5,9 +5,10 @@ every new template and only change what sits between the greeting and the CTA.
 
 `src/empeo-account-inactive.html` is the reference implementation. Start from it,
 swap the content rows, and leave everything else alone.
-`src/empeo-account-deletion-grayfooter.html` is the same shell with a CTA, and
-`src/empeo-payslip-grayfooter.html` adds the content components — an icon-plus-label
-block and an info box — on top of that.
+`src/empeo-account-deletion-grayfooter.html` is the same shell with a CTA. On top of
+that, `src/empeo-payslip-grayfooter.html` adds an icon-plus-label block and an info
+box, `src/empeo-password-reset.html` adds the OTP row, and
+`src/empeo-document-rejected.html` adds the detail card.
 
 ## Type
 
@@ -37,6 +38,9 @@ Outlook desktop ignores the webfont entirely and lands on Tahoma.
 | OTP digit (password reset) | 20px | 700 | 44px | `#F15A2E` on `#FDEDE8` |
 | Reference line (password reset) | 12px | 400 | 18px | `#525260` |
 | Inline link in body copy | 16px | 500 | 24px | `#F15A2E` |
+| Detail-card title (document) | 16px | 600 | 30px | `#1C1C22` |
+| Detail-card label / value | 14px | 400 / 500 | 22px | `#525260` / `#1C1C22` |
+| Status badge (document) | 12px | 500 | 16px | `#FFFFFF` on `#8A8F98` |
 
 Flame (buttons, accents): `#F15A2E`. Footer band: `#F5F6F7`. Card: `#FFFFFF`.
 Corner radius: **8px**, buttons and cards alike.
@@ -77,6 +81,14 @@ Per-template components, measured in Prompt and all clearing their current value
 | File-password note, 14px/600 and 14px/400 | lh 22px | +3.50 |
 | Reference line, 12px/400 | lh 18px | +3.00 |
 | OTP digit, 20px/700 — Latin numerals, no Thai marks | lh 44px | +15.00 |
+| Detail-card title, 16px/600 | lh 30px | +7.00 |
+| Detail-card label 14px/400, value 14px/500 | lh 22px | +3.50 |
+| Status badge, 12px/500 | lh 16px | +3.00 |
+
+Document-rejected is the one template whose body copy is safe at 24px: `เอกสารของคุณ
+ถูกปฏิเสธ` has no stacked vowel-plus-tone, so it clears by +5px at the top and +2px
+below — the descenders in `ถูก` and `ปฏิ` are what make the bottom the tighter side
+there.
 
 Password reset is the template most exposed to the 24px body value: all four of its
 Thai lines — the body copy and the three closing lines — carry a stacked
@@ -100,6 +112,19 @@ would understate what February needs. Free-form copy keeps the shell value.
 | Last content row → CTA button | **48px** | `padding-top:48px` on the CTA cell |
 | CTA button → footer | **80px** | body band `padding-bottom:80px` |
 | Footer top / bottom | **24px** | footer band `padding:24px 0` |
+
+Document-rejected's detail card:
+
+| Gap | Value | Where it lives |
+|---|---|---|
+| Body copy → card | **36px** | spacer row |
+| Card padding | **16px 20px** | on the card's single cell |
+| Title row → first detail row | **10px** | spacer row inside the card |
+| Detail row → detail row | **8px** | spacer row, `colspan="2"` |
+| Card → CTA button | **48px** | `padding-top:48px` on the CTA cell |
+
+The 8px spacer carries `colspan="2"` so it cannot introduce a third column and nudge
+the label column's width.
 
 Password reset's own block, between the body copy and the closing lines:
 
@@ -136,6 +161,24 @@ optical gap: the line box is 30px while the label's ink is only 13px tall (`ด�
 and `ติดต่อเรา` both measure 13px, no descender), so the 30px box already contributes
 ~17px of its own breathing room. Squaring the padding at 24px was tried and reverted —
 it took the button to 78px, which read as oversized.
+
+## The detail card
+
+```
+background: #FFFFFF          /* white on white — the 1px border is the whole edge */
+border: 1px solid #E6E8EB
+border-radius: 8px
+border-collapse: separate !important; border-spacing: 0
+```
+
+`border-collapse:separate` is load-bearing for the same reason as the OTP chips: the
+shell's reset collapses every table, and a collapsed table drops **both** its
+`border-radius` and its 1px border, leaving the card invisible.
+
+The status badge is `#FFFFFF` on `#8A8F98` with a 10px radius and `padding:3px 12px`,
+plus `white-space:nowrap` on the badge cell and its parent so a long title can never
+break the word. `#8A8F98` is the one place the old muted grey survives — it is a chip
+fill behind white text, not body copy, so it did not move to `#525260` with the rest.
 
 ## The OTP row
 
