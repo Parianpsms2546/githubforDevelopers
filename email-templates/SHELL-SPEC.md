@@ -242,6 +242,20 @@ author CSS, but Outlook goes by the attributes and will stretch it.
   Only stack a row whose content genuinely cannot fit, and remember that the
   media query fires on the *pane* width, not the device.
 
+- **The whole footer is one table, and that is load-bearing.** Some clients
+  ignore `width:100%` and shrink-wrap every table to its own content. The
+  logo/icons row holds 96px of it, so as a table of its own it collapsed to 96px
+  and the icons ended up against the logo instead of on the right edge — measured
+  at 96px wide in a 198px-wide footer. Keeping the row in the same table as the
+  address rows (which are `colspan="3"`) forces it to the footer's real width, so
+  the icons land on the right edge whatever width the client decides on. Never
+  split the footer back into sibling tables.
+
+  Both end columns carry an explicit `width` (60 and 36) so the colspan rows
+  cannot squeeze them, and **the 8px gap between the icons is `padding-left`, not
+  a spacer cell** — see the spacer-collapse note below; a `font-size:0` spacer
+  between them collapsed to 0px and the two icons touched.
+
 - **A fixed pixel width belongs in the attribute, never in the inline CSS.** The
   welcome card was `width="386" style="width:386px; max-width:386px"` to match its
   gradient tile, and the media query's `.cred-bg { width:100% !important }` was the

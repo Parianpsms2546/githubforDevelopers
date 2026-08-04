@@ -182,48 +182,55 @@
                   <tr>
                     <td class="px-24" style="padding:0 40px 0 40px;">
 
-                <!-- Row: powered-by logo (left) + social icons (right).
-                     One row in every client, at every width: no classes, no
-                     media query, no inline-block, no ghost cells. The whole row
-                     is ~96px of content, so it never needs to stack. -->
+                <!-- The whole footer is ONE table on purpose.
+                     A client that ignores width:100% shrink-wraps every table to
+                     its own content, and this row holds only 96px of it, so as a
+                     separate table it collapsed and parked the icons against the
+                     logo. Sharing the columns with the address rows below (via
+                     colspan) forces the row to the footer's real width, so the
+                     icons land on the right edge whatever width the client gives.
+                     The middle cell takes up the slack. -->
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                   <tr>
-                    <td valign="middle" align="left" style="font-size:0; line-height:0;">
+                    <td width="60" valign="middle" align="left" style="width:60px; font-size:0; line-height:0;">
                       <img src="cid:powered-by-empeo"
                            width="60" height="18" alt="Powered by empeo"
                            style="display:block; width:60px; height:auto; border:0;" />
                     </td>
-                    <td valign="middle" align="right" style="font-size:0; line-height:0;">
-                      <!-- SOCIAL ICONS — table with fixed 8px gap (Outlook-safe) -->
-                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="right">
+                    <td width="100%" style="width:100%; font-size:0; line-height:0;">&nbsp;</td>
+                    <td width="36" valign="middle" align="right" style="width:36px; font-size:0; line-height:0;">
+                      <!-- SOCIAL ICONS. The 8px gap is padding, not a spacer cell:
+                           the colspan rows below hand this column its width, and a
+                           font-size:0 spacer has no min-content to defend itself
+                           with, so it collapsed to 0 and the icons touched. Both
+                           end columns carry an explicit width for the same reason.
+                           No align="right" float either - the cell is already the
+                           last one, so the float had nothing to do and was one
+                           more thing a client could drop. -->
+                      <table role="presentation" width="36" cellspacing="0" cellpadding="0" border="0" style="width:36px;">
                         <tr>
                           <td valign="middle"><a href="https://www.facebook.com/empeoHR" target="_blank" style="text-decoration:none;"><img src="cid:icon-facebook" width="14" height="14" alt="Facebook" style="display:block; width:14px; height:14px; border:0;" /></a></td>
-                          <td width="8" style="width:8px; font-size:0; line-height:0;">&nbsp;</td>
-                          <td valign="middle"><a href="https://www.youtube.com/@empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-youtube" width="14" height="14" alt="YouTube" style="display:block; width:14px; height:14px; border:0;" /></a></td>
+                          <td valign="middle" style="padding-left:8px;"><a href="https://www.youtube.com/@empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-youtube" width="14" height="14" alt="YouTube" style="display:block; width:14px; height:14px; border:0;" /></a></td>
                         </tr>
                       </table>
                     </td>
                   </tr>
-                </table>
 
-                <!-- Spacer (divider line removed) -->
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <!-- Spacer (divider line removed) -->
                   <tr>
-                    <td height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
+                    <td colspan="3" height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
                   </tr>
-                </table>
 
-                <!-- Address -->
-                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <!-- Address -->
                   <tr>
-                    <td class="text-muted no-autolink" style="font-family:'Kanit',Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#8A8F98; padding:0;">
+                    <td colspan="3" class="text-muted no-autolink" style="font-family:'Kanit',Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#8A8F98; padding:0;">
                       92 Central Park Offices,<br />
                       Unit MM3205, 32nd Floor, Rama 4 Road,<br />
                       Silom, Bang Rak, Bangkok 10500
                     </td>
                   </tr>
                   <tr>
-                    <td class="text-muted" style="font-family:'Kanit',Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#8A8F98; padding:4px 0 0 0;">
+                    <td colspan="3" class="text-muted" style="font-family:'Kanit',Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#8A8F98; padding:4px 0 0 0;">
                       Need help using empeo? Visit our
                       <a href="https://help.empeo.com" target="_blank" style="color:#8A8F98; font-weight:400; text-decoration:underline;">Help Center</a>
                     </td>
