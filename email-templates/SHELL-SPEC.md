@@ -303,11 +303,35 @@ button is:
 <!--<![endif]-->
 ```
 
-| Branch | Serves |
-|---|---|
-| VML `v:fill type="gradient"`, `angle="90"` = left → right | **Outlook desktop / Windows Mail** |
-| CSS `linear-gradient` | Gmail, Apple Mail, iOS, webmail |
-| `fillcolor` and `bgcolor` | last resort — flat `#F15A2E` |
+| Path | Serves | Fails when |
+|---|---|---|
+| VML `v:fill type="gradient"`, `angle="90"` = left → right | **classic Outlook desktop** (Word engine) | the client is not Word-based, so it never sees `[if mso]` at all |
+| `background="https://…/bg-credentials.png"` | a webview client that strips CSS `background-image` but honours the legacy attribute | images are not downloaded, or the URL 404s |
+| CSS `linear-gradient` | Gmail, Apple Mail, iOS, webmail | the sanitizer strips `background-image` |
+| `fillcolor` / `bgcolor` `#F15A2E` | everything else | — |
+
+**VML requires its namespaces on `<html>`**, not just inline on the element:
+
+```html
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:v="urn:schemas-microsoft-com:vml"
+      xmlns:o="urn:schemas-microsoft-com:office:office" …>
+```
+
+Every template carries them now. Four of them had shipped VML buttons declaring `xmlns:v`
+inline on the `v:roundrect` — the fragile form — with nothing on `<html>` and the document's
+own `xmlns` pointing at `https://www.w3.org/1999/xhtml`, which is not the XHTML namespace
+(it is `http://`). Both are fixed.
+
+**A webview-based Outlook cannot be reached by VML at all.** The new Outlook for Windows
+and Outlook on the web render with a browser engine, so `[if mso]` is skipped and the
+`[if !mso]` branch is what they get — which is why the hosted-image path exists. If that
+client also blocks the download or the URL is unreachable, the card is flat Flame, and
+there is no fourth trick: a gradient behind live text needs either a Word engine, a CSS
+gradient, or a downloadable image.
+
+The hosted URL is pinned to a commit SHA. **Re-pin it whenever the asset changes**, and
+note it only resolves while the repository is public.
 
 **The two branches carry the same rows — edit both.** That duplication is the price of a
 gradient that survives Outlook; there is no single declaration that does.

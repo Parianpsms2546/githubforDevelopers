@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="https://www.w3.org/1999/xhtml" lang="th" xml:lang="th">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="th" xml:lang="th">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -186,7 +186,10 @@
                        CSS gradient, so it gets a VML roundrect whose fill IS the
                        gradient, with the content inside a v:textbox. Its height is
                        fixed at 100px, which is exactly 20 + 22 + 16 + 22 + 20.
-                       Everyone else takes the [if !mso] table and the CSS gradient.
+                       Everyone else takes the [if !mso] table, which declares the
+                       gradient twice over: a background attribute pointing at an https
+                       PNG, for a webview client that strips CSS background-image, and
+                       the CSS gradient for the rest. Flat Flame under all of it.
                        The two branches carry the same rows - edit both. -->
                   <tr>
                     <td align="center" style="padding:0;">
@@ -222,7 +225,7 @@
                       <!--[if !mso]><!-->
                       <table role="presentation" width="386" align="center" cellspacing="0" cellpadding="0" border="0" class="cred-bg" style="width:100%; max-width:386px; margin:0 auto; border-radius:8px; border-collapse:separate !important; border-spacing:0;">
                         <tr>
-                          <td bgcolor="#F15A2E" class="cred-cell" style="background-color:#F15A2E; background-image:linear-gradient(90deg, #E94E2D 0%, #F7943C 100%); border-radius:8px; padding:20px 24px;">
+                          <td background="https://cdn.jsdelivr.net/gh/Parianpsms2546/githubforDevelopers@e1530eda6bec1b1bb8dcb4b0dc0e9cc188d92c27/email-templates/assets/bg-credentials.png" bgcolor="#F15A2E" class="cred-cell" style="background-color:#F15A2E; background-image:linear-gradient(90deg, #E94E2D 0%, #F7943C 100%); border-radius:8px; padding:20px 24px;">
                             <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
                               <tr>
                                 <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-user-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
