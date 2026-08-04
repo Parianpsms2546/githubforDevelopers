@@ -33,6 +33,7 @@ Outlook desktop ignores the webfont entirely and lands on Tahoma.
 | Body copy | 16px | 500 | 24px | `#1C1C22` |
 | CTA label | 16px | 600 | 30px | `#FFFFFF` |
 | Footer address / help line / Help Center link | 10px | 400 | 16px | `#525260` |
+| Info-box label / body (payslip) | 14px | 600 / 400 | 22px | `#1C1C22` / `#525260` |
 
 Flame (buttons, accents): `#F15A2E`. Footer band: `#F5F6F7`. Card: `#FFFFFF`.
 Corner radius: **8px**, buttons and cards alike.
@@ -224,9 +225,11 @@ fills the chip more, which is the approved look — do not shrink it back.
 
 `.card-bg` `#1F2228` · `.footer-bg` `#191B20` · `.text-charcoal` `#FFFFFF` ·
 `.text-iron` `#C7CBD1` · `.text-muted` `#9AA0A8` · page `#16181D`.
+`.info-bg` `#262A31` — the payslip's info box adds this pair to the shell.
 
-Footer copy is `#525260` in light mode and stays on the `#9AA0A8` override in dark —
-`#525260` on `#191B20` is unreadable. Outlook mobile rewrites colours for its own
+Footer copy and the info box's secondary line are both `#525260` in light mode and
+stay on their dark overrides — `#9AA0A8` and `#C7CBD1` — because `#525260` on
+`#191B20` or `#262A31` is unreadable. Outlook mobile rewrites colours for its own
 dark mode and tags what it touched with `data-ogsb` / `data-ogsc`; the CTA is pinned
 back to Flame with white text there, or `#F15A2E` darkens to a muddy red.
 
