@@ -1,0 +1,177 @@
+# empeo email shell — locked values
+
+The header, footer, typography and vertical rhythm below are fixed. Reuse them for
+every new template and only change what sits between the greeting and the CTA.
+
+`src/empeo-account-inactive.html` is the reference implementation. Start from it,
+swap the content rows, and leave everything else alone.
+`src/empeo-account-deletion-grayfooter.html` is the same shell with a CTA.
+
+## Type
+
+Font stack — one canonical string, used in every cell and in the preheader:
+
+```
+'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif
+```
+
+The order is the point. Tahoma carries Thai glyphs, Helvetica carries none; put
+Helvetica first and Thai falls through to whatever the OS picks. `'Noto Sans Thai'`
+sits behind Prompt so the fallback is the email's choice, not the OS's — quote it,
+it is a multi-word family name. The webfont `<link>` loads **Prompt only**: Noto
+matters only when Prompt is unavailable, and a client that cannot load one webfont
+will not load the other.
+
+Outlook desktop ignores the webfont entirely and lands on Tahoma.
+
+| Element | Size | Weight | Line height | Colour |
+|---|---|---|---|---|
+| Greeting label ("เรียน ", "สวัสดี ") | 18px | 500 | 24px | `#000000` |
+| Greeting name | 18px | 700 | 24px | `#000000` |
+| Body copy | 16px | 500 | 24px | `#1C1C22` |
+| CTA label | 16px | 600 | 30px | `#FFFFFF` |
+| Footer address / help line / Help Center link | 10px | 400 | 16px | `#525260` |
+
+Flame (buttons, accents): `#F15A2E`. Footer band: `#F5F6F7`. Card: `#FFFFFF`.
+Corner radius: **8px**, buttons and cards alike.
+
+`.body-mobile` in the media query carries its own `line-height` — change it with the
+inline value or the mobile view snaps back.
+
+### Body copy at 24px is knowingly tight
+
+Measured with real Prompt (Thai subset, weight 500, 16px) against the live body
+lines. `headroom` is the gap between the top of the line box and the top of the ink;
+negative means Outlook desktop, where `mso-line-height-rule:exactly` applies, can
+shave the top of a tone mark. Browsers and webmail let the overflow pass invisibly.
+
+| Line | ink ascent | lh 24 | lh 26 | lh 30 |
+|---|---|---|---|---|
+| `ขณะนี้ …` (inactive) | 17.35px | **−0.35** | +0.65 | +2.65 |
+| `ปิดใช้งาน …` (inactive) | 14.00px | +3.00 | +4.00 | +6.00 |
+| `ความผิดพลาด …` (inactive) | 13.00px | +4.00 | +5.00 | +7.00 |
+| `คำขอการลบบัญชี …` (deletion) | 16.71px | +0.29 | +1.29 | +3.29 |
+| `อย่างถาวรเรียบร้อยแล้ว …` (deletion) | 17.35px | **−0.35** | +0.65 | +2.65 |
+
+The cost is always a *stacked* vowel-plus-tone — `นี้`, `ที่` — never a plain
+consonant. **26px is the tightest value that clears every line measured.** 24px is
+kept because it is the approved look; if a tone mark ever looks cut in Outlook
+desktop, 26px is the one-line fix (inline value **and** `.body-mobile`).
+
+Greeting at 18px/700 clears comfortably at 24px (+3). The CTA label at 16px/600
+clears at 30px (+7), and 30px is what keeps the button exactly 44px tall with
+`padding:7px 24px`, matching its VML fallback — do not retune it to the body value.
+
+## Vertical rhythm
+
+| Gap | Value | Where it lives |
+|---|---|---|
+| Top of card → logo | **0** | header band `padding:0` |
+| Logo → greeting | **16px** | body band `padding-top:16px` |
+| Greeting → body copy | **8px** | spacer row, `height="8"` |
+| Body copy → CTA button | **48px** | `padding-top:48px` on the CTA cell |
+| CTA button → footer | **80px** | body band `padding-bottom:80px` |
+| Footer top / bottom | **24px** | footer band `padding:24px 0` |
+
+Both sides of the button are padding, never a spacer row on one side and padding on
+the other — clients size the two differently and the gaps drift apart.
+
+On a template with no CTA the 80px runs from the last line of copy to the footer.
+
+The logo's optical gap is larger than 16px on purpose: the asset carries ~17.5px of
+transparent margin below its artwork, so 16px of box spacing reads as ~36px. Put
+logo spacing in the asset, never in the HTML.
+
+## Layout and width
+
+- Bands are full-bleed: white body and grey footer run edge to edge. No rounded
+  corners on the shell.
+- Horizontal padding is **24px, front and back, at every width**. `.px-24` stays on
+  the three band cells as the hook, currently a no-op in the media query.
+- Body copy is centred — a left-aligned paragraph reads as off-centre between a
+  centred greeting and a centred button.
+
+Width is the one thing that must not be left to the client:
+
+```html
+<table ... class="email-container" style="width:100%; min-width:600px; max-width:100%;">
+<table ... class="inner"           style="width:100%; min-width:100%; max-width:100%;">
+```
+
+```css
+@media only screen and (max-width: 600px) {
+  .email-container { width: 100% !important; min-width: 0 !important; margin: 0 auto !important; }
+}
+```
+
+Every width in this shell is a percentage, and a percentage needs a parent with a
+definite width. Outlook always has one — the Word engine's page width, plus the
+`[if mso]` ghost table wrapping the container. Gmail has neither: it drops
+`<html>`/`<head>`/`<body>`, which takes `html, body { width: 100% }` with them, and
+it never sees the `mso` block. With no anchor left, the tables fall back to
+`width:auto` and shrink-wrap to their content — `align="center"` then centres the
+collapsed table, which is what a narrow Gmail render looks like. Measured: the whole
+email collapsed to **176px** in a container with no definite width, grey footer band
+included.
+
+`min-width:600px` is the floor that survives that. Clients with a definite width
+still fill their pane; the media query releases the floor on a viewport that really
+is narrow, so mobile never scrolls sideways.
+
+| Container | without the floor | with it |
+|---|---|---|
+| no definite width (Gmail-like) | 176px | 600px |
+| 1000px pane | 1000px | 1000px |
+| 375px viewport | 375px | 375px |
+
+Outlook desktop ignores `min-width`, which is harmless — the ghost table already
+holds it open.
+
+## Footer structure
+
+The footer is **one table**, not three. The logo/icons row shares its columns with
+the address rows via `colspan="3"`, so a client that shrink-wraps still gives that
+row the footer's real width and the social icons stay on the right edge. Both end
+columns carry an explicit `width`, and the 8px between the icons is padding — a
+`font-size:0` spacer has no min-content to defend itself with and collapses.
+
+## Assets
+
+`build-eml.py` resolves every `cid:` against `assets/<cid>.png`, so a template's
+image is named by its `cid`.
+
+**Never reference SVG from an email.** Gmail strips `<img>` pointing at `.svg` and
+Outlook desktop's Word engine cannot render it — the icon becomes an empty box.
+Vector sources live in `assets/` for regeneration only:
+
+| cid | asset | source |
+|---|---|---|
+| `empeo-logo` | `empeo-logo.png` | — |
+| `powered-by-empeo` | `powered-by-empeo.png` | — |
+| `icon-facebook` | `icon-facebook.png` | `facebook.svg` |
+| `icon-youtube` | `icon-youtube.png` | `bi_youtube.svg` |
+
+Social icons are rasterised at **168px** (12× their 14px display size, matching the
+density of the assets they replaced) on a transparent canvas, keeping the source
+SVG's `#1C1C22`.
+
+## Dark mode
+
+`.card-bg` `#1F2228` · `.footer-bg` `#191B20` · `.text-charcoal` `#FFFFFF` ·
+`.text-iron` `#C7CBD1` · `.text-muted` `#9AA0A8` · page `#16181D`.
+
+Footer copy is `#525260` in light mode and stays on the `#9AA0A8` override in dark —
+`#525260` on `#191B20` is unreadable. Outlook mobile rewrites colours for its own
+dark mode and tags what it touched with `data-ogsb` / `data-ogsc`; the CTA is pinned
+back to Flame with white text there, or `#F15A2E` darkens to a muddy red.
+
+## Building
+
+```bash
+cd email-templates
+python3 build-eml.py <template-name> "<Subject line>"
+```
+
+Reads `src/<name>.html`, resolves the `cid:` references against `assets/`, writes
+`<name>.eml` as `multipart/related` with `X-Unsent: 1` so it opens as an editable
+draft in Outlook. Edit `src/`, never the `.eml`.
