@@ -151,15 +151,22 @@ the email asked for 395 — and that is the point. With no pixel width declared
 anywhere, there is nothing for a client to honour, so each one guesses.
 
 `empeo-account-inactive` therefore carries a cap, and the mechanism is worth
-copying: **`width="100%"` as the attribute, `max-width:600px` in the style.**
+copying: **`width="100%"` as the attribute, `max-width:675px` in the style.**
 Outlook ignores `max-width` and goes by the attribute, so it keeps filling its
-pane; every other client honours the cap. Verified in both profiles — capped at
-600 and centred at 680px and 1206px where `max-width` applies, still filling 680
-and 1206 where it does not, and fluid with zero overflow at 320-600px either way.
+pane; every other client honours the cap.
 
-600px is within 80px of what Outlook already shows, so the two clients finally
-agree. The other eleven templates are still fully fluid; add the same cap if the
-same complaint comes up.
+Verified in both profiles, with zero horizontal overflow throughout:
+
+| Viewport | honours `max-width` | Outlook (ignores it) |
+|---|---|---|
+| 320 / 390 | 320 / 390 — fluid | 320 / 390 — fluid |
+| 675 | 675 | 675 |
+| 680 | 675, centred | 680 — fills |
+| 1206 | 675, centred | 1206 — fills |
+
+675 is the number asked for, 5px under the 680px Outlook was measured filling, so
+the two clients land within a hair of each other. The other eleven templates are
+still fully fluid; add the same cap if the same complaint comes up.
 
 ## Swapping the logo for another brand
 
