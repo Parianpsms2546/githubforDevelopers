@@ -87,6 +87,36 @@ own container, not from the email. Outlook hands it roughly 824px with uneven
 sides, and that cannot be corrected from inside the message. Reintroduce
 `max-width` on the `.inner` tables if that ever becomes unacceptable.
 
+### The layout-width anchor
+
+Every template carries a 1px row holding an empty `<table width="386"
+class="width-anchor">` just above the greeting. It exists because a client that
+ignores the stylesheet also ignores `width:100%`, sizes the message to its own
+content, and lays it out narrower than the screen — so the mail arrives looking
+pinched. Welcome-onboarding was the one template that escaped this, purely because
+its credentials card is 386px wide; measured with the stylesheet stripped, welcome
+laid out at 466px while every other template collapsed to 365-390px.
+
+The 386 lives in the **HTML attribute only**, with no inline width, which splits
+the two kinds of client cleanly:
+
+- a client that reads the stylesheet applies `.width-anchor { width:100% }` and the
+  anchor collapses to nothing, so it can never cause horizontal scroll;
+- a client that ignores the stylesheet falls back to the attribute and lays the
+  message out at 386px + padding, matching welcome.
+
+`.width-anchor` is deliberately **not** inside a media query: a client that
+supports `<style>` but not media queries must still collapse it.
+
+Two things not to do here. **Do not give the anchor an inline `width:386px` with
+`max-width:100%`** — a percentage max-width is ignored while a browser computes
+intrinsic width, so the 386 inflates min-content and the email really does scroll
+sideways; measured at 114px of overflow on a 320px viewport. And **do not treat
+"block centred in the viewport" as a passing condition in a stylesheet-stripped
+profile** — the anchor makes the message wider than a narrow viewport on purpose,
+and the client that behaves that way scales the message to fit rather than
+scrolling. With the stylesheet present there is zero overflow at 320-824px.
+
 ## Swapping the logo for another brand
 
 The header is logo-agnostic in layout: centring, the 16px gap to the heading and

@@ -57,6 +57,12 @@
       cursor: default !important;
     }
 
+    /* Collapses the layout-width anchor wherever author CSS is honoured; see
+       the anchor row in the body band for why it exists. Deliberately not in a
+       media query - a client that supports <style> but not media queries must
+       still collapse it. */
+    .width-anchor { width: 100% !important; max-width: 100% !important; }
+
     /* ---------- Base ---------- */
     body, #body {
       background-color: #FFFFFF;
@@ -155,6 +161,32 @@
                     <td class="px-24" style="padding:0 40px 0 40px;">
 
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                  <!-- Layout-width anchor. The reporting client sizes the message
+                       to its content instead of honouring width:100%, then lays it
+                       out narrower than the screen and scales it - which is why the
+                       welcome template looked full and the rest looked pinched: only
+                       welcome had anything 386px wide in it.
+
+                       The 386 lives in the HTML width attribute alone, with no inline
+                       width, so the two kinds of client split cleanly:
+
+                         - a client that reads the stylesheet gets .width-anchor's
+                           width:100% and the anchor collapses, so it can never cause
+                           horizontal scroll;
+                         - a client that ignores the stylesheet - the same one that
+                           ignores the .px-24 media query, which is how we know it
+                           does - falls back to the attribute and lays the message
+                           out at 386px like the welcome template.
+
+                       It is one empty 1px row either way. -->
+                  <tr>
+                    <td style="padding:0; font-size:0; line-height:0;">
+                      <table role="presentation" width="386" class="width-anchor" cellspacing="0" cellpadding="0" border="0">
+                        <tr><td height="1" style="height:1px; font-size:0; line-height:1px;">&nbsp;</td></tr>
+                      </table>
+                    </td>
+                  </tr>
 
                   <!-- Greeting -->
                   <tr>
