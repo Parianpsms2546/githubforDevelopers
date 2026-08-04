@@ -78,7 +78,16 @@ Corner radius: **8px** everywhere — content cards and inline note boxes alike.
 - Each band's content sits in an `align="center"` + `margin:0 auto` table at
   full width, so if a client constrains it the leftover space still splits
   evenly instead of hugging one edge.
-- Horizontal padding is 40px, dropping to 24px under 600px via `.px-24`.
+- Horizontal padding is **24px, front and back, at every width**. It used to be
+  40px with `.px-24` taking it down to 24 on mobile; 24 is now simply the base, so
+  that media-query rule is gone. The class stays on the three band cells as the
+  hook — a different mobile value only needs a rule adding back.
+
+  It also cleared the welcome template's long-standing overflow. That email used to
+  push 25px past a 320px screen with the stylesheet stripped, because 40px a side
+  left its 386px credentials card no room. Measured after the change: **zero
+  horizontal overflow on all twelve templates at 320/360/375/390/414/435/600/824px,
+  with the stylesheet present and stripped alike.**
 - Body copy is centred. A left-aligned paragraph reads as off-centre next to a
   centred greeting and button.
 

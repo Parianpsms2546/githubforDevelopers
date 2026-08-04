@@ -68,7 +68,9 @@
       .email-container { width: 100% !important; margin: 0 auto !important; }
       .inner { width: 100% !important; max-width: 100% !important; }
       .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
-      .px-24 { padding-left: 24px !important; padding-right: 24px !important; }
+      /* .px-24 is now a no-op: 24px is the base padding, front and back, at
+         every width. The class is left on the cells as the hook, so a different
+         mobile value only needs a rule here. */
       .h1-mobile { font-size: 22px !important; line-height: 30px !important; }
       .body-mobile { font-size: 16px !important; line-height: 30px !important; }
       .btn-mobile a { font-size: 16px !important; }
@@ -135,7 +137,7 @@
               <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:0;">
                 <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; max-width:100%; margin:0 auto;">
                   <tr>
-                    <td class="px-24" align="center" style="padding:0 40px 0 40px;">
+                    <td class="px-24" align="center" style="padding:0 24px 0 24px;">
                       <a href="https://afs.org" target="_blank" style="text-decoration:none;">
                         <img src="cid:afs-logo"
                              width="128" height="64" alt="AFS"
@@ -152,7 +154,7 @@
               <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:16px 0 60px 0;">
                 <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; max-width:100%; margin:0 auto;">
                   <tr>
-                    <td class="px-24" style="padding:0 40px 0 40px;">
+                    <td class="px-24" style="padding:0 24px 0 24px;">
 
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
 
@@ -279,7 +281,7 @@
               <td class="footer-bg" align="center" style="background-color:#F5F6F7; padding:24px 0 24px 0;">
                 <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; max-width:100%; margin:0 auto;">
                   <tr>
-                    <td class="px-24" style="padding:0 40px 0 40px;">
+                    <td class="px-24" style="padding:0 24px 0 24px;">
 
                 <!-- The whole footer is ONE table on purpose.
                      A client that ignores width:100% shrink-wraps every table to
