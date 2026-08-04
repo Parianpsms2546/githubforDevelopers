@@ -165,17 +165,30 @@ Vector sources live in `assets/` for regeneration only:
 | `powered-by-empeo` | `powered-by-empeo.png` | — | 60×18 |
 | `icon-facebook` | `icon-facebook.png` | `facebook.svg` | 14×14 |
 | `icon-youtube` | `icon-youtube.png` | `bi_youtube.svg` | 14×14 |
-| `empeo-e-payslip` | `empeo-e-payslip.png` | `empeo-e-payslip.svg` | 36×36 |
+| `empeo-e-payslip` | `empeo-e-payslip.png` | `empeo-e-payslip-chip.svg` | 36×36 |
 
 Social icons are rasterised at **168px** (12× their 14px display size, matching the
 density of the assets they replaced) on a transparent canvas, keeping the source
 SVG's `#1C1C22`. The payslip icon is rasterised at **144px** (4× its 36px box),
 keeping the source SVG's `#F05B2F`.
 
-**The payslip icon carries no background chip.** The 80px asset it replaced had a
-pale peach rounded square baked in; `empeo-e-payslip.svg` is the artwork alone, and
-its ink fills 24 of its 36px box. If a chip is wanted back it belongs in the asset,
-not the HTML — the same rule as the logo's margin.
+### The payslip icon's peach chip
+
+`empeo-e-payslip.svg` is the artwork as delivered — the glyph alone, 24px of ink in a
+36px box. The chip behind it lives in `empeo-e-payslip-chip.svg`, and that is what the
+PNG is rasterised from. Same rule as the logo's margin: **the padding is in the asset,
+never in the HTML**, so the markup only ever says 36×36.
+
+Chip values measured off the 80px asset it replaced, so it reads as before:
+
+| | value | how it was measured |
+|---|---|---|
+| Fill | `#FDEDE8` | most common opaque colour in the old PNG |
+| Corner radius | **20% of the side** — 7.2px at 36px | opacity on row 0 starts 16px into an 80px asset |
+| Glyph | native scale — 24px of ink, 6px of peach all round | — |
+
+The old asset sat its glyph at 47.5% of the box. Keeping the new glyph at native scale
+fills the same chip more, which is the approved look — do not shrink it back.
 
 ## Dark mode
 
