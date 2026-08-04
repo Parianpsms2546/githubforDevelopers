@@ -39,7 +39,7 @@ Outlook desktop ignores the webfont entirely and lands on Tahoma.
 | Reference line (password reset) | 12px | 400 | 18px | `#525260` |
 | Inline link in body copy | 16px | 500 | 24px | `#F15A2E` |
 | Detail-card title (document) | 16px | 600 | 30px | `#1C1C22` |
-| Detail-card label / value | 14px | 400 / 500 | 22px | `#525260` / `#1C1C22` |
+| Detail-card label / value | 14px | 400 / 600 | 22px | `#525260` / `#1C1C22` |
 | Status badge (document) | 12px | 500 | 16px | `#FFFFFF` on `#8A8F98` |
 
 Flame (buttons, accents): `#F15A2E`. Footer band: `#F5F6F7`. Card: `#FFFFFF`.
@@ -82,7 +82,7 @@ Per-template components, measured in Prompt and all clearing their current value
 | Reference line, 12px/400 | lh 18px | +3.00 |
 | OTP digit, 20px/700 — Latin numerals, no Thai marks | lh 44px | +15.00 |
 | Detail-card title, 16px/600 | lh 30px | +7.00 |
-| Detail-card label 14px/400, value 14px/500 | lh 22px | +3.50 |
+| Detail-card label 14px/400, value 14px/600 | lh 22px | +3.50 |
 | Status badge, 12px/500 | lh 16px | +3.00 |
 
 Document-rejected is the one template whose body copy is safe at 24px: `เอกสารของคุณ
