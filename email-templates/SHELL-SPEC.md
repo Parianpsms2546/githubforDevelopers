@@ -8,7 +8,8 @@ swap the content rows, and leave everything else alone.
 `src/empeo-account-deletion-grayfooter.html` is the same shell with a CTA. On top of
 that, `src/empeo-payslip-grayfooter.html` adds an icon-plus-label block and an info
 box, `src/empeo-password-reset.html` adds the OTP row, and
-`src/empeo-document-rejected.html` adds the detail card.
+`src/empeo-document-rejected.html` adds the detail card, and
+`src/empeo-interview-appointment.html` adds the appointment card.
 
 ## Type
 
@@ -41,6 +42,9 @@ Outlook desktop ignores the webfont entirely and lands on Tahoma.
 | Detail-card title (document) | 16px | 600 | 30px | `#1C1C22` |
 | Detail-card label / value | 14px | 400 / 600 | 22px | `#525260` / `#1C1C22` |
 | Status badge (document) | 12px | 500 | 16px | `#FFFFFF` on `#8A8F98` |
+| Appointment day number | 36px | 700 | 44px | `#1C1C22` |
+| Appointment month / time | 16px | 500 / 700 | 24px | `#1C1C22` / `#F15A2E` |
+| Appointment mode heading | 16px | 600 | 24px | `#1C1C22` |
 
 Flame (buttons, accents): `#F15A2E`. Footer band: `#F5F6F7`. Card: `#FFFFFF`.
 Corner radius: **8px**, buttons and cards alike.
@@ -84,6 +88,10 @@ Per-template components, measured in Prompt and all clearing their current value
 | Detail-card title, 16px/600 | lh 30px | +7.00 |
 | Detail-card label 14px/400, value 14px/600 | lh 22px | +3.50 |
 | Status badge, 12px/500 | lh 16px | +3.00 |
+| Appointment day `25`, 36px/700 | lh 44px | +10.00 |
+| Appointment month 16px/500, time 16px/700 | lh 24px | +5.00 / +6.00 |
+| Appointment mode, 16px/600 | lh 24px | +4.00 |
+| Appointment place 14px/600, note 14px/600 | lh 22px | +3.50 / +1.19 |
 
 Document-rejected is the one template whose body copy is safe at 24px: `เอกสารของคุณ
 ถูกปฏิเสธ` has no stacked vowel-plus-tone, so it clears by +5px at the top and +2px
@@ -155,6 +163,12 @@ background: #F15A2E
 Height is **44px** = 7 + 30 + 7, and the VML fallback carries `height:44px` so Outlook
 draws the same button as everyone else. **The two are edited together, always** — a
 padding change that leaves the VML behind ships two different buttons.
+
+**Reach 44px through the 30px line box, not through padding.** The interview template
+arrived at the same 44px with `padding:11px 24px; line-height:22px`, and that label —
+`คลิกเพื่อดูแผนที่`, with `พื่` and `ที่` stacked — measures 17.45px of ink, so a 22px
+line box cut it by **1.45px** in Outlook desktop. Same height, same look everywhere
+else, clipped only there. On the shell's 30px it clears by +2.55px.
 
 The vertical padding is deliberately not 24px. Padding is the CSS value, not the
 optical gap: the line box is 30px while the label's ink is only 13px tall (`ดาวน์โหลด`
