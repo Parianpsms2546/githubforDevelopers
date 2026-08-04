@@ -33,6 +33,17 @@ differently, so mixing the two makes the two sides of the button drift apart.
 
 Font stack: `'Kanit', Helvetica, Arial, sans-serif`.
 
+**`empeo-account-inactive` runs Prompt instead, by request** —
+`'Prompt', Helvetica, Arial, sans-serif`, with the webfont link switched to match.
+Its line-heights are unchanged: they were tuned for Kanit, and Prompt was measured
+against every real string in that email at the shipped sizes rather than assumed to
+fit. Headroom above the ink, Kanit vs Prompt: 10px/16px 3.5 vs 3.5, 16px/30px 3.5 vs
+3.5, 18px/24px 2 vs 2. Nothing clips in either, so do not "correct" the line-heights
+when changing the family — measure first.
+
+Prompt sets a little wider than Kanit, so the body paragraph breaks at different
+points. That is the only visible difference.
+
 **Kanit needs more headroom than Prompt did.** Its Thai upper tone marks sit
 higher, and every clip measured was at the *top* of the line box — where
 `mso-line-height-rule:exactly` makes Outlook cut them off rather than overflow.
