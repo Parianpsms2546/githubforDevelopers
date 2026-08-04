@@ -69,11 +69,6 @@
       .inner { width: 100% !important; max-width: 100% !important; }
       .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
       .px-24 { padding-left: 24px !important; padding-right: 24px !important; }
-      /* Drop the layout-width floor on a viewport that really is narrow, so it
-         can never cause sideways scroll here. An !important author rule beats the
-         anchor's inline width. Clients that ignore media queries - Gmail's iOS app
-         among them - keep the 386, which is the entire point of it. */
-      .width-anchor { width: auto !important; }
       .h1-mobile { font-size: 22px !important; line-height: 30px !important; }
       .body-mobile { font-size: 16px !important; line-height: 30px !important; }
       .btn-mobile a { font-size: 16px !important; }
@@ -160,36 +155,6 @@
                     <td class="px-24" style="padding:0 40px 0 40px;">
 
                 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-
-                  <!-- Layout-width floor. Gmail's iOS app lays the message out
-                       narrower than the screen when nothing in it has a width, and
-                       the mail arrives looking pinched. Welcome-onboarding escaped
-                       that only because its credentials card is 386px wide, which is
-                       why that one template looked right and the rest did not.
-
-                       So every template gets the same 386px floor - 466px once the
-                       40px side padding is counted - and Gmail scales that up to fill
-                       the screen. Wider viewports are unaffected: the email is still
-                       fluid, this only raises the minimum.
-
-                       The 386 is unconditional, attribute and inline width both,
-                       because Gmail's app honours the stylesheet - an earlier attempt
-                       put the 386 in the attribute alone and a plain
-                       .width-anchor { width:100% } rule collapsed it, so it did
-                       nothing at all. It is walked back only inside the mobile media
-                       query, which Gmail's app ignores - established twice over, its
-                       .px-24 padding stayed 40px in a pane well under 600px - so a
-                       real narrow viewport that does honour media queries collapses
-                       the floor and never scrolls sideways.
-
-                       One empty 1px row either way. -->
-                  <tr>
-                    <td style="padding:0; font-size:0; line-height:0;">
-                      <table role="presentation" width="386" class="width-anchor" cellspacing="0" cellpadding="0" border="0" style="width:386px;">
-                        <tr><td height="1" style="height:1px; font-size:0; line-height:1px;">&nbsp;</td></tr>
-                      </table>
-                    </td>
-                  </tr>
 
                   <!-- Greeting -->
                   <tr>
