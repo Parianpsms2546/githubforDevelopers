@@ -84,7 +84,7 @@ would understate what February needs. Free-form copy keeps the shell value.
 | Top of card → logo | **0** | header band `padding:0` |
 | Logo → greeting | **16px** | body band `padding-top:16px` |
 | Greeting → body copy | **8px** | spacer row, `height="8"` |
-| Body copy → CTA button | **48px** | `padding-top:48px` on the CTA cell |
+| Last content row → CTA button | **48px** | `padding-top:48px` on the CTA cell |
 | CTA button → footer | **80px** | body band `padding-bottom:80px` |
 | Footer top / bottom | **24px** | footer band `padding:24px 0` |
 
@@ -100,22 +100,21 @@ logo spacing in the asset, never in the HTML.
 ## The CTA box
 
 ```
-padding: 24px          /* all four sides, matching the horizontal value */
-line-height: 30px      /* the Thai clearance value, unchanged */
+padding: 7px 24px      /* 44px tall with the 30px line box */
+line-height: 30px      /* the Thai clearance value */
 border-radius: 8px
 background: #F15A2E
 ```
 
-Height is **78px** = 24 + 30 + 24, and the VML fallback's `height` must be set to the
-same number or Outlook renders a different button from every other client. The two
-are edited together, always.
+Height is **44px** = 7 + 30 + 7, and the VML fallback carries `height:44px` so Outlook
+draws the same button as everyone else. **The two are edited together, always** — a
+padding change that leaves the VML behind ships two different buttons.
 
-Padding is the CSS value, not the optical gap. The line box is 30px while the label's
-ink is only 13px tall (`ดาวน์โหลด`, `ติดต่อเรา` — both 13px, no descender), so 24px of
-padding reads as **31px above the ink and 34px below** against 24px at the sides. If
-the four gaps ever need to look equal rather than measure equal, `padding:17px 24px`
-puts the ink 24px from the top edge and takes the box to 64px — but that is not the
-current value.
+The vertical padding is deliberately not 24px. Padding is the CSS value, not the
+optical gap: the line box is 30px while the label's ink is only 13px tall (`ดาวน์โหลด`
+and `ติดต่อเรา` both measure 13px, no descender), so the 30px box already contributes
+~17px of its own breathing room. Squaring the padding at 24px was tried and reverted —
+it took the button to 78px, which read as oversized.
 
 ## Layout and width
 
