@@ -6,9 +6,9 @@ From: empeo <no-reply@empeo.com>
 To: hr@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============8711955908586190162=="
+ boundary="===============3945621322479837900=="
 
---===============8711955908586190162==
+--===============3945621322479837900==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -27,12 +27,12 @@ uYDguKDguJfguK3guLHguJXguKPguLI6IOC4l+C4lOC5geC4l+C4meC4nuC4meC4seC4geC4h+C4
 suC4meC5gOC4lOC4tOC4oQrguJTguLPguYDguJnguLTguJnguIHguLLguKPguYDguKHguLfguYjg
 uK06IDUg4LmA4Lih4Lip4Liy4Lii4LiZIDI1NjYgMTM6MTIK
 
---===============8711955908586190162==
+--===============3945621322479837900==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============3535902882979935066=="
+ boundary="===============6908972963835660611=="
 
---===============3535902882979935066==
+--===============6908972963835660611==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -283,7 +283,7 @@ d table
 -color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; border-collapse:=
 separate !important; border-spacing:0;">
                         <tr>
-                          <td style=3D"padding:32px 20px;">
+                          <td style=3D"padding:16px 20px;">
 
                             <!-- Employee name (no status badge on this templ=
 ate) -->
@@ -590,7 +590,7 @@ r</a>
 </body>
 </html>
 
---===============3535902882979935066==
+--===============6908972963835660611==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -1008,7 +1008,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============3535902882979935066==
+--===============6908972963835660611==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1594,7 +1594,7 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============3535902882979935066==
+--===============6908972963835660611==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="icon-facebook.png"
@@ -1679,7 +1679,7 @@ fcfx9goyoJlMxhai8ziLteUSOvh7sH0Mr+sRjP8mdhliXKt4D3JLxSJ9D0/Ug2zb7q7V2s9KpeQ5
 I3ZcHFCmtQRX8cwEHFCmNQ4o0xoHlGmNA8q0xgFlWuOAMq39CgAA///umrQgAAAABklEQVQDABnS
 ZCwmN1BlAAAAAElFTkSuQmCC
 
---===============3535902882979935066==
+--===============6908972963835660611==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="icon-youtube.png"
@@ -1746,6 +1746,6 @@ k9N4fQ9yGgNKTmNAyWkMKDmNASWnMaDkNAaUnMaAktMYUHIaA0pOY0DJaQwoOY0BJacxoOQ0BpSc
 xoCS0xhQchoDSk5jQMlpDCg5jQElpzGg5DQGlJzGgJLTGFByGgNKTmNAyWkMKDnt/wAAAP//M0mM
 rQAAAAZJREFUAwDV6IT5m5e0KgAAAABJRU5ErkJggg==
 
---===============3535902882979935066==--
+--===============6908972963835660611==--
 
---===============8711955908586190162==--
+--===============3945621322479837900==--
