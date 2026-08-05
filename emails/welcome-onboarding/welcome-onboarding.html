@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="th" xml:lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <!-- Stop iOS / Android from auto-linking numbers, dates and addresses -->
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no" />
+  <title>empeo</title>
+
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        <o:AllowPNG/>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+
+  <!-- Web font (ignored by Outlook desktop, which falls back to Helvetica/Arial) -->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!--<![endif]-->
+
+  <style type="text/css">
+    /* ---------- Reset ---------- */
+    html, body { margin: 0 !important; padding: 0 !important; height: 100% !important; width: 100% !important; }
+    * { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-collapse: collapse !important; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    a { text-decoration: none; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+    #MessageViewBody a { color: inherit; text-decoration: none; }
+
+    /* Neutralise any link a client injects inside .no-autolink (iOS data
+       detectors, Gmail phone/date linkification) — keeps the text looking
+       like plain copy instead of a blue underlined link. */
+    .no-autolink a,
+    .no-autolink a[href^="tel"],
+    .no-autolink a[href^="sms"],
+    .no-autolink a[href^="mailto"],
+    .no-autolink a[href^="http"] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      border-bottom: 0 !important;
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+
+    /* ---------- Base ---------- */
+    body, #body {
+      background-color: #FFFFFF;
+      font-family: 'Prompt', 'Noto Sans Thai', Tahoma, Helvetica, Arial, sans-serif;
+    }
+
+    /* ---------- Responsive (mobile) ---------- */
+    @media only screen and (max-width: 600px) {
+      .email-container { width: 100% !important; min-width: 0 !important; margin: 0 auto !important; }
+      .inner { width: 100% !important; max-width: 100% !important; }
+      .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      /* .px-24 is now a no-op: 24px is the base padding, front and back, at
+         every width. The class is left on the cells as the hook, so a different
+         mobile value only needs a rule here. */
+      .h1-mobile { font-size: 22px !important; line-height: 30px !important; }
+      .body-mobile { font-size: 16px !important; line-height: 24px !important; }
+      .btn-mobile a { font-size: 16px !important; }
+
+      /* Three store buttons now share the row, so the label has to give up a
+         little at narrow widths or "Android" wraps inside its 1/3 of the row.
+         The cells themselves are percentage-width and need no rule here. */
+      .btn-label a { font-size: 13px !important; }
+      .btn-label { padding-left: 6px !important; }
+    }
+
+    /* ---------- Dark mode ---------- */
+    @media (prefers-color-scheme: dark) {
+      body, #body, .darkmode-bg { background-color: #16181D !important; }
+      .card-bg { background-color: #1F2228 !important; }
+      .footer-bg { background-color: #191B20 !important; }
+      .text-charcoal { color: #FFFFFF !important; }
+      .info-bg { background-color: #262A31 !important; }
+      .text-iron { color: #C7CBD1 !important; }
+      .text-muted { color: #9AA0A8 !important; }
+      .divider { border-color: #2C2F36 !important; }
+    }
+    [data-ogsc] .card-bg { background-color: #1F2228 !important; }
+    [data-ogsc] .footer-bg { background-color: #191B20 !important; }
+    [data-ogsc] .text-charcoal { color: #FFFFFF !important; }
+    [data-ogsc] .info-bg { background-color: #262A31 !important; }
+    [data-ogsc] .text-iron { color: #C7CBD1 !important; }
+    [data-ogsc] .text-muted { color: #9AA0A8 !important; }
+
+    /* Outlook mobile rewrites colours for its own dark mode and tags whatever it
+       touched with data-ogsb / data-ogsc. Hold the CTA to Flame with white text,
+       otherwise #F15A2E is darkened to a muddy red. */
+    [data-ogsb] .btn-bg, .btn-bg[data-ogsb] { background-color: #F15A2E !important; }
+    [data-ogsb] .cred-cell, .cred-cell[data-ogsb] { background-color: #F15A2E !important; }
+    [data-ogsc] .btn-bg a, .btn-bg a[data-ogsc] {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+  </style>
+</head>
+
+<body id="body" style="margin:0; padding:0; background-color:#FFFFFF;">
+
+  <!-- Preheader: hidden preview text shown in inbox list -->
+  <div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif;">
+    ยินดีต้อนรับสู่ทีม เข้าใช้งาน empeo ด้วยข้อมูลบัญชีในอีเมลนี้
+    &#847;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <div role="article" aria-roledescription="email" aria-label="empeo" lang="th" style="background-color:#FFFFFF;">
+
+    <!-- Full-width background wrapper -->
+    <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="darkmode-bg" style="background-color:#FFFFFF; margin:0 auto;">
+      <tr>
+        <td align="center" style="padding:0;">
+
+          <!--[if mso]>
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td>
+          <![endif]-->
+
+          <!-- Email container (full width).
+               align="center" as well as margin:0 auto: iOS Mail left-aligned the
+               whole message, and a client that treats width:100% as auto has
+               nothing but these two to centre the shrink-wrapped table. The
+               attribute is the one every renderer understands, and it is a no-op
+               whenever the table really is full width. -->
+          <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; min-width:600px; max-width:100%; margin:0 auto;">
+
+            <!-- ============ HEADER band (full-bleed) — logo flush to top ============ -->
+            <tr>
+              <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; min-width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" align="center" style="padding:0 24px 0 24px;">
+                      <a href="https://www.empeo.com" target="_blank" style="text-decoration:none;">
+                        <img src="cid:empeo-logo"
+                             width="128" height="64" alt="empeo"
+                             style="display:block; width:128px; max-width:128px; height:auto; border:0; margin:0 auto;" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============ BODY band (full-bleed) — 16px logo→title, 80px last step→footer ============ -->
+            <tr>
+              <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:16px 0 80px 0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; min-width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" style="padding:0 24px 0 24px;">
+
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                  <!-- Title -->
+                  <tr>
+                    <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:24px; line-height:32px; font-weight:700; color:#1C1C22; text-align:center; padding:0; mso-line-height-rule:exactly;">Welcome!</td>
+                  </tr>
+
+                  <!-- 8px: title → subtitle -->
+                  <tr>
+                    <td height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- Subtitle. The empty line between the two sentences is a
+                       double <br />, not a spacer row: both sentences are one
+                       subtitle block, so they share a cell and the gap is just
+                       one blank line of the same 24px leading. -->
+                  <tr>
+                    <td align="center" class="text-iron body-mobile" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#525260; text-align:center; padding:0; mso-line-height-rule:exactly;">
+                      ยินดีต้อนรับ คุณสมปอง หมายปอง สู่ระบบ empeo<br /><br />คุณสามารถเข้าถึงระบบได้ด้วยข้อมูลบัญชีด้านล่างนี้
+                    </td>
+                  </tr>
+
+                  <!-- 36px: subtitle → credentials card -->
+                  <tr>
+                    <td height="36" style="font-size:0; line-height:36px; height:36px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- Credentials card, 386px wide, flat Flame by decision.
+                       The gradient was dropped rather than chased further. A gradient
+                       behind live text needs a Word engine (VML), a CSS gradient, or a
+                       downloadable image, and the client this gets checked in - the
+                       webview-based Outlook - skips [if mso] entirely and strips CSS
+                       background-image, so it landed on this exact colour every time.
+                       Flat means one table for every client instead of two branches
+                       carrying duplicate rows. -->
+                  <tr>
+                    <td align="center" style="padding:0;">
+                      <table role="presentation" width="386" align="center" cellspacing="0" cellpadding="0" border="0" class="cred-bg" style="width:100%; max-width:386px; margin:0 auto; border-radius:8px; border-collapse:separate !important; border-spacing:0;">
+                        <tr>
+                          <td bgcolor="#F15A2E" class="cred-cell" style="background-color:#F15A2E; border-radius:8px; padding:20px 24px;">
+                            <!-- icon → label → ":" are held together at 4px each so
+                                 the icon reads as part of the label, and the value is
+                                 the only thing the eye has to travel to. -->
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
+                              <tr>
+                                <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-user-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
+                                <td width="4" style="width:4px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">ชื่อผู้ใช้</td>
+                                <td width="4" style="width:4px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">:</td>
+                                <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;"><a href="mailto:jutiphan@gofive.co.th" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:700; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important;">jutiphan@gofive.co.th</a></td>
+                              </tr>
+                              <tr><td colspan="7" height="16" style="font-size:0; line-height:16px; height:16px;">&nbsp;</td></tr>
+                              <tr>
+                                <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-lock-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
+                                <td width="4" style="width:4px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">รหัสผ่าน</td>
+                                <td width="4" style="width:4px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">:</td>
+                                <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;">empeo100886</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- 48px: credentials → steps divider -->
+                  <tr>
+                    <td height="48" style="font-size:0; line-height:48px; height:48px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- Plain full-width divider. The centred label this rule used to
+                       carry is gone, so it is one line across the whole column
+                       instead of the three-cell line / label / line arrangement. -->
+                  <tr>
+                    <td height="1" bgcolor="#E6E8EB" class="divider" style="height:1px; font-size:0; line-height:1px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- 24px: divider → first step -->
+                  <tr>
+                    <td height="24" style="font-size:0; line-height:24px; height:24px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- ============ Step 1 ============ -->
+                  <tr>
+                    <td align="center" style="padding:0;">
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:18px; line-height:28px; font-weight:600; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">ติดตั้ง empeo ได้เลยวันนี้!</td>
+                        </tr>
+                        <tr>
+                          <td height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">บนมือถือของคุณผ่าน App Store และ Play Store หรือ เข้าใช้งานผ่านเว็บได้เช่นกัน</td>
+                        </tr>
+                        <tr>
+                          <td height="14" style="font-size:0; line-height:14px; height:14px;">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <!-- Three buttons of equal width. The cells carry both a
+                                 px width attribute (what Outlook reads, and the row
+                                 is never narrower than 600px there) and a percentage
+                                 style, so a fluid mobile client divides the row into
+                                 equal thirds instead of overflowing 372px. -->
+                            <table role="presentation" width="372" align="center" cellspacing="0" cellpadding="0" border="0" style="width:100%; max-width:372px; margin:0 auto; border-collapse:separate !important; border-spacing:0;">
+                              <tr>
+                                <td align="center" width="116" bgcolor="#FFFFFF" style="width:31%; background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; padding:10px 0;"><table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr><td valign="middle" width="18" style="width:18px;"><a href="https://apps.apple.com/app/empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-apple" width="18" height="18" alt="iOS" style="display:block; width:18px; height:18px; border:0;" /></a></td><td valign="middle" class="btn-label" style="padding-left:8px;"><a href="https://apps.apple.com/app/empeo" target="_blank" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:600; color:#1C1C22 !important; -webkit-text-fill-color:#1C1C22 !important; text-decoration:none !important; white-space:nowrap;">iOS</a></td></tr></table></td>
+                                <td width="12" style="width:3.5%; font-size:0; line-height:0;">&nbsp;</td>
+                                <td align="center" width="116" bgcolor="#FFFFFF" style="width:31%; background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; padding:10px 0;"><table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr><td valign="middle" width="18" style="width:18px;"><a href="https://play.google.com/store/apps/details?id=com.empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-android" width="18" height="18" alt="Android" style="display:block; width:18px; height:18px; border:0;" /></a></td><td valign="middle" class="btn-label" style="padding-left:8px;"><a href="https://play.google.com/store/apps/details?id=com.empeo" target="_blank" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:600; color:#1C1C22 !important; -webkit-text-fill-color:#1C1C22 !important; text-decoration:none !important; white-space:nowrap;">Android</a></td></tr></table></td>
+                                <td width="12" style="width:3.5%; font-size:0; line-height:0;">&nbsp;</td>
+                                <td align="center" width="116" bgcolor="#FFFFFF" style="width:31%; background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; padding:10px 0;"><table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;"><tr><td valign="middle" width="18" style="width:18px;"><a href="https://app.myempeo.com" target="_blank" style="text-decoration:none;"><img src="cid:icon-web" width="18" height="18" alt="Website" style="display:block; width:18px; height:18px; border:0;" /></a></td><td valign="middle" class="btn-label" style="padding-left:8px;"><a href="https://app.myempeo.com" target="_blank" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:600; color:#1C1C22 !important; -webkit-text-fill-color:#1C1C22 !important; text-decoration:none !important; white-space:nowrap;">Website</a></td></tr></table></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- 20px + rule + 20px between steps -->
+                  <tr>
+                    <td height="20" style="font-size:0; line-height:20px; height:20px;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="1" bgcolor="#E6E8EB" class="divider" style="height:1px; font-size:0; line-height:1px;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="20" style="font-size:0; line-height:20px; height:20px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- ============ Step 2 ============ -->
+                  <tr>
+                    <td align="center" style="padding:0;">
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:18px; line-height:28px; font-weight:600; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">มาเรียนรู้วิธีใช้กันเลย</td>
+                        </tr>
+                        <tr>
+                          <td height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">ศึกษาการใช้งานระบบ empeo ได้ด้วยตัวเอง ผ่าน Help Center<br />เพื่อให้คุณสามารถใช้งาน empeo ได้อย่างเต็มประสิทธิภาพ</td>
+                        </tr>
+                        <tr>
+                          <td height="14" style="font-size:0; line-height:14px; height:14px;">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center">
+                            <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto; border-collapse:separate !important; border-spacing:0;">
+                              <tr>
+                                <td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; padding:10px 18px;"><a href="https://help.empeo.com" target="_blank" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:600; color:#1C1C22 !important; -webkit-text-fill-color:#1C1C22 !important; text-decoration:none !important;">เรียนรู้การใช้งาน</a></td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- 20px + rule + 20px between steps -->
+                  <tr>
+                    <td height="20" style="font-size:0; line-height:20px; height:20px;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="1" bgcolor="#E6E8EB" class="divider" style="height:1px; font-size:0; line-height:1px;">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="20" style="font-size:0; line-height:20px; height:20px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- ============ Step 3 ============ -->
+                  <tr>
+                    <td align="center" style="padding:0;">
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:18px; line-height:28px; font-weight:600; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">กรอกข้อมูลส่วนตัวให้ครบ</td>
+                        </tr>
+                        <tr>
+                          <td height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">กรอกข้อมูลติดต่อ บัญชีธนาคาร และเอกสารสำหรับฝ่ายบุคคล</td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+
+                </table>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============ FOOTER band (full-bleed) ============ -->
+            <tr>
+              <td class="footer-bg" align="center" style="background-color:#F5F6F7; padding:24px 0 24px 0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; min-width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" style="padding:0 24px 0 24px;">
+
+                <!-- The whole footer is ONE table on purpose.
+                     A client that ignores width:100% shrink-wraps every table to
+                     its own content, and this row holds only 96px of it, so as a
+                     separate table it collapsed and parked the icons against the
+                     logo. Sharing the columns with the address rows below (via
+                     colspan) forces the row to the footer's real width, so the
+                     icons land on the right edge whatever width the client gives.
+                     The middle cell takes up the slack. -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td width="60" valign="middle" align="left" style="width:60px; min-width:60px; font-size:0; line-height:0;">
+                      <!-- Outlook mobile rendered this about 9px wide while the
+                           icons beside it stayed 14px. The asset is 960px wide,
+                           and the icons differ in exactly one way: their height
+                           is in px, not auto. An auto height is what allows a
+                           squeezed column to scale the whole image down, so pin
+                           the height and floor the width. -->
+                      <img src="cid:powered-by-empeo"
+                           width="60" height="18" alt="Powered by empeo"
+                           style="display:block; width:60px; min-width:60px; height:18px; border:0;" />
+                    </td>
+                    <!-- No width on the middle cell. It was width="100%", and
+                         Outlook mobile read that as "this cell takes the whole
+                         table" and collapsed the 60px and 36px columns beside
+                         it. With both ends pinned this is the only auto column,
+                         so it absorbs the slack on its own. -->
+                    <td style="font-size:0; line-height:0;">&nbsp;</td>
+                    <td width="36" valign="middle" align="right" style="width:36px; font-size:0; line-height:0;">
+                      <!-- SOCIAL ICONS. The 8px gap is padding, not a spacer cell:
+                           the colspan rows below hand this column its width, and a
+                           font-size:0 spacer has no min-content to defend itself
+                           with, so it collapsed to 0 and the icons touched. Both
+                           end columns carry an explicit width for the same reason.
+                           No align="right" float either - the cell is already the
+                           last one, so the float had nothing to do and was one
+                           more thing a client could drop. -->
+                      <table role="presentation" width="36" cellspacing="0" cellpadding="0" border="0" style="width:36px;">
+                        <tr>
+                          <td valign="middle"><a href="https://www.facebook.com/empeoHR" target="_blank" style="text-decoration:none;"><img src="cid:icon-facebook" width="14" height="14" alt="Facebook" style="display:block; width:14px; height:14px; border:0;" /></a></td>
+                          <td valign="middle" style="padding-left:8px;"><a href="https://www.youtube.com/@empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-youtube" width="14" height="14" alt="YouTube" style="display:block; width:14px; height:14px; border:0;" /></a></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Spacer (divider line removed) -->
+                  <tr>
+                    <td colspan="3" height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- Address -->
+                  <tr>
+                    <td colspan="3" class="text-muted no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:0;">
+                      92 Central Park Offices,<br />
+                      Unit MM3205, 32nd Floor, Rama 4 Road,<br />
+                      Silom, Bang Rak, Bangkok 10500
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:4px 0 0 0;">
+                      Need help using empeo? Visit our
+                      <a href="https://help.empeo.com" target="_blank" style="color:#525260; font-weight:400; text-decoration:underline;">Help Center</a>
+                    </td>
+                  </tr>
+                </table>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+          </table>
+          <!-- /Email container -->
+
+          <!--[if mso]>
+          </td></tr></table>
+          <![endif]-->
+
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
