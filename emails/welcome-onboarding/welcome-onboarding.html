@@ -170,25 +170,17 @@
                     <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:28px; line-height:36px; font-weight:700; color:#000000; text-align:center; padding:0; mso-line-height-rule:exactly;">Welcome!</td>
                   </tr>
 
-                  <!-- 8px: title → subtitle -->
+                  <!-- Subtitle, 8px under the title. Both sentences are one
+                       block on consecutive lines, so they share a cell and a
+                       single <br />. -->
                   <tr>
-                    <td height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
-                  </tr>
-
-                  <!-- Subtitle. Both sentences are one block on consecutive
-                       lines, so they share a cell and a single <br />. -->
-                  <tr>
-                    <td align="center" class="text-charcoal body-mobile" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#1C1C22; text-align:center; padding:0; mso-line-height-rule:exactly;">
+                    <td align="center" class="text-charcoal body-mobile" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#1C1C22; text-align:center; padding:8px 0 0 0; mso-line-height-rule:exactly;">
                       ยินดีต้อนรับ คุณสมปอง หมายปอง สู่ระบบ empeo<br />คุณสามารถเข้าถึงระบบได้ด้วยข้อมูลบัญชีด้านล่างนี้
                     </td>
                   </tr>
 
-                  <!-- 36px: subtitle → credentials card -->
-                  <tr>
-                    <td height="36" style="font-size:0; line-height:36px; height:36px;">&nbsp;</td>
-                  </tr>
-
-                  <!-- Credentials card, 386px wide, flat Flame by decision.
+                  <!-- Credentials card, 36px under the subtitle and 48px clear
+                       of the first rule., 386px wide, flat Flame by decision.
                        The gradient was dropped rather than chased further. A gradient
                        behind live text needs a Word engine (VML), a CSS gradient, or a
                        downloadable image, and the client this gets checked in - the
@@ -197,7 +189,7 @@
                        Flat means one table for every client instead of two branches
                        carrying duplicate rows. -->
                   <tr>
-                    <td align="center" style="padding:0;">
+                    <td align="center" style="padding:36px 0 48px 0;">
                       <table role="presentation" width="386" align="center" cellspacing="0" cellpadding="0" border="0" class="cred-bg" style="width:100%; max-width:386px; margin:0 auto; border-radius:8px; border-collapse:separate !important; border-spacing:0;">
                         <tr>
                           <td bgcolor="#F15A2E" class="cred-cell" style="background-color:#F15A2E; border-radius:8px; padding:20px 24px;">
@@ -214,15 +206,14 @@
                                 <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
                                 <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;"><a href="mailto:jutiphan@gofive.co.th" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:700; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important;">jutiphan@gofive.co.th</a></td>
                               </tr>
-                              <tr><td colspan="7" height="16" style="font-size:0; line-height:16px; height:16px;">&nbsp;</td></tr>
                               <tr>
-                                <td valign="middle" width="16" style="width:16px;"><img src="cid:icon-lock-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
-                                <td width="4" style="width:4px; font-size:0; line-height:0;">&nbsp;</td>
-                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">รหัสผ่าน</td>
-                                <td width="4" style="width:4px; font-size:0; line-height:0;">&nbsp;</td>
-                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:500;">:</td>
-                                <td width="14" style="width:14px; font-size:0; line-height:0;">&nbsp;</td>
-                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; font-weight:700;">empeo100886</td>
+                                <td valign="middle" width="16" style="width:16px; padding-top:16px;"><img src="cid:icon-lock-white" width="16" height="16" alt="" style="display:block; width:16px; height:16px; border:0;" /></td>
+                                <td width="4" style="width:4px; font-size:0; line-height:0; padding-top:16px;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; padding-top:16px; font-weight:500;">รหัสผ่าน</td>
+                                <td width="4" style="width:4px; font-size:0; line-height:0; padding-top:16px;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; padding-top:16px; font-weight:500;">:</td>
+                                <td width="14" style="width:14px; font-size:0; line-height:0; padding-top:16px;">&nbsp;</td>
+                                <td valign="middle" class="cred-text" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; color:#FFFFFF; white-space:nowrap; mso-line-height-rule:exactly; padding-top:16px; font-weight:700;">empeo100886</td>
                               </tr>
                             </table>
                           </td>
@@ -231,41 +222,25 @@
                     </td>
                   </tr>
 
-                  <!-- 48px: credentials → steps divider -->
+                  <!-- ============ Step 1 ============
+                       Each step owns the rule above it as a border-top and the
+                       24px either side of itself as padding. Spacer rows were
+                       what carried this rhythm, and a client that drops their
+                       height leaves the &nbsp; inside them to set it instead —
+                       every gap collapsed to one line of body text, ~21px, so a
+                       32px gap and a 4px gap came out the same size. Padding and
+                       a border have nothing to collapse to. -->
                   <tr>
-                    <td height="48" style="font-size:0; line-height:48px; height:48px;">&nbsp;</td>
-                  </tr>
-
-                  <!-- Plain full-width divider. The centred label this rule used to
-                       carry is gone, so it is one line across the whole column
-                       instead of the three-cell line / label / line arrangement. -->
-                  <tr>
-                    <td height="1" bgcolor="#E6E8EB" class="divider" style="height:1px; font-size:0; line-height:1px;">&nbsp;</td>
-                  </tr>
-
-                  <!-- 24px: divider → first step -->
-                  <tr>
-                    <td height="24" style="font-size:0; line-height:24px; height:24px;">&nbsp;</td>
-                  </tr>
-
-                  <!-- ============ Step 1 ============ -->
-                  <tr>
-                    <td align="center" style="padding:0;">
+                    <td align="center" class="divider" style="border-top:1px solid #E6E8EB; padding:24px 0 24px 0;">
                       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                         <tr>
                           <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:18px; line-height:28px; font-weight:600; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">ติดตั้ง empeo ได้เลยวันนี้!</td>
                         </tr>
                         <tr>
-                          <td height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
+                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#1C1C22; text-align:center; padding:4px 0 0 0; mso-line-height-rule:exactly;">บนมือถือของคุณผ่าน App Store และ Play Store หรือ เข้าใช้งานผ่านเว็บได้เช่นกัน</td>
                         </tr>
                         <tr>
-                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">บนมือถือของคุณผ่าน App Store และ Play Store หรือ เข้าใช้งานผ่านเว็บได้เช่นกัน</td>
-                        </tr>
-                        <tr>
-                          <td height="32" style="font-size:0; line-height:32px; height:32px;">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td align="center">
+                          <td align="center" style="padding:32px 0 0 0;">
                             <!-- Three buttons of equal width. The cells carry both a
                                  px width attribute (what Outlook reads, and the row
                                  is never narrower than 600px there) and a percentage
@@ -286,36 +261,20 @@
                     </td>
                   </tr>
 
-                  <!-- 24px + rule + 24px between steps, matching the 24px the
-                       rule above step 1 already sits on. -->
+                  <!-- ============ Step 2 ============
+                       No padding-bottom: the 80px on the body band already sets
+                       the gap down to the footer. -->
                   <tr>
-                    <td height="24" style="font-size:0; line-height:24px; height:24px;">&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <td height="1" bgcolor="#E6E8EB" class="divider" style="height:1px; font-size:0; line-height:1px;">&nbsp;</td>
-                  </tr>
-                  <tr>
-                    <td height="24" style="font-size:0; line-height:24px; height:24px;">&nbsp;</td>
-                  </tr>
-
-                  <!-- ============ Step 2 ============ -->
-                  <tr>
-                    <td align="center" style="padding:0;">
+                    <td align="center" class="divider" style="border-top:1px solid #E6E8EB; padding:24px 0 0 0;">
                       <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                         <tr>
                           <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:18px; line-height:28px; font-weight:600; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">มาเรียนรู้วิธีใช้กันเลย</td>
                         </tr>
                         <tr>
-                          <td height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
+                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#1C1C22; text-align:center; padding:4px 0 0 0; mso-line-height-rule:exactly;">ศึกษาการใช้งานระบบ empeo ได้ด้วยตัวเอง ผ่าน Help Center<br />เพื่อให้คุณสามารถใช้งาน empeo ได้อย่างเต็มประสิทธิภาพ</td>
                         </tr>
                         <tr>
-                          <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#1C1C22; text-align:center; mso-line-height-rule:exactly;">ศึกษาการใช้งานระบบ empeo ได้ด้วยตัวเอง ผ่าน Help Center<br />เพื่อให้คุณสามารถใช้งาน empeo ได้อย่างเต็มประสิทธิภาพ</td>
-                        </tr>
-                        <tr>
-                          <td height="32" style="font-size:0; line-height:32px; height:32px;">&nbsp;</td>
-                        </tr>
-                        <tr>
-                          <td align="center">
+                          <td align="center" style="padding:32px 0 0 0;">
                             <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto; border-collapse:separate !important; border-spacing:0;">
                               <tr>
                                 <td align="center" bgcolor="#FFFFFF" style="background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; padding:10px 18px;"><a href="https://help.empeo.com" target="_blank" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:14px; line-height:22px; font-weight:600; color:#1C1C22 !important; -webkit-text-fill-color:#1C1C22 !important; text-decoration:none !important;">เรียนรู้การใช้งาน</a></td>
@@ -388,14 +347,9 @@
                     </td>
                   </tr>
 
-                  <!-- Spacer (divider line removed) -->
+                  <!-- Address, 4px under the logo row -->
                   <tr>
-                    <td colspan="3" height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
-                  </tr>
-
-                  <!-- Address -->
-                  <tr>
-                    <td colspan="3" class="text-muted no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:0;">
+                    <td colspan="3" class="text-muted no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:4px 0 0 0;">
                       92 Central Park Offices,<br />
                       Unit MM3205, 32nd Floor, Rama 4 Road,<br />
                       Silom, Bang Rak, Bangkok 10500

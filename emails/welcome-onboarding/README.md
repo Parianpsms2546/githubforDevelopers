@@ -27,6 +27,13 @@ Nothing to install: the scripts are stdlib-only.
 
 - The body is table-based and full-bleed at `min-width:600px`, going fluid under
   600px through the media query in `<head>`.
+- **Vertical rhythm is padding, never spacer rows.** A `<td height="32">` holding
+  a `&nbsp;` relies on the client keeping `height` and `font-size:0`; a client
+  that drops them lets the `&nbsp;` set the height instead, and every gap in the
+  mail collapses to one line of body text (~21px) — a 32px gap and a 4px gap come
+  out the same size. Padding has nothing to collapse to. For the same reason the
+  rules between steps are a `border-top` on the step cell, not a 1px background
+  cell.
 - Copy is centred throughout: title, subtitles, step titles, step copy, buttons.
 - The three store buttons (`iOS` / `Android` / `Website`) share one row and carry
   both a px width attribute (Outlook) and a percentage width (fluid clients), so
