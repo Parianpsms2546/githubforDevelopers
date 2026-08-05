@@ -501,7 +501,12 @@ what the eye reads:
 |---|---|---|---|
 | `empeo-logo` | 117×29 | ~17.5px | ~36px |
 | `afs-logo` | 71.6×48 | 8px | ~24px |
-| `rs-logo` | 48×48 | 8px | ~24px |
+| `rs-logo` | 64×64 | 0px | 16px |
+
+**RS fills the box outright**, by request: 64px of ink, diamond touching top and bottom,
+no vertical margin in the asset at all. The gap to the greeting is then the 16px of box
+spacing alone — less than half what the empeo logo reads — which is what a full-bleed logo
+costs. Both exceptions are one number in the rasterising step.
 
 **AFS is a deliberate exception to the 29px ink height.** Its artwork is a filled flag at
 1.492:1 that fills its own canvas, and at 29px it read as too small, so it is scaled to
