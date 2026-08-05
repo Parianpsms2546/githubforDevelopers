@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="th" xml:lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <!-- Stop iOS / Android from auto-linking numbers, dates and addresses -->
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no" />
+  <title>empeo</title>
+
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        <o:AllowPNG/>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+
+  <!-- No web font link: gofive-regular is not hosted on a public CDN, so it
+       only renders where it is installed locally. Everywhere else the stack
+       falls through to noto-sans-tc / Helvetica / Arial / Tahoma. Add an
+       @font-face (or a <link>) here if gofive-regular ever gets a mail-safe
+       hosted copy. -->
+
+  <style type="text/css">
+    /* ---------- Reset ---------- */
+    html, body { margin: 0 !important; padding: 0 !important; height: 100% !important; width: 100% !important; }
+    * { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-collapse: collapse !important; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    a { text-decoration: none; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+    #MessageViewBody a { color: inherit; text-decoration: none; }
+
+    /* Neutralise any link a client injects inside .no-autolink (iOS data
+       detectors, Gmail phone/date linkification) — keeps the text looking
+       like plain copy instead of a blue underlined link. Never put a real
+       link inside .no-autolink: pointer-events:none would kill it too. */
+    .no-autolink a,
+    .no-autolink a[href^="tel"],
+    .no-autolink a[href^="sms"],
+    .no-autolink a[href^="mailto"],
+    .no-autolink a[href^="http"] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      border-bottom: 0 !important;
+      pointer-events: none !important;
+      cursor: default !important;
+    }
+
+    /* ---------- Base ---------- */
+    body, #body {
+      background-color: #FFFFFF;
+      font-family: 'gofive-regular', 'noto-sans-tc', Helvetica, Arial, Tahoma, sans-serif;
+    }
+
+    /* ---------- Responsive (mobile) ---------- */
+    @media only screen and (max-width: 600px) {
+      .email-container { width: 100% !important; min-width: 0 !important; margin: 0 auto !important; }
+      .inner { width: 100% !important; max-width: 100% !important; }
+      .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      /* .px-24 is now a no-op: 24px is the base padding, front and back, at
+         every width. The class is left on the cells as the hook, so a different
+         mobile value only needs a rule here. */
+      .h1-mobile { font-size: 22px !important; line-height: 30px !important; }
+      .body-mobile { font-size: 16px !important; line-height: 24px !important; }
+      .btn-mobile a { font-size: 16px !important; }
+      /* Label / value rows stack on narrow screens: four labels of very
+         different lengths ("ตำแหน่ง" vs "ข้อมูลเพิ่มเติม") leave the value
+         column too narrow to hold a room name or a meeting ID on one line. */
+      .stack-label, .stack-value { display: block !important; width: 100% !important; padding-right: 0 !important; }
+      .stack-value { padding-top: 2px !important; }
+    }
+
+    /* ---------- Dark mode ---------- */
+    @media (prefers-color-scheme: dark) {
+      body, #body, .darkmode-bg { background-color: #16181D !important; }
+      .card-bg { background-color: #1F2228 !important; }
+      .footer-bg { background-color: #191B20 !important; }
+      .text-charcoal { color: #FFFFFF !important; }
+      .detail-bg { background-color: #262A31 !important; border-color: #2C2F36 !important; }
+      .text-iron { color: #C7CBD1 !important; }
+      .text-muted { color: #9AA0A8 !important; }
+      .divider { border-color: #3A3E46 !important; }
+      .link-flame a { color: #FF7A52 !important; }
+    }
+    [data-ogsc] .card-bg { background-color: #1F2228 !important; }
+    [data-ogsc] .footer-bg { background-color: #191B20 !important; }
+    [data-ogsc] .text-charcoal { color: #FFFFFF !important; }
+    [data-ogsc] .detail-bg { background-color: #262A31 !important; }
+    [data-ogsc] .text-iron { color: #C7CBD1 !important; }
+    [data-ogsc] .text-muted { color: #9AA0A8 !important; }
+    [data-ogsc] .divider { border-color: #3A3E46 !important; }
+    [data-ogsc] .link-flame a { color: #FF7A52 !important; }
+
+    /* Outlook mobile rewrites colours for its own dark mode and tags whatever it
+       touched with data-ogsb / data-ogsc. Hold the CTA to Flame with white text,
+       otherwise #F15A2E is darkened to a muddy red. */
+    [data-ogsb] .btn-bg, .btn-bg[data-ogsb] { background-color: #F15A2E !important; }
+    [data-ogsc] .btn-bg a, .btn-bg a[data-ogsc] {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
+    }
+  </style>
+</head>
+
+<body id="body" style="margin:0; padding:0; background-color:#FFFFFF;">
+
+  <!-- Preheader: hidden preview text shown in inbox list -->
+  <div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif;">
+    วันนี้คุณมีนัดหมายสัมภาษณ์ผู้สมัครงาน 2 คน กดดูรายละเอียดได้ที่นี่
+    &#847;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+  </div>
+
+  <div role="article" aria-roledescription="email" aria-label="empeo" lang="th" style="background-color:#FFFFFF;">
+
+    <!-- Full-width background wrapper -->
+    <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="darkmode-bg" style="background-color:#FFFFFF; margin:0 auto;">
+      <tr>
+        <td align="center" style="padding:0;">
+
+          <!--[if mso]>
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td>
+          <![endif]-->
+
+          <!-- Email container (full width).
+               align="center" as well as margin:0 auto: iOS Mail left-aligned the
+               whole message, and a client that treats width:100% as auto has
+               nothing but these two to centre the shrink-wrapped table. The
+               attribute is the one every renderer understands, and it is a no-op
+               whenever the table really is full width. -->
+          <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; min-width:600px; max-width:100%; margin:0 auto;">
+
+            <!-- ============ HEADER band (full-bleed) — logo flush to top ============ -->
+            <tr>
+              <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; min-width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" align="center" style="padding:0 24px 0 24px;">
+                      <a href="https://www.empeo.com" target="_blank" style="text-decoration:none;">
+                        <img src="cid:empeo-logo"
+                             width="128" height="64" alt="empeo"
+                             style="display:block; width:128px; max-width:128px; height:auto; border:0; margin:0 auto;" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============ BODY band (full-bleed) — 16px logo→greeting, 48px card→button, 80px button→footer ============ -->
+            <tr>
+              <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:16px 0 80px 0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; min-width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" style="padding:0 24px 0 24px;">
+
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                  <!-- Greeting -->
+                  <tr>
+                    <td align="center" class="text-charcoal" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; line-height:24px; color:#000000; text-align:center; padding:0; mso-line-height-rule:exactly;"><span style="font-size:18px; font-weight:500;">สวัสดี </span><span style="font-size:18px; font-weight:700;">คุณเดชา</span></td>
+                  </tr>
+
+                  <!-- 8px: greeting → body copy -->
+                  <tr>
+                    <td height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- Body copy -->
+                  <tr>
+                    <td align="center" class="text-charcoal body-mobile" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; line-height:24px; font-weight:500; color:#1C1C22; text-align:center; padding:0; mso-line-height-rule:exactly;">
+                      วันนี้คุณมีนัดหมายสัมภาษณ์ผู้สมัครงาน รายละเอียดดังนี้
+                    </td>
+                  </tr>
+
+                  <!-- 36px: body copy → interview detail card -->
+                  <tr>
+                    <td height="36" style="font-size:0; line-height:36px; height:36px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- Interview detail card — every appointment lives inside this
+                       one card, one block per candidate, separated by a divider.
+                       border-collapse:separate !important because the shell's reset
+                       collapses every table and a collapsed table drops both its
+                       border-radius and its 1px border. -->
+                  <tr>
+                    <td align="left" style="padding:0;">
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="detail-bg" style="background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; border-collapse:separate !important; border-spacing:0;">
+                        <tr>
+                          <td style="padding:20px;">
+
+                            <!-- ---------- Appointment 1 ---------- -->
+
+                            <!-- Index + candidate name. Two columns, not "1. name"
+                                 in one cell: a long Thai name wraps under the number
+                                 otherwise instead of hanging on its own indent. -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td valign="top" width="20" class="text-charcoal" style="width:20px; padding-right:6px; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; line-height:26px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">1.</td>
+                                <td valign="top" width="100%" class="text-charcoal" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; line-height:26px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">อิสรีย์ สินสุขไชย</td>
+                              </tr>
+                            </table>
+
+                            <!-- 10px: name → detail rows -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td height="10" style="font-size:0; line-height:10px; height:10px;">&nbsp;</td>
+                              </tr>
+                            </table>
+
+                            <!-- Label / value rows, 8px apart. The spacer carries
+                                 colspan="2" so it cannot introduce a third column and
+                                 nudge the label column's width. The 20px indent that lines
+                                 the rows up under the name is padding on the wrapper cell,
+                                 not a spacer column: a font-size:0 spacer has no
+                                 min-content to defend its width with and collapsed to 0. -->
+                            <!-- Wrapper cell carries the 20px indent that lines the rows up under
+                                 the candidate name. -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td style="padding-left:20px;">
+                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                  <td valign="top" class="text-iron stack-label" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">ตำแหน่ง:</td>
+                                  <td valign="top" width="100%" class="text-charcoal stack-value" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">Front End Developer</td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" class="text-iron stack-label" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">วันและเวลา:</td>
+                                  <td valign="top" width="100%" class="text-charcoal no-autolink stack-value" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">25 กรกฎาคม 2565 13:00&#8288;-&#8288;14:00</td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" class="text-iron stack-label" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">สถานที่:</td>
+                                  <td valign="top" width="100%" class="text-charcoal link-flame stack-value" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">สัมภาษณ์ออนไลน์ <a href="https://app.empeo.com/interview/join" target="_blank" style="color:#F15A2E; font-weight:500; text-decoration:underline;">คลิกที่นี่เพื่อเข้าร่วม</a></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" class="text-iron stack-label" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">ข้อมูลเพิ่มเติม:</td>
+                                  <td valign="top" width="100%" class="text-charcoal no-autolink stack-value" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">Meeting ID: 435&nbsp;453&nbsp;627&nbsp;708&nbsp;&nbsp;Passcode: kvuJiJ</td>
+                                </tr>
+                              </table>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!-- ---------- Divider between appointments — 16px, rule, 16px.
+                                 The rule is a border on its own row so the dark-mode
+                                 .divider rule can recolour it; a bgcolor line would need
+                                 a second override and still show as a hairline gap in
+                                 Outlook. Repeat this block for every extra candidate. -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td height="16" style="font-size:0; line-height:16px; height:16px;">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td class="divider" height="1" style="border-top:1px solid #E6E8EB; font-size:0; line-height:1px; height:1px;">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td height="16" style="font-size:0; line-height:16px; height:16px;">&nbsp;</td>
+                              </tr>
+                            </table>
+
+                            <!-- ---------- Appointment 2 ---------- -->
+
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td valign="top" width="20" class="text-charcoal" style="width:20px; padding-right:6px; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; line-height:26px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">2.</td>
+                                <td valign="top" width="100%" class="text-charcoal" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; line-height:26px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">รวีโรจน์ เจียมศิริกาญจน์</td>
+                              </tr>
+                            </table>
+
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td height="10" style="font-size:0; line-height:10px; height:10px;">&nbsp;</td>
+                              </tr>
+                            </table>
+
+                            <!-- Wrapper cell carries the 20px indent that lines the rows up under
+                                 the candidate name. -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td style="padding-left:20px;">
+                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                                <tr>
+                                  <td valign="top" class="text-iron stack-label" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">ตำแหน่ง:</td>
+                                  <td valign="top" width="100%" class="text-charcoal stack-value" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">Front End Developer</td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" class="text-iron stack-label" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">วันและเวลา:</td>
+                                  <td valign="top" width="100%" class="text-charcoal no-autolink stack-value" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">25 กรกฎาคม 2565 14:00&#8288;-&#8288;15:00</td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" class="text-iron stack-label" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">สถานที่:</td>
+                                  <td valign="top" width="100%" class="text-charcoal link-flame stack-value" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">ห้องประชุม Apollo อาคาร B บริษัท โกไฟว์ จำกัด สาขา FYI Center <a href="https://maps.google.com/?q=FYI+Center+Bangkok" target="_blank" style="color:#F15A2E; font-weight:500; text-decoration:underline;">คลิกเพื่อดูแผนที่</a></td>
+                                </tr>
+                                <tr>
+                                  <td colspan="2" height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                  <td valign="top" class="text-iron stack-label" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">ข้อมูลเพิ่มเติม:</td>
+                                  <td valign="top" width="100%" class="text-charcoal no-autolink stack-value" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">กรุณาแต่งกายให้สุภาพและเปิดกล้องขณะสัมภาษณ์<br />หากถึงที่นัดหมายแล้วกรุณาติดต่อคุณดลนภา<br />เบอร์ 087&#8288;-&#8288;654&#8288;-&#8288;3213</td>
+                                </tr>
+                              </table>
+                                </td>
+                              </tr>
+                            </table>
+
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Button (CTA) — outside the card, one per mail, not one per
+                       appointment. 48px above via padding on this cell, so both
+                       sides of the button use the same mechanism as the 80px below
+                       (body band padding-bottom). A spacer row here and padding
+                       there makes the two gaps drift apart between clients. -->
+                  <tr>
+                    <td align="center" class="btn-mobile" style="padding:48px 0 0 0;">
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+                                   href="https://app.empeo.com/emsume" style="height:44px; v-text-anchor:middle; width:140px;" arcsize="18%" stroke="f" fillcolor="#F15A2E">
+                        <w:anchorlock/>
+                        <center style="color:#FFFFFF; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; font-weight:bold;">ดู emsume</center>
+                      </v:roundrect>
+                      <![endif]-->
+                      <!--[if !mso]><!-->
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
+                        <tr>
+                          <td align="center" bgcolor="#F15A2E" class="btn-bg" style="background-color:#F15A2E; border-radius:8px;">
+                            <a href="https://app.empeo.com/emsume" target="_blank"
+                               style="display:inline-block; padding:7px 24px; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important; border-radius:8px; mso-line-height-rule:exactly;">ดู emsume</a>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+                    </td>
+                  </tr>
+
+                </table>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============ FOOTER band (full-bleed) ============ -->
+            <tr>
+              <td class="footer-bg" align="center" style="background-color:#F5F6F7; padding:24px 0 24px 0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; min-width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" style="padding:0 24px 0 24px;">
+
+                <!-- The whole footer is ONE table on purpose.
+                     A client that ignores width:100% shrink-wraps every table to
+                     its own content, and this row holds only 96px of it, so as a
+                     separate table it collapsed and parked the icons against the
+                     logo. Sharing the columns with the address rows below (via
+                     colspan) forces the row to the footer's real width, so the
+                     icons land on the right edge whatever width the client gives.
+                     The middle cell takes up the slack. -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td width="60" valign="middle" align="left" style="width:60px; min-width:60px; font-size:0; line-height:0;">
+                      <!-- Outlook mobile rendered this about 9px wide while the
+                           icons beside it stayed 14px. The asset is 960px wide,
+                           and the icons differ in exactly one way: their height
+                           is in px, not auto. An auto height is what allows a
+                           squeezed column to scale the whole image down, so pin
+                           the height and floor the width. -->
+                      <img src="cid:powered-by-empeo"
+                           width="60" height="18" alt="Powered by empeo"
+                           style="display:block; width:60px; min-width:60px; height:18px; border:0;" />
+                    </td>
+                    <!-- No width on the middle cell. It was width="100%", and
+                         Outlook mobile read that as "this cell takes the whole
+                         table" and collapsed the 60px and 36px columns beside
+                         it. With both ends pinned this is the only auto column,
+                         so it absorbs the slack on its own. -->
+                    <td style="font-size:0; line-height:0;">&nbsp;</td>
+                    <td width="36" valign="middle" align="right" style="width:36px; font-size:0; line-height:0;">
+                      <!-- SOCIAL ICONS. The 8px gap is padding, not a spacer cell:
+                           the colspan rows below hand this column its width, and a
+                           font-size:0 spacer has no min-content to defend itself
+                           with, so it collapsed to 0 and the icons touched. Both
+                           end columns carry an explicit width for the same reason.
+                           No align="right" float either - the cell is already the
+                           last one, so the float had nothing to do and was one
+                           more thing a client could drop. -->
+                      <table role="presentation" width="36" cellspacing="0" cellpadding="0" border="0" style="width:36px;">
+                        <tr>
+                          <td valign="middle"><a href="https://www.facebook.com/empeoHR" target="_blank" style="text-decoration:none;"><img src="cid:icon-facebook" width="14" height="14" alt="Facebook" style="display:block; width:14px; height:14px; border:0;" /></a></td>
+                          <td valign="middle" style="padding-left:8px;"><a href="https://www.youtube.com/@empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-youtube" width="14" height="14" alt="YouTube" style="display:block; width:14px; height:14px; border:0;" /></a></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Spacer (divider line removed) -->
+                  <tr>
+                    <td colspan="3" height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- Address -->
+                  <tr>
+                    <td colspan="3" class="text-muted no-autolink" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:0;">
+                      92 Central Park Offices,<br />
+                      Unit MM3205, 32nd Floor, Rama 4 Road,<br />
+                      Silom, Bang Rak, Bangkok 10500
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="text-muted" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:4px 0 0 0;">
+                      Need help using empeo? Visit our
+                      <a href="https://help.empeo.com" target="_blank" style="color:#525260; font-weight:400; text-decoration:underline;">Help Center</a>
+                    </td>
+                  </tr>
+                </table>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+          </table>
+          <!-- /Email container -->
+
+          <!--[if mso]>
+          </td></tr></table>
+          <![endif]-->
+
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
