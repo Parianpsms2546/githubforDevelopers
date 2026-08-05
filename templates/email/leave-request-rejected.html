@@ -1,228 +1,361 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="th">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="th" xml:lang="th">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>เอกสารของคุณถูกปฏิเสธ | empeo</title>
-  <!--
-    empeo — Leave request rejected notification
+  <meta name="x-apple-disable-message-reformatting" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="supported-color-schemes" content="light dark" />
+  <!-- Stop iOS / Android from auto-linking numbers, dates and addresses -->
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no, url=no" />
+  <title>empeo</title>
 
-    Asset URLs are left as {{placeholders}} so they can be pointed at the
-    mail CDN at send time. Everything else is the sample content from the
-    approved design.
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        <o:AllowPNG/>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
 
-    Brand tokens used (empeo / Gofive Design System):
-      Flame (primary)  #E2673C
-      Charcoal (L1)    #1F2937
-      Iron (L2)        #374151
-      Lead (L3)        #4B5563
-      Porpoise (L5)    #9CA3AF   <- rejected badge
-      Card border      #E5E7EB
-      Footer BG        #F5F6F7
-  -->
+  <!-- Web font (ignored by Outlook desktop, which falls back to Helvetica/Arial) -->
+  <!--[if !mso]><!-->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!--<![endif]-->
+
   <style type="text/css">
-    /* Clients that support <style> get the nicer stack; the rest fall back
-       to the inline font-family declarations below. */
-    body, table, td, p, h1, h2 {
-      font-family: 'GoFive Font', 'Prompt', 'Noto Sans Thai', 'Kanit', Arial, sans-serif;
+    /* ---------- Reset ---------- */
+    html, body { margin: 0 !important; padding: 0 !important; height: 100% !important; width: 100% !important; }
+    * { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-collapse: collapse !important; }
+    img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+    a { text-decoration: none; }
+    a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; }
+    u + #body a { color: inherit; text-decoration: none; }
+    #MessageViewBody a { color: inherit; text-decoration: none; }
+
+    /* Neutralise any link a client injects inside .no-autolink (iOS data
+       detectors, Gmail phone/date linkification) — keeps the text looking
+       like plain copy instead of a blue underlined link. */
+    .no-autolink a,
+    .no-autolink a[href^="tel"],
+    .no-autolink a[href^="sms"],
+    .no-autolink a[href^="mailto"],
+    .no-autolink a[href^="http"] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-family: inherit !important;
+      font-weight: inherit !important;
+      line-height: inherit !important;
+      border-bottom: 0 !important;
+      pointer-events: none !important;
+      cursor: default !important;
     }
-    @media only screen and (max-width: 620px) {
-      .container { width: 100% !important; }
-      .gutter    { padding-left: 20px !important; padding-right: 20px !important; }
-      .row-label { display: block !important; width: 100% !important; padding-bottom: 2px !important; }
-      .row-value { display: block !important; width: 100% !important; }
-      .doc-title { font-size: 18px !important; }
+
+    /* ---------- Base ---------- */
+    body, #body {
+      background-color: #FFFFFF;
+      font-family: 'Prompt', 'Noto Sans Thai', Tahoma, Helvetica, Arial, sans-serif;
+    }
+
+    /* ---------- Responsive (mobile) ---------- */
+    @media only screen and (max-width: 600px) {
+      .email-container { width: 100% !important; min-width: 0 !important; margin: 0 auto !important; }
+      .inner { width: 100% !important; max-width: 100% !important; }
+      .fluid { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      /* .px-24 is now a no-op: 24px is the base padding, front and back, at
+         every width. The class is left on the cells as the hook, so a different
+         mobile value only needs a rule here. */
+      .h1-mobile { font-size: 22px !important; line-height: 30px !important; }
+      .body-mobile { font-size: 16px !important; line-height: 24px !important; }
+      .btn-mobile a { font-size: 16px !important; }
+    }
+
+    /* ---------- Dark mode ---------- */
+    @media (prefers-color-scheme: dark) {
+      body, #body, .darkmode-bg { background-color: #16181D !important; }
+      .card-bg { background-color: #1F2228 !important; }
+      .footer-bg { background-color: #191B20 !important; }
+      .text-charcoal { color: #FFFFFF !important; }
+      .detail-bg { background-color: #262A31 !important; border-color: #2C2F36 !important; }
+      .text-iron { color: #C7CBD1 !important; }
+      .text-muted { color: #9AA0A8 !important; }
+      .divider { border-color: #2C2F36 !important; }
+    }
+    [data-ogsc] .card-bg { background-color: #1F2228 !important; }
+    [data-ogsc] .footer-bg { background-color: #191B20 !important; }
+    [data-ogsc] .text-charcoal { color: #FFFFFF !important; }
+    [data-ogsc] .detail-bg { background-color: #262A31 !important; }
+    [data-ogsc] .text-iron { color: #C7CBD1 !important; }
+    [data-ogsc] .text-muted { color: #9AA0A8 !important; }
+
+    /* Outlook mobile rewrites colours for its own dark mode and tags whatever it
+       touched with data-ogsb / data-ogsc. Hold the CTA to Flame with white text,
+       otherwise #F15A2E is darkened to a muddy red. */
+    [data-ogsb] .btn-bg, .btn-bg[data-ogsb] { background-color: #F15A2E !important; }
+    [data-ogsc] .btn-bg a, .btn-bg a[data-ogsc] {
+      color: #FFFFFF !important;
+      -webkit-text-fill-color: #FFFFFF !important;
     }
   </style>
 </head>
 
-<body style="margin:0; padding:0; background-color:#ffffff; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
+<body id="body" style="margin:0; padding:0; background-color:#FFFFFF;">
 
-  <!-- Preheader (hidden) -->
-  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">
-    ลาป่วย (L230200033) — เอกสารของคุณถูกปฏิเสธ
+  <!-- Preheader: hidden preview text shown in inbox list -->
+  <div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif;">
+    คำขอลาป่วยของคุณถูกปฏิเสธ กดดูรายละเอียดเอกสารได้ที่นี่
+    &#847;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
   </div>
 
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;">
-    <tr>
-      <td align="center" style="padding:0;">
+  <div role="article" aria-roledescription="email" aria-label="empeo" lang="th" style="background-color:#FFFFFF;">
 
-        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
+    <!-- Full-width background wrapper -->
+    <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="darkmode-bg" style="background-color:#FFFFFF; margin:0 auto;">
+      <tr>
+        <td align="center" style="padding:0;">
 
-          <!-- Logo -->
-          <tr>
-            <td align="center" class="gutter" style="padding:48px 40px 40px 40px;">
-              <img src="{{logoUrl}}" width="180" height="42" alt="empeo"
-                   style="display:block; border:0; outline:none; text-decoration:none; height:auto; max-width:180px;" />
-            </td>
-          </tr>
+          <!--[if mso]>
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" align="center"><tr><td>
+          <![endif]-->
 
-          <!-- Greeting -->
-          <tr>
-            <td align="center" class="gutter" style="padding:0 40px 12px 40px;">
-              <h1 style="margin:0; font-size:24px; line-height:1.4; font-weight:700; color:#1F2937;
-                         font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
-                สวัสดี สมปอง หมายปอง
-              </h1>
-            </td>
-          </tr>
+          <!-- Email container (full width).
+               align="center" as well as margin:0 auto: iOS Mail left-aligned the
+               whole message, and a client that treats width:100% as auto has
+               nothing but these two to centre the shrink-wrapped table. The
+               attribute is the one every renderer understands, and it is a no-op
+               whenever the table really is full width. -->
+          <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="email-container" style="width:100%; min-width:600px; max-width:100%; margin:0 auto;">
 
-          <!-- Subtitle -->
-          <tr>
-            <td align="center" class="gutter" style="padding:0 40px 40px 40px;">
-              <p style="margin:0; font-size:18px; line-height:1.5; font-weight:400; color:#374151;
-                        font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
-                เอกสารของคุณถูกปฏิเสธ
-              </p>
-            </td>
-          </tr>
+            <!-- ============ HEADER band (full-bleed) — logo flush to top ============ -->
+            <tr>
+              <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; min-width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" align="center" style="padding:0 24px 0 24px;">
+                      <a href="https://www.empeo.com" target="_blank" style="text-decoration:none;">
+                        <img src="cid:empeo-logo"
+                             width="128" height="64" alt="empeo"
+                             style="display:block; width:128px; max-width:128px; height:auto; border:0; margin:0 auto;" />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
 
-          <!-- Document card -->
-          <tr>
-            <td class="gutter" style="padding:0 40px;">
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-                     style="border:1px solid #E5E7EB; border-radius:12px; background-color:#ffffff;">
-                <tr>
-                  <td style="padding:24px;">
+            <!-- ============ BODY band (full-bleed) — 16px logo→greeting, 48px card→button, 80px button→footer ============ -->
+            <tr>
+              <td class="card-bg" align="center" style="background-color:#FFFFFF; padding:16px 0 80px 0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; min-width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" style="padding:0 24px 0 24px;">
 
-                    <!-- Title + status badge -->
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                      <tr>
-                        <td align="left" valign="middle" style="padding:0 12px 0 0;">
-                          <!-- Document title: 18px -->
-                          <span class="doc-title"
-                                style="font-size:18px; line-height:1.5; font-weight:700; color:#1F2937;
-                                       font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
-                            ลาป่วย (L230200033)
-                          </span>
-                        </td>
-                        <td align="right" valign="middle" width="88" style="width:88px;">
-                          <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right">
-                            <tr>
-                              <td align="center"
-                                  style="background-color:#9CA3AF; border-radius:16px; padding:6px 18px;
-                                         font-size:14px; line-height:1.4; font-weight:400; color:#ffffff;
-                                         white-space:nowrap;
-                                         font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
-                                ปฏิเสธ
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
 
-                    <!-- Detail rows -->
-                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:16px;">
-                      <tr>
-                        <td class="row-label" align="left" valign="top" width="112"
-                            style="width:112px; padding:0 12px 10px 0; font-size:16px; line-height:1.6;
-                                   font-weight:400; color:#4B5563;
-                                   font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
-                          วันที่:
-                        </td>
-                        <td class="row-value" align="left" valign="top"
-                            style="padding:0 0 10px 0; font-size:16px; line-height:1.6;
-                                   font-weight:400; color:#1F2937;
-                                   font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
-                          25 กรกฎาคม 2565 (1 วัน)
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="row-label" align="left" valign="top" width="112"
-                            style="width:112px; padding:0 12px 0 0; font-size:16px; line-height:1.6;
-                                   font-weight:400; color:#4B5563;
-                                   font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
-                          รายละเอียด:
-                        </td>
-                        <!-- Detail value: 16px -->
-                        <td class="row-value" align="left" valign="top"
-                            style="padding:0; font-size:16px; line-height:1.6;
-                                   font-weight:700; color:#1F2937;
-                                   font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
-                          เป็นไข้ใจ
-                        </td>
-                      </tr>
-                    </table>
+                  <!-- Greeting -->
+                  <tr>
+                    <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; line-height:24px; color:#000000; text-align:center; padding:0; mso-line-height-rule:exactly;"><span style="font-size:18px; font-weight:500;">สวัสดี </span><span style="font-size:18px; font-weight:700;">สมปอง หมายปอง</span></td>
+                  </tr>
 
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+                  <!-- 8px: greeting → body copy -->
+                  <tr>
+                    <td height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                  </tr>
 
-          <!-- CTA -->
-          <tr>
-            <td align="center" class="gutter" style="padding:40px 40px 56px 40px;">
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td align="center" bgcolor="#E2673C" style="border-radius:8px;">
-                    <a href="{{documentUrl}}" target="_blank"
-                       style="display:inline-block; padding:16px 44px; border-radius:8px;
-                              background-color:#E2673C; color:#ffffff; font-size:18px; line-height:1.4;
-                              font-weight:700; text-decoration:none;
-                              font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
-                      ดูเอกสาร
-                    </a>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+                  <!-- Body copy -->
+                  <tr>
+                    <td align="center" class="text-charcoal body-mobile" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:500; color:#1C1C22; text-align:center; padding:0; mso-line-height-rule:exactly;">
+                      เอกสารของคุณถูกปฏิเสธ
+                    </td>
+                  </tr>
 
-        </table>
-      </td>
-    </tr>
+                  <!-- 36px: body copy → document detail card -->
+                  <tr>
+                    <td height="36" style="font-size:0; line-height:36px; height:36px;">&nbsp;</td>
+                  </tr>
 
-    <!-- Footer -->
-    <tr>
-      <td align="center" style="background-color:#F5F6F7; padding:0;">
-        <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:600px;">
-          <tr>
-            <td class="gutter" style="padding:28px 40px 32px 40px;">
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-                <tr>
-                  <td align="left" valign="top">
-                    <img src="{{poweredByLogoUrl}}" width="124" height="26" alt="Powered by empeo"
-                         style="display:block; border:0; outline:none; text-decoration:none; height:auto; max-width:124px;" />
-                  </td>
-                  <td align="right" valign="top">
-                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="right">
-                      <tr>
-                        <td style="padding:0 0 0 14px;">
-                          <a href="{{facebookUrl}}" target="_blank" style="text-decoration:none;">
-                            <img src="{{facebookIconUrl}}" width="22" height="22" alt="Facebook"
-                                 style="display:block; border:0; outline:none; text-decoration:none;" />
-                          </a>
-                        </td>
-                        <td style="padding:0 0 0 14px;">
-                          <a href="{{youtubeUrl}}" target="_blank" style="text-decoration:none;">
-                            <img src="{{youtubeIconUrl}}" width="26" height="22" alt="YouTube"
-                                 style="display:block; border:0; outline:none; text-decoration:none;" />
-                          </a>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="2" align="left" style="padding:14px 0 0 0;">
-                    <p style="margin:0; font-size:15px; line-height:1.6; font-weight:400; color:#374151;
-                              font-family:'GoFive Font','Prompt','Noto Sans Thai','Kanit',Arial,sans-serif;">
+                  <!-- Document detail card. border-collapse:separate !important because
+                       the shell's reset collapses every table and a collapsed table
+                       drops both its border-radius and its 1px border. -->
+                  <tr>
+                    <td align="left" style="padding:0;">
+                      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" class="detail-bg" style="background-color:#FFFFFF; border:1px solid #E6E8EB; border-radius:8px; border-collapse:separate !important; border-spacing:0;">
+                        <tr>
+                          <td style="padding:16px 20px;">
+
+                            <!-- Title + status badge -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td align="left" valign="middle" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:18px; line-height:30px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">ลาป่วย (L2302&#8288;00033)</td>
+                                <td align="right" valign="middle" style="white-space:nowrap;">
+                                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="right">
+                                    <tr>
+                                      <td align="center" bgcolor="#8A8F98" style="background-color:#8A8F98; border-radius:10px; padding:3px 12px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:12px; white-space:nowrap; line-height:16px; font-weight:500; color:#FFFFFF; mso-line-height-rule:exactly;">ปฏิเสธ</td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+
+                            <!-- 10px: title → detail rows -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td height="10" style="font-size:0; line-height:10px; height:10px;">&nbsp;</td>
+                              </tr>
+                            </table>
+
+                            <!-- Label / value rows, 8px apart. The spacer carries
+                                 colspan="2" so it cannot introduce a third column and
+                                 nudge the label column's width. -->
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                              <tr>
+                                <td valign="top" class="text-iron" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">วันที่:</td>
+                                <td valign="top" width="100%" class="text-charcoal no-autolink" style="width:100%; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">25 กรกฎาคม 2565 (1&nbsp;วัน)</td>
+                              </tr>
+                              <tr>
+                                <td colspan="2" height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="text-iron" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">รายละเอียด:</td>
+                                <td valign="top" width="100%" class="text-charcoal" style="width:100%; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">เป็นไข้ใจ</td>
+                              </tr>
+                            </table>
+
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Button (CTA) — 48px above via padding on this cell, so both
+                       sides of the button use the same mechanism as the 80px below
+                       (body band padding-bottom). A spacer row here and padding
+                       there makes the two gaps drift apart between clients. -->
+                  <tr>
+                    <td align="center" class="btn-mobile" style="padding:48px 0 0 0;">
+                      <!--[if mso]>
+                      <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+                                   href="https://app.empeo.com/document" style="height:44px; v-text-anchor:middle; width:118px;" arcsize="18%" stroke="f" fillcolor="#F15A2E">
+                        <w:anchorlock/>
+                        <center style="color:#FFFFFF; font-family:Tahoma,Helvetica,Arial,sans-serif; font-size:16px; font-weight:bold;">ดูเอกสาร</center>
+                      </v:roundrect>
+                      <![endif]-->
+                      <!--[if !mso]><!-->
+                      <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin:0 auto;">
+                        <tr>
+                          <td align="center" bgcolor="#F15A2E" class="btn-bg" style="background-color:#F15A2E; border-radius:8px;">
+                            <a href="https://app.empeo.com/document" target="_blank"
+                               style="display:inline-block; padding:7px 24px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important; border-radius:8px; mso-line-height-rule:exactly;">ดูเอกสาร</a>
+                          </td>
+                        </tr>
+                      </table>
+                      <!--<![endif]-->
+                    </td>
+                  </tr>
+
+                </table>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- ============ FOOTER band (full-bleed) ============ -->
+            <tr>
+              <td class="footer-bg" align="center" style="background-color:#F5F6F7; padding:24px 0 24px 0;">
+                <table role="presentation" align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="inner" style="width:100%; min-width:100%; max-width:100%; margin:0 auto;">
+                  <tr>
+                    <td class="px-24" style="padding:0 24px 0 24px;">
+
+                <!-- The whole footer is ONE table on purpose.
+                     A client that ignores width:100% shrink-wraps every table to
+                     its own content, and this row holds only 96px of it, so as a
+                     separate table it collapsed and parked the icons against the
+                     logo. Sharing the columns with the address rows below (via
+                     colspan) forces the row to the footer's real width, so the
+                     icons land on the right edge whatever width the client gives.
+                     The middle cell takes up the slack. -->
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td width="60" valign="middle" align="left" style="width:60px; min-width:60px; font-size:0; line-height:0;">
+                      <!-- Outlook mobile rendered this about 9px wide while the
+                           icons beside it stayed 14px. The asset is 960px wide,
+                           and the icons differ in exactly one way: their height
+                           is in px, not auto. An auto height is what allows a
+                           squeezed column to scale the whole image down, so pin
+                           the height and floor the width. -->
+                      <img src="cid:powered-by-empeo"
+                           width="60" height="18" alt="Powered by empeo"
+                           style="display:block; width:60px; min-width:60px; height:18px; border:0;" />
+                    </td>
+                    <!-- No width on the middle cell. It was width="100%", and
+                         Outlook mobile read that as "this cell takes the whole
+                         table" and collapsed the 60px and 36px columns beside
+                         it. With both ends pinned this is the only auto column,
+                         so it absorbs the slack on its own. -->
+                    <td style="font-size:0; line-height:0;">&nbsp;</td>
+                    <td width="36" valign="middle" align="right" style="width:36px; font-size:0; line-height:0;">
+                      <!-- SOCIAL ICONS. The 8px gap is padding, not a spacer cell:
+                           the colspan rows below hand this column its width, and a
+                           font-size:0 spacer has no min-content to defend itself
+                           with, so it collapsed to 0 and the icons touched. Both
+                           end columns carry an explicit width for the same reason.
+                           No align="right" float either - the cell is already the
+                           last one, so the float had nothing to do and was one
+                           more thing a client could drop. -->
+                      <table role="presentation" width="36" cellspacing="0" cellpadding="0" border="0" style="width:36px;">
+                        <tr>
+                          <td valign="middle"><a href="https://www.facebook.com/empeoHR" target="_blank" style="text-decoration:none;"><img src="cid:icon-facebook" width="14" height="14" alt="Facebook" style="display:block; width:14px; height:14px; border:0;" /></a></td>
+                          <td valign="middle" style="padding-left:8px;"><a href="https://www.youtube.com/@empeo" target="_blank" style="text-decoration:none;"><img src="cid:icon-youtube" width="14" height="14" alt="YouTube" style="display:block; width:14px; height:14px; border:0;" /></a></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- Spacer (divider line removed) -->
+                  <tr>
+                    <td colspan="3" height="4" style="font-size:0; line-height:4px; height:4px;">&nbsp;</td>
+                  </tr>
+
+                  <!-- Address -->
+                  <tr>
+                    <td colspan="3" class="text-muted no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:0;">
                       92 Central Park Offices,<br />
                       Unit MM3205, 32nd Floor, Rama 4 Road,<br />
                       Silom, Bang Rak, Bangkok 10500
-                    </p>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:4px 0 0 0;">
+                      Need help using empeo? Visit our
+                      <a href="https://help.empeo.com" target="_blank" style="color:#525260; font-weight:400; text-decoration:underline;">Help Center</a>
+                    </td>
+                  </tr>
+                </table>
 
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+          </table>
+          <!-- /Email container -->
+
+          <!--[if mso]>
+          </td></tr></table>
+          <![endif]-->
+
+        </td>
+      </tr>
+    </table>
+  </div>
 </body>
 </html>
