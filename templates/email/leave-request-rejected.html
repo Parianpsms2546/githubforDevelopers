@@ -22,10 +22,11 @@
   </noscript>
   <![endif]-->
 
-  <!-- Web font (ignored by Outlook desktop, which falls back to Helvetica/Arial) -->
-  <!--[if !mso]><!-->
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <!--<![endif]-->
+  <!-- No web font link: gofive-regular is not hosted on a public CDN, so it
+       only renders where it is installed locally. Everywhere else the stack
+       falls through to noto-sans-tc / Helvetica / Arial / Tahoma. Add an
+       @font-face (or a <link>) here if gofive-regular ever gets a mail-safe
+       hosted copy. -->
 
   <style type="text/css">
     /* ---------- Reset ---------- */
@@ -60,7 +61,7 @@
     /* ---------- Base ---------- */
     body, #body {
       background-color: #FFFFFF;
-      font-family: 'Prompt', 'Noto Sans Thai', Tahoma, Helvetica, Arial, sans-serif;
+      font-family: 'gofive-regular', 'noto-sans-tc', Helvetica, Arial, Tahoma, sans-serif;
     }
 
     /* ---------- Responsive (mobile) ---------- */
@@ -108,7 +109,7 @@
 <body id="body" style="margin:0; padding:0; background-color:#FFFFFF;">
 
   <!-- Preheader: hidden preview text shown in inbox list -->
-  <div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif;">
+  <div style="display:none; font-size:1px; line-height:1px; max-height:0; max-width:0; opacity:0; overflow:hidden; mso-hide:all; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif;">
     คำขอลาป่วยของคุณถูกปฏิเสธ กดดูรายละเอียดเอกสารได้ที่นี่
     &#847;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
   </div>
@@ -160,7 +161,7 @@
 
                   <!-- Greeting -->
                   <tr>
-                    <td align="center" class="text-charcoal" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; line-height:24px; color:#000000; text-align:center; padding:0; mso-line-height-rule:exactly;"><span style="font-size:18px; font-weight:500;">สวัสดี </span><span style="font-size:18px; font-weight:700;">สมปอง หมายปอง</span></td>
+                    <td align="center" class="text-charcoal" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; line-height:24px; color:#000000; text-align:center; padding:0; mso-line-height-rule:exactly;"><span style="font-size:18px; font-weight:500;">สวัสดี </span><span style="font-size:18px; font-weight:700;">สมปอง หมายปอง</span></td>
                   </tr>
 
                   <!-- 8px: greeting → body copy -->
@@ -170,7 +171,7 @@
 
                   <!-- Body copy -->
                   <tr>
-                    <td align="center" class="text-charcoal body-mobile" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:24px; font-weight:500; color:#1C1C22; text-align:center; padding:0; mso-line-height-rule:exactly;">
+                    <td align="center" class="text-charcoal body-mobile" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; line-height:24px; font-weight:500; color:#1C1C22; text-align:center; padding:0; mso-line-height-rule:exactly;">
                       เอกสารของคุณถูกปฏิเสธ
                     </td>
                   </tr>
@@ -192,11 +193,11 @@
                             <!-- Title + status badge -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                               <tr>
-                                <td align="left" valign="middle" class="text-charcoal no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">ลาป่วย (L2302&#8288;00033)</td>
+                                <td align="left" valign="middle" class="text-charcoal no-autolink" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#1C1C22; mso-line-height-rule:exactly;">ลาป่วย (L2302&#8288;00033)</td>
                                 <td align="right" valign="middle" style="white-space:nowrap;">
                                   <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="right">
                                     <tr>
-                                      <td align="center" bgcolor="#8A8F98" style="background-color:#8A8F98; border-radius:10px; padding:3px 12px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:12px; white-space:nowrap; line-height:16px; font-weight:500; color:#FFFFFF; mso-line-height-rule:exactly;">ปฏิเสธ</td>
+                                      <td align="center" bgcolor="#8A8F98" style="background-color:#8A8F98; border-radius:10px; padding:3px 12px; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:12px; white-space:nowrap; line-height:16px; font-weight:500; color:#FFFFFF; mso-line-height-rule:exactly;">ปฏิเสธ</td>
                                     </tr>
                                   </table>
                                 </td>
@@ -215,15 +216,15 @@
                                  nudge the label column's width. -->
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
                               <tr>
-                                <td valign="top" class="text-iron" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">วันที่:</td>
-                                <td valign="top" width="100%" class="text-charcoal no-autolink" style="width:100%; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">25 กรกฎาคม 2565 (1&nbsp;วัน)</td>
+                                <td valign="top" class="text-iron" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">วันที่:</td>
+                                <td valign="top" width="100%" class="text-charcoal no-autolink" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">25 กรกฎาคม 2565 (1&nbsp;วัน)</td>
                               </tr>
                               <tr>
                                 <td colspan="2" height="8" style="font-size:0; line-height:8px; height:8px;">&nbsp;</td>
                               </tr>
                               <tr>
-                                <td valign="top" class="text-iron" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">รายละเอียด:</td>
-                                <td valign="top" width="100%" class="text-charcoal" style="width:100%; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">เป็นไข้ใจ</td>
+                                <td valign="top" class="text-iron" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:400; color:#525260; white-space:nowrap; padding-right:12px; mso-line-height-rule:exactly;">รายละเอียด:</td>
+                                <td valign="top" width="100%" class="text-charcoal" style="width:100%; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:23px; font-weight:500; color:#1C1C22; mso-line-height-rule:exactly;">เป็นไข้ใจ</td>
                               </tr>
                             </table>
 
@@ -243,7 +244,7 @@
                       <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
                                    href="https://app.empeo.com/document" style="height:44px; v-text-anchor:middle; width:118px;" arcsize="18%" stroke="f" fillcolor="#F15A2E">
                         <w:anchorlock/>
-                        <center style="color:#FFFFFF; font-family:Tahoma,Helvetica,Arial,sans-serif; font-size:16px; font-weight:bold;">ดูเอกสาร</center>
+                        <center style="color:#FFFFFF; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; font-weight:bold;">ดูเอกสาร</center>
                       </v:roundrect>
                       <![endif]-->
                       <!--[if !mso]><!-->
@@ -251,7 +252,7 @@
                         <tr>
                           <td align="center" bgcolor="#F15A2E" class="btn-bg" style="background-color:#F15A2E; border-radius:8px;">
                             <a href="https://app.empeo.com/document" target="_blank"
-                               style="display:inline-block; padding:7px 24px; font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important; border-radius:8px; mso-line-height-rule:exactly;">ดูเอกสาร</a>
+                               style="display:inline-block; padding:7px 24px; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; line-height:30px; font-weight:600; color:#FFFFFF !important; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !important; border-radius:8px; mso-line-height-rule:exactly;">ดูเอกสาร</a>
                           </td>
                         </tr>
                       </table>
@@ -326,14 +327,14 @@
 
                   <!-- Address -->
                   <tr>
-                    <td colspan="3" class="text-muted no-autolink" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:0;">
+                    <td colspan="3" class="text-muted no-autolink" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:0;">
                       92 Central Park Offices,<br />
                       Unit MM3205, 32nd Floor, Rama 4 Road,<br />
                       Silom, Bang Rak, Bangkok 10500
                     </td>
                   </tr>
                   <tr>
-                    <td colspan="3" class="text-muted" style="font-family:'Prompt','Noto Sans Thai',Tahoma,Helvetica,Arial,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:4px 0 0 0;">
+                    <td colspan="3" class="text-muted" style="font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:10px; line-height:16px; font-weight:400; color:#525260; padding:4px 0 0 0;">
                       Need help using empeo? Visit our
                       <a href="https://help.empeo.com" target="_blank" style="color:#525260; font-weight:400; text-decoration:underline;">Help Center</a>
                     </td>
