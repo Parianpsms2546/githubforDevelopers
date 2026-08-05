@@ -440,6 +440,9 @@ Vector sources live in `assets/` for regeneration only:
 | `icon-facebook` | `icon-facebook.png` | `facebook.svg` | 14×14 |
 | `icon-youtube` | `icon-youtube.png` | `bi_youtube.svg` | 14×14 |
 | `empeo-e-payslip` | `empeo-e-payslip.png` | `empeo-e-payslip-chip.svg` | 36×42 |
+| `icon-apple` / `icon-android` | matching PNGs | `apple.svg` / `LogoAndroid.svg` | 18×18 |
+| `icon-user-white` / `icon-lock-white` | matching PNGs | — | 16×16 |
+| `afs-logo` | `afs-logo.png` | `AFS_Logo.svg` | 128×64 |
 
 Social icons are rasterised at **168px** (12× their 14px display size, matching the
 density of the assets they replaced) on a transparent canvas, keeping the source
@@ -478,6 +481,38 @@ so the taller chip still centres against the two lines beside it.
 
 The old asset sat its glyph at 47.5% of its box. Keeping the new glyph at native scale
 fills the chip more, which is the approved look — do not shrink it back.
+
+## Brand logos and brand variants
+
+A brand variant is **a separate template that differs in the header alone** — the `cid`,
+the `alt`, the link. `src/interview-appointment-afs.html` is
+`src/empeo-interview-appointment.html` with those three changed and nothing else; the grey
+`powered-by-empeo` footer stays, because that is the point of it.
+
+The header markup never changes shape: a **128×64** box, `align="center"`,
+`margin:0 auto`, `height:auto` in the style so the attribute drives it.
+
+**Put the spacing in the asset, not the HTML.** The gap to the greeting is 16px of box
+spacing plus whatever transparent margin the artwork carries, and that margin is most of
+what the eye reads:
+
+| Logo | Ink | Margin top / bottom | Optical gap to greeting |
+|---|---|---|---|
+| `empeo-logo` | 117×29 | ~17.5px | ~36px |
+| `afs-logo` | 71.6×48 | 8px | ~24px |
+
+**AFS is a deliberate exception to the 29px ink height.** Its artwork is a filled flag at
+1.492:1 that fills its own canvas, and at 29px it read as too small, so it is scaled to
+48px of ink inside the same 128×64 frame — bigger logo, less optical gap. One number in
+the rasterising step changes it back.
+
+**`AFS_Logo.svg` ships with no `viewBox`**, and its content sits behind a
+`translate(-61.85,-339.23)`, so CSS sizing crops it instead of scaling it — the first
+raster came out with 0.5px of visible ink. Measured from rendered pixels the artwork fills
+its declared box exactly, so inject `viewBox="0 0 576.29785 386.26526"` before scaling.
+Expect the next brand logo to arrive the same way: **render it once and measure the ink
+from the pixels** rather than trusting `getBBox`, which reports the group's local
+coordinates and sent that first attempt off-canvas.
 
 ## Dark mode
 

@@ -18,5 +18,7 @@ template — only the rows between the greeting and the CTA change per email.
   `src/empeo-document-rejected.html` adds the detail card;
   `src/empeo-interview-appointment.html` adds the appointment card;
   `src/empeo-welcome-onboarding.html` adds the credentials card and numbered steps.
+- Brand variants are separate files that differ in the header logo alone:
+  `src/interview-appointment-afs.html`.
 - Images are inline `cid:` parts resolved against `assets/<cid>.png`. Email clients
   do not render SVG — rasterise it and keep the vector in `assets/` as the source.
