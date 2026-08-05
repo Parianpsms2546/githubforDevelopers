@@ -443,6 +443,7 @@ Vector sources live in `assets/` for regeneration only:
 | `icon-apple` / `icon-android` | matching PNGs | `apple.svg` / `LogoAndroid.svg` | 18×18 |
 | `icon-user-white` / `icon-lock-white` | matching PNGs | — | 16×16 |
 | `afs-logo` | `afs-logo.png` | `AFS_Logo.svg` | 128×64 |
+| `rs-logo` | `rs-logo.png` | `RS_Logo` (WebP) | 128×64 |
 
 Social icons are rasterised at **168px** (12× their 14px display size, matching the
 density of the assets they replaced) on a transparent canvas, keeping the source
@@ -500,11 +501,19 @@ what the eye reads:
 |---|---|---|---|
 | `empeo-logo` | 117×29 | ~17.5px | ~36px |
 | `afs-logo` | 71.6×48 | 8px | ~24px |
+| `rs-logo` | 48×48 | 8px | ~24px |
 
 **AFS is a deliberate exception to the 29px ink height.** Its artwork is a filled flag at
 1.492:1 that fills its own canvas, and at 29px it read as too small, so it is scaled to
 48px of ink inside the same 128×64 frame — bigger logo, less optical gap. One number in
 the rasterising step changes it back.
+
+**Check what a delivered brand asset actually contains before using it.** `RS` arrived as
+two files: `RS.png`, 900×900 with **no alpha channel at all** — its two most common colours
+are `#E7E6E6` and `#FFFFFF`, i.e. the transparency checkerboard is painted into the file,
+and it is light blue — and `RS_Logo`, a WebP at 567×567 with a real transparent background
+and navy `#003A6F` ink. The WebP is the one that ships. WebP itself is no use in email
+(Outlook cannot read it), but it rasterises to PNG like anything else.
 
 **`AFS_Logo.svg` ships with no `viewBox`**, and its content sits behind a
 `translate(-61.85,-339.23)`, so CSS sizing crops it instead of scaling it — the first
