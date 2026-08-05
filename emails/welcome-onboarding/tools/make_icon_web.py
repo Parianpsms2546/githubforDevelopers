@@ -1,45 +1,46 @@
 #!/usr/bin/env python3
 """Render images/icon-web.png — the globe icon for the "Website" button.
 
-The Apple and Android icons that sit beside it in the same button row are
-72x72 RGBA PNGs inked in #383842, so this one is drawn to match: same canvas,
-same colour, an outline globe (circle + equator + two latitudes + one meridian)
-supersampled 4x for anti-aliasing. Pure stdlib — no imaging library is
+The Apple and Android icons beside it in the same button row are 72x72 RGBA
+PNGs inked in #383842, and both are solid glyphs, so this one is solid too: a
+filled disc with the equator, two latitudes and one meridian knocked back out
+of it. An outline globe was tried first and read noticeably lighter than its
+neighbours — it carried 1899 units of ink against Android's 2156, where this
+one carries 2187.
+
+Supersampled 4x for anti-aliasing. Pure stdlib — no imaging library is
 available in the build environment.
 """
 
 import struct
 import zlib
-from math import hypot, sqrt
+from math import hypot
 
 SIZE = 72          # canvas, matches icon-apple.png / icon-android.png
 INK = (56, 56, 66)  # #383842, sampled from the sibling icons
 SS = 4             # supersampling factor per axis
 
 C = SIZE / 2.0     # centre
-R = 32.0           # outer radius, leaves 4px of padding on each side
-HW = 2.1           # stroke half-width (4.2px stroke at 72 => ~1.05px at 18px)
-LAT = 16.0         # latitude lines at y = C +/- LAT
-MERIDIAN_A = 14.0  # semi-minor axis of the meridian ellipse
+R = 32.0           # disc radius, leaves 4px of padding on each side
+CUT = 3.4          # width of the knocked-out grid lines (~0.85px at 18px)
+LAT = 15.0         # latitude lines at y = C +/- LAT
+MERIDIAN_A = 13.5  # semi-minor axis of the meridian ellipse
+
+# No straight vertical centre line: the meridian ellipse already reads as one,
+# and adding it made the glyph noisy at the 18px it is displayed at.
 
 
 def covered(x, y):
-    """True when (x, y) falls on any stroke of the glyph."""
+    """True when (x, y) is inked — inside the disc and off every grid line."""
     dx, dy = x - C, y - C
-    d = hypot(dx, dy)
 
-    # Outer circle
-    if abs(d - R) <= HW:
-        return True
-
-    # Everything else is clipped to the inside of the circle
-    if d > R - HW:
+    if hypot(dx, dy) > R:
         return False
 
     # Equator + two latitude lines
     for off in (0.0, LAT, -LAT):
-        if abs(dy - off) <= HW:
-            return True
+        if abs(dy - off) <= CUT / 2:
+            return False
 
     # Meridian: ellipse (dx/a)^2 + (dy/R)^2 = 1, distance approximated by
     # the implicit value over the gradient magnitude.
@@ -47,10 +48,10 @@ def covered(x, y):
     gx = 2 * dx / (MERIDIAN_A ** 2)
     gy = 2 * dy / (R ** 2)
     g = hypot(gx, gy)
-    if g > 1e-9 and abs(f) / g <= HW:
-        return True
+    if g > 1e-9 and abs(f) / g <= CUT / 2:
+        return False
 
-    return False
+    return True
 
 
 def render():
