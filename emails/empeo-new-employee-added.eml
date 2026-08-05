@@ -6,9 +6,9 @@ From: empeo <no-reply@empeo.com>
 To: hr@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============2889853593103045941=="
+ boundary="===============7943525064947530217=="
 
---===============2889853593103045941==
+--===============7943525064947530217==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -25,16 +25,14 @@ IHNvbXBob25nQGV4YW1wbGUuY29tCuC4q+C4seC4p+C4q+C4meC5ieC4suC4h+C4suC4mTog4LiZ
 4Liy4LiH4Liq4Liy4Lin4LiB4Lih4Lil4LiK4LiZ4LiBIOC5g+C4iOC4lOC4tQrguJvguKPguLDg
 uYDguKDguJfguK3guLHguJXguKPguLI6IOC4l+C4lOC5geC4l+C4meC4nuC4meC4seC4geC4h+C4
 suC4meC5gOC4lOC4tOC4oQrguJTguLPguYDguJnguLTguJnguIHguLLguKPguYDguKHguLfguYjg
-uK06IDUg4LmA4Lih4Lip4Liy4Lii4LiZIDI1NjYgMTM6MTIKCuC4lOC4ueC4guC5ieC4reC4oeC4
-ueC4peC4nuC4meC4seC4geC4h+C4suC4mTogaHR0cHM6Ly9hcHAuZW1wZW8uY29tL2VtcGxveWVl
-Cg==
+uK06IDUg4LmA4Lih4Lip4Liy4Lii4LiZIDI1NjYgMTM6MTIK
 
---===============2889853593103045941==
+--===============7943525064947530217==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============4005348061522244656=="
+ boundary="===============0730885454737489187=="
 
---===============4005348061522244656==
+--===============0730885454737489187==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -237,11 +235,11 @@ le=3D"text-decoration:none;">
             </tr>
 
             <!-- =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D BODY band (full-bleed) =
-=E2=80=94 16px logo=E2=86=92headline, 48px card=E2=86=92button, 80px button=
-=E2=86=92footer =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D -->
+=E2=80=94 16px logo=E2=86=92headline, 48px card=E2=86=92footer =3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D -->
             <tr>
               <td class=3D"card-bg" align=3D"center" style=3D"background-colo=
-r:#FFFFFF; padding:16px 0 80px 0;">
+r:#FFFFFF; padding:16px 0 48px 0;">
                 <table role=3D"presentation" align=3D"center" width=3D"100%" =
 cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"inner" style=3D"wid=
 th:100%; min-width:100%; max-width:100%; margin:0 auto;">
@@ -446,53 +444,6 @@ oto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:15px; line-height:2=
                     </td>
                   </tr>
 
-                  <!-- Button (CTA) =E2=80=94 48px above via padding on this =
-cell, so both
-                       sides of the button use the same mechanism as the 80px=
- below
-                       (body band padding-bottom). A spacer row here and padd=
-ing
-                       there makes the two gaps drift apart between clients. =
--->
-                  <tr>
-                    <td align=3D"center" class=3D"btn-mobile" style=3D"paddin=
-g:48px 0 0 0;">
-                      <!--[if mso]>
-                      <v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" =
-xmlns:w=3D"urn:schemas-microsoft-com:office:word"
-                                   href=3D"https://app.empeo.com/employee" st=
-yle=3D"height:44px; v-text-anchor:middle; width:168px;" arcsize=3D"18%" strok=
-e=3D"f" fillcolor=3D"#F15A2E">
-                        <w:anchorlock/>
-                        <center style=3D"color:#FFFFFF; font-family:'gofive-r=
-egular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-serif; font-size:16px; fon=
-t-weight:bold;">=E0=B8=94=E0=B8=B9=E0=B8=82=E0=B9=89=E0=B8=AD=E0=B8=A1=E0=B8=
-=B9=E0=B8=A5=E0=B8=9E=E0=B8=99=E0=B8=B1=E0=B8=81=E0=B8=87=E0=B8=B2=E0=B8=99</=
-center>
-                      </v:roundrect>
-                      <![endif]-->
-                      <!--[if !mso]><!-->
-                      <table role=3D"presentation" cellspacing=3D"0" cellpadd=
-ing=3D"0" border=3D"0" align=3D"center" style=3D"margin:0 auto;">
-                        <tr>
-                          <td align=3D"center" bgcolor=3D"#F15A2E" class=3D"b=
-tn-bg" style=3D"background-color:#F15A2E; border-radius:8px;">
-                            <a href=3D"https://app.empeo.com/employee" target=
-=3D"_blank"
-                               style=3D"display:inline-block; padding:7px 24p=
-x; font-family:'gofive-regular','noto-sans-tc',Helvetica,Arial,Tahoma,sans-se=
-rif; font-size:16px; line-height:30px; font-weight:600; color:#FFFFFF !import=
-ant; -webkit-text-fill-color:#FFFFFF !important; text-decoration:none !import=
-ant; border-radius:8px; mso-line-height-rule:exactly;">=E0=B8=94=E0=B8=B9=E0=
-=B8=82=E0=B9=89=E0=B8=AD=E0=B8=A1=E0=B8=B9=E0=B8=A5=E0=B8=9E=E0=B8=99=E0=B8=
-=B1=E0=B8=81=E0=B8=87=E0=B8=B2=E0=B8=99</a>
-                          </td>
-                        </tr>
-                      </table>
-                      <!--<![endif]-->
-                    </td>
-                  </tr>
-
                 </table>
 
                     </td>
@@ -639,7 +590,7 @@ r</a>
 </body>
 </html>
 
---===============4005348061522244656==
+--===============0730885454737489187==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -1057,7 +1008,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============4005348061522244656==
+--===============0730885454737489187==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1643,7 +1594,7 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============4005348061522244656==
+--===============0730885454737489187==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="icon-facebook.png"
@@ -1728,7 +1679,7 @@ fcfx9goyoJlMxhai8ziLteUSOvh7sH0Mr+sRjP8mdhliXKt4D3JLxSJ9D0/Ug2zb7q7V2s9KpeQ5
 I3ZcHFCmtQRX8cwEHFCmNQ4o0xoHlGmNA8q0xgFlWuOAMq39CgAA///umrQgAAAABklEQVQDABnS
 ZCwmN1BlAAAAAElFTkSuQmCC
 
---===============4005348061522244656==
+--===============0730885454737489187==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="icon-youtube.png"
@@ -1795,6 +1746,6 @@ k9N4fQ9yGgNKTmNAyWkMKDmNASWnMaDkNAaUnMaAktMYUHIaA0pOY0DJaQwoOY0BJacxoOQ0BpSc
 xoCS0xhQchoDSk5jQMlpDCg5jQElpzGg5DQGlJzGgJLTGFByGgNKTmNAyWkMKDnt/wAAAP//M0mM
 rQAAAAZJREFUAwDV6IT5m5e0KgAAAABJRU5ErkJggg==
 
---===============4005348061522244656==--
+--===============0730885454737489187==--
 
---===============2889853593103045941==--
+--===============7943525064947530217==--
