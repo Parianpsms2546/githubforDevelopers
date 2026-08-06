@@ -3,13 +3,13 @@ Subject: =?utf-8?b?4Lia4Lix4LiN4LiK4Li14LiC4Lit4LiH4LiE4Li44LiT4LiW4Li54LiB?=
 From: empeo <no-reply@empeo.com>
 To: =?utf-8?b?4LiE4Li44LiT4Liq4Lih4Lir4Lih4Liy4LiiIOC4q+C4oeC4suC4ouC4mw==?=
  =?utf-8?b?4Lit4LiH?= <employee@example.com>
-Date: Thu, 06 Aug 2026 08:12:54 +0000
-Message-ID: <178600397454.2207.486304551655143005@empeo.com>
+Date: Thu, 06 Aug 2026 08:19:12 +0000
+Message-ID: <178600435282.2210.6366678287250260403@empeo.com>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============2730335029463736315=="
+ boundary="===============4717025065544057075=="
 
---===============2730335029463736315==
+--===============4717025065544057075==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -31,12 +31,12 @@ b3dlcmVkIGJ5IGVtcGVvCjkyIENlbnRyYWwgUGFyayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJu
 ZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBCYW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxw
 IENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29tL2hlbHAK
 
---===============2730335029463736315==
+--===============4717025065544057075==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============8005449189769532260=="
+ boundary="===============7240817117091819873=="
 
---===============8005449189769532260==
+--===============7240817117091819873==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -174,28 +174,22 @@ us:18px; overflow:hidden;">
 
               <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" c=
 ellspacing=3D"0" border=3D"0">
-                <!-- Orange top accent: clipped by the card's rounded corners=
- so it curves with them -->
-                <tr>
-                  <td height=3D"4" style=3D"height:4px; line-height:4px; font=
--size:0; padding:0; background-color:#F15A2E;">&nbsp;</td>
-                </tr>
                 <!-- Logo -->
                 <tr>
                   <td class=3D"card-pad" align=3D"center" style=3D"padding:44=
-px 56px 8px 56px;">
+px 56px 0 56px;">
                     <!--[if !mso]><!-->
                     <img class=3D"logo-light" src=3D"cid:empeo-logo" width=3D=
-"150" height=3D"75" alt=3D"empeo"
-                         style=3D"display:block; margin:0 auto; width:150px; =
-height:auto; max-width:150px; border:0; outline:none;">
+"128" height=3D"64" alt=3D"empeo"
+                         style=3D"display:block; margin:0 auto; width:128px; =
+height:64px; max-width:128px; border:0; outline:none;">
                     <img class=3D"logo-dark" src=3D"cid:empeo-logo-white" wid=
-th=3D"150" height=3D"75" alt=3D"empeo"
-                         style=3D"display:none; margin:0 auto; width:150px; h=
-eight:auto; max-width:150px; border:0; outline:none; mso-hide:all;">
+th=3D"128" height=3D"64" alt=3D"empeo"
+                         style=3D"display:none; margin:0 auto; width:128px; h=
+eight:64px; max-width:128px; border:0; outline:none; mso-hide:all;">
                     <!--<![endif]-->
                     <!--[if mso]>
-                    <img src=3D"cid:empeo-logo" width=3D"150" height=3D"75" a=
+                    <img src=3D"cid:empeo-logo" width=3D"128" height=3D"64" a=
 lt=3D"empeo" style=3D"display:block; margin:0 auto;">
                     <![endif]-->
                   </td>
@@ -204,7 +198,7 @@ lt=3D"empeo" style=3D"display:block; margin:0 auto;">
                 <!-- Title -->
                 <tr>
                   <td class=3D"card-pad h-title" align=3D"center" style=3D"pa=
-dding:24px 56px 0 56px; font-size:28px; line-height:38px; font-weight:700; co=
+dding:32px 56px 0 56px; font-size:28px; line-height:38px; font-weight:700; co=
 lor:#2B2B2B;">
                     =E0=B8=9A=E0=B8=B1=E0=B8=8D=E0=B8=8A=E0=B8=B5=E0=B8=82=E0=
 =B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=96=E0=B8=B9=E0=B8=81=E0=B8=
@@ -307,7 +301,7 @@ text-decoration:underline;">Help Center</a>
 </body>
 </html>
 
---===============8005449189769532260==
+--===============7240817117091819873==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo.png"
@@ -725,7 +719,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============8005449189769532260==
+--===============7240817117091819873==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo-white.png"
@@ -1048,6 +1042,6 @@ EmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAA
 uiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYA
 AKALEmAAAAC68P8DAAD//0iaO6oAAAAGSURBVAMALMRFiKRN9SYAAAAASUVORK5CYII=
 
---===============8005449189769532260==--
+--===============7240817117091819873==--
 
---===============2730335029463736315==--
+--===============4717025065544057075==--
