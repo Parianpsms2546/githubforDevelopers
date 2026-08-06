@@ -3,13 +3,13 @@ Subject: =?utf-8?b?4Lia4Lix4LiN4LiK4Li14LiC4Lit4LiH4LiE4Li44LiT4LiW4Li54LiB?=
 From: empeo <no-reply@empeo.com>
 To: =?utf-8?b?4LiE4Li44LiT4Liq4Lih4Lir4Lih4Liy4LiiIOC4q+C4oeC4suC4ouC4mw==?=
  =?utf-8?b?4Lit4LiH?= <employee@example.com>
-Date: Thu, 06 Aug 2026 07:43:20 +0000
-Message-ID: <178600220049.9715.1634068255995509930@empeo.com>
+Date: Thu, 06 Aug 2026 07:48:21 +0000
+Message-ID: <178600250122.11485.16354844906744438784@empeo.com>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============6819022034393795841=="
+ boundary="===============5131646331939342853=="
 
---===============6819022034393795841==
+--===============5131646331939342853==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -31,12 +31,12 @@ b3dlcmVkIGJ5IGVtcGVvCjkyIENlbnRyYWwgUGFyayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJu
 ZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBCYW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxw
 IENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29tL2hlbHAK
 
---===============6819022034393795841==
+--===============5131646331939342853==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============7689918834937907796=="
+ boundary="===============3954011741746751753=="
 
---===============7689918834937907796==
+--===============3954011741746751753==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -89,7 +89,7 @@ ple-system, "system-ui", "Noto Sans Thai Looped", system-ui, sans-serif;
     /* ---------- Light theme (default) ---------- */
     body { background-color: #ECEAE6; }
     .email-bg { background-color: #ECEAE6; }
-    .card { background-color: #F7F6F3; }
+    .card { background-color: #FFFFFF; }
     .h-title { color: #2B2B2B; }
     .t-greeting { color: #2B2B2B; }
     .t-body { color: #55524D; }
@@ -169,11 +169,17 @@ ng=3D"0" cellspacing=3D"0" border=3D"0"><tr><td>
 th=3D"600" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:60=
 0px; max-width:600px; margin:0 auto;">
           <tr>
-            <td class=3D"card" style=3D"background-color:#F7F6F3; border-radi=
-us:18px; border-top:4px solid #EE5D36; overflow:hidden;">
+            <td class=3D"card" style=3D"background-color:#FFFFFF; border-radi=
+us:18px; overflow:hidden;">
 
               <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" c=
 ellspacing=3D"0" border=3D"0">
+                <!-- Orange top accent: clipped by the card's rounded corners=
+ so it curves with them -->
+                <tr>
+                  <td height=3D"4" style=3D"height:4px; line-height:4px; font=
+-size:0; padding:0; background-color:#F15A2E;">&nbsp;</td>
+                </tr>
                 <!-- Logo -->
                 <tr>
                   <td class=3D"card-pad" align=3D"center" style=3D"padding:44=
@@ -301,7 +307,7 @@ text-decoration:underline;">Help Center</a>
 </body>
 </html>
 
---===============7689918834937907796==
+--===============3954011741746751753==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo.png"
@@ -719,7 +725,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============7689918834937907796==
+--===============3954011741746751753==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo-white.png"
@@ -1042,6 +1048,6 @@ EmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAA
 uiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYA
 AKALEmAAAAC68P8DAAD//0iaO6oAAAAGSURBVAMALMRFiKRN9SYAAAAASUVORK5CYII=
 
---===============7689918834937907796==--
+--===============3954011741746751753==--
 
---===============6819022034393795841==--
+--===============5131646331939342853==--
