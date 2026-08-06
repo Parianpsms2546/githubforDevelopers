@@ -46,7 +46,9 @@
     .t-note { color: #7C7873; }
     .t-footer { color: #A7A29B; }
     .t-footer-link { color: #A7A29B; }
-    .wordmark { color: #EE5D36; }
+
+    /* Logo swap: color by default, white in dark mode */
+    .logo-dark { display: none; }
 
     /* ---------- Dark theme ---------- */
     @media (prefers-color-scheme: dark) {
@@ -59,7 +61,8 @@
       .t-note { color: #9A958E !important; }
       .t-footer { color: #726E68 !important; }
       .t-footer-link { color: #8C877F !important; }
-      .wordmark { color: #FFFFFF !important; }
+      .logo-light { display: none !important; }
+      .logo-dark { display: block !important; }
     }
 
     /* Outlook.com / dark-mode data attribute hook */
@@ -69,7 +72,8 @@
     [data-ogsc] .t-body { color: #C6C2BC !important; }
     [data-ogsc] .t-note { color: #9A958E !important; }
     [data-ogsc] .t-footer, [data-ogsc] .t-footer-link { color: #8C877F !important; }
-    [data-ogsc] .wordmark { color: #FFFFFF !important; }
+    [data-ogsc] .logo-light { display: none !important; }
+    [data-ogsc] .logo-dark { display: block !important; }
 
     /* ---------- Responsive (mobile) ---------- */
     @media only screen and (max-width: 620px) {
@@ -106,10 +110,15 @@
                 <!-- Logo -->
                 <tr>
                   <td class="card-pad" align="center" style="padding:44px 56px 8px 56px;">
-                    <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2060%2040%22%3E%3Cg%20fill%3D%22%23EE5D36%22%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%2212%22%20r%3D%228%22%2F%3E%3Cpath%20d%3D%22M4%2038c0-8.3%206.7-15%2015-15s15%206.7%2015%2015z%22%2F%3E%3Ccircle%20cx%3D%2241%22%20cy%3D%2212%22%20r%3D%228%22%2F%3E%3Cpath%20d%3D%22M26%2038c0-8.3%206.7-15%2015-15s15%206.7%2015%2015z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                         width="42" height="28" alt="empeo"
-                         style="display:inline-block; vertical-align:middle; width:42px; height:28px;">
-                    <span class="wordmark" style="display:inline-block; vertical-align:middle; font-size:30px; line-height:1; font-weight:700; letter-spacing:-0.5px; color:#EE5D36; padding-left:8px;">empeo</span>
+                    <!--[if !mso]><!-->
+                    <img class="logo-light" src="assets/empeo-logo.png" width="150" height="75" alt="empeo"
+                         style="display:block; margin:0 auto; width:150px; height:auto; max-width:150px; border:0; outline:none;">
+                    <img class="logo-dark" src="assets/empeo-logo-white.png" width="150" height="75" alt="empeo"
+                         style="display:none; margin:0 auto; width:150px; height:auto; max-width:150px; border:0; outline:none; mso-hide:all;">
+                    <!--<![endif]-->
+                    <!--[if mso]>
+                    <img src="assets/empeo-logo.png" width="150" height="75" alt="empeo" style="display:block; margin:0 auto;">
+                    <![endif]-->
                   </td>
                 </tr>
 
