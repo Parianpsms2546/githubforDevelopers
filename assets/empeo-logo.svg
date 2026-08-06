@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="60" viewBox="0 0 260 60">
+  <!-- empeo people icon -->
+  <g fill="#F15A29">
+    <!-- back person (left) -->
+    <circle cx="22" cy="18.5" r="8.5"/>
+    <path d="M6 47c0-9.4 7.2-16.5 16-16.5S38 37.6 38 47a2.5 2.5 0 0 1-2.5 2.5h-27A2.5 2.5 0 0 1 6 47Z"/>
+    <!-- front person (right), with white gap to separate -->
+    <circle cx="41" cy="21" r="10" fill="#FFFFFF"/>
+    <circle cx="41" cy="21" r="8.7"/>
+    <path d="M23 50c0-10 8-17.5 18-17.5S59 40 59 50a2.6 2.6 0 0 1-2.6 2.6H25.6A2.6 2.6 0 0 1 23 50Z" fill="#FFFFFF"/>
+    <path d="M25 50c0-9 7.2-15.8 16-15.8S57 41 57 50a2.4 2.4 0 0 1-2.4 2.4H27.4A2.4 2.4 0 0 1 25 50Z"/>
+  </g>
+  <!-- wordmark -->
+  <text x="74" y="42" font-family="Prompt" font-weight="700" font-size="42" fill="#F15A29" letter-spacing="-0.5">empeo</text>
+</svg>
