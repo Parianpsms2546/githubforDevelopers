@@ -3,13 +3,13 @@ Subject: =?utf-8?b?4Lia4Lix4LiN4LiK4Li14LiC4Lit4LiH4LiE4Li44LiT4LiW4Li54LiB?=
 From: empeo <no-reply@empeo.com>
 To: =?utf-8?b?4LiE4Li44LiT4Liq4Lih4Lir4Lih4Liy4LiiIOC4q+C4oeC4suC4ouC4mw==?=
  =?utf-8?b?4Lit4LiH?= <employee@example.com>
-Date: Thu, 06 Aug 2026 07:48:21 +0000
-Message-ID: <178600250122.11485.16354844906744438784@empeo.com>
+Date: Thu, 06 Aug 2026 08:00:41 +0000
+Message-ID: <178600324158.2215.12255725544777120910@empeo.com>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============5131646331939342853=="
+ boundary="===============7381812393285456073=="
 
---===============5131646331939342853==
+--===============7381812393285456073==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -31,12 +31,12 @@ b3dlcmVkIGJ5IGVtcGVvCjkyIENlbnRyYWwgUGFyayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJu
 ZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBCYW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxw
 IENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29tL2hlbHAK
 
---===============5131646331939342853==
+--===============7381812393285456073==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============3954011741746751753=="
+ boundary="===============0931533852640002994=="
 
---===============3954011741746751753==
+--===============0931533852640002994==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -226,7 +226,7 @@ le=3D"font-weight:700;">=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=AA=E0=B8=A1=E0=B8=
                 <!-- Body -->
                 <tr>
                   <td class=3D"card-pad t-body" align=3D"center" style=3D"pad=
-ding:18px 56px 0 56px; font-size:16px; line-height:28px; color:#55524D;">
+ding:12px 56px 0 56px; font-size:16px; line-height:28px; color:#55524D;">
                     =E0=B8=82=E0=B8=93=E0=B8=B0=E0=B8=99=E0=B8=B5=E0=B9=89 =
 =E0=B8=AA=E0=B8=96=E0=B8=B2=E0=B8=99=E0=B8=B0=E0=B8=82=E0=B8=AD=E0=B8=87=E0=
 =B8=84=E0=B8=B8=E0=B8=93=E0=B8=9A=E0=B8=99=E0=B8=A3=E0=B8=B0=E0=B8=9A=E0=B8=
@@ -262,7 +262,7 @@ ding:18px 56px 0 56px; font-size:16px; line-height:28px; color:#55524D;">
                 <!-- Note -->
                 <tr>
                   <td class=3D"card-pad t-note" align=3D"center" style=3D"pad=
-ding:28px 56px 48px 56px; font-size:15px; line-height:24px; color:#7C7873;">
+ding:32px 56px 60px 56px; font-size:15px; line-height:24px; color:#7C7873;">
                     =E0=B8=AB=E0=B8=B2=E0=B8=81=E0=B8=9E=E0=B8=9A=E0=B8=A7=E0=
 =B9=88=E0=B8=B2=E0=B9=80=E0=B8=9B=E0=B9=87=E0=B8=99=E0=B8=84=E0=B8=A7=E0=B8=
 =B2=E0=B8=A1=E0=B8=9C=E0=B8=B4=E0=B8=94=E0=B8=9E=E0=B8=A5=E0=B8=B2=E0=B8=94 =
@@ -282,7 +282,7 @@ ding:28px 56px 48px 56px; font-size:15px; line-height:24px; color:#7C7873;">
           <!-- Footer -->
           <tr>
             <td align=3D"center" class=3D"t-footer" style=3D"padding:34px 40p=
-x 8px 40px; font-size:13px; line-height:22px; color:#A7A29B;">
+x 8px 40px; font-size:11px; line-height:18px; color:#A7A29B;">
               Powered by empeo<br>
               92 Central Park Offices, Unit MM3205, 32nd Floor,<br>
               Rama 4 Road, Silom, Bang Rak, Bangkok 10500
@@ -291,7 +291,7 @@ x 8px 40px; font-size:13px; line-height:22px; color:#A7A29B;">
           <tr>
             <td align=3D"center" style=3D"padding:6px 40px 8px 40px;">
               <a href=3D"https://www.empeo.com/help" target=3D"_blank" class=
-=3D"t-footer-link" style=3D"font-size:13px; line-height:22px; color:#A7A29B; =
+=3D"t-footer-link" style=3D"font-size:10px; line-height:16px; color:#A7A29B; =
 text-decoration:underline;">Help Center</a>
             </td>
           </tr>
@@ -307,7 +307,7 @@ text-decoration:underline;">Help Center</a>
 </body>
 </html>
 
---===============3954011741746751753==
+--===============0931533852640002994==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo.png"
@@ -725,7 +725,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============3954011741746751753==
+--===============0931533852640002994==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo-white.png"
@@ -1048,6 +1048,6 @@ EmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAA
 uiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYA
 AKALEmAAAAC68P8DAAD//0iaO6oAAAAGSURBVAMALMRFiKRN9SYAAAAASUVORK5CYII=
 
---===============3954011741746751753==--
+--===============0931533852640002994==--
 
---===============5131646331939342853==--
+--===============7381812393285456073==--
