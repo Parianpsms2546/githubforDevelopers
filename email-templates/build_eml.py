@@ -19,12 +19,14 @@ ASSETS = os.path.join(HERE, "assets")
 # Fixed Content-IDs referenced from the HTML after rewrite.
 CID_COLOR = "empeo-logo"
 CID_WHITE = "empeo-logo-white"
+CID_POWERED = "powered-by-empeo"
 
 with open(HTML_PATH, "r", encoding="utf-8") as f:
     html = f.read()
 
 # Point the <img> tags at the inline attachments instead of the relative files.
 # Replace the white path first (it is the longer, more specific string).
+html = html.replace("assets/powered-by-empeo.png", "cid:%s" % CID_POWERED)
 html = html.replace("assets/empeo-logo-white.png", "cid:%s" % CID_WHITE)
 html = html.replace("assets/empeo-logo.png", "cid:%s" % CID_COLOR)
 
@@ -69,6 +71,9 @@ html_part.add_related(load("empeo-logo.png"), "image", "png",
 html_part.add_related(load("empeo-logo-white.png"), "image", "png",
                       cid="<%s>" % CID_WHITE, disposition="inline",
                       filename="empeo-logo-white.png")
+html_part.add_related(load("powered-by-empeo.png"), "image", "png",
+                      cid="<%s>" % CID_POWERED, disposition="inline",
+                      filename="powered-by-empeo.png")
 
 with open(EML_PATH, "wb") as f:
     f.write(msg.as_bytes())
