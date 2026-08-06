@@ -3,13 +3,13 @@ Subject: =?utf-8?b?4Lia4Lix4LiN4LiK4Li14LiC4Lit4LiH4LiE4Li44LiT4LiW4Li54LiB?=
 From: empeo <no-reply@empeo.com>
 To: =?utf-8?b?4LiE4Li44LiT4Liq4Lih4Lir4Lih4Liy4LiiIOC4q+C4oeC4suC4ouC4mw==?=
  =?utf-8?b?4Lit4LiH?= <employee@example.com>
-Date: Thu, 06 Aug 2026 08:19:12 +0000
-Message-ID: <178600435282.2210.6366678287250260403@empeo.com>
+Date: Thu, 06 Aug 2026 08:20:32 +0000
+Message-ID: <178600443258.3470.16977097212307180788@empeo.com>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============4717025065544057075=="
+ boundary="===============9183445526043915315=="
 
---===============4717025065544057075==
+--===============9183445526043915315==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -31,12 +31,12 @@ b3dlcmVkIGJ5IGVtcGVvCjkyIENlbnRyYWwgUGFyayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJu
 ZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBCYW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxw
 IENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29tL2hlbHAK
 
---===============4717025065544057075==
+--===============9183445526043915315==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============7240817117091819873=="
+ boundary="===============1773950923466465367=="
 
---===============7240817117091819873==
+--===============1773950923466465367==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -87,8 +87,8 @@ ple-system, "system-ui", "Noto Sans Thai Looped", system-ui, sans-serif;
     }
 
     /* ---------- Light theme (default) ---------- */
-    body { background-color: #ECEAE6; }
-    .email-bg { background-color: #ECEAE6; }
+    body { background-color: #ECEBF1; }
+    .email-bg { background-color: #ECEBF1; }
     .card { background-color: #FFFFFF; }
     .h-title { color: #2B2B2B; }
     .t-greeting { color: #2B2B2B; }
@@ -141,11 +141,11 @@ nt; }
   </style>
 </head>
 
-<body style=3D"margin:0; padding:0; background-color:#ECEAE6;">
+<body style=3D"margin:0; padding:0; background-color:#ECEBF1;">
 
   <!-- Preheader (hidden preview text) -->
   <div style=3D"display:none; max-height:0; overflow:hidden; mso-hide:all; fo=
-nt-size:1px; line-height:1px; color:#ECEAE6; opacity:0;">
+nt-size:1px; line-height:1px; color:#ECEBF1; opacity:0;">
     =E0=B8=9A=E0=B8=B1=E0=B8=8D=E0=B8=8A=E0=B8=B5=E0=B8=82=E0=B8=AD=E0=B8=87=
 =E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=9A=E0=B8=99=E0=B8=A3=E0=B8=B0=E0=B8=9A=E0=
 =B8=9A empeo =E0=B8=96=E0=B8=B9=E0=B8=81=E0=B8=9B=E0=B8=B4=E0=B8=94=E0=B9=83=
@@ -156,7 +156,7 @@ j;&nbsp;&zwnj;
 
   <!-- Full-width background wrapper: centers content on every platform -->
   <table role=3D"presentation" class=3D"email-bg" width=3D"100%" cellpadding=
-=3D"0" cellspacing=3D"0" border=3D"0" style=3D"background-color:#ECEAE6;">
+=3D"0" cellspacing=3D"0" border=3D"0" style=3D"background-color:#ECEBF1;">
     <tr>
       <td align=3D"center" valign=3D"top" style=3D"padding:32px 16px;">
 
@@ -301,7 +301,7 @@ text-decoration:underline;">Help Center</a>
 </body>
 </html>
 
---===============7240817117091819873==
+--===============1773950923466465367==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo.png"
@@ -719,7 +719,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============7240817117091819873==
+--===============1773950923466465367==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo-white.png"
@@ -1042,6 +1042,6 @@ EmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAA
 uiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYA
 AKALEmAAAAC68P8DAAD//0iaO6oAAAAGSURBVAMALMRFiKRN9SYAAAAASUVORK5CYII=
 
---===============7240817117091819873==--
+--===============1773950923466465367==--
 
---===============4717025065544057075==--
+--===============9183445526043915315==--
