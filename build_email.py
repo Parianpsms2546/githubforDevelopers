@@ -9,15 +9,19 @@ Design goals:
   - Content stays centered on every client (incl. Outlook / Word engine)
   - Responsive for both mobile and desktop
   - Full dark-mode support
+  - Flame top accent bar that follows the card's rounded corners
   - Font order exactly as specified:
     Prompt, Inter, "Segoe UI Variable", "SF Pro Text", -apple-system,
     "system-ui", "Noto Sans Thai Looped", system-ui, sans-serif
 """
 
 import base64
+import io
 import os
 from email.message import EmailMessage
 from email.utils import make_msgid, formatdate
+
+from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LOGO_PATH = os.path.join(HERE, "assets", "empeo-logo.png")
@@ -26,12 +30,33 @@ LOGO_PATH = os.path.join(HERE, "assets", "empeo-logo.png")
 RECIPIENT_NAME = "คุณสมหมาย หมายปอง"
 SUBJECT = "บัญชีของคุณถูกปิดใช้งาน"
 HELP_CENTER_URL = "https://empeo.com/help"
+FLAME = "#F15A2E"  # sampled from the official empeo logo
 # Exact font order requested by the user.
 FONT_STACK = (
     'Prompt, Inter, "Segoe UI Variable", "SF Pro Text", -apple-system, '
     '"system-ui", "Noto Sans Thai Looped", system-ui, sans-serif'
 )
+# Displayed logo width (px). The official asset is trimmed at build time so
+# spacing around it is tight and predictable.
+LOGO_DISPLAY_W = 150
 # -----------------------------------------------------------------------------
+
+
+def trimmed_logo_bytes() -> bytes:
+    """Load the official logo and trim its transparent margin to a small,
+    uniform padding so the logo→heading gap is controlled purely by CSS."""
+    im = Image.open(LOGO_PATH).convert("RGBA")
+    bbox = im.getbbox()
+    if bbox:
+        pad = 6  # tiny uniform breathing room
+        left = max(bbox[0] - pad, 0)
+        top = max(bbox[1] - pad, 0)
+        right = min(bbox[2] + pad, im.width)
+        bottom = min(bbox[3] + pad, im.height)
+        im = im.crop((left, top, right, bottom))
+    out = io.BytesIO()
+    im.save(out, format="PNG")
+    return out.getvalue()
 
 
 def html_body(logo_src: str) -> str:
@@ -56,12 +81,13 @@ def html_body(logo_src: str) -> str:
   a {{ text-decoration:none; }}
   body, table, td, p, a, span {{ font-family:{FONT_STACK}; }}
 
-  /* Web font for clients that honor @font-face (Apple Mail, iOS Mail) */
+  /* Web font for clients that honor @import (Apple Mail, iOS Mail) */
   @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600;700&display=swap');
 
   /* ---- Palette (light) ---- */
   .bg-page   {{ background-color:#eeeef3; }}
   .bg-card   {{ background-color:#ffffff; }}
+  .bar       {{ background-color:{FLAME}; }}
   .c-heading {{ color:#20242e; }}
   .c-body    {{ color:#5b6270; }}
   .c-note    {{ color:#9aa0ac; }}
@@ -72,9 +98,9 @@ def html_body(logo_src: str) -> str:
   /* ---- Responsive ---- */
   @media only screen and (max-width:620px) {{
     .container {{ width:100% !important; }}
-    .card-pad  {{ padding:32px 22px !important; }}
+    .card-pad  {{ padding:36px 22px 40px 22px !important; }}
     .h1        {{ font-size:26px !important; line-height:1.3 !important; }}
-    .logo      {{ width:150px !important; height:auto !important; }}
+    .logo      {{ width:132px !important; height:auto !important; }}
     .body-txt  {{ font-size:16px !important; }}
     .dt-br     {{ display:none !important; }}
   }}
@@ -108,48 +134,52 @@ def html_body(logo_src: str) -> str:
   <!-- Full-width centering wrapper -->
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg-page" style="background-color:#eeeef3;">
     <tr>
-      <td align="center" style="padding:32px 16px;">
+      <td align="center" style="padding:36px 16px;">
         <!--[if mso]>
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" align="center"><tr><td>
         <![endif]-->
         <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="container" style="width:600px; max-width:600px; margin:0 auto;">
+          <!-- Card -->
           <tr>
-            <td align="center" class="bg-card card-pad" style="background-color:#ffffff; border-radius:22px; padding:56px 56px 44px 56px;">
+            <td class="bg-card" style="background-color:#ffffff; border-radius:20px; overflow:hidden;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                <!-- Flame top accent bar (follows the rounded top corners) -->
+                <tr>
+                  <td class="bar" height="5" style="height:5px; line-height:5px; font-size:0; background-color:{FLAME}; border-radius:20px 20px 0 0;">&nbsp;</td>
+                </tr>
+                <!-- Content -->
+                <tr>
+                  <td align="center" class="card-pad" style="padding:48px 56px 44px 56px;">
 
-              <!-- Logo -->
-              <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
-                <tr><td align="center" style="padding-bottom:34px;">
-                  <img src="{logo_src}" width="176" alt="empeo" class="logo" style="display:block; width:176px; max-width:176px; height:auto; margin:0 auto;">
-                </td></tr>
+                    <!-- Logo -->
+                    <img src="{logo_src}" width="{LOGO_DISPLAY_W}" alt="empeo" class="logo" style="display:block; width:{LOGO_DISPLAY_W}px; max-width:{LOGO_DISPLAY_W}px; height:auto; margin:0 auto 18px auto;">
+
+                    <!-- Heading -->
+                    <h1 class="h1 c-heading" style="margin:0 0 24px 0; font-family:{FONT_STACK}; font-size:30px; line-height:1.3; font-weight:700; color:#20242e; text-align:center;">
+                      {SUBJECT}
+                    </h1>
+
+                    <!-- Greeting -->
+                    <p class="body-txt c-body" style="margin:0 0 22px 0; font-family:{FONT_STACK}; font-size:17px; line-height:1.6; color:#5b6270; text-align:center;">
+                      เรียน <span class="c-heading" style="font-weight:600; color:#20242e;">{RECIPIENT_NAME}</span>
+                    </p>
+
+                    <!-- Body (breaks are whitespace-free so mobile joins Thai text without stray spaces) -->
+                    <p class="body-txt c-body" style="margin:0; font-family:{FONT_STACK}; font-size:17px; line-height:1.75; color:#5b6270; text-align:center;">ขณะนี้ สถานะของคุณบนระบบ empeo ได้ถูกเปลี่ยนเป็นบุคคล<br class="dt-br">ที่ลาออกจากบริษัท โดยระบบได้ปิดใช้งานและย้ายบัญชี<br class="dt-br">ของคุณออกจากกลุ่มผู้ใช้งานภายในบริษัทเรียบร้อยแล้ว</p>
+
+                    <!-- Divider -->
+                    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
+                      <tr><td class="divider" style="border-top:1px solid #e8e9ee; font-size:0; line-height:0; padding-top:38px;">&nbsp;</td></tr>
+                    </table>
+
+                    <!-- Note -->
+                    <p class="c-note" style="margin:36px 0 0 0; font-family:{FONT_STACK}; font-size:15px; line-height:1.65; color:#9aa0ac; text-align:center;">
+                      หากพบว่าเป็นความผิดพลาด กรุณาแจ้งฝ่ายบุคคลหรือผู้ดูแลระบบของคุณได้ทันที
+                    </p>
+
+                  </td>
+                </tr>
               </table>
-
-              <!-- Heading -->
-              <h1 class="h1 c-heading" style="margin:0 0 20px 0; font-family:{FONT_STACK}; font-size:30px; line-height:1.3; font-weight:700; color:#20242e; text-align:center;">
-                {SUBJECT}
-              </h1>
-
-              <!-- Greeting -->
-              <p class="body-txt c-body" style="margin:0 0 22px 0; font-family:{FONT_STACK}; font-size:17px; line-height:1.6; color:#5b6270; text-align:center;">
-                เรียน <span class="c-heading" style="font-weight:600; color:#20242e;">{RECIPIENT_NAME}</span>
-              </p>
-
-              <!-- Body -->
-              <p class="body-txt c-body" style="margin:0; font-family:{FONT_STACK}; font-size:17px; line-height:1.7; color:#5b6270; text-align:center;">
-                ขณะนี้ สถานะของคุณบนระบบ empeo ได้ถูกเปลี่ยน<br class="dt-br">
-                เป็นบุคคลที่ลาออกจากบริษัท โดยระบบได้ปิดใช้งาน<br class="dt-br">
-                และย้ายบัญชีของคุณออกจากกลุ่มผู้ใช้งานภายในบริษัทเรียบร้อยแล้ว
-              </p>
-
-              <!-- Divider -->
-              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:0 auto;">
-                <tr><td class="divider" style="border-top:1px solid #e8e9ee; font-size:0; line-height:0; padding-top:34px;">&nbsp;</td></tr>
-              </table>
-
-              <!-- Note -->
-              <p class="c-note" style="margin:34px 0 0 0; font-family:{FONT_STACK}; font-size:15px; line-height:1.6; color:#9aa0ac; text-align:center;">
-                หากพบว่าเป็นความผิดพลาด กรุณาแจ้งฝ่ายบุคคลหรือผู้ดูแลระบบของคุณได้ทันที
-              </p>
-
             </td>
           </tr>
 
@@ -180,15 +210,13 @@ def html_body(logo_src: str) -> str:
 
 
 def main():
-    with open(LOGO_PATH, "rb") as f:
-        logo_bytes = f.read()
+    logo_bytes = trimmed_logo_bytes()
 
     # 1) Self-contained HTML (base64 data URI) for browser preview
     b64 = base64.b64encode(logo_bytes).decode("ascii")
     data_uri = f"data:image/png;base64,{b64}"
-    html_standalone = html_body(data_uri)
     with open(os.path.join(HERE, "account-deactivated.html"), "w", encoding="utf-8") as f:
-        f.write(html_standalone)
+        f.write(html_body(data_uri))
 
     # 2) .eml with logo embedded via CID (multipart/related)
     logo_cid = make_msgid(domain="empeo.com")
@@ -206,7 +234,7 @@ def main():
         f"{SUBJECT}\n\n"
         f"เรียน {RECIPIENT_NAME}\n\n"
         "ขณะนี้ สถานะของคุณบนระบบ empeo ได้ถูกเปลี่ยนเป็นบุคคลที่ลาออกจากบริษัท "
-        "โดยระบบได้ปิดใช้งาน และย้ายบัญชีของคุณออกจากกลุ่มผู้ใช้งานภายในบริษัทเรียบร้อยแล้ว\n\n"
+        "โดยระบบได้ปิดใช้งานและย้ายบัญชีของคุณออกจากกลุ่มผู้ใช้งานภายในบริษัทเรียบร้อยแล้ว\n\n"
         "หากพบว่าเป็นความผิดพลาด กรุณาแจ้งฝ่ายบุคคลหรือผู้ดูแลระบบของคุณได้ทันที\n\n"
         "Powered by empeo\n"
         "92 Central Park Offices, Unit MM3205, 32nd Floor,\n"
@@ -216,7 +244,6 @@ def main():
     msg.set_content(plain, subtype="plain", charset="utf-8")
     msg.add_alternative(html_email, subtype="html", charset="utf-8")
 
-    # Attach the logo to the HTML alternative part as a related resource
     html_part = msg.get_payload()[1]
     html_part.add_related(
         logo_bytes, maintype="image", subtype="png", cid=logo_cid, filename="empeo-logo.png"
