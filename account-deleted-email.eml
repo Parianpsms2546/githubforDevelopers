@@ -4,9 +4,9 @@ To: Parisa Arnuphapsamosorn <parisa.a@gofive.co.th>
 Date: Thu, 06 Aug 2026 09:50:05 +0000
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============1337880049632165085=="
+ boundary="===============2994444241957560710=="
 
---===============1337880049632165085==
+--===============2994444241957560710==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -25,18 +25,34 @@ IGJ5IGVtcGVvXQo5MiBDZW50cmFsIFBhcmsgT2ZmaWNlcywgVW5pdCBNTTMyMDUsIDMybmQgRmxv
 b3IsClJhbWEgNCBSb2FkLCBTaWxvbSwgQmFuZyBSYWssIEJhbmdrb2sgMTA1MDAKSGVscCBDZW50
 ZXI8aHR0cHM6Ly93d3cuZW1wZW8uY29tL2hlbHA+Cg==
 
---===============1337880049632165085==
+--===============2994444241957560710==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============8392948910818812106=="
+ boundary="===============6015447051548273816=="
 
---===============8392948910818812106==
+--===============6015447051548273816==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
 <html>
 <head>
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0">
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<style>
+  /* Responsive rules for mobile email clients */
+  @media only screen and (max-width: 480px) {
+    .email-bg-td { padding: 20px 12px !important; }
+    .card-wrap { width: 100% !important; max-width: 100% !important; }
+    .card-pad { padding-left: 24px !important; padding-right: 24px !important=
+; }
+    .h-title { font-size: 24px !important; line-height: 32px !important; }
+    .t-greeting { font-size: 16px !important; }
+    .t-body { font-size: 15px !important; line-height: 24px !important; }
+    .t-note { font-size: 14px !important; padding-left: 24px !important; padd=
+ing-right: 24px !important; }
+    .btn-a { padding: 14px 32px !important; }
+  }
+</style>
 </head>
 <body>
 <div style=3D"direction: ltr; font-family: Aptos; font-size: 12pt; color: bla=
@@ -49,8 +65,8 @@ ck;"><br>
 %; box-sizing: border-box; border-collapse: collapse; border-spacing: 0px;">
 <tbody>
 <tr>
-<td class=3D"email-bg" align=3D"center" style=3D"padding: 32px 16px; vertical=
--align: top;">
+<td class=3D"email-bg email-bg-td" align=3D"center" style=3D"padding: 32px 16=
+px; vertical-align: top;">
 <table class=3D"card-wrap" align=3D"center" role=3D"presentation" cellspacing=
 =3D"0" cellpadding=3D"0" border=3D"0" style=3D"margin: 0px auto; width: 600px=
 ; max-width: 600px; box-sizing: border-box; border-collapse: collapse; border=
@@ -69,8 +85,8 @@ ight: 56px; padding-left: 56px;">
 <div class=3D"card-pad" style=3D"font-family: Prompt, Inter, &quot;Segoe UI V=
 ariable&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto =
 Sans Thai Looped&quot;, system-ui, sans-serif;">
-<span style=3D"line-height: 100%;"><img src=3D"cid:178608879763.2195.12413654=
-067273520606@localhost" alt=3D"empeo" width=3D"128" height=3D"64" style=3D"wi=
+<span style=3D"line-height: 100%;"><img src=3D"cid:178608934326.2200.15620609=
+595011645134@localhost" alt=3D"empeo" width=3D"128" height=3D"64" style=3D"wi=
 dth: 128px; height: 64px; max-width: 128px; margin: 0px auto; display: block;=
  outline: currentcolor;"></span>
 </div>
@@ -176,8 +192,8 @@ right: 40px; padding-left: 40px;">
 <div class=3D"card-wrap" style=3D"font-family: Prompt, Inter, &quot;Segoe UI =
 Variable&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto=
  Sans Thai Looped&quot;, system-ui, sans-serif;">
-<span style=3D"line-height: 100%;"><img src=3D"cid:178608879763.2195.67485535=
-78494511167@localhost" alt=3D"Powered by empeo" width=3D"48" height=3D"14" st=
+<span style=3D"line-height: 100%;"><img src=3D"cid:178608934326.2200.34914712=
+14199522653@localhost" alt=3D"Powered by empeo" width=3D"48" height=3D"14" st=
 yle=3D"width: 48px; height: 14px; max-width: 48px; margin: 0px auto; display:=
  block; outline: currentcolor;"></span>
 </div>
@@ -217,11 +233,11 @@ id=3D"42e14362-2be3-4bfd-a3a1-438d9836bf09" style=3D"color: rgb(167, 162, 155=
 </body>
 </html>
 
---===============8392948910818812106==
+--===============6015447051548273816==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
-Content-ID: <178608879763.2195.12413654067273520606@localhost>
+Content-ID: <178608934326.2200.15620609595011645134@localhost>
 MIME-Version: 1.0
 
 iVBORw0KGgoAAAANSUhEUgAAA8AAAAHgCAYAAABq5QSEAAAQAElEQVR4nOzdCXxcVd3/8d+5M2lp
@@ -635,11 +651,11 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============8392948910818812106==
+--===============6015447051548273816==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
-Content-ID: <178608879763.2195.6748553578494511167@localhost>
+Content-ID: <178608934326.2200.3491471214199522653@localhost>
 MIME-Version: 1.0
 
 iVBORw0KGgoAAAANSUhEUgAAA8AAAAEYCAYAAACTJJ/wAAAQAElEQVR4nOzdB3xb1fUH8HPfk7Js
@@ -1221,6 +1237,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============8392948910818812106==--
+--===============6015447051548273816==--
 
---===============1337880049632165085==--
+--===============2994444241957560710==--
