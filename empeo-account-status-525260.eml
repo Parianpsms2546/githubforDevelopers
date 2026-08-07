@@ -91,32 +91,44 @@ MIME-Version: 1.0
 <html>
 <head>
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1">
 <style type=3D"text/css">
 body{margin:0;padding:0;background-color:#f7f5f2;}
 table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;}
 img{border:0;line-height:100%;outline:none;text-decoration:none;-ms-interpola=
 tion-mode:bicubic;}
+/* Mobile-optimized signal: max-width media query with real mobile overrides =
+*/
+@media only screen and (max-width:600px){
+.container{width:100%!important;}
+.px{padding-left:20px!important;padding-right:20px!important;}
+.side{padding-left:16px!important;padding-right:16px!important;}
+.h-title{font-size:22px!important;line-height:30px!important;}
+}
 </style>
 </head>
 <body style=3D"margin:0;padding:0;background-color:#f7f5f2;">
 <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
 0" border=3D"0" style=3D"width:100%;background-color:#f7f5f2;">
 <tr>
-<td align=3D"center" valign=3D"top" style=3D"padding:32px 16px;">
-<table role=3D"presentation" align=3D"center" width=3D"600" cellpadding=3D"0"=
- cellspacing=3D"0" border=3D"0" style=3D"width:600px;max-width:600px;backgrou=
-nd-color:#ffffff;border-radius:18px;">
+<td align=3D"center" valign=3D"top" style=3D"padding-top:32px;padding-right:1=
+6px;padding-bottom:32px;padding-left:16px;">
+<table role=3D"presentation" class=3D"container" align=3D"center" width=3D"60=
+0" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%;max-w=
+idth:600px;background-color:#ffffff;border-radius:18px;">
 <tr>
-<td align=3D"center" style=3D"padding:44px 56px 0 56px;">
+<td class=3D"px" align=3D"center" style=3D"padding-top:44px;padding-right:56p=
+x;padding-bottom:0;padding-left:56px;">
 <img src=3D"cid:empeo-logo" alt=3D"empeo" width=3D"128" height=3D"64" style=
 =3D"display:block;margin:0 auto;width:128px;height:64px;">
 </td>
 </tr>
 <tr>
-<td align=3D"center" style=3D"padding:32px 56px 0 56px;font-family:Prompt, In=
-ter, 'Segoe UI Variable', 'SF Pro Text', -apple-system, system-ui, 'Noto Sans=
- Thai Looped', sans-serif;font-size:28px;line-height:38px;font-weight:700;col=
-or:rgb(43,43,43);">
+<td class=3D"px h-title" align=3D"center" style=3D"padding-top:32px;padding-r=
+ight:56px;padding-bottom:0;padding-left:56px;font-family:Prompt, Inter, 'Sego=
+e UI Variable', 'SF Pro Text', -apple-system, system-ui, 'Noto Sans Thai Loop=
+ed', sans-serif;font-size:28px;line-height:38px;font-weight:700;color:rgb(43,=
+43,43);">
 =E0=B8=AA=E0=B8=96=E0=B8=B2=E0=B8=99=E0=B8=B0=E0=B8=9A=E0=B8=B1=E0=B8=8D=E0=
 =B8=8A=E0=B8=B5=E0=B8=82=E0=B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=
 =96=E0=B8=B9=E0=B8=81=E0=B9=80=E0=B8=9B=E0=B8=A5=E0=B8=B5=E0=B9=88=E0=B8=A2=
@@ -124,20 +136,20 @@ or:rgb(43,43,43);">
 </td>
 </tr>
 <tr>
-<td align=3D"center" style=3D"padding:14px 56px 0 56px;font-family:Prompt, In=
-ter, 'Segoe UI Variable', 'SF Pro Text', -apple-system, system-ui, 'Noto Sans=
- Thai Looped', sans-serif;font-size:17px;line-height:26px;color:rgb(43,43,43)=
-;">
+<td class=3D"px" align=3D"center" style=3D"padding-top:14px;padding-right:56p=
+x;padding-bottom:0;padding-left:56px;font-family:Prompt, Inter, 'Segoe UI Var=
+iable', 'SF Pro Text', -apple-system, system-ui, 'Noto Sans Thai Looped', san=
+s-serif;font-size:17px;line-height:26px;color:rgb(43,43,43);">
 =E0=B9=80=E0=B8=A3=E0=B8=B5=E0=B8=A2=E0=B8=99 <span style=3D"font-weight:700;=
 ">=E0=B8=AA=E0=B8=A1=E0=B8=AB=E0=B8=A1=E0=B8=B2=E0=B8=A2 =E0=B8=AB=E0=B8=A1=
 =E0=B8=B2=E0=B8=A2=E0=B8=9B=E0=B8=AD=E0=B8=87</span>
 </td>
 </tr>
 <tr>
-<td align=3D"center" style=3D"padding:16px 56px 52px 56px;font-family:Prompt,=
- Inter, 'Segoe UI Variable', 'SF Pro Text', -apple-system, system-ui, 'Noto S=
-ans Thai Looped', sans-serif;font-size:16px;line-height:28px;color:rgb(82,82,=
-96);">
+<td class=3D"px" align=3D"center" style=3D"padding-top:16px;padding-right:56p=
+x;padding-bottom:52px;padding-left:56px;font-family:Prompt, Inter, 'Segoe UI =
+Variable', 'SF Pro Text', -apple-system, system-ui, 'Noto Sans Thai Looped', =
+sans-serif;font-size:16px;line-height:28px;color:rgb(82,82,96);">
 =E0=B8=82=E0=B8=93=E0=B8=B0=E0=B8=99=E0=B8=B5=E0=B9=89 =E0=B8=AA=E0=B8=96=E0=
 =B8=B2=E0=B8=99=E0=B8=B0=E0=B8=82=E0=B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=
 =93=E0=B8=9A=E0=B8=99=E0=B8=A3=E0=B8=B0=E0=B8=9A=E0=B8=9A empeo =E0=B9=84=E0=
@@ -167,28 +179,30 @@ ans Thai Looped', sans-serif;font-size:16px;line-height:28px;color:rgb(82,82,=
 </td>
 </tr>
 </table>
-<table role=3D"presentation" align=3D"center" width=3D"600" cellpadding=3D"0"=
- cellspacing=3D"0" border=3D"0" style=3D"width:600px;max-width:600px;">
+<table role=3D"presentation" class=3D"container" align=3D"center" width=3D"60=
+0" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:100%;max-w=
+idth:600px;">
 <tr>
-<td align=3D"center" style=3D"padding:24px 40px 0 40px;">
+<td class=3D"side" align=3D"center" style=3D"padding-top:24px;padding-right:4=
+0px;padding-bottom:0;padding-left:40px;">
 <img src=3D"cid:powered-by-empeo" alt=3D"Powered by empeo" width=3D"48" heigh=
 t=3D"14" style=3D"display:block;margin:0 auto;width:48px;height:14px;">
 </td>
 </tr>
 <tr>
-<td align=3D"center" style=3D"padding:10px 40px 2px 40px;font-family:Prompt, =
-Inter, 'Segoe UI Variable', 'SF Pro Text', -apple-system, system-ui, 'Noto Sa=
-ns Thai Looped', sans-serif;font-size:10px;line-height:16px;color:rgb(167,162=
-,155);">
+<td class=3D"side" align=3D"center" style=3D"padding-top:10px;padding-right:4=
+0px;padding-bottom:2px;padding-left:40px;font-family:Prompt, Inter, 'Segoe UI=
+ Variable', 'SF Pro Text', -apple-system, system-ui, 'Noto Sans Thai Looped',=
+ sans-serif;font-size:10px;line-height:16px;color:rgb(167,162,155);">
 92 Central Park Offices, Unit MM3205, 32nd Floor,<br>Rama 4 Road, Silom, Bang=
  Rak, Bangkok 10500
 </td>
 </tr>
 <tr>
-<td align=3D"center" style=3D"padding:0 40px 8px 40px;font-family:Prompt, Int=
-er, 'Segoe UI Variable', 'SF Pro Text', -apple-system, system-ui, 'Noto Sans =
-Thai Looped', sans-serif;font-size:9px;line-height:14px;color:rgb(167,162,155=
-);">
+<td class=3D"side" align=3D"center" style=3D"padding-top:0;padding-right:40px=
+;padding-bottom:8px;padding-left:40px;font-family:Prompt, Inter, 'Segoe UI Va=
+riable', 'SF Pro Text', -apple-system, system-ui, 'Noto Sans Thai Looped', sa=
+ns-serif;font-size:9px;line-height:14px;color:rgb(167,162,155);">
 <a href=3D"https://www.empeo.com/help" style=3D"color:rgb(167,162,155);"><u>H=
 elp Center</u></a>
 </td>
