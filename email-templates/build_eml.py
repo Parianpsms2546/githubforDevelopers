@@ -25,9 +25,16 @@ def load(name):
         return fh.read()
 
 
-def build(html_name, eml_name, subject, text):
+def build(html_name, eml_name, subject, text, subs=None):
     with open(os.path.join(HERE, html_name), "r", encoding="utf-8") as f:
         html = f.read()
+
+    # Fill in merge placeholders for the sample .eml so it renders cleanly in
+    # every client (e.g. Outlook shows raw {{...}} tags otherwise). The HTML
+    # template on disk keeps the placeholders for real mail-merge sending.
+    for key, val in (subs or {}).items():
+        html = html.replace(key, val)
+        text = text.replace(key, val)
 
     # Point the <img> tags at the inline attachments instead of the relative
     # files. Replace the more specific paths first.
@@ -122,4 +129,5 @@ build(
         "Rama 4 Road, Silom, Bang Rak, Bangkok 10500\n"
         "Help Center: https://www.empeo.com/help\n"
     ),
+    subs={"{{DOCUMENT_URL}}": "https://app.empeo.com/documents/L230200033"},
 )

@@ -184,9 +184,17 @@
                   </td>
                 </tr>
 
-                <!-- CTA button -->
+                <!-- CTA button (bulletproof: VML for Outlook, styled anchor elsewhere) -->
                 <tr>
                   <td class="card-pad" align="center" style="padding:36px 56px 60px 56px;">
+                    <!--[if mso]>
+                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+                                 href="{{DOCUMENT_URL}}" style="height:50px;v-text-anchor:middle;width:190px;" arcsize="16%" stroke="f" fillcolor="#E15D2E">
+                      <w:anchorlock/>
+                      <center style="color:#FFFFFF;font-family:'Prompt',Arial,sans-serif;font-size:16px;font-weight:bold;">ดูเอกสาร</center>
+                    </v:roundrect>
+                    <![endif]-->
+                    <!--[if !mso]><!-->
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center" style="margin:0 auto;">
                       <tr>
                         <td class="btn-bg" align="center" bgcolor="#E15D2E" style="border-radius:8px; background-color:#E15D2E;">
@@ -195,6 +203,7 @@
                         </td>
                       </tr>
                     </table>
+                    <!--<![endif]-->
                   </td>
                 </tr>
               </table>
