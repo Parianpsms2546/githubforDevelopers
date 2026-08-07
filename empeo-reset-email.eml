@@ -81,8 +81,16 @@ Content-Transfer-Encoding: quoted-printable
 <head>
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-8=
 74">
+<style>
+html,body{-webkit-text-size-adjust:100%;
+-ms-text-size-adjust:100%;text-size-adjust:100%}
+@media only screen and (max-width:480px){
+td.email-bg{padding-left:8px !important;padding-right:8px !important}
+.t-footer{padding-left:8px !important;padding-right:8px !important}
+}
+</style>
 </head>
-<body>
+<body style=3D"-webkit-text-size-adjust: 100%; text-size-adjust: 100%;">
 <div style=3D"direction: ltr; font-family: Aptos; font-size: 12pt; color: b=
 lack;"><br>
 <br>
@@ -229,7 +237,7 @@ olor;"></span>
 </tr>
 <tr>
 <td class=3D"t-footer" align=3D"center" style=3D"line-height: 16px; padding=
-: 10px 40px 2px; color: rgb(167, 162, 155);">
+: 10px 16px 2px; color: rgb(167, 162, 155);">
 <div class=3D"t-footer" style=3D"line-height: 16px; font-family: Prompt, In=
 ter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple-system,=
  system-ui, &quot;Noto Sans Thai Looped&quot;, system-ui, sans-serif; font-=
