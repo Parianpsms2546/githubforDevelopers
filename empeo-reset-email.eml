@@ -161,14 +161,14 @@ g=3D"0" cellpadding=3D"0" border=3D"0" style=3D"margin: 0px auto; box-sizin=
 g: border-box; border-collapse: collapse; border-spacing: 0px;">
 <tbody>
 <tr>
-<td class=3D"otp-box otp-text" align=3D"center" style=3D"text-indent: 12px;=
+<td class=3D"otp-box otp-text" align=3D"center" style=3D"text-indent: 0;=
  line-height: 44px; border-radius: 14px; background-color: rgb(252, 234, 22=
 3); padding: 18px 28px; color: rgb(225, 93, 46);">
-<div class=3D"otp-box otp-text" style=3D"text-indent: 12px; line-height: 44=
+<div class=3D"otp-box otp-text" style=3D"text-indent: 0; line-height: 44=
 px; font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro=
  Text&quot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, s=
 ystem-ui, sans-serif; font-size: 38px;">
-<span style=3D"letter-spacing: 12px; font-weight: 700;">284990 </span></div=
+<span style=3D"letter-spacing: 12px; font-weight: 700;">284990</span></div=
 >
 </td>
 </tr>
