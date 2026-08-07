@@ -109,6 +109,10 @@
       .card-pad { padding-left: 24px !important; padding-right: 24px !important; }
       .h-title { font-size: 24px !important; line-height: 34px !important; }
       .t-body { font-size: 15px !important; line-height: 26px !important; }
+      /* Stack the interview detail box so the date/time never wraps */
+      .io-left, .io-right { display: block !important; width: 100% !important; }
+      .io-left { border-right: none !important; border-bottom: 1px solid #E2DFD9 !important; padding: 22px 16px !important; }
+      .io-right { padding: 22px 22px !important; }
     }
   </style>
 </head>
@@ -175,12 +179,12 @@
                   <td class="card-pad" style="padding:32px 56px 0 56px;">
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="io-box" style="border:1px solid #E2DFD9; border-radius:12px; border-collapse:separate !important; border-spacing:0;">
                       <tr>
-                        <td class="io-div" width="34%" valign="middle" align="center" style="padding:28px 10px; border-right:1px solid #E2DFD9;">
+                        <td class="io-div io-left" width="34%" valign="middle" align="center" style="padding:28px 10px; border-right:1px solid #E2DFD9;">
                           <div class="io-date" style="font-size:42px; line-height:46px; font-weight:700; color:#2B2B2B;">25</div>
-                          <div class="io-label" style="font-size:14px; line-height:22px; color:#8C8781; padding-top:2px;">กรกฎาคม 2565</div>
-                          <div class="io-accent" style="font-size:15px; line-height:24px; font-weight:700; color:#E15D2E; padding-top:2px;">13:00-14:00</div>
+                          <div class="io-label" style="font-size:14px; line-height:22px; color:#8C8781; padding-top:2px; white-space:nowrap;">กรกฎาคม 2565</div>
+                          <div class="io-accent" style="font-size:15px; line-height:24px; font-weight:700; color:#E15D2E; padding-top:2px; white-space:nowrap;">13:00-14:00</div>
                         </td>
-                        <td width="66%" valign="top" style="padding:24px 22px;">
+                        <td class="io-right" width="66%" valign="top" style="padding:24px 22px;">
                           <div class="io-title" style="font-size:17px; line-height:24px; font-weight:700; color:#2B2B2B;">รายละเอียดการสัมภาษณ์</div>
                           <div class="io-label" style="font-size:13px; line-height:20px; color:#8C8781; padding-top:14px;">สถานที่ :</div>
                           <div class="io-value" style="font-size:15px; line-height:22px; color:#383842; padding-top:2px;">สัมภาษณ์ออนไลน์</div>
