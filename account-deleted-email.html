@@ -3,6 +3,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+  /* Stop mobile clients from auto-inflating small text (keeps footer at 2 lines) */
+  body, table, td, div, span, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%; }
   /* Responsive rules for mobile email clients */
   @media only screen and (max-width: 480px) {
     .email-bg-td { padding: 20px 12px !important; }
@@ -13,6 +15,7 @@
     .t-body { font-size: 15px !important; line-height: 24px !important; }
     .t-note { font-size: 14px !important; padding-left: 24px !important; padding-right: 24px !important; }
     .btn-a { padding: 14px 32px !important; }
+    .t-footer { font-size: 11px !important; line-height: 16px !important; padding-left: 16px !important; padding-right: 16px !important; }
   }
 </style>
 </head>
