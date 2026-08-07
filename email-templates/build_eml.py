@@ -103,3 +103,24 @@ build(
         "Help Center: https://www.empeo.com/help\n"
     ),
 )
+
+# --- Document rejected (leave request rejected) ---
+build(
+    "document-rejected.html",
+    "document-rejected.eml",
+    "เอกสารของคุณถูกปฏิเสธ",
+    (
+        "เอกสารของคุณถูกปฏิเสธ\n\n"
+        "สวัสดี {{FULL_NAME}}\n\n"
+        "เอกสารของคุณถูกปฏิเสธ\n\n"
+        "ลาป่วย (L230200033)   [ปฏิเสธ]\n"
+        "วันที่: 25 กรกฎาคม 2565 (1 วัน)\n"
+        "รายละเอียด: เป็นไข้ใจ\n\n"
+        "ดูเอกสาร: {{DOCUMENT_URL}}\n\n"
+        "-----\n"
+        "Powered by empeo\n"
+        "92 Central Park Offices, Unit MM3205, 32nd Floor,\n"
+        "Rama 4 Road, Silom, Bang Rak, Bangkok 10500\n"
+        "Help Center: https://www.empeo.com/help\n"
+    ),
+)
