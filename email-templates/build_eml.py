@@ -158,3 +158,27 @@ build(
     ),
     subs={"{{DOWNLOAD_URL}}": "https://app.empeo.com/payslip/2566-12"},
 )
+
+# --- Interview invitation ---
+build(
+    "interview-invitation.html",
+    "interview-invitation.eml",
+    "นัดสัมภาษณ์งานวันนี้",
+    (
+        "นัดสัมภาษณ์งานวันนี้\n\n"
+        "สวัสดี อิสรีย์ สินสุขไชย\n\n"
+        "คุณมีนัดสัมภาษณ์งานกับเราในตำแหน่ง Front End Developer\n\n"
+        "รายละเอียดการสัมภาษณ์\n"
+        "วันที่: 25 กรกฎาคม 2565 เวลา 13:00-14:00\n"
+        "สถานที่: สัมภาษณ์ออนไลน์\n"
+        "ข้อมูลเพิ่มเติม: Meeting ID: 435 453 627 708 / Passcode: kvuJiJ\n\n"
+        "เรายินดีอย่างยิ่งที่จะได้รู้จักคุณมากขึ้น แล้วพบกัน :)\n\n"
+        "เข้าร่วมสัมภาษณ์: {{INTERVIEW_URL}}\n\n"
+        "-----\n"
+        "Powered by empeo\n"
+        "92 Central Park Offices, Unit MM3205, 32nd Floor,\n"
+        "Rama 4 Road, Silom, Bang Rak, Bangkok 10500\n"
+        "Help Center: https://www.empeo.com/help\n"
+    ),
+    subs={"{{INTERVIEW_URL}}": "https://app.empeo.com/interview/435453627708"},
+)
