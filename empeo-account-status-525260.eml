@@ -93,17 +93,16 @@ MIME-Version: 1.0
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
 <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1">
 <style type=3D"text/css">
-body{margin:0!important;padding:0!important;background-color:#f7f5f2;}
+body{margin:0;padding:0;background-color:#f7f5f2;}
 table{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0;}
 img{border:0;line-height:100%;outline:none;text-decoration:none;-ms-interpola=
 tion-mode:bicubic;}
-.card{width:600px;}
-@media only screen and (max-width:600px){
-.card{width:100%!important;max-width:100%!important;}
-.outer{padding-left:16px!important;padding-right:16px!important;}
-.px{padding-left:24px!important;padding-right:24px!important;}
-.side{padding-left:20px!important;padding-right:20px!important;}
-.h-title{font-size:24px!important;line-height:32px!important;}
+/* Desktop enhancement (mobile-first base padding is small so it never squish=
+es) */
+@media only screen and (min-width:601px){
+.px{padding-left:56px!important;padding-right:56px!important;}
+.side{padding-left:40px!important;padding-right:40px!important;}
+.h-title{font-size:28px!important;line-height:38px!important;}
 }
 </style>
 </head>
@@ -111,21 +110,20 @@ tion-mode:bicubic;}
 <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
 0" border=3D"0" style=3D"width:100%;background-color:#f7f5f2;">
 <tr>
-<td class=3D"outer" align=3D"center" valign=3D"top" style=3D"padding:32px 16p=
-x;">
-<table role=3D"presentation" class=3D"card" align=3D"center" width=3D"600" ce=
-llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;max-width=
-:600px;background-color:#ffffff;border-radius:18px;">
+<td align=3D"center" valign=3D"top" style=3D"padding:32px 16px;">
+<table role=3D"presentation" align=3D"center" width=3D"600" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%;max-width:600px;backgroun=
+d-color:#ffffff;border-radius:18px;">
 <tr>
-<td class=3D"px" align=3D"center" style=3D"padding:44px 56px 0 56px;">
+<td class=3D"px" align=3D"center" style=3D"padding:40px 24px 0 24px;">
 <img src=3D"cid:empeo-logo" alt=3D"empeo" width=3D"128" height=3D"64" style=
 =3D"display:block;margin:0 auto;width:128px;height:64px;">
 </td>
 </tr>
 <tr>
-<td class=3D"px h-title" align=3D"center" style=3D"padding:32px 56px 0 56px;f=
+<td class=3D"px h-title" align=3D"center" style=3D"padding:28px 24px 0 24px;f=
 ont-family:Prompt, Inter, 'Segoe UI Variable', 'SF Pro Text', -apple-system, =
-system-ui, 'Noto Sans Thai Looped', sans-serif;font-size:28px;line-height:38p=
+system-ui, 'Noto Sans Thai Looped', sans-serif;font-size:24px;line-height:32p=
 x;font-weight:700;color:rgb(43,43,43);">
 =E0=B8=AA=E0=B8=96=E0=B8=B2=E0=B8=99=E0=B8=B0=E0=B8=9A=E0=B8=B1=E0=B8=8D=E0=
 =B8=8A=E0=B8=B5=E0=B8=82=E0=B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=
@@ -134,7 +132,7 @@ x;font-weight:700;color:rgb(43,43,43);">
 </td>
 </tr>
 <tr>
-<td class=3D"px" align=3D"center" style=3D"padding:14px 56px 0 56px;font-fami=
+<td class=3D"px" align=3D"center" style=3D"padding:14px 24px 0 24px;font-fami=
 ly:Prompt, Inter, 'Segoe UI Variable', 'SF Pro Text', -apple-system, system-u=
 i, 'Noto Sans Thai Looped', sans-serif;font-size:17px;line-height:26px;color:=
 rgb(43,43,43);">
@@ -144,7 +142,7 @@ rgb(43,43,43);">
 </td>
 </tr>
 <tr>
-<td class=3D"px" align=3D"center" style=3D"padding:16px 56px 52px 56px;font-f=
+<td class=3D"px" align=3D"center" style=3D"padding:16px 24px 40px 24px;font-f=
 amily:Prompt, Inter, 'Segoe UI Variable', 'SF Pro Text', -apple-system, syste=
 m-ui, 'Noto Sans Thai Looped', sans-serif;font-size:16px;line-height:28px;col=
 or:rgb(82,82,96);">
@@ -177,17 +175,16 @@ or:rgb(82,82,96);">
 </td>
 </tr>
 </table>
-<table role=3D"presentation" class=3D"card" align=3D"center" width=3D"600" ce=
-llpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"width:600px;max-width=
-:600px;">
+<table role=3D"presentation" align=3D"center" width=3D"600" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%;max-width:600px;">
 <tr>
-<td class=3D"side" align=3D"center" style=3D"padding:24px 40px 0 40px;">
+<td class=3D"side" align=3D"center" style=3D"padding:24px 24px 0 24px;">
 <img src=3D"cid:powered-by-empeo" alt=3D"Powered by empeo" width=3D"48" heigh=
 t=3D"14" style=3D"display:block;margin:0 auto;width:48px;height:14px;">
 </td>
 </tr>
 <tr>
-<td class=3D"side" align=3D"center" style=3D"padding:10px 40px 2px 40px;font-=
+<td class=3D"side" align=3D"center" style=3D"padding:10px 24px 2px 24px;font-=
 family:Prompt, Inter, 'Segoe UI Variable', 'SF Pro Text', -apple-system, syst=
 em-ui, 'Noto Sans Thai Looped', sans-serif;font-size:10px;line-height:16px;co=
 lor:rgb(167,162,155);">
@@ -196,7 +193,7 @@ lor:rgb(167,162,155);">
 </td>
 </tr>
 <tr>
-<td class=3D"side" align=3D"center" style=3D"padding:0 40px 8px 40px;font-fam=
+<td class=3D"side" align=3D"center" style=3D"padding:0 24px 8px 24px;font-fam=
 ily:Prompt, Inter, 'Segoe UI Variable', 'SF Pro Text', -apple-system, system-=
 ui, 'Noto Sans Thai Looped', sans-serif;font-size:9px;line-height:14px;color:=
 rgb(167,162,155);">
