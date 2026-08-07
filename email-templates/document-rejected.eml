@@ -3,21 +3,19 @@ Subject: =?utf-8?b?4LmA4Lit4LiB4Liq4Liy4Lij4LiC4Lit4LiH4LiE4Li44LiT4LiW4Li5?=
 From: empeo <no-reply@empeo.com>
 To: =?utf-8?b?4LiE4Li44LiT4Liq4Lih4Lir4Lih4Liy4LiiIOC4q+C4oeC4suC4ouC4mw==?=
  =?utf-8?b?4Lit4LiH?= <employee@example.com>
-Date: Fri, 07 Aug 2026 01:09:07 +0000
-Message-ID: <178606494744.2212.14751044954786365327@empeo.com>
+Date: Fri, 07 Aug 2026 01:22:58 +0000
+Message-ID: <178606577805.2207.52743991263658448@empeo.com>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============3643612327744723013=="
+ boundary="===============5290096863617665264=="
 
---===============3643612327744723013==
+--===============5290096863617665264==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
 เอกสารของคุณถูกปฏิเสธ
 
-สวัสดี {{FULL_NAME}}
-
-เอกสารของคุณถูกปฏิเสธ
+สวัสดี คุณสมหมาย หมายปอง
 
 ลาป่วย (L230200033)   [ปฏิเสธ]
 วันที่: 25 กรกฎาคม 2565 (1 วัน)
@@ -31,12 +29,12 @@ Powered by empeo
 Rama 4 Road, Silom, Bang Rak, Bangkok 10500
 Help Center: https://www.empeo.com/help
 
---===============3643612327744723013==
+--===============5290096863617665264==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============6781182456278437759=="
+ boundary="===============2519744957608171118=="
 
---===============6781182456278437759==
+--===============2519744957608171118==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -223,17 +221,9 @@ lor:#2B2B2B;">
                   <td class=3D"card-pad t-greeting" align=3D"center" style=3D=
 "padding:14px 56px 0 56px; font-size:17px; line-height:26px; color:#2B2B2B;">
                     =E0=B8=AA=E0=B8=A7=E0=B8=B1=E0=B8=AA=E0=B8=94=E0=B8=B5 <s=
-trong style=3D"font-weight:700;">{{FULL_NAME}}</strong>
-                  </td>
-                </tr>
-
-                <!-- Subtitle -->
-                <tr>
-                  <td class=3D"card-pad t-body" align=3D"center" style=3D"pad=
-ding:10px 56px 0 56px; font-size:16px; line-height:26px; color:#55524D;">
-                    =E0=B9=80=E0=B8=AD=E0=B8=81=E0=B8=AA=E0=B8=B2=E0=B8=A3=E0=
-=B8=82=E0=B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=96=E0=B8=B9=E0=B8=
-=81=E0=B8=9B=E0=B8=8F=E0=B8=B4=E0=B9=80=E0=B8=AA=E0=B8=98
+trong style=3D"font-weight:700;">=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=AA=E0=B8=
+=A1=E0=B8=AB=E0=B8=A1=E0=B8=B2=E0=B8=A2 =E0=B8=AB=E0=B8=A1=E0=B8=B2=E0=B8=A2=
+=E0=B8=9B=E0=B8=AD=E0=B8=87</strong>
                   </td>
                 </tr>
 
@@ -354,7 +344,7 @@ ext-decoration:underline;">Help Center</a>
 </body>
 </html>
 
---===============6781182456278437759==
+--===============2519744957608171118==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo.png"
@@ -772,7 +762,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============6781182456278437759==
+--===============2519744957608171118==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo-white.png"
@@ -1095,7 +1085,7 @@ EmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAA
 uiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYA
 AKALEmAAAAC68P8DAAD//0iaO6oAAAAGSURBVAMALMRFiKRN9SYAAAAASUVORK5CYII=
 
---===============6781182456278437759==
+--===============2519744957608171118==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="powered-by-empeo.png"
@@ -1681,6 +1671,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============6781182456278437759==--
+--===============2519744957608171118==--
 
---===============3643612327744723013==--
+--===============5290096863617665264==--
