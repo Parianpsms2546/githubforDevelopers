@@ -91,30 +91,30 @@ Content-Transfer-Encoding: quoted-printable
 <table class=3D"card" role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"width: 100%; box-sizing: border-box; border-collapse: collapse; border-spacing: 0px;">
 <tbody>
 <tr>
-<td class=3D"card-pad" align=3D"center" style=3D"padding-top: 44px; padding-right: 56px; padding-left: 56px;">
+<td class=3D"card-pad" align=3D"center" style=3D"padding-top: 44px; padding-right: 24px; padding-left: 24px;">
 <div class=3D"card-pad" style=3D"font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, system-ui, sans-serif;">
 <span style=3D"line-height: 100%;"><img src=3D"cid:empeo-logo" alt=3D"empeo" width=3D"128" height=3D"64" style=3D"width: 128px; height: 64px; max-width: 128px; margin: 0px auto; display: block; outline: currentcolor;"></span>
 </div>
 </td>
 </tr>
 <tr>
-<td class=3D"card-pad h-title" align=3D"center" style=3D"line-height: 38px; padding-top: 32px; padding-right: 56px; padding-left: 56px; color: rgb(43, 43, 43);">
+<td class=3D"card-pad h-title" align=3D"center" style=3D"line-height: 38px; padding-top: 32px; padding-right: 24px; padding-left: 24px; color: rgb(43, 43, 43);">
 <div class=3D"card-pad h-title" style=3D"line-height: 38px; font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, system-ui, sans-serif; font-size: 28px;">
 <span style=3D"font-weight: 700;">=E0=CD=A1=CA=D2=C3=A2=CD=A7=A4=D8=B3=B6=D9=A1=BB=AF=D4=E0=CA=B8 </span></div>
 </td>
 </tr>
 <tr>
-<td class=3D"card-pad t-greeting" align=3D"center" style=3D"line-height: 26px; padding-top: 14px; padding-right: 56px; padding-left: 56px; color: rgb(43, 43, 43);">
+<td class=3D"card-pad t-greeting" align=3D"center" style=3D"line-height: 26px; padding-top: 14px; padding-right: 24px; padding-left: 24px; color: rgb(43, 43, 43);">
 <div class=3D"card-pad t-greeting" style=3D"line-height: 26px; font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, system-ui, sans-serif; font-size: 17px;">
 =CA=C7=D1=CA=B4=D5 <span style=3D"font-weight: 700;">=A4=D8=B3=CA=C1=CB=C1=D2=C2 =CB=C1=D2=C2=BB=CD=A7</span> </div>
 </td>
 </tr>
 <tr>
-<td class=3D"card-pad" style=3D"padding-top: 28px; padding-right: 28px; padding-left: 28px;">
+<td class=3D"card-pad" style=3D"padding-top: 28px; padding-right: 24px; padding-left: 24px;">
 <table class=3D"infobox" role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"border-radius: 12px; background-color: rgb(245, 243, 240); width: 100%; box-sizing: border-box; border-collapse: collapse; border-spacing: 0px;">
 <tbody>
 <tr>
-<td class=3D"infobox" style=3D"padding-top: 22px; padding-right: 16px; padding-left: 16px;">
+<td class=3D"infobox" style=3D"padding-top: 22px; padding-right: 12px; padding-left: 12px;">
 <table class=3D"infobox" role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"width: 100%; box-sizing: border-box; border-collapse: collapse; border-spacing: 0px;">
 <tbody>
 <tr>
@@ -132,11 +132,11 @@ Content-Transfer-Encoding: quoted-printable
 </td>
 </tr>
 <tr>
-<td class=3D"infobox" style=3D"padding: 14px 16px 22px;">
+<td class=3D"infobox" style=3D"padding: 14px 12px 22px;">
 <table class=3D"infobox" role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"box-sizing: border-box; border-collapse: collapse; border-spacing: 0px;">
 <tbody>
 <tr>
-<td class=3D"info-label" align=3D"left" style=3D"line-height: 26px; white-space: nowrap; padding-right: 10px; vertical-align: top; color: rgb(140, 135, 129);">
+<td class=3D"info-label" align=3D"left" style=3D"line-height: 26px; white-space: nowrap; padding-right: 8px; vertical-align: top; color: rgb(140, 135, 129);">
 <div class=3D"info-label" style=3D"line-height: 26px; white-space: nowrap; font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, system-ui, sans-serif; font-size: 15px;">
 =C7=D1=B9=B7=D5=E8:</div>
 </td>
@@ -146,7 +146,7 @@ Content-Transfer-Encoding: quoted-printable
 </td>
 </tr>
 <tr>
-<td class=3D"info-label" align=3D"left" style=3D"line-height: 26px; white-space: nowrap; padding-right: 10px; vertical-align: top; color: rgb(140, 135, 129);">
+<td class=3D"info-label" align=3D"left" style=3D"line-height: 26px; white-space: nowrap; padding-right: 8px; vertical-align: top; color: rgb(140, 135, 129);">
 <div class=3D"info-label" style=3D"line-height: 26px; white-space: nowrap; font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, system-ui, sans-serif; font-size: 15px;">
 =C3=D2=C2=C5=D0=E0=CD=D5=C2=B4:</div>
 </td>
@@ -164,7 +164,7 @@ Content-Transfer-Encoding: quoted-printable
 </td>
 </tr>
 <tr>
-<td class=3D"card-pad" align=3D"center" style=3D"padding: 36px 56px 60px;">
+<td class=3D"card-pad" align=3D"center" style=3D"padding: 36px 24px 60px;">
 <table class=3D"card-pad" align=3D"center" role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" style=3D"margin: 0px auto; box-sizing: border-box; border-collapse: collapse; border-spacing: 0px;">
 <tbody>
 <tr>
