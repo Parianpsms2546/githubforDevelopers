@@ -3,13 +3,13 @@ Subject: =?utf-8?b?4LiZ4Lix4LiU4Liq4Lix4Lih4Lig4Liy4Lip4LiT4LmM4LiH4Liy4LiZ?=
 From: empeo <no-reply@empeo.com>
 To: =?utf-8?b?4LiE4Li44LiT4Liq4Lih4Lir4Lih4Liy4LiiIOC4q+C4oeC4suC4ouC4mw==?=
  =?utf-8?b?4Lit4LiH?= <employee@example.com>
-Date: Fri, 07 Aug 2026 07:09:41 +0000
-Message-ID: <178608658188.2210.5968681027821992303@empeo.com>
+Date: Fri, 07 Aug 2026 07:16:39 +0000
+Message-ID: <178608699978.2220.7485320356742402249@empeo.com>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============3188867028041574518=="
+ boundary="===============3203698354512475088=="
 
---===============3188867028041574518==
+--===============3203698354512475088==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -31,12 +31,12 @@ MzU0NTM2Mjc3MDgKCi0tLS0tClBvd2VyZWQgYnkgZW1wZW8KOTIgQ2VudHJhbCBQYXJrIE9mZmlj
 ZXMsIFVuaXQgTU0zMjA1LCAzMm5kIEZsb29yLApSYW1hIDQgUm9hZCwgU2lsb20sIEJhbmcgUmFr
 LCBCYW5na29rIDEwNTAwCkhlbHAgQ2VudGVyOiBodHRwczovL3d3dy5lbXBlby5jb20vaGVscAo=
 
---===============3188867028041574518==
+--===============3203698354512475088==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============8195613878484423675=="
+ boundary="===============6548204982485452021=="
 
---===============8195613878484423675==
+--===============6548204982485452021==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -51,6 +51,8 @@ as-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office">
   <meta name=3D"x-apple-disable-message-reformatting">
   <meta name=3D"color-scheme" content=3D"light dark">
   <meta name=3D"supported-color-schemes" content=3D"light dark">
+  <meta name=3D"format-detection" content=3D"telephone=3Dno, date=3Dno, email=
+=3Dno, address=3Dno">
   <title>=E0=B8=99=E0=B8=B1=E0=B8=94=E0=B8=AA=E0=B8=B1=E0=B8=A1=E0=B8=A0=E0=
 =B8=B2=E0=B8=A9=E0=B8=93=E0=B9=8C=E0=B8=87=E0=B8=B2=E0=B8=99=E0=B8=A7=E0=B8=
 =B1=E0=B8=99=E0=B8=99=E0=B8=B5=E0=B9=89</title>
@@ -81,6 +83,16 @@ rtant; border-collapse: collapse !important; }
     img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-heig=
 ht: 100%; outline: none; text-decoration: none; }
     a { text-decoration: none; }
+    /* Stop iOS/Apple Mail from auto-linking dates/times/numbers and recolori=
+ng them */
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+      text-decoration: none !important;
+      font-size: inherit !important;
+      font-weight: inherit !important;
+      font-family: inherit !important;
+      line-height: inherit !important;
+    }
     body, table, td, a, p, h1 {
       font-family: "Prompt", "Inter", "Segoe UI Variable", "SF Pro Text", -ap=
 ple-system, "system-ui", "Noto Sans Thai Looped", system-ui, sans-serif;
@@ -238,7 +250,7 @@ trong style=3D"font-weight:700;">=E0=B8=AD=E0=B8=B4=E0=B8=AA=E0=B8=A3=E0=B8=
                 <!-- Body -->
                 <tr>
                   <td class=3D"card-pad t-body" align=3D"center" style=3D"pad=
-ding:12px 56px 0 56px; font-size:16px; line-height:28px; color:#55524D;">
+ding:12px 56px 0 56px; font-size:16px; line-height:28px; color:#383842;">
                     =E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=A1=E0=B8=B5=E0=B8=99=E0=
 =B8=B1=E0=B8=94=E0=B8=AA=E0=B8=B1=E0=B8=A1=E0=B8=A0=E0=B8=B2=E0=B8=A9=E0=B8=
 =93=E0=B9=8C=E0=B8=87=E0=B8=B2=E0=B8=99=E0=B8=81=E0=B8=B1=E0=B8=9A=E0=B9=80=
@@ -256,18 +268,18 @@ ont End Developer</strong>
 lid #E2DFD9; border-radius:12px; border-collapse:separate !important; border-=
 spacing:0;">
                       <tr>
-                        <td class=3D"io-div" width=3D"42%" valign=3D"middle" =
-align=3D"center" style=3D"padding:28px 12px; border-right:1px solid #E2DFD9;">
+                        <td class=3D"io-div" width=3D"34%" valign=3D"middle" =
+align=3D"center" style=3D"padding:28px 10px; border-right:1px solid #E2DFD9;">
                           <div class=3D"io-date" style=3D"font-size:42px; lin=
 e-height:46px; font-weight:700; color:#2B2B2B;">25</div>
                           <div class=3D"io-label" style=3D"font-size:14px; li=
 ne-height:22px; color:#8C8781; padding-top:2px;">=E0=B8=81=E0=B8=A3=E0=B8=81=
 =E0=B8=8E=E0=B8=B2=E0=B8=84=E0=B8=A1 2565</div>
-                          <div class=3D"io-accent" style=3D"font-size:17px; l=
-ine-height:26px; font-weight:700; color:#E15D2E; padding-top:2px;">13:00-14:0=
+                          <div class=3D"io-accent" style=3D"font-size:15px; l=
+ine-height:24px; font-weight:700; color:#E15D2E; padding-top:2px;">13:00-14:0=
 0</div>
                         </td>
-                        <td width=3D"58%" valign=3D"top" style=3D"padding:24p=
+                        <td width=3D"66%" valign=3D"top" style=3D"padding:24p=
 x 22px;">
                           <div class=3D"io-title" style=3D"font-size:17px; li=
 ne-height:24px; font-weight:700; color:#2B2B2B;">=E0=B8=A3=E0=B8=B2=E0=B8=A2=
@@ -278,7 +290,7 @@ ne-height:24px; font-weight:700; color:#2B2B2B;">=E0=B8=A3=E0=B8=B2=E0=B8=A2=
 ne-height:20px; color:#8C8781; padding-top:14px;">=E0=B8=AA=E0=B8=96=E0=B8=B2=
 =E0=B8=99=E0=B8=97=E0=B8=B5=E0=B9=88 :</div>
                           <div class=3D"io-value" style=3D"font-size:15px; li=
-ne-height:22px; color:#55524D; padding-top:2px;">=E0=B8=AA=E0=B8=B1=E0=B8=A1=
+ne-height:22px; color:#383842; padding-top:2px;">=E0=B8=AA=E0=B8=B1=E0=B8=A1=
 =E0=B8=A0=E0=B8=B2=E0=B8=A9=E0=B8=93=E0=B9=8C=E0=B8=AD=E0=B8=AD=E0=B8=99=E0=
 =B9=84=E0=B8=A5=E0=B8=99=E0=B9=8C</div>
                           <div class=3D"io-label" style=3D"font-size:13px; li=
@@ -286,7 +298,7 @@ ne-height:20px; color:#8C8781; padding-top:12px;">=E0=B8=82=E0=B9=89=E0=B8=AD=
 =E0=B8=A1=E0=B8=B9=E0=B8=A5=E0=B9=80=E0=B8=9E=E0=B8=B4=E0=B9=88=E0=B8=A1=E0=
 =B9=80=E0=B8=95=E0=B8=B4=E0=B8=A1 :</div>
                           <div class=3D"io-value" style=3D"font-size:15px; li=
-ne-height:22px; color:#55524D; padding-top:2px;">Meeting ID: 435 453 627 708<=
+ne-height:22px; color:#383842; padding-top:2px;">Meeting ID: 435 453 627 708<=
 br>Passcode: kvuJiJ</div>
                         </td>
                       </tr>
@@ -297,7 +309,7 @@ br>Passcode: kvuJiJ</div>
                 <!-- Note -->
                 <tr>
                   <td class=3D"card-pad t-note" align=3D"center" style=3D"pad=
-ding:28px 56px 0 56px; font-size:15px; line-height:24px; color:#7C7873;">
+ding:28px 56px 0 56px; font-size:15px; line-height:24px; color:#383842;">
                     =E0=B9=80=E0=B8=A3=E0=B8=B2=E0=B8=A2=E0=B8=B4=E0=B8=99=E0=
 =B8=94=E0=B8=B5=E0=B8=AD=E0=B8=A2=E0=B9=88=E0=B8=B2=E0=B8=87=E0=B8=A2=E0=B8=
 =B4=E0=B9=88=E0=B8=87=E0=B8=97=E0=B8=B5=E0=B9=88=E0=B8=88=E0=B8=B0=E0=B9=84=
@@ -385,7 +397,7 @@ ext-decoration:underline;">Help Center</a>
 </body>
 </html>
 
---===============8195613878484423675==
+--===============6548204982485452021==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo.png"
@@ -803,7 +815,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============8195613878484423675==
+--===============6548204982485452021==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo-white.png"
@@ -1126,7 +1138,7 @@ EmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAA
 uiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYA
 AKALEmAAAAC68P8DAAD//0iaO6oAAAAGSURBVAMALMRFiKRN9SYAAAAASUVORK5CYII=
 
---===============8195613878484423675==
+--===============6548204982485452021==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="powered-by-empeo.png"
@@ -1712,6 +1724,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============8195613878484423675==--
+--===============6548204982485452021==--
 
---===============3188867028041574518==--
+--===============3203698354512475088==--

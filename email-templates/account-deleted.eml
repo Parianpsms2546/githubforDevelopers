@@ -3,13 +3,13 @@ Subject: =?utf-8?b?4Lil4Lia4Lia4Lix4LiN4LiK4Li14LiC4Lit4LiH4LiE4Li44LiT4LmA?=
 From: empeo <no-reply@empeo.com>
 To: =?utf-8?b?4LiE4Li44LiT4Liq4Lih4Lir4Lih4Liy4LiiIOC4q+C4oeC4suC4ouC4mw==?=
  =?utf-8?b?4Lit4LiH?= <employee@example.com>
-Date: Fri, 07 Aug 2026 07:09:41 +0000
-Message-ID: <178608658186.2210.636764992046901477@empeo.com>
+Date: Fri, 07 Aug 2026 07:16:39 +0000
+Message-ID: <178608699975.2220.8059164226444020329@empeo.com>
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============8031097107071678510=="
+ boundary="===============2469068739276102611=="
 
---===============8031097107071678510==
+--===============2469068739276102611==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -28,12 +28,12 @@ IGJ5IGVtcGVvCjkyIENlbnRyYWwgUGFyayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJuZCBGbG9v
 ciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBCYW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxwIENlbnRl
 cjogaHR0cHM6Ly93d3cuZW1wZW8uY29tL2hlbHAK
 
---===============8031097107071678510==
+--===============2469068739276102611==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============1268855986679874424=="
+ boundary="===============8210549218734948374=="
 
---===============1268855986679874424==
+--===============8210549218734948374==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -213,7 +213,7 @@ ICAgICA8L3RkPgogICAgICAgICAgPC90cj4KICAgICAgICA8L3RhYmxlPgogICAgICAgIDwhLS1b
 aWYgbXNvXT4KICAgICAgICA8L3RkPjwvdHI+PC90YWJsZT4KICAgICAgICA8IVtlbmRpZl0tLT4K
 CiAgICAgIDwvdGQ+CiAgICA8L3RyPgogIDwvdGFibGU+Cgo8L2JvZHk+CjwvaHRtbD4K
 
---===============1268855986679874424==
+--===============8210549218734948374==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo.png"
@@ -631,7 +631,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============1268855986679874424==
+--===============8210549218734948374==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="empeo-logo-white.png"
@@ -954,7 +954,7 @@ EmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAA
 uiABBgAAoAsSYAAAALogAQYAAKALEmAAAAC6IAEGAACgCxJgAAAAuiABBgAAoAsSYAAAALogAQYA
 AKALEmAAAAC68P8DAAD//0iaO6oAAAAGSURBVAMALMRFiKRN9SYAAAAASUVORK5CYII=
 
---===============1268855986679874424==
+--===============8210549218734948374==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: inline; filename="powered-by-empeo.png"
@@ -1540,6 +1540,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============1268855986679874424==--
+--===============8210549218734948374==--
 
---===============8031097107071678510==--
+--===============2469068739276102611==--
