@@ -53,6 +53,8 @@
     .t-detail-name { color: #2B2B2B; }
     .t-detail-label { color: #8A857E; }
     .t-detail-value { color: #2B2B2B; }
+    /* Email shown as normal text, not a highlighted link */
+    a.t-email { color: #2B2B2B !important; text-decoration: none !important; }
 
     /* Logo swap: color by default, white in dark mode */
     .logo-dark { display: none; }
@@ -71,6 +73,7 @@
       .t-detail-name { color: #F5F4F2 !important; }
       .t-detail-label { color: #9A958E !important; }
       .t-detail-value { color: #F5F4F2 !important; }
+      a.t-email { color: #F5F4F2 !important; }
       .logo-light { display: none !important; }
       .logo-dark { display: block !important; }
     }
@@ -86,6 +89,7 @@
     [data-ogsc] .t-detail-name { color: #F5F4F2 !important; }
     [data-ogsc] .t-detail-label { color: #9A958E !important; }
     [data-ogsc] .t-detail-value { color: #F5F4F2 !important; }
+    [data-ogsc] a.t-email { color: #F5F4F2 !important; }
     [data-ogsc] .logo-light { display: none !important; }
     [data-ogsc] .logo-dark { display: block !important; }
 
@@ -161,7 +165,7 @@
                             <!-- Full name -->
                             <tr>
                               <td colspan="2" class="t-detail-name" style="padding:0 0 18px 0; font-size:19px; line-height:28px; font-weight:700; color:#2B2B2B;">
-                                สมหมาย หมายปอง
+                                คุณสมหมาย หมายปอง
                               </td>
                             </tr>
                             <!-- รหัสพนักงาน -->
@@ -197,7 +201,7 @@
                                 อีเมล:
                               </td>
                               <td class="t-detail-value" valign="top" style="padding:0 0 12px 0; font-size:15px; line-height:24px; color:#2B2B2B;">
-                                somphong@example.com
+<a class="t-detail-value t-email" href="mailto:somphong@example.com" style="color:#2B2B2B; text-decoration:none; font-size:15px; line-height:24px;">somphong@example.com</a>
                               </td>
                             </tr>
                             <!-- หัวหน้างาน -->
@@ -223,7 +227,7 @@
                               <td class="t-detail-label detail-label-col" valign="top" width="150" style="width:150px; padding:0 12px 0 0; font-size:15px; line-height:24px; color:#8A857E; white-space:nowrap;">
                                 ดำเนินการเมื่อ:
                               </td>
-                              <td class="t-detail-value" valign="top" style="padding:0; font-size:15px; line-height:24px; font-weight:700; color:#2B2B2B;">
+                              <td class="t-detail-value" valign="top" style="padding:0; font-size:15px; line-height:24px; color:#2B2B2B;">
                                 5 เมษายน 2566 13:12
                               </td>
                             </tr>
