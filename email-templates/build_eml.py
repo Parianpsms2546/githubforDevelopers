@@ -18,6 +18,15 @@ ASSETS = os.path.join(HERE, "assets")
 CID_COLOR = "empeo-logo"
 CID_WHITE = "empeo-logo-white"
 CID_POWERED = "powered-by-empeo"
+CID_PAYSLIP = "empeo-e-payslip"
+
+# (cid, asset filename) pairs; each is embedded only if the HTML references it.
+RELATED = [
+    (CID_COLOR, "empeo-logo.png"),
+    (CID_WHITE, "empeo-logo-white.png"),
+    (CID_POWERED, "powered-by-empeo.png"),
+    (CID_PAYSLIP, "empeo-e-payslip.png"),
+]
 
 
 def load(name):
@@ -38,6 +47,7 @@ def build(html_name, eml_name, subject, text, subs=None):
 
     # Point the <img> tags at the inline attachments instead of the relative
     # files. Replace the more specific paths first.
+    html = html.replace("assets/empeo-e-payslip.png", "cid:%s" % CID_PAYSLIP)
     html = html.replace("assets/powered-by-empeo.png", "cid:%s" % CID_POWERED)
     html = html.replace("assets/empeo-logo-white.png", "cid:%s" % CID_WHITE)
     html = html.replace("assets/empeo-logo.png", "cid:%s" % CID_COLOR)
@@ -54,17 +64,14 @@ def build(html_name, eml_name, subject, text, subs=None):
     msg.set_content(text, subtype="plain", charset="utf-8")
     msg.add_alternative(html, subtype="html", charset="utf-8")
 
-    # Attach the logos as inline (CID) images related to the HTML part.
+    # Attach the images as inline (CID) attachments related to the HTML part —
+    # but only the ones this template actually references.
     html_part = msg.get_payload()[1]
-    html_part.add_related(load("empeo-logo.png"), "image", "png",
-                          cid="<%s>" % CID_COLOR, disposition="inline",
-                          filename="empeo-logo.png")
-    html_part.add_related(load("empeo-logo-white.png"), "image", "png",
-                          cid="<%s>" % CID_WHITE, disposition="inline",
-                          filename="empeo-logo-white.png")
-    html_part.add_related(load("powered-by-empeo.png"), "image", "png",
-                          cid="<%s>" % CID_POWERED, disposition="inline",
-                          filename="powered-by-empeo.png")
+    for cid, fn in RELATED:
+        if ("cid:%s" % cid) in html:
+            html_part.add_related(load(fn), "image", "png",
+                                  cid="<%s>" % cid, disposition="inline",
+                                  filename=fn)
 
     out = os.path.join(HERE, eml_name)
     with open(out, "wb") as f:
@@ -130,4 +137,25 @@ build(
         "Help Center: https://www.empeo.com/help\n"
     ),
     subs={"{{DOCUMENT_URL}}": "https://app.empeo.com/documents/L230200033"},
+)
+
+# --- Payslip ready (download e-payslip) ---
+build(
+    "payslip-ready.html",
+    "payslip-ready.eml",
+    "สลิปเงินเดือนของคุณพร้อมให้ดาวน์โหลดแล้ว",
+    (
+        "สวัสดี สมปอง หมายปอง\n\n"
+        "สามารถดาวน์โหลดสลิปเงินเดือนด้านล่างได้ทันที\n\n"
+        "รอบเงินเดือน: 1 – 31 ธันวาคม 2566\n"
+        "รหัสเปิดไฟล์: คือ วันเดือนปีเกิดของท่าน 8 หลัก ววดดปปปป(ค.ศ.) "
+        "เช่น 12 พ.ย. 2003 -> 12112003\n\n"
+        "ดาวน์โหลด: {{DOWNLOAD_URL}}\n\n"
+        "-----\n"
+        "Powered by empeo\n"
+        "92 Central Park Offices, Unit MM3205, 32nd Floor,\n"
+        "Rama 4 Road, Silom, Bang Rak, Bangkok 10500\n"
+        "Help Center: https://www.empeo.com/help\n"
+    ),
+    subs={"{{DOWNLOAD_URL}}": "https://app.empeo.com/payslip/2566-12"},
 )
