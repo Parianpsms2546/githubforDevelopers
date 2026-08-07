@@ -182,3 +182,28 @@ build(
     ),
     subs={"{{INTERVIEW_URL}}": "https://app.empeo.com/interview/435453627708"},
 )
+
+# --- Interview invitation (v2: OTP-style date box, no frame) ---
+build(
+    "interview-invitation-v2.html",
+    "interview-invitation-v2.eml",
+    "นัดสัมภาษณ์งานวันนี้",
+    (
+        "นัดสัมภาษณ์งานวันนี้\n\n"
+        "สวัสดี อิสรีย์ สินสุขไชย\n\n"
+        "คุณมีนัดสัมภาษณ์งานกับเราในตำแหน่ง Front End Developer\n\n"
+        "25 กรกฎาคม 2565 เวลา 13:00 - 14:00\n\n"
+        "รายละเอียดการสัมภาษณ์\n"
+        "สถานที่: ห้องประชุม Apollo อาคาร B บริษัท โกไฟว์ จำกัด\n"
+        "ข้อมูลเพิ่มเติม: กรุณาแต่งกายให้สุภาพและเปิดกล้องขณะสัมภาษณ์ "
+        "หากถึงที่นัดหมายแล้วกรุณาติดต่อคุณลนภา\n\n"
+        "เรายินดีอย่างยิ่งที่จะได้รู้จักคุณมากขึ้น แล้วพบกัน :)\n\n"
+        "เข้าร่วมสัมภาษณ์: {{INTERVIEW_URL}}\n\n"
+        "-----\n"
+        "Powered by empeo\n"
+        "92 Central Park Offices, Unit MM3205, 32nd Floor,\n"
+        "Rama 4 Road, Silom, Bang Rak, Bangkok 10500\n"
+        "Help Center: https://www.empeo.com/help\n"
+    ),
+    subs={"{{INTERVIEW_URL}}": "https://app.empeo.com/interview/435453627708"},
+)
