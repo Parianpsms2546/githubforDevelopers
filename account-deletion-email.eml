@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============3026181396824370719=="
+ boundary="===============5797549792275508497=="
 
---===============3026181396824370719==
+--===============5797549792275508497==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -25,19 +25,18 @@ ayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJuZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBC
 YW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxwIENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29t
 L2hlbHAK
 
---===============3026181396824370719==
+--===============5797549792275508497==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============0217009403012241813=="
+ boundary="===============6872095865633010166=="
 
---===============0217009403012241813==
+--===============6872095865633010166==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
 <html>
 <head>
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
-<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1">
 <meta name=3D"format-detection" content=3D"telephone=3Dno">
 <meta name=3D"x-apple-disable-message-reformatting">
 <style type=3D"text/css">
@@ -216,7 +215,7 @@ d=3D"42e14362-2be3-4bfd-a3a1-438d9836bf09" style=3D"color: rgb(167, 162, 155)=
 </html>
 
 
---===============0217009403012241813==
+--===============6872095865633010166==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -634,7 +633,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============0217009403012241813==
+--===============6872095865633010166==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1220,6 +1219,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============0217009403012241813==--
+--===============6872095865633010166==--
 
---===============3026181396824370719==--
+--===============5797549792275508497==--
