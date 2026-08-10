@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============8012775231322205074=="
+ boundary="===============5233407584402009296=="
 
---===============8012775231322205074==
+--===============5233407584402009296==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -25,12 +25,12 @@ ayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJuZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBC
 YW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxwIENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29t
 L2hlbHAK
 
---===============8012775231322205074==
+--===============5233407584402009296==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============8095312801782268521=="
+ boundary="===============8134347427393181233=="
 
---===============8095312801782268521==
+--===============8134347427393181233==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -77,7 +77,7 @@ width=3D"128" height=3D"64" style=3D"width: 128px; height: 64px; max-width: 1=
 </tr>
 <tr>
 <td class=3D"card-pad h-title" align=3D"center" style=3D"line-height: 38px; p=
-adding-top: 28px; padding-right: 56px; padding-left: 56px; color: rgb(43, 43,=
+adding-top: 20px; padding-right: 56px; padding-left: 56px; color: rgb(43, 43,=
  43);">
 <div class=3D"card-pad h-title" style=3D"line-height: 38px; font-family: Prom=
 pt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple-sys=
@@ -132,7 +132,7 @@ em, system-ui, &quot;Noto Sans Thai Looped&quot;, system-ui, sans-serif; font=
 </tr>
 <tr>
 <td class=3D"card-pad" align=3D"center" style=3D"padding-top: 36px; padding-r=
-ight: 56px; padding-left: 56px;">
+ight: 56px; padding-bottom: 60px; padding-left: 56px;">
 <table class=3D"card-pad" align=3D"center" role=3D"presentation" cellspacing=
 =3D"0" cellpadding=3D"0" border=3D"0" style=3D"margin: 0px auto; box-sizing: =
 border-box; border-collapse: collapse; border-spacing: 0px;">
@@ -190,7 +190,7 @@ g-bottom: 8px; padding-left: 40px;">
 <div class=3D"card-wrap" style=3D"font-family: Prompt, Inter, &quot;Segoe UI =
 Variable&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto=
  Sans Thai Looped&quot;, system-ui, sans-serif;">
-<span style=3D"font-size: 9px; color: rgb(167, 162, 155); line-height: 14px;"=
+<span style=3D"font-size: 8px; color: rgb(167, 162, 155); line-height: 14px;"=
 ><a href=3D"https://www.empeo.com/help" class=3D"t-footer-link" data-outlook-=
 id=3D"42e14362-2be3-4bfd-a3a1-438d9836bf09" style=3D"color: rgb(167, 162, 155=
 );"><u>Help Center</u></a></span>
@@ -208,7 +208,7 @@ id=3D"42e14362-2be3-4bfd-a3a1-438d9836bf09" style=3D"color: rgb(167, 162, 155=
 </html>
 
 
---===============8095312801782268521==
+--===============8134347427393181233==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -626,7 +626,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============8095312801782268521==
+--===============8134347427393181233==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1212,6 +1212,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============8095312801782268521==--
+--===============8134347427393181233==--
 
---===============8012775231322205074==--
+--===============5233407584402009296==--
