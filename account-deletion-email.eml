@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============0854642936333263341=="
+ boundary="===============3026181396824370719=="
 
---===============0854642936333263341==
+--===============3026181396824370719==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -25,18 +25,38 @@ ayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJuZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBC
 YW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxwIENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29t
 L2hlbHAK
 
---===============0854642936333263341==
+--===============3026181396824370719==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============0133164075949024386=="
+ boundary="===============0217009403012241813=="
 
---===============0133164075949024386==
+--===============0217009403012241813==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
 <html>
 <head>
 <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1">
+<meta name=3D"format-detection" content=3D"telephone=3Dno">
+<meta name=3D"x-apple-disable-message-reformatting">
+<style type=3D"text/css">
+html, body { margin: 0 !important; padding: 0 !important; width: 100% !import=
+ant; }
+body, table, td, div, p, a, span { -webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%; text-size-adjust: 100%; }
+table { border-collapse: collapse !important; mso-table-lspace: 0pt; mso-tabl=
+e-rspace: 0pt; }
+img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
+: bicubic; }
+@media only screen and (max-width: 600px) {
+  table.card-wrap { width: 100% !important; max-width: 100% !important; }
+  td.card-pad { padding-left: 28px !important; padding-right: 28px !important=
+; }
+  td.t-footer { padding-left: 20px !important; padding-right: 20px !important=
+; }
+}
+</style>
 </head>
 <body>
 <div style=3D"direction: ltr; font-family: Aptos; font-size: 12pt; color: bla=
@@ -196,7 +216,7 @@ d=3D"42e14362-2be3-4bfd-a3a1-438d9836bf09" style=3D"color: rgb(167, 162, 155)=
 </html>
 
 
---===============0133164075949024386==
+--===============0217009403012241813==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -614,7 +634,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============0133164075949024386==
+--===============0217009403012241813==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1200,6 +1220,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============0133164075949024386==--
+--===============0217009403012241813==--
 
---===============0854642936333263341==--
+--===============3026181396824370719==--
