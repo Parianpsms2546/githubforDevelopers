@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============8962354675328210483=="
+ boundary="===============8294943636453974073=="
 
---===============8962354675328210483==
+--===============8294943636453974073==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -25,12 +25,12 @@ ayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJuZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBC
 YW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxwIENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29t
 L2hlbHAK
 
---===============8962354675328210483==
+--===============8294943636453974073==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============4736976247863735016=="
+ boundary="===============0074012188885471936=="
 
---===============4736976247863735016==
+--===============0074012188885471936==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -53,8 +53,10 @@ img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
 : bicubic; }
 .email-wrap { width: 100%; max-width: 600px; }
 @media only screen and (max-width: 480px) {
+  .outer { padding-left: 0 !important; padding-right: 0 !important; }
+  .card-main { border-radius: 0 !important; }
   .px { padding-left: 20px !important; padding-right: 20px !important; }
-  .side { padding-left: 16px !important; padding-right: 16px !important; }
+  .side { padding-left: 20px !important; padding-right: 20px !important; }
   .h-title { font-size: 20px !important; line-height: 28px !important; }
   .t-greet { font-size: 15px !important; line-height: 22px !important; }
   .t-body { font-size: 14px !important; line-height: 24px !important; }
@@ -69,11 +71,12 @@ img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
 : 100%; background-color: #f6f6f8;">
 <tbody>
 <tr>
-<td align=3D"center" valign=3D"top" style=3D"padding: 32px 16px;">
-<table class=3D"email-wrap" role=3D"presentation" align=3D"center" width=3D"6=
-00" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#ffffff" styl=
-e=3D"border-collapse: collapse; width: 100%; max-width: 600px; background-col=
-or: #ffffff; border-radius: 18px;">
+<td class=3D"outer" align=3D"center" valign=3D"top" style=3D"padding: 32px 16=
+px;">
+<table class=3D"email-wrap card-main" role=3D"presentation" align=3D"center" =
+width=3D"600" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#ff=
+ffff" style=3D"border-collapse: collapse; width: 100%; max-width: 600px; back=
+ground-color: #ffffff; border-radius: 18px;">
 <tbody>
 <tr>
 <td class=3D"px" align=3D"center" style=3D"padding: 40px 24px 0px;">
@@ -177,7 +180,7 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </body>
 </html>
 
---===============4736976247863735016==
+--===============0074012188885471936==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -595,7 +598,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============4736976247863735016==
+--===============0074012188885471936==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1181,6 +1184,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============4736976247863735016==--
+--===============0074012188885471936==--
 
---===============8962354675328210483==--
+--===============8294943636453974073==--

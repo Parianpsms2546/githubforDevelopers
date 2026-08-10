@@ -11,8 +11,10 @@ body, table, td, div, p, a, span { -webkit-text-size-adjust: 100%; -ms-text-size
 img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
 .email-wrap { width: 100%; max-width: 600px; }
 @media only screen and (max-width: 480px) {
+  .outer { padding-left: 0 !important; padding-right: 0 !important; }
+  .card-main { border-radius: 0 !important; }
   .px { padding-left: 20px !important; padding-right: 20px !important; }
-  .side { padding-left: 16px !important; padding-right: 16px !important; }
+  .side { padding-left: 20px !important; padding-right: 20px !important; }
   .h-title { font-size: 20px !important; line-height: 28px !important; }
   .t-greet { font-size: 15px !important; line-height: 22px !important; }
   .t-body { font-size: 14px !important; line-height: 24px !important; }
@@ -25,8 +27,8 @@ img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: b
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f6f6f8" style="border-collapse: collapse; width: 100%; background-color: #f6f6f8;">
 <tbody>
 <tr>
-<td align="center" valign="top" style="padding: 32px 16px;">
-<table class="email-wrap" role="presentation" align="center" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="border-collapse: collapse; width: 100%; max-width: 600px; background-color: #ffffff; border-radius: 18px;">
+<td class="outer" align="center" valign="top" style="padding: 32px 16px;">
+<table class="email-wrap card-main" role="presentation" align="center" width="600" cellpadding="0" cellspacing="0" border="0" bgcolor="#ffffff" style="border-collapse: collapse; width: 100%; max-width: 600px; background-color: #ffffff; border-radius: 18px;">
 <tbody>
 <tr>
 <td class="px" align="center" style="padding: 40px 24px 0px;">
