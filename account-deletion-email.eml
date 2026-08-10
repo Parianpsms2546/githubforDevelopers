@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============4041962231799297059=="
+ boundary="===============1611049821935476882=="
 
---===============4041962231799297059==
+--===============1611049821935476882==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -17,20 +17,20 @@ Content-Transfer-Encoding: base64
 4Liy4Lij4Lit4LiZ4Li44Lih4Lix4LiV4Li0CuC5guC4lOC4ouC4guC5ieC4reC4oeC4ueC4peC4
 l+C4seC5ieC4h+C4q+C4oeC4lOC4guC4reC4h+C4hOC4uOC4k+C5hOC4lOC5ieC4luC4ueC4geC4
 peC4muC4reC4reC4geC4iOC4suC4geC4o+C4sOC4muC4muC4reC4ouC5iOC4suC4h+C4luC4suC4
-p+C4o+C5gOC4o+C4teC4ouC4muC4o+C5ieC4reC4ouC5geC4peC5ieC4pyDguILguK3guILguK3g
-uJrguITguLjguJPguJfguLXguYjguYPguKvguYnguITguKfguLLguKHguYTguKfguYnguKfguLLg
-uIfguYPguIjguYDguKPguLLguYDguKrguKHguK3guKHguLIgOikKCuC4leC4tOC4lOC4leC5iOC4
-reC5gOC4o+C4sjogaHR0cHM6Ly93d3cuZW1wZW8uY29tL2NvbnRhY3QKCjkyIENlbnRyYWwgUGFy
-ayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJuZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBC
-YW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxwIENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29t
-L2hlbHAK
+p+C4o+C5gOC4o+C4teC4ouC4muC4o+C5ieC4reC4ouC5geC4peC5ieC4pwoK4LiC4Lit4LiC4Lit
+4Lia4LiE4Li44LiT4LiX4Li14LmI4LmD4Lir4LmJ4LiE4Lin4Liy4Lih4LmE4Lin4LmJ4Lin4Liy
+4LiH4LmD4LiI4LmA4Lij4Liy4LmA4Liq4Lih4Lit4Lih4LiyIDopCgrguJXguLTguJTguJXguYjg
+uK3guYDguKPguLI6IGh0dHBzOi8vd3d3LmVtcGVvLmNvbS9jb250YWN0Cgo5MiBDZW50cmFsIFBh
+cmsgT2ZmaWNlcywgVW5pdCBNTTMyMDUsIDMybmQgRmxvb3IsClJhbWEgNCBSb2FkLCBTaWxvbSwg
+QmFuZyBSYWssIEJhbmdrb2sgMTA1MDAKSGVscCBDZW50ZXI6IGh0dHBzOi8vd3d3LmVtcGVvLmNv
+bS9oZWxwCg==
 
---===============4041962231799297059==
+--===============1611049821935476882==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============0194167999040065621=="
+ boundary="===============8883935775902723805=="
 
---===============0194167999040065621==
+--===============8883935775902723805==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -60,6 +60,7 @@ img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
   .h-title { font-size: 20px !important; line-height: 28px !important; }
   .t-greet { font-size: 15px !important; line-height: 22px !important; }
   .t-body { font-size: 14px !important; line-height: 24px !important; }
+  .t-note { font-size: 14px !important; line-height: 24px !important; }
   .btn-a { font-size: 14px !important; }
   .t-foot { font-size: 8px !important; }
 }
@@ -121,14 +122,10 @@ r>=E0=B9=82=E0=B8=94=E0=B8=A2=E0=B8=82=E0=B9=89=E0=B8=AD=E0=B8=A1=E0=B8=B9=E0=
 =B8=88=E0=B8=B2=E0=B8=81=E0=B8=A3=E0=B8=B0=E0=B8=9A=E0=B8=9A=E0=B8=AD=E0=B8=
 =A2=E0=B9=88=E0=B8=B2=E0=B8=87=E0=B8=96=E0=B8=B2=E0=B8=A7=E0=B8=A3=E0=B9=80=
 =E0=B8=A3=E0=B8=B5=E0=B8=A2=E0=B8=9A=E0=B8=A3=E0=B9=89=E0=B8=AD=E0=B8=A2=E0=
-=B9=81=E0=B8=A5=E0=B9=89=E0=B8=A7 =E0=B8=82=E0=B8=AD=E0=B8=82=E0=B8=AD=E0=B8=
-=9A=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=97=E0=B8=B5=E0=B9=88=E0=B9=83=E0=B8=AB=
-=E0=B9=89=E0=B8=84=E0=B8=A7=E0=B8=B2=E0=B8=A1=E0=B9=84=E0=B8=A7=E0=B9=89=E0=
-=B8=A7=E0=B8=B2=E0=B8=87=E0=B9=83=E0=B8=88=E0=B9=80=E0=B8=A3=E0=B8=B2=E0=B9=
-=80=E0=B8=AA=E0=B8=A1=E0=B8=AD=E0=B8=A1=E0=B8=B2 :)</td>
+=B9=81=E0=B8=A5=E0=B9=89=E0=B8=A7</td>
 </tr>
 <tr>
-<td class=3D"px" align=3D"center" style=3D"padding: 36px 24px 60px;">
+<td class=3D"px" align=3D"center" style=3D"padding: 36px 24px 0px;">
 <table role=3D"presentation" align=3D"center" cellpadding=3D"0" cellspacing=
 =3D"0" border=3D"0" style=3D"border-collapse: collapse;">
 <tbody>
@@ -147,6 +144,16 @@ n: none; display: inline-block; padding: 14px 46px; border-radius: 8px;">=E0=
 </tbody>
 </table>
 </td>
+</tr>
+<tr>
+<td class=3D"px t-note" align=3D"center" style=3D"padding: 32px 24px 52px; fo=
+nt-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&qu=
+ot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif;=
+ font-size: 15px; line-height: 26px; color: #1C1C22;">=E0=B8=82=E0=B8=AD=E0=
+=B8=82=E0=B8=AD=E0=B8=9A=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=97=E0=B8=B5=E0=B9=
+=88=E0=B9=83=E0=B8=AB=E0=B9=89=E0=B8=84=E0=B8=A7=E0=B8=B2=E0=B8=A1=E0=B9=84=
+=E0=B8=A7=E0=B9=89=E0=B8=A7=E0=B8=B2=E0=B8=87=E0=B9=83=E0=B8=88=E0=B9=80=E0=
+=B8=A3=E0=B8=B2=E0=B9=80=E0=B8=AA=E0=B8=A1=E0=B8=AD=E0=B8=A1=E0=B8=B2 :)</td>
 </tr>
 </tbody>
 </table>
@@ -180,7 +187,7 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </body>
 </html>
 
---===============0194167999040065621==
+--===============8883935775902723805==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -598,7 +605,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============0194167999040065621==
+--===============8883935775902723805==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1184,6 +1191,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============0194167999040065621==--
+--===============8883935775902723805==--
 
---===============4041962231799297059==--
+--===============1611049821935476882==--
