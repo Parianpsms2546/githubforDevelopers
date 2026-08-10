@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============5797176987615805156=="
+ boundary="===============8962354675328210483=="
 
---===============5797176987615805156==
+--===============8962354675328210483==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -25,18 +25,43 @@ ayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJuZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBC
 YW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxwIENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29t
 L2hlbHAK
 
---===============5797176987615805156==
+--===============8962354675328210483==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============9014223517653482606=="
+ boundary="===============4736976247863735016=="
 
---===============9014223517653482606==
+--===============4736976247863735016==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
-<html>
+<!DOCTYPE html>
+<html lang=3D"th">
 <head>
 <meta http-equiv=3D"content-type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1">
+<meta name=3D"x-apple-disable-message-reformatting">
+<title>=E0=B8=A5=E0=B8=9A=E0=B8=9A=E0=B8=B1=E0=B8=8D=E0=B8=8A=E0=B8=B5=E0=B8=
+=82=E0=B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B9=80=E0=B8=A3=E0=B8=B5=
+=E0=B8=A2=E0=B8=9A=E0=B8=A3=E0=B9=89=E0=B8=AD=E0=B8=A2=E0=B9=81=E0=B8=A5=E0=
+=B9=89=E0=B8=A7</title>
+<style type=3D"text/css">
+html, body { margin: 0 !important; padding: 0 !important; width: 100% !import=
+ant; }
+body, table, td, div, p, a, span { -webkit-text-size-adjust: 100%; -ms-text-s=
+ize-adjust: 100%; text-size-adjust: 100%; }
+img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
+: bicubic; }
+.email-wrap { width: 100%; max-width: 600px; }
+@media only screen and (max-width: 480px) {
+  .px { padding-left: 20px !important; padding-right: 20px !important; }
+  .side { padding-left: 16px !important; padding-right: 16px !important; }
+  .h-title { font-size: 20px !important; line-height: 28px !important; }
+  .t-greet { font-size: 15px !important; line-height: 22px !important; }
+  .t-body { font-size: 14px !important; line-height: 24px !important; }
+  .btn-a { font-size: 14px !important; }
+  .t-foot { font-size: 8px !important; }
+}
+</style>
 </head>
 <body style=3D"margin: 0; padding: 0;">
 <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
@@ -45,10 +70,10 @@ Content-Transfer-Encoding: quoted-printable
 <tbody>
 <tr>
 <td align=3D"center" valign=3D"top" style=3D"padding: 32px 16px;">
-<table role=3D"presentation" align=3D"center" width=3D"600" cellpadding=3D"0"=
- cellspacing=3D"0" border=3D"0" bgcolor=3D"#ffffff" style=3D"border-collapse:=
- collapse; width: 100%; max-width: 600px; background-color: #ffffff; border-r=
-adius: 18px;">
+<table class=3D"email-wrap" role=3D"presentation" align=3D"center" width=3D"6=
+00" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#ffffff" styl=
+e=3D"border-collapse: collapse; width: 100%; max-width: 600px; background-col=
+or: #ffffff; border-radius: 18px;">
 <tbody>
 <tr>
 <td class=3D"px" align=3D"center" style=3D"padding: 40px 24px 0px;">
@@ -61,42 +86,43 @@ one; display: block; margin: 0px auto; width: 128px; height: 64px;">
 <td class=3D"px h-title" align=3D"center" style=3D"padding: 20px 24px 0px; fo=
 nt-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&qu=
 ot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif;=
- font-size: 24px; line-height: 32px; font-weight: 700; color: #000000;">=E0=
+ font-size: 22px; line-height: 30px; font-weight: 700; color: #000000;">=E0=
 =B8=A5=E0=B8=9A=E0=B8=9A=E0=B8=B1=E0=B8=8D=E0=B8=8A=E0=B8=B5=E0=B8=82=E0=B8=
 =AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B9=80=E0=B8=A3=E0=B8=B5=E0=B8=A2=
 =E0=B8=9A=E0=B8=A3=E0=B9=89=E0=B8=AD=E0=B8=A2=E0=B9=81=E0=B8=A5=E0=B9=89=E0=
 =B8=A7</td>
 </tr>
 <tr>
-<td class=3D"px" align=3D"center" style=3D"padding: 14px 24px 0px; font-famil=
-y: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -ap=
-ple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif; font-si=
-ze: 17px; line-height: 26px; color: #1C1C22;">=E0=B9=80=E0=B8=A3=E0=B8=B5=E0=
-=B8=A2=E0=B8=99<span>&nbsp;</span><span style=3D"font-weight: 700;">=E0=B8=84=
-=E0=B8=B8=E0=B8=93=E0=B8=AA=E0=B8=A1=E0=B8=AB=E0=B8=A1=E0=B8=B2=E0=B8=A2 =E0=
-=B8=AB=E0=B8=A1=E0=B8=B2=E0=B8=A2=E0=B8=9B=E0=B8=AD=E0=B8=87</span></td>
+<td class=3D"px t-greet" align=3D"center" style=3D"padding: 14px 24px 0px; fo=
+nt-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&qu=
+ot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif;=
+ font-size: 16px; line-height: 24px; color: #1C1C22;">=E0=B9=80=E0=B8=A3=E0=
+=B8=B5=E0=B8=A2=E0=B8=99<span>&nbsp;</span><span style=3D"font-weight: 700;">=
+=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=AA=E0=B8=A1=E0=B8=AB=E0=B8=A1=E0=B8=B2=E0=
+=B8=A2 =E0=B8=AB=E0=B8=A1=E0=B8=B2=E0=B8=A2=E0=B8=9B=E0=B8=AD=E0=B8=87</span>=
+</td>
 </tr>
 <tr>
-<td class=3D"px" align=3D"center" style=3D"padding: 16px 24px 0px; font-famil=
-y: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -ap=
-ple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif; font-si=
-ze: 16px; line-height: 28px; color: #1C1C22;">=E0=B8=84=E0=B8=B3=E0=B8=82=E0=
-=B8=AD=E0=B8=81=E0=B8=B2=E0=B8=A3=E0=B8=A5=E0=B8=9A=E0=B8=9A=E0=B8=B1=E0=B8=
-=8D=E0=B8=8A=E0=B8=B5=E0=B8=82=E0=B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=
-=E0=B9=84=E0=B8=94=E0=B9=89=E0=B8=A3=E0=B8=B1=E0=B8=9A=E0=B8=81=E0=B8=B2=E0=
-=B8=A3=E0=B8=AD=E0=B8=99=E0=B8=B8=E0=B8=A1=E0=B8=B1=E0=B8=95=E0=B8=B4<br>=E0=
-=B9=82=E0=B8=94=E0=B8=A2=E0=B8=82=E0=B9=89=E0=B8=AD=E0=B8=A1=E0=B8=B9=E0=B8=
-=A5=E0=B8=97=E0=B8=B1=E0=B9=89=E0=B8=87=E0=B8=AB=E0=B8=A1=E0=B8=94=E0=B8=82=
-=E0=B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B9=84=E0=B8=94=E0=B9=89=E0=
-=B8=96=E0=B8=B9=E0=B8=81=E0=B8=A5=E0=B8=9A=E0=B8=AD=E0=B8=AD=E0=B8=81=E0=B8=
-=88=E0=B8=B2=E0=B8=81=E0=B8=A3=E0=B8=B0=E0=B8=9A=E0=B8=9A=E0=B8=AD=E0=B8=A2=
-=E0=B9=88=E0=B8=B2=E0=B8=87=E0=B8=96=E0=B8=B2=E0=B8=A7=E0=B8=A3=E0=B9=80=E0=
-=B8=A3=E0=B8=B5=E0=B8=A2=E0=B8=9A=E0=B8=A3=E0=B9=89=E0=B8=AD=E0=B8=A2=E0=B9=
-=81=E0=B8=A5=E0=B9=89=E0=B8=A7 =E0=B8=82=E0=B8=AD=E0=B8=82=E0=B8=AD=E0=B8=9A=
-=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=97=E0=B8=B5=E0=B9=88=E0=B9=83=E0=B8=AB=E0=
-=B9=89=E0=B8=84=E0=B8=A7=E0=B8=B2=E0=B8=A1=E0=B9=84=E0=B8=A7=E0=B9=89=E0=B8=
-=A7=E0=B8=B2=E0=B8=87=E0=B9=83=E0=B8=88=E0=B9=80=E0=B8=A3=E0=B8=B2=E0=B9=80=
-=E0=B8=AA=E0=B8=A1=E0=B8=AD=E0=B8=A1=E0=B8=B2 :)</td>
+<td class=3D"px t-body" align=3D"center" style=3D"padding: 16px 24px 0px; fon=
+t-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quo=
+t;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif; =
+font-size: 15px; line-height: 26px; color: #1C1C22;">=E0=B8=84=E0=B8=B3=E0=B8=
+=82=E0=B8=AD=E0=B8=81=E0=B8=B2=E0=B8=A3=E0=B8=A5=E0=B8=9A=E0=B8=9A=E0=B8=B1=
+=E0=B8=8D=E0=B8=8A=E0=B8=B5=E0=B8=82=E0=B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=
+=B8=93=E0=B9=84=E0=B8=94=E0=B9=89=E0=B8=A3=E0=B8=B1=E0=B8=9A=E0=B8=81=E0=B8=
+=B2=E0=B8=A3=E0=B8=AD=E0=B8=99=E0=B8=B8=E0=B8=A1=E0=B8=B1=E0=B8=95=E0=B8=B4<b=
+r>=E0=B9=82=E0=B8=94=E0=B8=A2=E0=B8=82=E0=B9=89=E0=B8=AD=E0=B8=A1=E0=B8=B9=E0=
+=B8=A5=E0=B8=97=E0=B8=B1=E0=B9=89=E0=B8=87=E0=B8=AB=E0=B8=A1=E0=B8=94=E0=B8=
+=82=E0=B8=AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B9=84=E0=B8=94=E0=B9=89=
+=E0=B8=96=E0=B8=B9=E0=B8=81=E0=B8=A5=E0=B8=9A=E0=B8=AD=E0=B8=AD=E0=B8=81=E0=
+=B8=88=E0=B8=B2=E0=B8=81=E0=B8=A3=E0=B8=B0=E0=B8=9A=E0=B8=9A=E0=B8=AD=E0=B8=
+=A2=E0=B9=88=E0=B8=B2=E0=B8=87=E0=B8=96=E0=B8=B2=E0=B8=A7=E0=B8=A3=E0=B9=80=
+=E0=B8=A3=E0=B8=B5=E0=B8=A2=E0=B8=9A=E0=B8=A3=E0=B9=89=E0=B8=AD=E0=B8=A2=E0=
+=B9=81=E0=B8=A5=E0=B9=89=E0=B8=A7 =E0=B8=82=E0=B8=AD=E0=B8=82=E0=B8=AD=E0=B8=
+=9A=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=97=E0=B8=B5=E0=B9=88=E0=B9=83=E0=B8=AB=
+=E0=B9=89=E0=B8=84=E0=B8=A7=E0=B8=B2=E0=B8=A1=E0=B9=84=E0=B8=A7=E0=B9=89=E0=
+=B8=A7=E0=B8=B2=E0=B8=87=E0=B9=83=E0=B8=88=E0=B9=80=E0=B8=A3=E0=B8=B2=E0=B9=
+=80=E0=B8=AA=E0=B8=A1=E0=B8=AD=E0=B8=A1=E0=B8=B2 :)</td>
 </tr>
 <tr>
 <td class=3D"px" align=3D"center" style=3D"padding: 36px 24px 60px;">
@@ -106,12 +132,13 @@ ze: 16px; line-height: 28px; color: #1C1C22;">=E0=B8=84=E0=B8=B3=E0=B8=82=E0=
 <tr>
 <td align=3D"center" bgcolor=3D"#F05B2F" style=3D"border-radius: 8px; backgro=
 und-color: #F05B2F;">
-<a href=3D"https://www.empeo.com/contact" style=3D"font-family: Prompt, Inter=
-, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple-system, syst=
-em-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif; font-size: 16px; line-h=
-eight: 20px; font-weight: 700; color: #ffffff; text-decoration: none; display=
-: inline-block; padding: 14px 46px; border-radius: 8px;">=E0=B8=95=E0=B8=B4=
-=E0=B8=94=E0=B8=95=E0=B9=88=E0=B8=AD=E0=B9=80=E0=B8=A3=E0=B8=B2</a>
+<a href=3D"https://www.empeo.com/contact" class=3D"btn-a" style=3D"font-famil=
+y: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -ap=
+ple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif; font-si=
+ze: 15px; line-height: 20px; font-weight: 700; color: #ffffff; text-decoratio=
+n: none; display: inline-block; padding: 14px 46px; border-radius: 8px;">=E0=
+=B8=95=E0=B8=B4=E0=B8=94=E0=B8=95=E0=B9=88=E0=B8=AD=E0=B9=80=E0=B8=A3=E0=B8=
+=B2</a>
 </td>
 </tr>
 </tbody>
@@ -120,9 +147,9 @@ eight: 20px; font-weight: 700; color: #ffffff; text-decoration: none; display=
 </tr>
 </tbody>
 </table>
-<table role=3D"presentation" align=3D"center" width=3D"600" cellpadding=3D"0"=
- cellspacing=3D"0" border=3D"0" style=3D"border-collapse: collapse; width: 10=
-0%; max-width: 600px;">
+<table class=3D"email-wrap" role=3D"presentation" align=3D"center" width=3D"6=
+00" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
+: collapse; width: 100%; max-width: 600px;">
 <tbody>
 <tr>
 <td class=3D"side" align=3D"center" style=3D"padding: 24px 12px 0px;">
@@ -133,13 +160,13 @@ x;">
 </td>
 </tr>
 <tr>
-<td class=3D"side" align=3D"center" style=3D"padding: 10px 12px 8px; font-fam=
-ily: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -=
-apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif; font-=
-size: 8px; line-height: 16px; color: rgb(167, 162, 155);">92 Central Park Off=
-ices, Unit MM3205, 32nd Floor,<br>Rama 4 Road, Silom, Bang Rak, Bangkok 10500=
-<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 162, 155)=
-;"><u>Help Center</u></a></td>
+<td class=3D"side t-foot" align=3D"center" style=3D"padding: 10px 12px 8px; f=
+ont-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&q=
+uot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif=
+; font-size: 8px; line-height: 16px; color: rgb(167, 162, 155);">92 Central P=
+ark Offices, Unit MM3205, 32nd Floor,<br>Rama 4 Road, Silom, Bang Rak, Bangko=
+k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
+2, 155);"><u>Help Center</u></a></td>
 </tr>
 </tbody>
 </table>
@@ -150,7 +177,7 @@ ices, Unit MM3205, 32nd Floor,<br>Rama 4 Road, Silom, Bang Rak, Bangkok 10500=
 </body>
 </html>
 
---===============9014223517653482606==
+--===============4736976247863735016==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -568,7 +595,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============9014223517653482606==
+--===============4736976247863735016==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1154,6 +1181,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============9014223517653482606==--
+--===============4736976247863735016==--
 
---===============5797176987615805156==--
+--===============8962354675328210483==--
