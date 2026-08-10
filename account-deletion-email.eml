@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============5233407584402009296=="
+ boundary="===============2355398119358158491=="
 
---===============5233407584402009296==
+--===============2355398119358158491==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -25,12 +25,12 @@ ayBPZmZpY2VzLCBVbml0IE1NMzIwNSwgMzJuZCBGbG9vciwKUmFtYSA0IFJvYWQsIFNpbG9tLCBC
 YW5nIFJhaywgQmFuZ2tvayAxMDUwMApIZWxwIENlbnRlcjogaHR0cHM6Ly93d3cuZW1wZW8uY29t
 L2hlbHAK
 
---===============5233407584402009296==
+--===============2355398119358158491==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============8134347427393181233=="
+ boundary="===============2147219354332831229=="
 
---===============8134347427393181233==
+--===============2147219354332831229==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -139,7 +139,7 @@ border-box; border-collapse: collapse; border-spacing: 0px;">
 <tbody>
 <tr>
 <td class=3D"btn-bg" align=3D"center" style=3D"border-radius: 8px; background=
--color: rgb(225, 93, 46);">
+-color: #F05B2F;">
 <div class=3D"btn-bg" style=3D"font-family: Prompt, Inter, &quot;Segoe UI Var=
 iable&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sa=
 ns Thai Looped&quot;, system-ui, sans-serif;">
@@ -208,7 +208,7 @@ id=3D"42e14362-2be3-4bfd-a3a1-438d9836bf09" style=3D"color: rgb(167, 162, 155=
 </html>
 
 
---===============8134347427393181233==
+--===============2147219354332831229==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -626,7 +626,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============8134347427393181233==
+--===============2147219354332831229==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1212,6 +1212,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============8134347427393181233==--
+--===============2147219354332831229==--
 
---===============5233407584402009296==--
+--===============2355398119358158491==--
