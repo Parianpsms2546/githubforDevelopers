@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============4568668728591844664=="
+ boundary="===============3553757192431571375=="
 
---===============4568668728591844664==
+--===============3553757192431571375==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -28,12 +28,12 @@ cmFsIFBhcmsgT2ZmaWNlcywgVW5pdCBNTTMyMDUsIDMybmQgRmxvb3IsClJhbWEgNCBSb2FkLCBT
 aWxvbSwgQmFuZyBSYWssIEJhbmdrb2sgMTA1MDAKSGVscCBDZW50ZXI6IGh0dHBzOi8vd3d3LmVt
 cGVvLmNvbS9oZWxwCg==
 
---===============4568668728591844664==
+--===============3553757192431571375==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============2570080129255590854=="
+ boundary="===============7439776135145343285=="
 
---===============2570080129255590854==
+--===============7439776135145343285==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -108,7 +108,7 @@ ot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif;=
 =B8=B2=E0=B8=A2=E0=B8=9B=E0=B8=AD=E0=B8=87</span></td>
 </tr>
 <tr>
-<td class=3D"px t-body" align=3D"center" style=3D"padding: 16px 24px 44px; fo=
+<td class=3D"px t-body" align=3D"center" style=3D"padding: 16px 24px 60px; fo=
 nt-family: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&qu=
 ot;, -apple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif;=
  font-size: 15px; line-height: 26px; color: #1C1C22;">=E0=B8=82=E0=B8=93=E0=
@@ -171,7 +171,7 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </body>
 </html>
 
---===============2570080129255590854==
+--===============7439776135145343285==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -589,7 +589,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============2570080129255590854==
+--===============7439776135145343285==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1175,6 +1175,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============2570080129255590854==--
+--===============7439776135145343285==--
 
---===============4568668728591844664==--
+--===============3553757192431571375==--
