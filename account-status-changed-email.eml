@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============3553757192431571375=="
+ boundary="===============8506196507172692799=="
 
---===============3553757192431571375==
+--===============8506196507172692799==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: base64
 
@@ -28,12 +28,12 @@ cmFsIFBhcmsgT2ZmaWNlcywgVW5pdCBNTTMyMDUsIDMybmQgRmxvb3IsClJhbWEgNCBSb2FkLCBT
 aWxvbSwgQmFuZyBSYWssIEJhbmdrb2sgMTA1MDAKSGVscCBDZW50ZXI6IGh0dHBzOi8vd3d3LmVt
 cGVvLmNvbS9oZWxwCg==
 
---===============3553757192431571375==
+--===============8506196507172692799==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============7439776135145343285=="
+ boundary="===============6562754729102317320=="
 
---===============7439776135145343285==
+--===============6562754729102317320==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -48,8 +48,8 @@ Content-Transfer-Encoding: quoted-printable
 =E0=B8=96=E0=B8=B9=E0=B8=81=E0=B9=80=E0=B8=9B=E0=B8=A5=E0=B8=B5=E0=B9=88=E0=
 =B8=A2=E0=B8=99</title>
 <style type=3D"text/css">
-html, body { margin: 0 !important; padding: 0 !important; width: 100% !import=
-ant; height: 100% !important; background-color: #f6f6f8 !important; }
+html, body { margin: 0 !important; padding: 0 !important; background-color: #=
+f6f6f8 !important; }
 body, table, td, div, p, a, span { -webkit-text-size-adjust: 100%; -ms-text-s=
 ize-adjust: 100%; text-size-adjust: 100%; }
 img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
@@ -171,7 +171,7 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </body>
 </html>
 
---===============7439776135145343285==
+--===============6562754729102317320==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -589,7 +589,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============7439776135145343285==
+--===============6562754729102317320==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1175,6 +1175,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============7439776135145343285==--
+--===============6562754729102317320==--
 
---===============3553757192431571375==--
+--===============8506196507172692799==--
