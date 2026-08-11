@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============6657170911345836155=="
+ boundary="===============7897368936602801097=="
 
---===============6657170911345836155==
+--===============7897368936602801097==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
@@ -24,12 +24,12 @@ Content-Transfer-Encoding: 8bit
 Rama 4 Road, Silom, Bang Rak, Bangkok 10500
 Help Center: https://www.empeo.com/help
 
---===============6657170911345836155==
+--===============7897368936602801097==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============6066052491369931806=="
+ boundary="===============7793624576015791347=="
 
---===============6066052491369931806==
+--===============7793624576015791347==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -43,8 +43,9 @@ Content-Transfer-Encoding: quoted-printable
 =AD=E0=B8=87=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=96=E0=B8=B9=E0=B8=81=E0=B8=9B=
 =E0=B8=8F=E0=B8=B4=E0=B9=80=E0=B8=AA=E0=B8=98</title>
 <style type=3D"text/css">
-html, body { margin: 0 !important; padding: 0 !important; background-color: #=
-f6f6f8 !important; }
+html { height: 100% !important; background-color: #f6f6f8 !important; }
+body { margin: 0 !important; padding: 0 !important; width: 100% !important; m=
+in-height: 100% !important; background-color: #f6f6f8 !important; }
 body, table, td, div, p, a, span { -webkit-text-size-adjust: 100%; -ms-text-s=
 ize-adjust: 100%; text-size-adjust: 100%; }
 img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
@@ -67,10 +68,11 @@ img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
 }
 </style>
 </head>
-<body style=3D"margin: 0; padding: 0; background-color: #f6f6f8;">
-<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
-0" border=3D"0" bgcolor=3D"#f6f6f8" style=3D"border-collapse: collapse; width=
-: 100%; background-color: #f6f6f8;">
+<body style=3D"margin: 0; padding: 0; min-height: 100%; background-color: #f6=
+f6f8;">
+<table role=3D"presentation" width=3D"100%" height=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" bgcolor=3D"#f6f6f8" style=3D"border-collapse:=
+ collapse; width: 100%; height: 100%; background-color: #f6f6f8;">
 <tbody>
 <tr>
 <td class=3D"outer" align=3D"center" valign=3D"top" style=3D"padding: 32px 12=
@@ -228,7 +230,7 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </body>
 </html>
 
---===============6066052491369931806==
+--===============7793624576015791347==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -646,7 +648,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============6066052491369931806==
+--===============7793624576015791347==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1232,6 +1234,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============6066052491369931806==--
+--===============7793624576015791347==--
 
---===============6657170911345836155==--
+--===============7897368936602801097==--
