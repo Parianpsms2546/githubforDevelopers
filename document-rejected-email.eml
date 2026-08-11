@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============3958905926963125794=="
+ boundary="===============2573905939456765913=="
 
---===============3958905926963125794==
+--===============2573905939456765913==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
@@ -24,12 +24,12 @@ Content-Transfer-Encoding: 8bit
 Rama 4 Road, Silom, Bang Rak, Bangkok 10500
 Help Center: https://www.empeo.com/help
 
---===============3958905926963125794==
+--===============2573905939456765913==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============3822224613974903990=="
+ boundary="===============2698999593802187995=="
 
---===============3822224613974903990==
+--===============2698999593802187995==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -53,8 +53,9 @@ img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
 @media only screen and (max-width: 480px) {
   .outer { padding-left: 0 !important; padding-right: 0 !important; }
   .card-main { border-radius: 0 !important; }
-  .px { padding-left: 20px !important; padding-right: 20px !important; }
-  .side { padding-left: 20px !important; padding-right: 20px !important; }
+  .px { padding-left: 12px !important; padding-right: 12px !important; }
+  .side { padding-left: 16px !important; padding-right: 16px !important; }
+  .ibpad { padding-left: 14px !important; padding-right: 14px !important; }
   .h-title { font-size: 20px !important; line-height: 28px !important; }
   .t-greet { font-size: 15px !important; line-height: 22px !important; }
   .info-title { font-size: 15px !important; }
@@ -63,7 +64,7 @@ img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
 t: 0 !important; }
   .ib-badge { display: block !important; width: 100% !important; text-align: =
 left !important; padding-top: 12px !important; }
-  .info-label { font-size: 14px !important; }
+  .info-label { font-size: 14px !important; padding-right: 8px !important; }
   .info-value { font-size: 14px !important; }
   .btn-a { font-size: 14px !important; }
   .t-foot { font-size: 8px !important; }
@@ -116,7 +117,7 @@ t: 700;">=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=AA=E0=B8=A1=E0=B8=AB=E0=B8=A1=E0=
 : 100%; border-radius: 12px; background-color: #F1F2F4;">
 <tbody>
 <tr>
-<td style=3D"padding: 20px 20px 0px;">
+<td class=3D"ibpad" style=3D"padding: 20px 20px 0px;">
 <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
 0" border=3D"0" style=3D"border-collapse: collapse; width: 100%;">
 <tbody>
@@ -142,7 +143,7 @@ ped&quot;, sans-serif; font-size: 13px; line-height: 18px; padding: 5px 15px;=
 </td>
 </tr>
 <tr>
-<td style=3D"padding: 12px 20px 20px;">
+<td class=3D"ibpad" style=3D"padding: 12px 20px 20px;">
 <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"=
  style=3D"border-collapse: collapse;">
 <tbody>
@@ -232,7 +233,7 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </body>
 </html>
 
---===============3822224613974903990==
+--===============2698999593802187995==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -650,7 +651,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============3822224613974903990==
+--===============2698999593802187995==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1236,6 +1237,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============3822224613974903990==--
+--===============2698999593802187995==--
 
---===============3958905926963125794==--
+--===============2573905939456765913==--
