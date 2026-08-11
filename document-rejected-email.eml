@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============4438517748015016267=="
+ boundary="===============2860065275977855121=="
 
---===============4438517748015016267==
+--===============2860065275977855121==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
@@ -24,12 +24,12 @@ Content-Transfer-Encoding: 8bit
 Rama 4 Road, Silom, Bang Rak, Bangkok 10500
 Help Center: https://www.empeo.com/help
 
---===============4438517748015016267==
+--===============2860065275977855121==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============4649568888858971958=="
+ boundary="===============0556794201840359446=="
 
---===============4649568888858971958==
+--===============0556794201840359446==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -68,17 +68,18 @@ img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
 </style>
 </head>
 <body style=3D"margin: 0; padding: 0; background-color: #f6f6f8;">
-<table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
-0" border=3D"0" bgcolor=3D"#f6f6f8" style=3D"border-collapse: collapse; width=
-: 100%; background-color: #f6f6f8;">
+<center style=3D"width: 100%; background-color: #f6f6f8;">
+<table role=3D"presentation" width=3D"100%" align=3D"center" cellpadding=3D"0=
+" cellspacing=3D"0" border=3D"0" bgcolor=3D"#f6f6f8" style=3D"border-collapse=
+: collapse; width: 100%; background-color: #f6f6f8;">
 <tbody>
 <tr>
 <td class=3D"outer" align=3D"center" valign=3D"top" style=3D"padding: 32px 12=
 px;">
 <table class=3D"email-wrap card-main" role=3D"presentation" align=3D"center" =
-width=3D"600" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#ff=
-ffff" style=3D"border-collapse: collapse; width: 100%; max-width: 600px; marg=
-in: 0 auto; background-color: #ffffff; border-radius: 18px;">
+width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" bgcolor=3D"#f=
+fffff" style=3D"border-collapse: collapse; width: 100%; max-width: 600px; mar=
+gin: 0 auto; background-color: #ffffff; border-radius: 18px;">
 <tbody>
 <tr>
 <td class=3D"px" align=3D"center" style=3D"padding: 40px 24px 0px;">
@@ -198,9 +199,9 @@ us: 8px;">=E0=B8=94=E0=B8=B9=E0=B9=80=E0=B8=AD=E0=B8=81=E0=B8=AA=E0=B8=B2=E0=
 </tr>
 </tbody>
 </table>
-<table class=3D"email-wrap" role=3D"presentation" align=3D"center" width=3D"6=
-00" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collapse=
-: collapse; width: 100%; max-width: 600px; margin: 0 auto;">
+<table class=3D"email-wrap" role=3D"presentation" align=3D"center" width=3D"1=
+00%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"border-collaps=
+e: collapse; width: 100%; max-width: 600px; margin: 0 auto;">
 <tbody>
 <tr>
 <td class=3D"side" align=3D"center" style=3D"padding: 24px 12px 0px;">
@@ -225,10 +226,11 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </tr>
 </tbody>
 </table>
+</center>
 </body>
 </html>
 
---===============4649568888858971958==
+--===============0556794201840359446==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -646,7 +648,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============4649568888858971958==
+--===============0556794201840359446==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1232,6 +1234,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============4649568888858971958==--
+--===============0556794201840359446==--
 
---===============4438517748015016267==--
+--===============2860065275977855121==--
