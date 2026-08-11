@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============3029777115856383007=="
+ boundary="===============5855660072449288137=="
 
---===============3029777115856383007==
+--===============5855660072449288137==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
@@ -24,12 +24,12 @@ Content-Transfer-Encoding: 8bit
 Rama 4 Road, Silom, Bang Rak, Bangkok 10500
 Help Center: https://www.empeo.com/help
 
---===============3029777115856383007==
+--===============5855660072449288137==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============3967704903036363550=="
+ boundary="===============5290232704792115920=="
 
---===============3967704903036363550==
+--===============5290232704792115920==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -108,8 +108,8 @@ t: 700;">=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=AA=E0=B8=A1=E0=B8=AB=E0=B8=A1=E0=
 <tr>
 <td class=3D"px" align=3D"center" style=3D"padding: 24px 24px 0px;">
 <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"=
-0" border=3D"0" bgcolor=3D"#F5F3F0" style=3D"border-collapse: collapse; width=
-: 100%; border-radius: 12px; background-color: #F5F3F0;">
+0" border=3D"0" bgcolor=3D"#F1F2F4" style=3D"border-collapse: collapse; width=
+: 100%; border-radius: 12px; background-color: #F1F2F4;">
 <tbody>
 <tr>
 <td style=3D"padding: 20px 20px 0px;">
@@ -123,8 +123,8 @@ ple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif; font-si=
 ze: 16px; line-height: 24px; font-weight: 700; color: #1C1C22;">=E0=B8=A5=E0=
 =B8=B2=E0=B8=9B=E0=B9=88=E0=B8=A7=E0=B8=A2 (L230200033)</td>
 <td align=3D"right" valign=3D"middle" style=3D"white-space: nowrap;">
-<span class=3D"badge" style=3D"display: inline-block; background-color: #E7E4=
-DF; color: #6B6763; font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;=
+<span class=3D"badge" style=3D"display: inline-block; background-color: #E4E6=
+EB; color: #6B7280; font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;=
 , &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans Thai Loo=
 ped&quot;, sans-serif; font-size: 13px; line-height: 18px; padding: 5px 15px;=
  border-radius: 14px; white-space: nowrap;">=E0=B8=9B=E0=B8=8F=E0=B8=B4=E0=B9=
@@ -145,7 +145,7 @@ ped&quot;, sans-serif; font-size: 13px; line-height: 18px; padding: 5px 15px;=
 nowrap; padding-right: 20px; font-family: Prompt, Inter, &quot;Segoe UI Varia=
 ble&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans=
  Thai Looped&quot;, sans-serif; font-size: 15px; line-height: 26px; color: #8=
-C8781;">=E0=B8=A7=E0=B8=B1=E0=B8=99=E0=B8=97=E0=B8=B5=E0=B9=88:</td>
+68B94;">=E0=B8=A7=E0=B8=B1=E0=B8=99=E0=B8=97=E0=B8=B5=E0=B9=88:</td>
 <td class=3D"info-value" align=3D"left" valign=3D"top" style=3D"font-family: =
 Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple=
 -system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif; font-size:=
@@ -157,7 +157,7 @@ Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple=
 nowrap; padding-right: 20px; font-family: Prompt, Inter, &quot;Segoe UI Varia=
 ble&quot;, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans=
  Thai Looped&quot;, sans-serif; font-size: 15px; line-height: 26px; color: #8=
-C8781;">=E0=B8=A3=E0=B8=B2=E0=B8=A2=E0=B8=A5=E0=B8=B0=E0=B9=80=E0=B8=AD=E0=B8=
+68B94;">=E0=B8=A3=E0=B8=B2=E0=B8=A2=E0=B8=A5=E0=B8=B0=E0=B9=80=E0=B8=AD=E0=B8=
 =B5=E0=B8=A2=E0=B8=94:</td>
 <td class=3D"info-value" align=3D"left" valign=3D"top" style=3D"font-family: =
 Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -apple=
@@ -226,7 +226,7 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </body>
 </html>
 
---===============3967704903036363550==
+--===============5290232704792115920==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -644,7 +644,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============3967704903036363550==
+--===============5290232704792115920==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1230,6 +1230,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============3967704903036363550==--
+--===============5290232704792115920==--
 
---===============3029777115856383007==--
+--===============5855660072449288137==--
