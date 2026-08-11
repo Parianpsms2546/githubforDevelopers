@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============7879849448116609851=="
+ boundary="===============3958905926963125794=="
 
---===============7879849448116609851==
+--===============3958905926963125794==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
@@ -24,12 +24,12 @@ Content-Transfer-Encoding: 8bit
 Rama 4 Road, Silom, Bang Rak, Bangkok 10500
 Help Center: https://www.empeo.com/help
 
---===============7879849448116609851==
+--===============3958905926963125794==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============0849243667776896759=="
+ boundary="===============3822224613974903990=="
 
---===============0849243667776896759==
+--===============3822224613974903990==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -59,6 +59,10 @@ img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
   .t-greet { font-size: 15px !important; line-height: 22px !important; }
   .info-title { font-size: 15px !important; }
   .badge { font-size: 12px !important; }
+  .ib-title { display: block !important; width: 100% !important; padding-righ=
+t: 0 !important; }
+  .ib-badge { display: block !important; width: 100% !important; text-align: =
+left !important; padding-top: 12px !important; }
   .info-label { font-size: 14px !important; }
   .info-value { font-size: 14px !important; }
   .btn-a { font-size: 14px !important; }
@@ -117,12 +121,14 @@ t: 700;">=E0=B8=84=E0=B8=B8=E0=B8=93=E0=B8=AA=E0=B8=A1=E0=B8=AB=E0=B8=A1=E0=
 0" border=3D"0" style=3D"border-collapse: collapse; width: 100%;">
 <tbody>
 <tr>
-<td class=3D"info-title" align=3D"left" valign=3D"middle" style=3D"font-famil=
-y: Prompt, Inter, &quot;Segoe UI Variable&quot;, &quot;SF Pro Text&quot;, -ap=
-ple-system, system-ui, &quot;Noto Sans Thai Looped&quot;, sans-serif; font-si=
-ze: 16px; line-height: 24px; font-weight: 700; color: #1C1C22;">=E0=B8=A5=E0=
-=B8=B2=E0=B8=9B=E0=B9=88=E0=B8=A7=E0=B8=A2 (L230200033)</td>
-<td align=3D"right" valign=3D"middle" style=3D"white-space: nowrap;">
+<td class=3D"info-title ib-title" align=3D"left" valign=3D"middle" style=3D"p=
+adding-right: 12px; font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;=
+, &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans Thai Loo=
+ped&quot;, sans-serif; font-size: 16px; line-height: 24px; font-weight: 700; =
+color: #1C1C22;">=E0=B8=A5=E0=B8=B2=E0=B8=9B=E0=B9=88=E0=B8=A7=E0=B8=A2 (L230=
+200033)</td>
+<td class=3D"ib-badge" align=3D"right" valign=3D"middle" style=3D"white-space=
+: nowrap;">
 <span class=3D"badge" style=3D"display: inline-block; background-color: #585A=
 6B; color: #ffffff; font-family: Prompt, Inter, &quot;Segoe UI Variable&quot;=
 , &quot;SF Pro Text&quot;, -apple-system, system-ui, &quot;Noto Sans Thai Loo=
@@ -226,7 +232,7 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </body>
 </html>
 
---===============0849243667776896759==
+--===============3822224613974903990==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -644,7 +650,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============0849243667776896759==
+--===============3822224613974903990==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1230,6 +1236,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============0849243667776896759==--
+--===============3822224613974903990==--
 
---===============7879849448116609851==--
+--===============3958905926963125794==--
