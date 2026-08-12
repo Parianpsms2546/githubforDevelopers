@@ -4,9 +4,9 @@ From: empeo <no-reply@empeo.com>
 To: customer@example.com
 MIME-Version: 1.0
 Content-Type: multipart/alternative;
- boundary="===============2860065275977855121=="
+ boundary="===============8546219087006596018=="
 
---===============2860065275977855121==
+--===============8546219087006596018==
 Content-Type: text/plain; charset="utf-8"
 Content-Transfer-Encoding: 8bit
 
@@ -24,12 +24,12 @@ Content-Transfer-Encoding: 8bit
 Rama 4 Road, Silom, Bang Rak, Bangkok 10500
 Help Center: https://www.empeo.com/help
 
---===============2860065275977855121==
+--===============8546219087006596018==
 MIME-Version: 1.0
 Content-Type: multipart/related;
- boundary="===============0556794201840359446=="
+ boundary="===============7442468538629128604=="
 
---===============0556794201840359446==
+--===============7442468538629128604==
 Content-Type: text/html; charset="utf-8"
 Content-Transfer-Encoding: quoted-printable
 
@@ -44,7 +44,7 @@ Content-Transfer-Encoding: quoted-printable
 =E0=B8=8F=E0=B8=B4=E0=B9=80=E0=B8=AA=E0=B8=98</title>
 <style type=3D"text/css">
 html, body { margin: 0 !important; padding: 0 !important; width: 100% !import=
-ant; }
+ant; background-color: #f6f6f8 !important; }
 body, table, td, div, p, a, span { -webkit-text-size-adjust: 100%; -ms-text-s=
 ize-adjust: 100%; text-size-adjust: 100%; }
 img { border: 0; outline: none; text-decoration: none; -ms-interpolation-mode=
@@ -230,7 +230,7 @@ k 10500<br><a href=3D"https://www.empeo.com/help" style=3D"color: rgb(167, 16=
 </body>
 </html>
 
---===============0556794201840359446==
+--===============7442468538629128604==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="empeo-logo.png"
@@ -648,7 +648,7 @@ AIJAAAYAAAAABIEADAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEYAAAAABAEAjAAAAAAIAgEIABAAAA
 AEEgAAMAAAAAgkAABgAAAAAEgQAMAAAAAAgCARgAAAAAEAQCMAAAAAAgCARgAAAAAEAQ/j8AAAD/
 /z+n+/QAAAAGSURBVAMA/0BBeK9BZxUAAAAASUVORK5CYII=
 
---===============0556794201840359446==
+--===============7442468538629128604==
 Content-Type: image/png
 Content-Transfer-Encoding: base64
 Content-Disposition: attachment; filename="powered-by-empeo.png"
@@ -1234,6 +1234,6 @@ T1F0+TNlrYu/JAAAcA0CYAAAAAAAACgKPgIAAAAAAAAoAgiAAQAAAAAAoCggAAYAAAAAAICigAAY
 AAAAAAAAigICYAAAAAAAACgKCIABAAAAAACgKPwfAAAA//+E+oiMAAAABklEQVQDAPzIWAJ5ArP5
 AAAAAElFTkSuQmCC
 
---===============0556794201840359446==--
+--===============7442468538629128604==--
 
---===============2860065275977855121==--
+--===============8546219087006596018==--
